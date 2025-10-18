@@ -1,0 +1,112 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[=3h[2J[01;01H[0m[37m[40m  Booting `Amazon Linux (6.1.150-174.273.amzn2023.x86_64) 2023'
+
+[    0.036775] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    2.804897] fuse: init (API version 7.38)
+[    2.809857] loop: module loaded
+[    2.833655] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[    2.834798] systemd[1]: Started systemd-journald.service - Journal Service.
+[    3.365874] systemd-journald[829]: Received client request to flush runtime journal.
+[    3.675571] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.693699] ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.14.1g
+[    3.701876] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    3.702755] i8042: Warning: Keylock active
+[    3.707273] ena 0000:00:05.0: ENA device version: 0.10
+[    3.707743] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+[    3.728736] ACPI: button: Power Button [PWRF]
+[    3.729236] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    3.730154] ACPI: button: Sleep Button [SLPF]
+[    3.747574] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.748009] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.815399] ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+[    3.825948] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem 80400000, mac addr 02:bc:42:58:f5:e7
+[    3.903752] RPC: Registered named UNIX socket transport module.
+[    3.904298] RPC: Registered udp transport module.
+[    3.904729] RPC: Registered tcp transport module.
+[    3.905137] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    3.933196] ena 0000:00:05.0 ens5: renamed from eth0
+[    4.114607] zram_generator::config[1373]: zram0: system has too much memory (904MB), limit is 800MB, ignoring.
+[    4.914329] ena 0000:00:05.0 ens5: Local page cache is disabled for less than 16 channels
+[    5.888950] cloud-init[1535]: Cloud-init v. 22.2.2 running 'init' at Tue, 23 Sep 2025 15:26:13 +0000. Up 5.86 seconds.
+[    5.963496] cloud-init[1535]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+[    5.965462] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.967402] cloud-init[1535]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[    5.969269] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.971175] cloud-init[1535]: ci-info: |  ens5  | True |        172.31.42.16        | 255.255.240.0 | global | 02:bc:42:58:f5:e7 |
+[    5.973040] cloud-init[1535]: ci-info: |  ens5  | True | fe80::bc:42ff:fe58:f5e7/64 |       .       |  link  | 02:bc:42:58:f5:e7 |
+[    5.974968] cloud-init[1535]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[    5.976824] cloud-init[1535]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+[    5.978733] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.980688] cloud-init[1535]: ci-info: ++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++++
+[    5.982348] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.984038] cloud-init[1535]: ci-info: | Route | Destination |   Gateway   |     Genmask     | Interface | Flags |
+[    5.985711] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.987388] cloud-init[1535]: ci-info: |   0   |   0.0.0.0   | 172.31.32.1 |     0.0.0.0     |    ens5   |   UG  |
+[    5.989061] cloud-init[1535]: ci-info: |   1   |  172.31.0.2 | 172.31.32.1 | 255.255.255.255 |    ens5   |  UGH  |
+[    5.990844] cloud-init[1535]: ci-info: |   2   | 172.31.32.0 |   0.0.0.0   |  255.255.240.0  |    ens5   |   U   |
+[    5.992516] cloud-init[1535]: ci-info: |   3   | 172.31.32.1 |   0.0.0.0   | 255.255.255.255 |    ens5   |   UH  |
+[    5.994184] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.995833] cloud-init[1535]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[    5.997213] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    5.998632] cloud-init[1535]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[    6.000027] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    6.001408] cloud-init[1535]: ci-info: |   0   |  fe80::/64  |    ::   |    ens5   |   U   |
+[    6.002856] cloud-init[1535]: ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+[    6.004261] cloud-init[1535]: ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+[    6.005664] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    7.146412] cloud-init[1535]: Generating public/private ed25519 key pair.
+[    7.147838] cloud-init[1535]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+[    7.149404] cloud-init[1535]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+[    7.151685] cloud-init[1535]: The key fingerprint is:
+[    7.152638] cloud-init[1535]: SHA256:EnSXaeH+VIVC5W7BuEG/sjP/kZEzfojr5TyIKhYkFQg root@ip-172-31-42-16.ap-south-1.compute.internal
+[    7.154652] cloud-init[1535]: The key's randomart image is:
+[    7.155690] cloud-init[1535]: +--[ED25519 256]--+
+[    7.156546] cloud-init[1535]: |  E. .o.. o=o....|
+[    7.157491] cloud-init[1535]: |    .... o+..=.. |
+[    7.158356] cloud-init[1535]: |     ..  .. o.*  |
+[    7.159213] cloud-init[1535]: |    . .. .   = o.|
+[    7.160146] cloud-init[1535]: |     o. S . + += |
+[    7.161029] cloud-init[1535]: |      ..   o =..=|
+[    7.161903] cloud-init[1535]: |       .   .*.o+.|
+[    7.162772] cloud-init[1535]: |      o   . .O. o|
+[    7.163623] cloud-init[1535]: |     . ... .o +o.|
+[    7.164488] cloud-init[1535]: +----[SHA256]-----+
+[    7.165356] cloud-init[1535]: Generating public/private ecdsa key pair.
+[    7.166490] cloud-init[1535]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+[    7.168034] cloud-init[1535]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+[    7.169495] cloud-init[1535]: The key fingerprint is:
+[    7.170374] cloud-init[1535]: SHA256:G6vz7uKpeo4FiO3ulK7myODQEaKQL/e/3C3VY30vQQk root@ip-172-31-42-16.ap-south-1.compute.internal
+[    7.172355] cloud-init[1535]: The key's randomart image is:
+[    7.173362] cloud-init[1535]: +---[ECDSA 256]---+
+[    7.174236] cloud-init[1535]: |                 |
+[    7.175220] cloud-init[1535]: | .          E    |
+[    7.176094] cloud-init[1535]: |+ .          . . |
+[    7.176932] cloud-init[1535]: |+= .          o  |
+[    7.177794] cloud-init[1535]: |= *     S  . o   |
+[    7.178651] cloud-init[1535]: | = =     +. + o .|
+[    7.179528] cloud-init[1535]: |o = o   o. . . o.|
+[    7.180396] cloud-init[1535]: |*= o.oo+..    . .|
+[    7.181251] cloud-init[1535]: |=**+ooBB=..    . |
+[    7.182102] cloud-init[1535]: +----[SHA256]-----+
+[    7.719989] cloud-init[1662]: Cloud-init v. 22.2.2 running 'modules:config' at Tue, 23 Sep 2025 15:26:14 +0000. Up 7.62 seconds.
+[    8.234302] cloud-init[1673]: Cloud-init v. 22.2.2 running 'modules:final' at Tue, 23 Sep 2025 15:26:15 +0000. Up 8.18 seconds.
+ci-info: +++++++++++++++++++++++++++Authorized keys from /home/ec2-user/.ssh/authorized_keys for user ec2-user++++++++++++++++++++++++++++
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+ci-info: | Keytype |                                       Fingerprint (sha256)                                      | Options | Comment |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+ci-info: | ssh-rsa | 95:17:76:38:82:70:04:db:0c:4e:09:ae:dd:5b:fd:1e:d0:52:1a:4c:7a:d0:e8:91:ea:27:e6:de:75:77:b1:0d |    -    |  pbkey  |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+<14>Sep 23 15:26:15 cloud-init: #############################################################
+<14>Sep 23 15:26:15 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Sep 23 15:26:15 cloud-init: 256 SHA256:G6vz7uKpeo4FiO3ulK7myODQEaKQL/e/3C3VY30vQQk root@ip-172-31-42-16.ap-south-1.compute.internal (ECDSA)
+<14>Sep 23 15:26:15 cloud-init: 256 SHA256:EnSXaeH+VIVC5W7BuEG/sjP/kZEzfojr5TyIKhYkFQg root@ip-172-31-42-16.ap-south-1.compute.internal (ED25519)
+<14>Sep 23 15:26:15 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+<14>Sep 23 15:26:15 cloud-init: #############################################################
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNqzx8uGd6ouo4hVFagIBmbYqz7Mk9gyadq1pK7QzHcHjcKvs22DY81lVO4YPctPRXPhFodHgRwXMXlUmIvFVE4= root@ip-172-31-42-16.ap-south-1.compute.internal
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDHybV3C0DKWFoMitK03Hjj7EAyUuIy/qtue41BYsrKx root@ip-172-31-42-16.ap-south-1.compute.internal
+-----END SSH HOST KEY KEYS-----
+[    8.380407] cloud-init[1673]: Cloud-init v. 22.2.2 finished at Tue, 23 Sep 2025 15:26:15 +0000. Datasource DataSourceEc2.  Up 8.37 seconds
+
+Amazon Linux 2023.8.20250915
+Kernel 6.1.150-174.273.amzn2023.x86_64 on an x86_64 (-)
+
