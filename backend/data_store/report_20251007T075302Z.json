@@ -1,0 +1,254 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "benign",
+    "confidence": 0.95
+  },
+  "statistical_analysis": {
+    "zscore_threshold": Infinity,
+    "total_nodes": 6,
+    "total_edges": 6,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "CPU-1",
+      "type": "CPU",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "Interface",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.42.16",
+      "type": "IP",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "Process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "Process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ena-driver",
+      "type": "Process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "CPU-1",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "CPU-1",
+      "target": "systemd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "cloud-init",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ena-driver",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "gnn_analysis": {
+    "training_epochs": 30,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "model_architecture": {
+      "type": "SimpleGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "predictions": [
+      {
+        "node_id": "CPU-1",
+        "anomaly_probability": 0.3281765282154083,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.29394248127937317,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.324428915977478,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3281765282154083,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.30800294876098633,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ena-driver",
+        "anomaly_probability": 0.324428915977478,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ]
+  },
+  "embeddings_shape": [
+    6,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "risk_score": 1.0,
+        "type": "CPU",
+        "cve": [
+          "CVE-2023-38408"
+        ],
+        "last_seen": 1759823580.5237026,
+        "id": "CPU-1"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "Interface",
+        "cve": [],
+        "last_seen": 1759823580.5237026,
+        "id": "ens5"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "IP",
+        "cve": [],
+        "last_seen": 1759823580.5237026,
+        "id": "172.31.42.16"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "Process",
+        "cve": [],
+        "last_seen": 1759823580.5237026,
+        "id": "cloud-init"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "Process",
+        "cve": [],
+        "last_seen": 1759823580.5237026,
+        "id": "systemd"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "Process",
+        "cve": [],
+        "last_seen": 1759823580.5237026,
+        "id": "ena-driver"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "CPU-1",
+        "target": "ens5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "CPU-1",
+        "target": "systemd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ens5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "cloud-init"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ena-driver",
+        "target": "ens5"
+      }
+    ]
+  }
+}

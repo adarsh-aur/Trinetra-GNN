@@ -1,0 +1,287 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "benign",
+    "confidence": 0.6
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 7,
+    "total_edges": 6,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "172.31.42.16",
+      "type": "IP",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "interface",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "02:bc:42:58:f5:e7",
+      "type": "MAC",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ena",
+      "type": "driver",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "RETBleed",
+      "type": "vulnerability",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "ens5",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "02:bc:42:58:f5:e7",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "systemd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "ena",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "RETBleed",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_IP",
+      "type_MAC",
+      "type_driver",
+      "type_interface",
+      "type_process",
+      "type_vulnerability"
+    ],
+    "predictions": [
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.34534066915512085,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.31849998235702515,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "02:bc:42:58:f5:e7",
+        "anomaly_probability": 0.32617369294166565,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3731803894042969,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.29468995332717896,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ena",
+        "anomaly_probability": 0.2881167531013489,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "RETBleed",
+        "anomaly_probability": 0.2944803535938263,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.2778445780277252
+  },
+  "embeddings_shape": [
+    7,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "risk_score": 1.0,
+        "type": "IP",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "interface",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "ens5"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "MAC",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "02:bc:42:58:f5:e7"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "process",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "cloud-init"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "process",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "systemd"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "driver",
+        "cve": [],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "ena"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "vulnerability",
+        "cve": [
+          "CVE-2023-38408"
+        ],
+        "last_seen": "2025-10-11 20:53:07 IST",
+        "id": "RETBleed"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "02:bc:42:58:f5:e7"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ens5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "systemd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "ena"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "RETBleed"
+      }
+    ]
+  }
+}
