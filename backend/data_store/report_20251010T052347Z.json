@@ -1,0 +1,485 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "benign",
+    "confidence": 0.8
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 14,
+    "total_edges": 10,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "CPU",
+      "type": "processor",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "interface",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "02:bc:42:58:f5:e7",
+      "type": "mac",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.1",
+      "type": "ip",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ena",
+      "type": "driver",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "fuse",
+      "type": "module",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "zram_generator",
+      "type": "module",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "RPC",
+      "type": "module",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "authorized_keys",
+      "type": "file",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ssh_host_ed25519_key",
+      "type": "file",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ssh_host_ecdsa_key",
+      "type": "file",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "ens5",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "02:bc:42:58:f5:e7",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "172.31.32.1",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "02:bc:42:58:f5:e7",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "authorized_keys",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ssh_host_ed25519_key",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ssh_host_ecdsa_key",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "cloud-init",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_driver",
+      "type_file",
+      "type_interface",
+      "type_ip",
+      "type_mac",
+      "type_module",
+      "type_process",
+      "type_processor"
+    ],
+    "predictions": [
+      {
+        "node_id": "CPU",
+        "anomaly_probability": 0.3942868709564209,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.3175027370452881,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.33841702342033386,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "02:bc:42:58:f5:e7",
+        "anomaly_probability": 0.3273404538631439,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.1",
+        "anomaly_probability": 0.3049658536911011,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3189031481742859,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.3482246696949005,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ena",
+        "anomaly_probability": 0.4332847595214844,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "fuse",
+        "anomaly_probability": 0.3419577479362488,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "zram_generator",
+        "anomaly_probability": 0.3419577479362488,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "RPC",
+        "anomaly_probability": 0.3419577479362488,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "authorized_keys",
+        "anomaly_probability": 0.28994837403297424,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh_host_ed25519_key",
+        "anomaly_probability": 0.28994837403297424,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh_host_ecdsa_key",
+        "anomaly_probability": 0.28994837403297424,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.332219660282135
+  },
+  "embeddings_shape": [
+    14,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "risk_score": 1.0,
+        "type": "processor",
+        "cve": [
+          "CVE-2023-38408"
+        ],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "CPU"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "interface",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "ens5"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "ip",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "mac",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "02:bc:42:58:f5:e7"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "ip",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "172.31.32.1"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "process",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "cloud-init"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "process",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "systemd"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "driver",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "ena"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "module",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "fuse"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "module",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "zram_generator"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "module",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "RPC"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "file",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "authorized_keys"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "file",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "ssh_host_ed25519_key"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "file",
+        "cve": [],
+        "last_seen": "2025-10-10 10:53:44 IST",
+        "id": "ssh_host_ecdsa_key"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "02:bc:42:58:f5:e7"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.32.1"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ens5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "02:bc:42:58:f5:e7"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "authorized_keys"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ssh_host_ed25519_key"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ssh_host_ecdsa_key"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "cloud-init"
+      }
+    ]
+  }
+}
