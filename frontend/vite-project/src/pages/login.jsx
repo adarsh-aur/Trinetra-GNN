@@ -18,13 +18,9 @@ const Login = () => {
 
   // Initialize Vanta.js effect
   useEffect(() => {
-    // Dynamically import THREE and Vanta
     const loadVanta = async () => {
       try {
-        // Import THREE.js
         const THREE = await import('three');
-        
-        // Import Vanta NET effect
         const VANTA = await import('vanta/dist/vanta.net.min');
         const NET = VANTA.default || VANTA;
 
@@ -48,13 +44,11 @@ const Login = () => {
         }
       } catch (error) {
         console.error('Error loading Vanta:', error);
-        // Fallback: Use CSS gradient if Vanta fails to load
       }
     };
 
     loadVanta();
 
-    // Cleanup function
     return () => {
       if (vantaEffect.current) {
         vantaEffect.current.destroy();
@@ -98,7 +92,7 @@ const Login = () => {
         }}
       />
       
-      {/* Fallback gradient background (in case Vanta doesn't load) */}
+      {/* Fallback gradient background */}
       <div className="login-bg" style={{ zIndex: 1 }}></div>
       
       {/* Login Container */}
@@ -161,15 +155,35 @@ const Login = () => {
             />
           </div>
           
+          {/* Password field with Forgot Password link */}
           <div className="form-group" style={{ marginBottom: '1.5rem' }}>
-            <label htmlFor="password" style={{ 
-              fontSize: '0.875rem',
-              fontWeight: '500',
-              marginBottom: '0.5rem',
-              display: 'block'
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center', 
+              marginBottom: '0.5rem' 
             }}>
-              Password
-            </label>
+              <label htmlFor="password" style={{ 
+                fontSize: '0.875rem',
+                fontWeight: '500'
+              }}>
+                Password
+              </label>
+              <Link 
+                to="/forgot-password" 
+                style={{
+                  fontSize: '0.8rem',
+                  color: '#64ffda',
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
+                onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
+              >
+                Forgot Password?
+              </Link>
+            </div>
             <input
               type="password"
               id="password"
@@ -261,91 +275,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-// import { useState, useContext } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
-// import AuthContext from '../context/AuthContext';
-// import '../styles/auth.css';
-
-// const Login = () => {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState('');
-  
-//   const { login } = useContext(AuthContext);
-//   const navigate = useNavigate();
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setError('');
-    
-//     if (!email || !password) {
-//       setError('Please enter both email and password');
-//       return;
-//     }
-
-//     setLoading(true);
-//     const result = await login(email, password);
-//     setLoading(false);
-
-//     if (result.success) {
-//       navigate('/cloud-connection');
-//     } else {
-//       setError(result.message);
-//     }
-//   };
-
-//   return (
-//     <div className="login-page">
-//       <div className="login-bg"></div>
-//       <div className="login-container">
-//         <div className="logo">
-//           <h1>CloudGraph Sentinel</h1>
-//           <p className="tagline">Intelligent Threat Hunting for Multi-Cloud Environments</p>
-//         </div>
-        
-//         {error && (
-//           <div className="error-message">
-//             {error}
-//           </div>
-//         )}
-
-//         <form onSubmit={handleSubmit}>
-//           <div className="form-group">
-//             <label htmlFor="email">Email Address</label>
-//             <input
-//               type="email"
-//               id="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//               required
-//             />
-//           </div>
-          
-//           <div className="form-group">
-//             <label htmlFor="password">Password</label>
-//             <input
-//               type="password"
-//               id="password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//               required
-//             />
-//           </div>
-          
-//           <button type="submit" className="btn-primary" disabled={loading}>
-//             {loading ? 'Logging in...' : 'Log In'}
-//           </button>
-//         </form>
-        
-//         <div className="signup-link">
-//           Don't have an account? <Link to="/register">Sign Up</Link>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
