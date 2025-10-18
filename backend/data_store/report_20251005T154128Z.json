@@ -1,0 +1,8 @@
+{
+  "attack_type": "Spectre v2 / RETBleed vulnerability",
+  "confidence": 0.6,
+  "zscore_threshold": Infinity,
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "gnn_accuracy_on_labels": 1.0
+}

@@ -1,0 +1,192 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "retbleed exploitation",
+    "confidence": 0.7
+  },
+  "statistical_analysis": {
+    "zscore_threshold": Infinity,
+    "total_nodes": 5,
+    "total_edges": 3,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "CPU",
+      "type": "processor",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "interface",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.42.16",
+      "type": "ip_address",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "process",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ssh_host_keys",
+      "type": "credential",
+      "risk_score": 1.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "CPU",
+      "target": "ens5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ssh_host_keys",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "gnn_analysis": {
+    "training_epochs": 30,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "model_architecture": {
+      "type": "SimpleGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "predictions": [
+      {
+        "node_id": "CPU",
+        "anomaly_probability": 0.38884904980659485,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.431112676858902,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.38884904980659485,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3630516827106476,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh_host_keys",
+        "anomaly_probability": 0.3815465569496155,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ]
+  },
+  "embeddings_shape": [
+    5,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "risk_score": 1.0,
+        "type": "processor",
+        "cve": [
+          "CVE-2023-38408"
+        ],
+        "last_seen": "2025-10-07 13:41:38 IST",
+        "id": "CPU"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "interface",
+        "cve": [],
+        "last_seen": "2025-10-07 13:41:38 IST",
+        "id": "ens5"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "ip_address",
+        "cve": [],
+        "last_seen": "2025-10-07 13:41:38 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "process",
+        "cve": [],
+        "last_seen": "2025-10-07 13:41:38 IST",
+        "id": "cloud-init"
+      },
+      {
+        "risk_score": 1.0,
+        "type": "credential",
+        "cve": [],
+        "last_seen": "2025-10-07 13:41:38 IST",
+        "id": "ssh_host_keys"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "CPU",
+        "target": "ens5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ssh_host_keys"
+      }
+    ]
+  }
+}
