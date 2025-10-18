@@ -5,7 +5,9 @@ import {
   getMe,
   updateCloudProvider,
   logout,
-  deleteAccount
+  deleteAccount,
+  forgotPassword,    // Add this
+  resetPassword      // Add this
 } from '../controllers/authController.js';
 import { protect } from '../middlewares/auth.js';
 
@@ -14,6 +16,8 @@ const router = express.Router();
 // Public routes
 router.post('/register', register);
 router.post('/login', login);
+router.post('/forgot-password', forgotPassword);        // Add this
+router.post('/reset-password/:token', resetPassword);  // Add this
 
 // Protected routes
 router.get('/me', protect, getMe);
