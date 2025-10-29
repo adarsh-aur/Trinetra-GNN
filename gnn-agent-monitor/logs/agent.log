@@ -1690,3 +1690,84 @@
 2025-10-29 22:04:04,749 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
 2025-10-29 22:04:04,750 - root - INFO - run:52 - Agent started autonomous monitoring
 2025-10-29 22:04:05,528 - root - INFO - _cleanup:73 - Resources cleaned up
+2025-10-30 00:28:42,857 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-10-30 00:28:42,857 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
+2025-10-30 00:28:42,858 - root - INFO - run:52 - Agent started autonomous monitoring
+2025-10-30 00:28:44,239 - root - INFO - _execute_action:343 - Executing action: Perform comprehensive vulnerability scan on nodes 17, 45, 68, 113, 136
+2025-10-30 00:28:44,239 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-30 00:28:44,243 - root - INFO - _monitor_cycle:112 - Cycle 1: 63 anomalies detected
+2025-10-30 00:28:47,264 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 226 not in graph
+2025-10-30 00:28:47,265 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 252 not in graph
+2025-10-30 00:28:47,265 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 253 not in graph
+2025-10-30 00:28:47,265 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 261 not in graph
+2025-10-30 00:28:47,265 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 267 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 295 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 350 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 381 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 426 not in graph
+2025-10-30 00:28:47,266 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 452 not in graph
+2025-10-30 00:28:48,318 - root - INFO - _execute_action:343 - Executing action: Patch and harden nodes 26, 52, 53, 61, 65
+2025-10-30 00:28:48,318 - root - INFO - _execute_action:343 - Executing action: Run deep vulnerability scan on all nodes in critical paths
+2025-10-30 00:28:48,318 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-30 00:28:48,322 - root - INFO - _monitor_cycle:112 - Cycle 2: 63 anomalies detected
+2025-10-30 00:28:51,209 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 206 not in graph
+2025-10-30 00:28:51,209 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 240 not in graph
+2025-10-30 00:28:51,209 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 269 not in graph
+2025-10-30 00:28:51,209 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 329 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 406 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 440 not in graph
+2025-10-30 00:28:51,210 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 469 not in graph
+2025-10-30 00:28:51,211 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 529 not in graph
+2025-10-30 00:28:51,211 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 567 not in graph
+2025-10-30 00:28:51,211 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 580 not in graph
+2025-10-30 00:28:53,063 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-30 00:28:53,063 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-30 00:28:53,063 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-30 00:28:53,063 - root - INFO - _execute_action:343 - Executing action: patch_node
+2025-10-30 00:28:53,063 - root - INFO - _execute_action:343 - Executing action: patch_node
+2025-10-30 00:28:53,064 - root - INFO - _execute_action:343 - Executing action: patch_node
+2025-10-30 00:28:53,064 - root - INFO - _execute_action:343 - Executing action: patch_node
+2025-10-30 00:28:53,064 - root - INFO - _execute_action:343 - Executing action: deep_vulnerability_scan
+2025-10-30 00:28:53,064 - root - INFO - _execute_action:343 - Executing action: network_monitoring
+2025-10-30 00:28:53,064 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-30 00:28:53,068 - root - INFO - _monitor_cycle:112 - Cycle 3: 49 anomalies detected
+2025-10-30 00:28:53,688 - root - INFO - _cleanup:73 - Resources cleaned up
+2025-10-30 00:35:12,855 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-10-30 00:35:12,855 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
+2025-10-30 00:35:12,856 - root - INFO - run:52 - Agent started autonomous monitoring
+2025-10-30 00:35:14,181 - root - INFO - _execute_action:343 - Executing action: Validate connectivity of isolated nodes
+2025-10-30 00:35:14,181 - root - INFO - _execute_action:343 - Executing action: Perform comprehensive vulnerability scan on nodes 1, 14, 53, 58, 76
+2025-10-30 00:35:14,181 - root - INFO - _execute_action:343 - Executing action: Collect and analyze host and network logs for these nodes
+2025-10-30 00:35:14,183 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-30 00:35:14,185 - root - INFO - _monitor_cycle:112 - Cycle 1: 63 anomalies detected
+2025-10-30 00:35:17,279 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 201 not in graph
+2025-10-30 00:35:17,279 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 202 not in graph
+2025-10-30 00:35:17,280 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-30 00:35:17,280 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-30 00:35:17,280 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 278 not in graph
+2025-10-30 00:35:17,280 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-30 00:35:17,280 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 295 not in graph
+2025-10-30 00:35:17,281 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 320 not in graph
+2025-10-30 00:35:17,281 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 326 not in graph
+2025-10-30 00:35:17,281 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-30 00:35:18,764 - root - INFO - _execute_action:343 - Executing action: Isolate node 1
+2025-10-30 00:35:18,765 - root - INFO - _execute_action:343 - Executing action: Perform immediate vulnerability scan on nodes 1, 2, 17, 65, 78, 0, and 5
+2025-10-30 00:35:18,765 - root - INFO - _execute_action:343 - Executing action: Collect and analyze host and network logs for nodes 1, 2, 17, 65, 78, 0, 5
+2025-10-30 00:35:18,765 - root - INFO - _execute_action:343 - Executing action: Apply patches for identified CVEs immediately
+2025-10-30 00:35:18,765 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-30 00:35:18,768 - root - INFO - _monitor_cycle:112 - Cycle 2: 70 anomalies detected
+2025-10-30 00:35:21,878 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-30 00:35:21,878 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 207 not in graph
+2025-10-30 00:35:21,879 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 224 not in graph
+2025-10-30 00:35:21,879 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-10-30 00:35:21,879 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 273 not in graph
+2025-10-30 00:35:21,879 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 277 not in graph
+2025-10-30 00:35:21,879 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 317 not in graph
+2025-10-30 00:35:21,880 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 343 not in graph
+2025-10-30 00:35:21,880 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-30 00:35:21,880 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 396 not in graph
+2025-10-30 00:35:22,511 - root - INFO - _cleanup:73 - Resources cleaned up

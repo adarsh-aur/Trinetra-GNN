@@ -87,6 +87,15 @@ async def main():
         traceback.print_exc()
         sys.exit(1)
 
+    async def main():
+        agent = GNNAgent(Config())
+        try:
+            await agent.run()
+        except asyncio.CancelledError:
+            print("Agent run was cancelled. Cleaning up...")
+            # Optional: do cleanup here
+        return
+
 
 if __name__ == "__main__":
     asyncio.run(main())
