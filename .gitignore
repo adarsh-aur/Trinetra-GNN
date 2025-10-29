@@ -1,0 +1,12 @@
+# Ignore Python virtual environments
+venv/
+gnn-agent-monitor/venv/
+
+# Common Python files
+__pycache__/
+*.pyc
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
