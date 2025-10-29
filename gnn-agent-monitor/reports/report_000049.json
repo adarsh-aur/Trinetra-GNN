@@ -1,0 +1,318 @@
+{
+  "timestamp": "2025-10-29T21:59:44.001597",
+  "iteration": 49,
+  "total_nodes": 200,
+  "total_edges": 591,
+  "anomalous_nodes": 35,
+  "anomaly_rate": 0.175,
+  "mean_score": 1.670262098312378,
+  "max_score": 17.917207717895508,
+  "max_zscore": 5.154622554779053,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 3,
+      "anomaly_score": 12.62946891784668,
+      "z_score": 3.459050416946411,
+      "degree": 7,
+      "betweenness": 0.007429419468618467,
+      "clustering": 0.14285714285714285,
+      "neighbors": 7
+    },
+    {
+      "node_id": 18,
+      "anomaly_score": 15.016788482666016,
+      "z_score": 4.2245707511901855,
+      "degree": 5,
+      "betweenness": 0.0046584409672301786,
+      "clustering": 0.0,
+      "neighbors": 5
+    },
+    {
+      "node_id": 124,
+      "anomaly_score": 15.31448745727539,
+      "z_score": 4.32003116607666,
+      "degree": 3,
+      "betweenness": 0.0003190239390473132,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3
+    },
+    {
+      "node_id": 128,
+      "anomaly_score": 17.917207717895508,
+      "z_score": 5.154622554779053,
+      "degree": 3,
+      "betweenness": 0.0012031280457875419,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 185,
+      "anomaly_score": 17.740802764892578,
+      "z_score": 5.098056316375732,
+      "degree": 3,
+      "betweenness": 0.0006762887315971713,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3
+    },
+    {
+      "node_id": 203,
+      "anomaly_score": 12.62946891784668,
+      "z_score": 3.459050416946411,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 218,
+      "anomaly_score": 15.016788482666016,
+      "z_score": 4.2245707511901855,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 324,
+      "anomaly_score": 15.31448745727539,
+      "z_score": 4.32003116607666,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 328,
+      "anomaly_score": 17.917207717895508,
+      "z_score": 5.154622554779053,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 385,
+      "anomaly_score": 17.740802764892578,
+      "z_score": 5.098056316375732,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 403,
+      "anomaly_score": 12.62946891784668,
+      "z_score": 3.459050416946411,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 418,
+      "anomaly_score": 15.016788482666016,
+      "z_score": 4.2245707511901855,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 524,
+      "anomaly_score": 15.31448745727539,
+      "z_score": 4.32003116607666,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 528,
+      "anomaly_score": 17.917207717895508,
+      "z_score": 5.154622554779053,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 585,
+      "anomaly_score": 17.740802764892578,
+      "z_score": 5.098056316375732,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 603,
+      "anomaly_score": 12.62946891784668,
+      "z_score": 3.459050416946411,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 618,
+      "anomaly_score": 15.016788482666016,
+      "z_score": 4.2245707511901855,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 724,
+      "anomaly_score": 15.31448745727539,
+      "z_score": 4.32003116607666,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 728,
+      "anomaly_score": 17.917207717895508,
+      "z_score": 5.154622554779053,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 785,
+      "anomaly_score": 17.740802764892578,
+      "z_score": 5.098056316375732,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        3,
+        19,
+        18
+      ],
+      "length": 3,
+      "source": 3,
+      "target": 18
+    },
+    {
+      "path": [
+        3,
+        22,
+        128
+      ],
+      "length": 3,
+      "source": 3,
+      "target": 128
+    },
+    {
+      "path": [
+        18,
+        16,
+        124
+      ],
+      "length": 3,
+      "source": 18,
+      "target": 124
+    },
+    {
+      "path": [
+        18,
+        8,
+        128
+      ],
+      "length": 3,
+      "source": 18,
+      "target": 128
+    },
+    {
+      "path": [
+        128,
+        2,
+        185
+      ],
+      "length": 3,
+      "source": 128,
+      "target": 185
+    }
+  ],
+  "batch_processing_time": 0.017101287841796875,
+  "agent_response": {
+    "severity": "HIGH",
+    "confidence": 0.86,
+    "reasoning": "The graph shows 35 anomalies out of 200 nodes (17.5% anomaly rate) with a max z\u2011score of 5.15, indicating statistically significant deviations. Five nodes (3, 18, 124, 128, 185) have anomaly scores above 12 and are part of critical paths that connect each other, suggesting a potential lateral movement chain. The presence of 20 critical nodes and 5 vulnerable paths further elevates the risk. These factors collectively point to a high\u2011severity threat scenario.",
+    "threats_identified": [
+      "Anomalous traffic patterns indicating possible intrusion or compromised hosts",
+      "Potential lateral movement through critical paths (3\u201119\u201118, 3\u201122\u2011128, 18\u201116\u2011124)",
+      "Exploitation of vulnerable nodes with high anomaly scores"
+    ],
+    "recommended_actions": [
+      {
+        "action": "isolate_node",
+        "priority": "HIGH",
+        "reason": "Node 3, 18, 124, 128, and 185 exhibit the highest anomaly scores and are central to critical paths; isolation prevents further spread."
+      },
+      {
+        "action": "run_vulnerability_scan",
+        "priority": "HIGH",
+        "reason": "Immediate scanning of isolated nodes will identify specific CVEs and confirm exploitation attempts."
+      },
+      {
+        "action": "apply_patches",
+        "priority": "MEDIUM",
+        "reason": "Once vulnerabilities are identified, patching will mitigate the attack surface."
+      },
+      {
+        "action": "block_outbound",
+        "priority": "MEDIUM",
+        "reason": "Blocking outbound traffic from isolated nodes limits data exfiltration while investigation proceeds."
+      },
+      {
+        "action": "send_alert",
+        "priority": "HIGH",
+        "reason": "Notify SOC and incident response teams to coordinate containment and forensic analysis."
+      }
+    ],
+    "predictions": "If left unchecked, the attacker may use the identified critical paths to pivot from node 3 to node 18 and then to node 124, potentially compromising additional critical nodes and exfiltrating data. The anomaly rate may rise further as lateral movement spreads.",
+    "questions": [
+      "What are the roles and external connectivity of nodes 3, 18, 124, 128, and 185?",
+      "Are there any known CVEs affecting the software stack on these nodes?",
+      "Is there any observed data exfiltration or unusual outbound traffic from these nodes?"
+    ]
+  },
+  "actions_taken": [
+    {
+      "action": "isolate_node",
+      "status": "executed",
+      "timestamp": "2025-10-29T21:59:44.963526",
+      "details": "Node 3, 18, 124, 128, and 185 exhibit the highest anomaly scores and are central to critical paths; isolation prevents further spread."
+    },
+    {
+      "action": "run_vulnerability_scan",
+      "status": "executed",
+      "timestamp": "2025-10-29T21:59:44.963526",
+      "details": "Immediate scanning of isolated nodes will identify specific CVEs and confirm exploitation attempts."
+    },
+    {
+      "action": "send_alert",
+      "status": "executed",
+      "timestamp": "2025-10-29T21:59:44.963526",
+      "details": "Notify SOC and incident response teams to coordinate containment and forensic analysis."
+    },
+    {
+      "action": "send_alert",
+      "status": "sent",
+      "timestamp": "2025-10-29T21:59:44.963526",
+      "severity": "HIGH",
+      "message": "Anomaly rate 17.50% exceeds threshold"
+    }
+  ],
+  "total_anomalies_cumulative": 2800
+}

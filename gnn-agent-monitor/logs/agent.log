@@ -1,0 +1,1692 @@
+2025-10-29 21:54:17,336 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-10-29 21:54:17,337 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
+2025-10-29 21:54:17,338 - root - INFO - run:52 - Agent started autonomous monitoring
+2025-10-29 21:54:20,283 - root - INFO - _execute_action:343 - Executing action: Validate data ingestion pipeline
+2025-10-29 21:54:20,284 - root - INFO - _execute_action:343 - Executing action: Investigate isolated nodes
+2025-10-29 21:54:20,285 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:54:20,291 - root - INFO - _monitor_cycle:112 - Cycle 1: 49 anomalies detected
+2025-10-29 21:54:23,789 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 21:54:23,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:54:23,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 237 not in graph
+2025-10-29 21:54:23,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 291 not in graph
+2025-10-29 21:54:23,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 293 not in graph
+2025-10-29 21:54:23,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 307 not in graph
+2025-10-29 21:54:23,794 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 325 not in graph
+2025-10-29 21:54:23,796 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 338 not in graph
+2025-10-29 21:54:23,797 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 356 not in graph
+2025-10-29 21:54:23,797 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 389 not in graph
+2025-10-29 21:54:25,310 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:25,310 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:25,310 - root - INFO - _execute_action:343 - Executing action: run_cve_scan
+2025-10-29 21:54:25,310 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:54:25,310 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:54:25,317 - root - INFO - _monitor_cycle:112 - Cycle 2: 70 anomalies detected
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 242 not in graph
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 254 not in graph
+2025-10-29 21:54:28,865 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 263 not in graph
+2025-10-29 21:54:28,866 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 333 not in graph
+2025-10-29 21:54:28,866 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 334 not in graph
+2025-10-29 21:54:28,866 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 21:54:28,866 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: run_cve_scan
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: monitor_traffic
+2025-10-29 21:54:30,247 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:54:30,249 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:54:30,252 - root - INFO - _monitor_cycle:112 - Cycle 3: 70 anomalies detected
+2025-10-29 21:54:33,105 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 231 not in graph
+2025-10-29 21:54:33,106 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 246 not in graph
+2025-10-29 21:54:33,106 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 262 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 336 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 397 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 431 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 446 not in graph
+2025-10-29 21:54:33,107 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 462 not in graph
+2025-10-29 21:54:33,108 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 536 not in graph
+2025-10-29 21:54:33,108 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 580 not in graph
+2025-10-29 21:54:33,108 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 597 not in graph
+2025-10-29 21:54:33,108 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 631 not in graph
+2025-10-29 21:54:33,108 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 646 not in graph
+2025-10-29 21:54:34,308 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:34,309 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:34,309 - root - INFO - _execute_action:343 - Executing action: run_cve_scan
+2025-10-29 21:54:34,309 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:54:34,313 - root - INFO - _monitor_cycle:112 - Cycle 4: 42 anomalies detected
+2025-10-29 21:54:37,328 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 201 not in graph
+2025-10-29 21:54:37,329 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 21:54:37,329 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 21:54:37,329 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:54:37,329 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 401 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 464 not in graph
+2025-10-29 21:54:37,330 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 483 not in graph
+2025-10-29 21:54:38,643 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:38,643 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:38,643 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:38,644 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:38,644 - root - INFO - _execute_action:343 - Executing action: monitor_traffic
+2025-10-29 21:54:38,644 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:54:38,648 - root - INFO - _monitor_cycle:112 - Cycle 5: 56 anomalies detected
+2025-10-29 21:54:42,657 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 206 not in graph
+2025-10-29 21:54:42,658 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 225 not in graph
+2025-10-29 21:54:42,658 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 21:54:42,658 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 259 not in graph
+2025-10-29 21:54:42,659 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 261 not in graph
+2025-10-29 21:54:42,659 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 21:54:42,659 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 21:54:42,660 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:54:42,660 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 395 not in graph
+2025-10-29 21:54:42,660 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 397 not in graph
+2025-10-29 21:54:42,718 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6991, Requested 1104. Please try again in 712.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:54:42,719 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:54:42,733 - root - INFO - _monitor_cycle:112 - Cycle 6: 70 anomalies detected
+2025-10-29 21:54:46,186 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 215 not in graph
+2025-10-29 21:54:46,186 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 232 not in graph
+2025-10-29 21:54:46,187 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 249 not in graph
+2025-10-29 21:54:46,187 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 21:54:46,187 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:54:46,187 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 21:54:46,187 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 340 not in graph
+2025-10-29 21:54:46,188 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 389 not in graph
+2025-10-29 21:54:46,188 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 415 not in graph
+2025-10-29 21:54:46,188 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 432 not in graph
+2025-10-29 21:54:46,188 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 449 not in graph
+2025-10-29 21:54:46,188 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 494 not in graph
+2025-10-29 21:54:47,756 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:47,757 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:47,758 - root - INFO - _execute_action:343 - Executing action: forensic_analysis
+2025-10-29 21:54:47,759 - root - INFO - _execute_action:343 - Executing action: run_cve_scan
+2025-10-29 21:54:47,759 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:54:47,760 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:54:47,770 - root - INFO - _monitor_cycle:112 - Cycle 7: 56 anomalies detected
+2025-10-29 21:54:50,745 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 266 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 319 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 323 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:54:50,746 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 349 not in graph
+2025-10-29 21:54:50,747 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 21:54:50,747 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 457 not in graph
+2025-10-29 21:54:50,747 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 466 not in graph
+2025-10-29 21:54:50,747 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 487 not in graph
+2025-10-29 21:54:50,747 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 519 not in graph
+2025-10-29 21:54:50,801 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7594, Requested 1098. Please try again in 5.189999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:54:50,801 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:54:50,805 - root - INFO - _monitor_cycle:112 - Cycle 8: 56 anomalies detected
+2025-10-29 21:54:53,958 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 21:54:53,958 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 216 not in graph
+2025-10-29 21:54:53,958 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:54:53,958 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 245 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 261 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 273 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 297 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 21:54:53,959 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-29 21:54:54,009 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7166, Requested 1077. Please try again in 1.8225s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:54:54,011 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:54:54,013 - root - INFO - _monitor_cycle:112 - Cycle 9: 70 anomalies detected
+2025-10-29 21:54:57,058 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-10-29 21:54:57,058 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 221 not in graph
+2025-10-29 21:54:57,059 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:54:57,059 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 276 not in graph
+2025-10-29 21:54:57,059 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 306 not in graph
+2025-10-29 21:54:57,059 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 368 not in graph
+2025-10-29 21:54:57,060 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 377 not in graph
+2025-10-29 21:54:57,060 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-29 21:54:57,060 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 21:54:57,060 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 409 not in graph
+2025-10-29 21:54:57,061 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 421 not in graph
+2025-10-29 21:54:58,597 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:58,598 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:58,598 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:54:58,599 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:54:58,599 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:54:58,602 - root - INFO - _monitor_cycle:112 - Cycle 10: 63 anomalies detected
+2025-10-29 21:54:59,468 - root - INFO - _cleanup:73 - Resources cleaned up
+2025-10-29 21:56:47,688 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-10-29 21:56:47,689 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
+2025-10-29 21:56:47,691 - root - INFO - run:52 - Agent started autonomous monitoring
+2025-10-29 21:56:49,055 - root - INFO - _execute_action:343 - Executing action: Isolate suspicious nodes
+2025-10-29 21:56:49,055 - root - INFO - _execute_action:343 - Executing action: Run comprehensive vulnerability scan on isolated nodes
+2025-10-29 21:56:49,056 - root - INFO - _execute_action:343 - Executing action: Apply critical patches and update firmware
+2025-10-29 21:56:49,056 - root - INFO - _execute_action:343 - Executing action: Enable continuous monitoring and anomaly alerts
+2025-10-29 21:56:49,056 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:56:49,059 - root - INFO - _monitor_cycle:112 - Cycle 1: 70 anomalies detected
+2025-10-29 21:56:52,077 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 238 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 21:56:52,078 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 321 not in graph
+2025-10-29 21:56:52,080 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 342 not in graph
+2025-10-29 21:56:52,080 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 391 not in graph
+2025-10-29 21:56:52,080 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 400 not in graph
+2025-10-29 21:56:52,080 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 417 not in graph
+2025-10-29 21:56:53,525 - root - INFO - _execute_action:343 - Executing action: Isolate node 0
+2025-10-29 21:56:53,525 - root - INFO - _execute_action:343 - Executing action: Isolate nodes 19 and 65
+2025-10-29 21:56:53,526 - root - INFO - _execute_action:343 - Executing action: Run comprehensive vulnerability scan on isolated nodes
+2025-10-29 21:56:53,526 - root - INFO - _execute_action:343 - Executing action: Apply critical patches and firmware updates to nodes 0, 19, 65, 4, and 6
+2025-10-29 21:56:53,526 - root - INFO - _execute_action:343 - Executing action: Send alert to SOC and incident response team
+2025-10-29 21:56:53,526 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:56:53,530 - root - INFO - _monitor_cycle:112 - Cycle 2: 63 anomalies detected
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 290 not in graph
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 308 not in graph
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 320 not in graph
+2025-10-29 21:56:56,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:56:56,312 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 400 not in graph
+2025-10-29 21:56:56,312 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 413 not in graph
+2025-10-29 21:56:56,312 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 490 not in graph
+2025-10-29 21:56:56,312 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 508 not in graph
+2025-10-29 21:56:56,312 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 520 not in graph
+2025-10-29 21:56:56,314 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 535 not in graph
+2025-10-29 21:56:56,314 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 600 not in graph
+2025-10-29 21:56:56,314 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 613 not in graph
+2025-10-29 21:56:57,672 - root - INFO - _execute_action:343 - Executing action: Isolate node 0
+2025-10-29 21:56:57,672 - root - INFO - _execute_action:343 - Executing action: Isolate nodes 13, 90, 108, 120
+2025-10-29 21:56:57,672 - root - INFO - _execute_action:343 - Executing action: Enable continuous monitoring and anomaly alerts on all nodes
+2025-10-29 21:56:57,673 - root - INFO - _execute_action:343 - Executing action: Block traffic from node 0 to external IPs until verified clean
+2025-10-29 21:56:57,673 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:56:57,678 - root - INFO - _monitor_cycle:112 - Cycle 3: 42 anomalies detected
+2025-10-29 21:57:00,787 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 218 not in graph
+2025-10-29 21:57:00,787 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 275 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 298 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 319 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 332 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:57:00,788 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 21:57:00,790 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 418 not in graph
+2025-10-29 21:57:00,790 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 475 not in graph
+2025-10-29 21:57:02,440 - root - INFO - _execute_action:343 - Executing action: Isolate node 18
+2025-10-29 21:57:02,440 - root - INFO - _execute_action:343 - Executing action: Isolate node 75
+2025-10-29 21:57:02,441 - root - INFO - _execute_action:343 - Executing action: Isolate node 98
+2025-10-29 21:57:02,441 - root - INFO - _execute_action:343 - Executing action: Isolate node 99
+2025-10-29 21:57:02,441 - root - INFO - _execute_action:343 - Executing action: Block outbound traffic from isolated nodes to external IPs
+2025-10-29 21:57:02,441 - root - INFO - _execute_action:343 - Executing action: Run comprehensive vulnerability scan on isolated nodes
+2025-10-29 21:57:02,441 - root - INFO - _execute_action:343 - Executing action: Apply critical patches and firmware updates to isolated nodes
+2025-10-29 21:57:02,442 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:57:02,447 - root - INFO - _monitor_cycle:112 - Cycle 4: 63 anomalies detected
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 215 not in graph
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 232 not in graph
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 250 not in graph
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 21:57:05,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 271 not in graph
+2025-10-29 21:57:05,656 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 291 not in graph
+2025-10-29 21:57:05,656 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 306 not in graph
+2025-10-29 21:57:05,656 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 339 not in graph
+2025-10-29 21:57:05,656 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 381 not in graph
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Isolate node 28
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Isolate node 15
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Isolate node 32
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Isolate node 50
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Block outbound traffic from isolated nodes to external IPs
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Run comprehensive vulnerability scan on isolated nodes
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Apply critical patches and firmware updates to isolated nodes
+2025-10-29 21:57:06,857 - root - INFO - _execute_action:343 - Executing action: Send alert to SOC and incident response team
+2025-10-29 21:57:06,858 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:06,860 - root - INFO - _monitor_cycle:112 - Cycle 5: 70 anomalies detected
+2025-10-29 21:57:09,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 278 not in graph
+2025-10-29 21:57:09,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 282 not in graph
+2025-10-29 21:57:09,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 364 not in graph
+2025-10-29 21:57:09,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-29 21:57:09,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 377 not in graph
+2025-10-29 21:57:09,489 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 478 not in graph
+2025-10-29 21:57:09,489 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 482 not in graph
+2025-10-29 21:57:09,489 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 564 not in graph
+2025-10-29 21:57:09,489 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 567 not in graph
+2025-10-29 21:57:09,489 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 577 not in graph
+2025-10-29 21:57:09,490 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 678 not in graph
+2025-10-29 21:57:09,490 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 682 not in graph
+2025-10-29 21:57:09,490 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 764 not in graph
+2025-10-29 21:57:09,490 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 767 not in graph
+2025-10-29 21:57:09,490 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 777 not in graph
+2025-10-29 21:57:09,543 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7636, Requested 1268. Please try again in 6.78s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:09,543 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 17.50% exceeds threshold
+2025-10-29 21:57:09,546 - root - INFO - _monitor_cycle:112 - Cycle 6: 35 anomalies detected
+2025-10-29 21:57:12,569 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 216 not in graph
+2025-10-29 21:57:12,569 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 273 not in graph
+2025-10-29 21:57:12,569 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 291 not in graph
+2025-10-29 21:57:12,569 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 21:57:12,570 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 298 not in graph
+2025-10-29 21:57:12,570 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 21:57:12,570 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:57:12,570 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 355 not in graph
+2025-10-29 21:57:12,570 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 387 not in graph
+2025-10-29 21:57:12,572 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 416 not in graph
+2025-10-29 21:57:12,572 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 473 not in graph
+2025-10-29 21:57:12,627 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7225, Requested 1247. Please try again in 3.54s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:12,628 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:57:12,630 - root - INFO - _monitor_cycle:112 - Cycle 7: 63 anomalies detected
+2025-10-29 21:57:15,751 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 208 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 222 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 286 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 336 not in graph
+2025-10-29 21:57:15,752 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 339 not in graph
+2025-10-29 21:57:15,753 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 353 not in graph
+2025-10-29 21:57:15,753 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-29 21:57:15,753 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 394 not in graph
+2025-10-29 21:57:17,009 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:17,009 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:57:17,009 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:17,011 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:17,011 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:57:17,011 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:17,015 - root - INFO - _monitor_cycle:112 - Cycle 8: 70 anomalies detected
+2025-10-29 21:57:20,127 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 232 not in graph
+2025-10-29 21:57:20,127 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 21:57:20,127 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 250 not in graph
+2025-10-29 21:57:20,127 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 252 not in graph
+2025-10-29 21:57:20,128 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 269 not in graph
+2025-10-29 21:57:20,128 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 282 not in graph
+2025-10-29 21:57:20,128 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 21:57:20,128 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:57:20,128 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 314 not in graph
+2025-10-29 21:57:20,129 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 322 not in graph
+2025-10-29 21:57:20,189 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7576, Requested 1160. Please try again in 5.52s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:20,189 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:20,193 - root - INFO - _monitor_cycle:112 - Cycle 9: 70 anomalies detected
+2025-10-29 21:57:23,146 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 206 not in graph
+2025-10-29 21:57:23,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 277 not in graph
+2025-10-29 21:57:23,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 21:57:23,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-29 21:57:23,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 314 not in graph
+2025-10-29 21:57:23,148 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:57:23,148 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:57:23,148 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-29 21:57:23,148 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 406 not in graph
+2025-10-29 21:57:23,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 477 not in graph
+2025-10-29 21:57:23,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 479 not in graph
+2025-10-29 21:57:23,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 484 not in graph
+2025-10-29 21:57:23,216 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7175, Requested 1096. Please try again in 2.0325s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:23,216 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:57:23,224 - root - INFO - _monitor_cycle:112 - Cycle 10: 56 anomalies detected
+2025-10-29 21:57:26,322 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 21:57:26,322 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 249 not in graph
+2025-10-29 21:57:26,322 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 308 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 344 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 396 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 413 not in graph
+2025-10-29 21:57:26,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 449 not in graph
+2025-10-29 21:57:26,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 458 not in graph
+2025-10-29 21:57:26,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 508 not in graph
+2025-10-29 21:57:27,423 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:27,424 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:27,424 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:57:27,425 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:27,425 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:27,425 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:57:27,428 - root - INFO - _monitor_cycle:112 - Cycle 11: 56 anomalies detected
+2025-10-29 21:57:30,443 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:57:30,443 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 233 not in graph
+2025-10-29 21:57:30,443 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-10-29 21:57:30,443 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 346 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 358 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 381 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 419 not in graph
+2025-10-29 21:57:30,444 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 433 not in graph
+2025-10-29 21:57:30,497 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7590, Requested 1047. Please try again in 4.7775s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:30,499 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:57:30,502 - root - INFO - _monitor_cycle:112 - Cycle 12: 63 anomalies detected
+2025-10-29 21:57:33,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 234 not in graph
+2025-10-29 21:57:33,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 244 not in graph
+2025-10-29 21:57:33,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:57:33,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 21:57:33,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 21:57:33,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 334 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 370 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 434 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 444 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 483 not in graph
+2025-10-29 21:57:33,427 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 488 not in graph
+2025-10-29 21:57:33,478 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7193, Requested 1054. Please try again in 1.8525s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:33,479 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:57:33,483 - root - INFO - _monitor_cycle:112 - Cycle 13: 56 anomalies detected
+2025-10-29 21:57:36,454 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-10-29 21:57:36,454 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 21:57:36,454 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 280 not in graph
+2025-10-29 21:57:36,455 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 21:57:36,455 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 21:57:36,455 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 333 not in graph
+2025-10-29 21:57:36,455 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 350 not in graph
+2025-10-29 21:57:36,456 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 363 not in graph
+2025-10-29 21:57:36,456 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 411 not in graph
+2025-10-29 21:57:36,457 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 479 not in graph
+2025-10-29 21:57:36,457 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 480 not in graph
+2025-10-29 21:57:36,457 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 496 not in graph
+2025-10-29 21:57:37,815 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:37,815 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:57:37,816 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:37,816 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:37,816 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:57:37,817 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:57:37,822 - root - INFO - _monitor_cycle:112 - Cycle 14: 56 anomalies detected
+2025-10-29 21:57:40,892 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-10-29 21:57:40,893 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 215 not in graph
+2025-10-29 21:57:40,893 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 218 not in graph
+2025-10-29 21:57:40,893 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:57:40,894 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:57:40,905 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:57:40,905 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 21:57:40,905 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 21:57:40,905 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 358 not in graph
+2025-10-29 21:57:40,906 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 394 not in graph
+2025-10-29 21:57:40,957 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7581, Requested 1059. Please try again in 4.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:40,958 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:40,961 - root - INFO - _monitor_cycle:112 - Cycle 15: 70 anomalies detected
+2025-10-29 21:57:44,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 229 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 236 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 250 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 253 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 292 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 333 not in graph
+2025-10-29 21:57:44,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 391 not in graph
+2025-10-29 21:57:44,096 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7162, Requested 1056. Please try again in 1.635s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:44,097 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:44,099 - root - INFO - _monitor_cycle:112 - Cycle 16: 70 anomalies detected
+2025-10-29 21:57:46,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 21:57:46,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 21:57:46,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 349 not in graph
+2025-10-29 21:57:46,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 21:57:46,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 373 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 494 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 524 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 549 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 561 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 573 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 592 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 694 not in graph
+2025-10-29 21:57:46,731 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 724 not in graph
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:47,918 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:57:47,918 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:57:47,921 - root - INFO - _monitor_cycle:112 - Cycle 17: 42 anomalies detected
+2025-10-29 21:57:50,831 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 246 not in graph
+2025-10-29 21:57:50,831 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 275 not in graph
+2025-10-29 21:57:50,832 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 286 not in graph
+2025-10-29 21:57:50,832 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-10-29 21:57:50,832 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 308 not in graph
+2025-10-29 21:57:50,832 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 365 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 393 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 446 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 475 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 486 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 500 not in graph
+2025-10-29 21:57:50,833 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 508 not in graph
+2025-10-29 21:57:50,834 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 565 not in graph
+2025-10-29 21:57:50,887 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7604, Requested 1053. Please try again in 4.9275s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:50,888 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:57:50,891 - root - INFO - _monitor_cycle:112 - Cycle 18: 49 anomalies detected
+2025-10-29 21:57:54,005 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 21:57:54,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 208 not in graph
+2025-10-29 21:57:54,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 227 not in graph
+2025-10-29 21:57:54,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:57:54,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 278 not in graph
+2025-10-29 21:57:54,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 21:57:54,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:57:54,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 320 not in graph
+2025-10-29 21:57:54,008 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 21:57:54,008 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 377 not in graph
+2025-10-29 21:57:54,059 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7181, Requested 1053. Please try again in 1.755s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:57:54,061 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:54,064 - root - INFO - _monitor_cycle:112 - Cycle 19: 70 anomalies detected
+2025-10-29 21:57:57,324 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 216 not in graph
+2025-10-29 21:57:57,324 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 224 not in graph
+2025-10-29 21:57:57,324 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 237 not in graph
+2025-10-29 21:57:57,324 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 21:57:57,324 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 21:57:57,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 21:57:57,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:57:57,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 370 not in graph
+2025-10-29 21:57:57,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 21:57:57,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 393 not in graph
+2025-10-29 21:57:58,991 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:58,991 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:58,991 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:58,993 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:57:58,994 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:57:58,994 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:57:58,998 - root - INFO - _monitor_cycle:112 - Cycle 20: 70 anomalies detected
+2025-10-29 21:58:01,423 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 317 not in graph
+2025-10-29 21:58:01,423 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 320 not in graph
+2025-10-29 21:58:01,423 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 21:58:01,423 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 517 not in graph
+2025-10-29 21:58:01,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 520 not in graph
+2025-10-29 21:58:01,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 572 not in graph
+2025-10-29 21:58:01,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 717 not in graph
+2025-10-29 21:58:01,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 720 not in graph
+2025-10-29 21:58:01,425 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 772 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 917 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 920 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 972 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 1117 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 1120 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 1172 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 1317 not in graph
+2025-10-29 21:58:01,426 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 1320 not in graph
+2025-10-29 21:58:01,479 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7669, Requested 1086. Please try again in 5.6625s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:01,480 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 10.50% exceeds threshold
+2025-10-29 21:58:01,483 - root - INFO - _monitor_cycle:112 - Cycle 21: 21 anomalies detected
+2025-10-29 21:58:04,552 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 252 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 276 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 310 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 323 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 338 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 368 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 452 not in graph
+2025-10-29 21:58:04,553 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 476 not in graph
+2025-10-29 21:58:04,555 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 479 not in graph
+2025-10-29 21:58:04,555 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 500 not in graph
+2025-10-29 21:58:04,607 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7252, Requested 1092. Please try again in 2.579999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:04,609 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:58:04,611 - root - INFO - _monitor_cycle:112 - Cycle 22: 56 anomalies detected
+2025-10-29 21:58:07,823 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-10-29 21:58:07,823 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 215 not in graph
+2025-10-29 21:58:07,823 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 254 not in graph
+2025-10-29 21:58:07,824 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 21:58:07,824 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:58:07,824 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 277 not in graph
+2025-10-29 21:58:07,824 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 344 not in graph
+2025-10-29 21:58:07,825 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 370 not in graph
+2025-10-29 21:58:07,825 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 373 not in graph
+2025-10-29 21:58:07,825 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 398 not in graph
+2025-10-29 21:58:09,595 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:58:09,595 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:58:09,595 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:58:09,595 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:58:09,596 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:58:09,598 - root - INFO - _monitor_cycle:112 - Cycle 23: 70 anomalies detected
+2025-10-29 21:58:12,755 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 21:58:12,757 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 21:58:12,757 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-10-29 21:58:12,757 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 271 not in graph
+2025-10-29 21:58:12,757 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 21:58:12,758 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:58:12,758 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 293 not in graph
+2025-10-29 21:58:12,758 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 311 not in graph
+2025-10-29 21:58:12,759 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:58:12,759 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 21:58:12,810 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7572, Requested 1084. Please try again in 4.92s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:12,810 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:58:12,812 - root - INFO - _monitor_cycle:112 - Cycle 24: 70 anomalies detected
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 210 not in graph
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 229 not in graph
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 297 not in graph
+2025-10-29 21:58:15,739 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 320 not in graph
+2025-10-29 21:58:15,740 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 350 not in graph
+2025-10-29 21:58:15,740 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 364 not in graph
+2025-10-29 21:58:15,740 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:58:15,740 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 410 not in graph
+2025-10-29 21:58:15,740 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 429 not in graph
+2025-10-29 21:58:15,794 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7174, Requested 1077. Please try again in 1.8825s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:15,794 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:58:15,797 - root - INFO - _monitor_cycle:112 - Cycle 25: 63 anomalies detected
+2025-10-29 21:58:18,790 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 215 not in graph
+2025-10-29 21:58:18,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 260 not in graph
+2025-10-29 21:58:18,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 283 not in graph
+2025-10-29 21:58:18,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 297 not in graph
+2025-10-29 21:58:18,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 298 not in graph
+2025-10-29 21:58:18,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 314 not in graph
+2025-10-29 21:58:18,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:58:18,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 352 not in graph
+2025-10-29 21:58:18,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 21:58:18,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 415 not in graph
+2025-10-29 21:58:18,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 460 not in graph
+2025-10-29 21:58:20,152 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:58:20,152 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:58:20,152 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:58:20,153 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:58:20,153 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:58:20,158 - root - INFO - _monitor_cycle:112 - Cycle 26: 63 anomalies detected
+2025-10-29 21:58:23,227 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:58:23,227 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 223 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 238 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 239 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 267 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 274 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 21:58:23,228 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 21:58:23,229 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-29 21:58:23,229 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 397 not in graph
+2025-10-29 21:58:23,281 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7583, Requested 1048. Please try again in 4.7325s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:23,283 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:58:23,286 - root - INFO - _monitor_cycle:112 - Cycle 27: 70 anomalies detected
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 307 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 334 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 353 not in graph
+2025-10-29 21:58:26,064 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 378 not in graph
+2025-10-29 21:58:26,065 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 472 not in graph
+2025-10-29 21:58:26,065 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 484 not in graph
+2025-10-29 21:58:26,065 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 500 not in graph
+2025-10-29 21:58:26,066 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 507 not in graph
+2025-10-29 21:58:26,066 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 534 not in graph
+2025-10-29 21:58:26,066 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 553 not in graph
+2025-10-29 21:58:26,120 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7205, Requested 1036. Please try again in 1.8075s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:26,120 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:58:26,123 - root - INFO - _monitor_cycle:112 - Cycle 28: 49 anomalies detected
+2025-10-29 21:58:29,257 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:58:29,257 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-10-29 21:58:29,258 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 21:58:29,258 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 273 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 345 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 352 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 365 not in graph
+2025-10-29 21:58:29,259 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:58:30,339 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:58:30,340 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:58:30,340 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:58:30,340 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:58:30,342 - root - INFO - _monitor_cycle:112 - Cycle 29: 70 anomalies detected
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 234 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 246 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 280 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 285 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:58:33,654 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:58:33,655 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 360 not in graph
+2025-10-29 21:58:33,655 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 366 not in graph
+2025-10-29 21:58:33,655 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:58:33,710 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7551, Requested 1029. Please try again in 4.35s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:33,710 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:58:33,718 - root - INFO - _monitor_cycle:112 - Cycle 30: 70 anomalies detected
+2025-10-29 21:58:36,764 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 237 not in graph
+2025-10-29 21:58:36,764 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 274 not in graph
+2025-10-29 21:58:36,764 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 286 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 293 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 306 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 344 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 437 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 474 not in graph
+2025-10-29 21:58:36,765 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 486 not in graph
+2025-10-29 21:58:36,766 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 493 not in graph
+2025-10-29 21:58:36,899 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7136, Requested 1038. Please try again in 1.305s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:36,899 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:58:36,904 - root - INFO - _monitor_cycle:112 - Cycle 31: 56 anomalies detected
+2025-10-29 21:58:40,631 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 249 not in graph
+2025-10-29 21:58:40,632 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 21:58:40,633 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 291 not in graph
+2025-10-29 21:58:40,633 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 21:58:40,633 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 331 not in graph
+2025-10-29 21:58:40,634 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 366 not in graph
+2025-10-29 21:58:40,634 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 381 not in graph
+2025-10-29 21:58:40,634 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 21:58:40,634 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 449 not in graph
+2025-10-29 21:58:40,634 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 468 not in graph
+2025-10-29 21:58:40,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 491 not in graph
+2025-10-29 21:58:40,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 512 not in graph
+2025-10-29 21:58:41,895 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:58:41,897 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:58:41,897 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:58:41,898 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:58:41,898 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:58:41,915 - root - INFO - _monitor_cycle:112 - Cycle 32: 56 anomalies detected
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 238 not in graph
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 311 not in graph
+2025-10-29 21:58:44,872 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 355 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 404 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 438 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 509 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 511 not in graph
+2025-10-29 21:58:44,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 555 not in graph
+2025-10-29 21:58:44,926 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7595, Requested 1045. Please try again in 4.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:44,926 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:58:44,930 - root - INFO - _monitor_cycle:112 - Cycle 33: 49 anomalies detected
+2025-10-29 21:58:47,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 240 not in graph
+2025-10-29 21:58:47,717 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 260 not in graph
+2025-10-29 21:58:47,717 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 21:58:47,717 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 319 not in graph
+2025-10-29 21:58:47,717 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:58:47,717 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 397 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 440 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 460 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 518 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 519 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 528 not in graph
+2025-10-29 21:58:47,719 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 597 not in graph
+2025-10-29 21:58:47,720 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 640 not in graph
+2025-10-29 21:58:47,720 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 660 not in graph
+2025-10-29 21:58:47,776 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7216, Requested 1039. Please try again in 1.9125s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:47,777 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:58:47,784 - root - INFO - _monitor_cycle:112 - Cycle 34: 42 anomalies detected
+2025-10-29 21:58:50,871 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 21:58:50,871 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 219 not in graph
+2025-10-29 21:58:50,871 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 235 not in graph
+2025-10-29 21:58:50,871 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 267 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 386 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 389 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 21:58:50,873 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 404 not in graph
+2025-10-29 21:58:50,874 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 419 not in graph
+2025-10-29 21:58:52,230 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:58:52,231 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:58:52,231 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:58:52,231 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:58:52,231 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:58:52,231 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:58:52,235 - root - INFO - _monitor_cycle:112 - Cycle 35: 63 anomalies detected
+2025-10-29 21:58:54,790 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 340 not in graph
+2025-10-29 21:58:54,790 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 345 not in graph
+2025-10-29 21:58:54,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 369 not in graph
+2025-10-29 21:58:54,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 373 not in graph
+2025-10-29 21:58:54,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 540 not in graph
+2025-10-29 21:58:54,791 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 545 not in graph
+2025-10-29 21:58:54,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 569 not in graph
+2025-10-29 21:58:54,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 573 not in graph
+2025-10-29 21:58:54,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 740 not in graph
+2025-10-29 21:58:54,792 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 745 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 769 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 773 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 940 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 945 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 969 not in graph
+2025-10-29 21:58:54,793 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 973 not in graph
+2025-10-29 21:58:54,844 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7652, Requested 1049. Please try again in 5.257499999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:54,845 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 14.00% exceeds threshold
+2025-10-29 21:58:54,848 - root - INFO - _monitor_cycle:112 - Cycle 36: 28 anomalies detected
+2025-10-29 21:58:58,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 221 not in graph
+2025-10-29 21:58:58,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 232 not in graph
+2025-10-29 21:58:58,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 21:58:58,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 280 not in graph
+2025-10-29 21:58:58,149 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 282 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 327 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 357 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 421 not in graph
+2025-10-29 21:58:58,150 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 432 not in graph
+2025-10-29 21:58:58,205 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7204, Requested 1048. Please try again in 1.89s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:58:58,205 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:58:58,208 - root - INFO - _monitor_cycle:112 - Cycle 37: 63 anomalies detected
+2025-10-29 21:59:01,412 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 207 not in graph
+2025-10-29 21:59:01,413 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 212 not in graph
+2025-10-29 21:59:01,413 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:59:01,413 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 229 not in graph
+2025-10-29 21:59:01,413 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 248 not in graph
+2025-10-29 21:59:01,414 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 21:59:01,414 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 332 not in graph
+2025-10-29 21:59:01,414 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 362 not in graph
+2025-10-29 21:59:01,414 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-29 21:59:01,415 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 407 not in graph
+2025-10-29 21:59:01,415 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 412 not in graph
+2025-10-29 21:59:02,609 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:02,609 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:59:02,609 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:02,610 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:02,610 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:02,613 - root - INFO - _monitor_cycle:112 - Cycle 38: 63 anomalies detected
+2025-10-29 21:59:05,344 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 21:59:05,344 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 214 not in graph
+2025-10-29 21:59:05,344 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 236 not in graph
+2025-10-29 21:59:05,344 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 254 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 351 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 404 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 414 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 436 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 454 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 551 not in graph
+2025-10-29 21:59:05,346 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 599 not in graph
+2025-10-29 21:59:05,347 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 604 not in graph
+2025-10-29 21:59:05,347 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 614 not in graph
+2025-10-29 21:59:05,399 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7628, Requested 1046. Please try again in 5.055s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:05,399 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:59:05,403 - root - INFO - _monitor_cycle:112 - Cycle 39: 42 anomalies detected
+2025-10-29 21:59:08,120 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 271 not in graph
+2025-10-29 21:59:08,121 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 21:59:08,121 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 336 not in graph
+2025-10-29 21:59:08,121 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 342 not in graph
+2025-10-29 21:59:08,121 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 352 not in graph
+2025-10-29 21:59:08,121 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 356 not in graph
+2025-10-29 21:59:08,122 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 471 not in graph
+2025-10-29 21:59:08,122 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 487 not in graph
+2025-10-29 21:59:08,122 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 536 not in graph
+2025-10-29 21:59:08,122 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 542 not in graph
+2025-10-29 21:59:08,122 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 552 not in graph
+2025-10-29 21:59:08,123 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 556 not in graph
+2025-10-29 21:59:08,123 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 671 not in graph
+2025-10-29 21:59:08,123 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 687 not in graph
+2025-10-29 21:59:08,174 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7258, Requested 1046. Please try again in 2.28s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:08,174 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:59:08,181 - root - INFO - _monitor_cycle:112 - Cycle 40: 42 anomalies detected
+2025-10-29 21:59:10,937 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 212 not in graph
+2025-10-29 21:59:10,938 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 261 not in graph
+2025-10-29 21:59:10,938 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 322 not in graph
+2025-10-29 21:59:10,938 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 337 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 344 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 355 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 412 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 461 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 522 not in graph
+2025-10-29 21:59:10,939 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 537 not in graph
+2025-10-29 21:59:10,940 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 544 not in graph
+2025-10-29 21:59:10,940 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 555 not in graph
+2025-10-29 21:59:12,274 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:12,274 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:59:12,275 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:12,275 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:12,275 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:59:12,279 - root - INFO - _monitor_cycle:112 - Cycle 41: 49 anomalies detected
+2025-10-29 21:59:16,040 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 21:59:16,040 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 210 not in graph
+2025-10-29 21:59:16,041 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 224 not in graph
+2025-10-29 21:59:16,041 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 260 not in graph
+2025-10-29 21:59:16,041 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 285 not in graph
+2025-10-29 21:59:16,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 317 not in graph
+2025-10-29 21:59:16,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 21:59:16,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 21:59:16,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 400 not in graph
+2025-10-29 21:59:16,042 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 410 not in graph
+2025-10-29 21:59:16,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 424 not in graph
+2025-10-29 21:59:16,043 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 460 not in graph
+2025-10-29 21:59:16,101 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7490, Requested 1042. Please try again in 3.99s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:16,101 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:59:16,107 - root - INFO - _monitor_cycle:112 - Cycle 42: 56 anomalies detected
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 267 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:59:19,169 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 332 not in graph
+2025-10-29 21:59:19,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 381 not in graph
+2025-10-29 21:59:19,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 394 not in graph
+2025-10-29 21:59:19,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 430 not in graph
+2025-10-29 21:59:19,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 465 not in graph
+2025-10-29 21:59:19,222 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7074, Requested 1051. Please try again in 937.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:19,224 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:19,227 - root - INFO - _monitor_cycle:112 - Cycle 43: 63 anomalies detected
+2025-10-29 21:59:22,532 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 21:59:22,534 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 21:59:22,534 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 247 not in graph
+2025-10-29 21:59:22,534 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 326 not in graph
+2025-10-29 21:59:22,534 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 347 not in graph
+2025-10-29 21:59:22,535 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 21:59:22,535 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 384 not in graph
+2025-10-29 21:59:22,535 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 387 not in graph
+2025-10-29 21:59:22,535 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 430 not in graph
+2025-10-29 21:59:22,535 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 443 not in graph
+2025-10-29 21:59:22,536 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 447 not in graph
+2025-10-29 21:59:22,536 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 526 not in graph
+2025-10-29 21:59:25,134 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:25,135 - root - INFO - _execute_action:343 - Executing action: block_outbound
+2025-10-29 21:59:25,135 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:25,135 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:25,135 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:59:25,135 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 21:59:25,141 - root - INFO - _monitor_cycle:112 - Cycle 44: 56 anomalies detected
+2025-10-29 21:59:29,461 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 239 not in graph
+2025-10-29 21:59:29,461 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 292 not in graph
+2025-10-29 21:59:29,462 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 21:59:29,462 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 21:59:29,462 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 21:59:29,462 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 352 not in graph
+2025-10-29 21:59:29,463 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 21:59:29,463 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-29 21:59:29,463 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 21:59:29,463 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 439 not in graph
+2025-10-29 21:59:29,463 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 492 not in graph
+2025-10-29 21:59:29,521 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7416, Requested 1052. Please try again in 3.51s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:29,521 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:29,525 - root - INFO - _monitor_cycle:112 - Cycle 45: 63 anomalies detected
+2025-10-29 21:59:33,307 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 223 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 226 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 261 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 323 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:59:33,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 346 not in graph
+2025-10-29 21:59:33,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 21:59:33,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 423 not in graph
+2025-10-29 21:59:33,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 426 not in graph
+2025-10-29 21:59:35,029 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:35,030 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:35,031 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:35,031 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 21:59:35,031 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:59:35,031 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:35,039 - root - INFO - _monitor_cycle:112 - Cycle 46: 63 anomalies detected
+2025-10-29 21:59:38,294 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 202 not in graph
+2025-10-29 21:59:38,294 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 225 not in graph
+2025-10-29 21:59:38,294 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 226 not in graph
+2025-10-29 21:59:38,294 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 251 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 291 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 374 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 21:59:38,295 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 402 not in graph
+2025-10-29 21:59:38,296 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 425 not in graph
+2025-10-29 21:59:38,351 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7557, Requested 1093. Please try again in 4.875s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:38,351 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:38,356 - root - INFO - _monitor_cycle:112 - Cycle 47: 63 anomalies detected
+2025-10-29 21:59:41,192 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 21:59:41,193 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 21:59:41,193 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 301 not in graph
+2025-10-29 21:59:41,193 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 336 not in graph
+2025-10-29 21:59:41,193 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 364 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 443 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 496 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 501 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 536 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 564 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 575 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 643 not in graph
+2025-10-29 21:59:41,194 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 696 not in graph
+2025-10-29 21:59:41,315 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7165, Requested 1088. Please try again in 1.8975s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:41,316 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 21:59:41,319 - root - INFO - _monitor_cycle:112 - Cycle 48: 42 anomalies detected
+2025-10-29 21:59:43,997 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 21:59:43,997 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 218 not in graph
+2025-10-29 21:59:43,997 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 21:59:43,998 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 21:59:43,998 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 385 not in graph
+2025-10-29 21:59:43,998 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 21:59:43,998 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 418 not in graph
+2025-10-29 21:59:43,998 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 524 not in graph
+2025-10-29 21:59:43,999 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 528 not in graph
+2025-10-29 21:59:43,999 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 585 not in graph
+2025-10-29 21:59:43,999 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 603 not in graph
+2025-10-29 21:59:43,999 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 618 not in graph
+2025-10-29 21:59:44,001 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 724 not in graph
+2025-10-29 21:59:44,001 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 728 not in graph
+2025-10-29 21:59:44,001 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 785 not in graph
+2025-10-29 21:59:44,962 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:44,963 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:44,963 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 21:59:44,963 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 17.50% exceeds threshold
+2025-10-29 21:59:44,967 - root - INFO - _monitor_cycle:112 - Cycle 49: 35 anomalies detected
+2025-10-29 21:59:48,289 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 21:59:48,289 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-10-29 21:59:48,289 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:59:48,289 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 282 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 295 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 355 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 371 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 374 not in graph
+2025-10-29 21:59:48,291 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 378 not in graph
+2025-10-29 21:59:48,344 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7550, Requested 1069. Please try again in 4.6425s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:48,345 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:59:48,347 - root - INFO - _monitor_cycle:112 - Cycle 50: 70 anomalies detected
+2025-10-29 21:59:51,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 21:59:51,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 21:59:51,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 220 not in graph
+2025-10-29 21:59:51,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 226 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 259 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 347 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 21:59:51,488 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 389 not in graph
+2025-10-29 21:59:51,540 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7123, Requested 1071. Please try again in 1.455s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:51,542 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 21:59:51,546 - root - INFO - _monitor_cycle:112 - Cycle 51: 70 anomalies detected
+2025-10-29 21:59:55,168 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-10-29 21:59:55,168 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 224 not in graph
+2025-10-29 21:59:55,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 234 not in graph
+2025-10-29 21:59:55,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 282 not in graph
+2025-10-29 21:59:55,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-10-29 21:59:55,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 21:59:55,170 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 347 not in graph
+2025-10-29 21:59:55,171 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 21:59:55,171 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 368 not in graph
+2025-10-29 21:59:55,171 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 411 not in graph
+2025-10-29 21:59:55,171 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 424 not in graph
+2025-10-29 21:59:56,434 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:56,435 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:56,435 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 21:59:56,435 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 21:59:56,436 - root - INFO - _execute_action:343 - Executing action: deploy_security_patches
+2025-10-29 21:59:56,436 - root - INFO - _execute_action:343 - Executing action: enhance_monitoring
+2025-10-29 21:59:56,436 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 21:59:56,440 - root - INFO - _monitor_cycle:112 - Cycle 52: 63 anomalies detected
+2025-10-29 21:59:59,515 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 237 not in graph
+2025-10-29 21:59:59,516 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 21:59:59,516 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 21:59:59,516 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 301 not in graph
+2025-10-29 21:59:59,516 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 322 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 338 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 362 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 437 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 468 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 488 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 501 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 522 not in graph
+2025-10-29 21:59:59,517 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 538 not in graph
+2025-10-29 21:59:59,571 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7582, Requested 1051. Please try again in 4.7475s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 21:59:59,571 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 21:59:59,575 - root - INFO - _monitor_cycle:112 - Cycle 53: 49 anomalies detected
+2025-10-29 22:00:02,633 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 233 not in graph
+2025-10-29 22:00:02,635 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 249 not in graph
+2025-10-29 22:00:02,635 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-10-29 22:00:02,635 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 22:00:02,635 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 22:00:02,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-29 22:00:02,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 22:00:02,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 433 not in graph
+2025-10-29 22:00:02,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 449 not in graph
+2025-10-29 22:00:02,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 455 not in graph
+2025-10-29 22:00:02,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 487 not in graph
+2025-10-29 22:00:02,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 512 not in graph
+2025-10-29 22:00:02,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 567 not in graph
+2025-10-29 22:00:02,692 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7166, Requested 1050. Please try again in 1.62s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:02,693 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:00:02,698 - root - INFO - _monitor_cycle:112 - Cycle 54: 49 anomalies detected
+2025-10-29 22:00:05,834 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 276 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 277 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 285 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 321 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 22:00:05,835 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 374 not in graph
+2025-10-29 22:00:05,836 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 464 not in graph
+2025-10-29 22:00:05,836 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 476 not in graph
+2025-10-29 22:00:05,836 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 477 not in graph
+2025-10-29 22:00:05,836 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 485 not in graph
+2025-10-29 22:00:07,452 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:07,453 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:07,453 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:00:07,453 - root - INFO - _execute_action:343 - Executing action: deploy_security_patches
+2025-10-29 22:00:07,453 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:00:07,457 - root - INFO - _monitor_cycle:112 - Cycle 55: 56 anomalies detected
+2025-10-29 22:00:10,618 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 22:00:10,619 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 290 not in graph
+2025-10-29 22:00:10,620 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 22:00:10,620 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 22:00:10,620 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 326 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 331 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 390 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 394 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 456 not in graph
+2025-10-29 22:00:10,621 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 490 not in graph
+2025-10-29 22:00:10,678 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7570, Requested 1056. Please try again in 4.695s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:10,678 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:00:10,682 - root - INFO - _monitor_cycle:112 - Cycle 56: 63 anomalies detected
+2025-10-29 22:00:14,636 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:00:14,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 222 not in graph
+2025-10-29 22:00:14,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 225 not in graph
+2025-10-29 22:00:14,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 248 not in graph
+2025-10-29 22:00:14,637 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 22:00:14,638 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 315 not in graph
+2025-10-29 22:00:14,638 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 321 not in graph
+2025-10-29 22:00:14,639 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 349 not in graph
+2025-10-29 22:00:14,639 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 360 not in graph
+2025-10-29 22:00:14,639 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:00:14,639 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 422 not in graph
+2025-10-29 22:00:14,699 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7035, Requested 1048. Please try again in 622.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:14,699 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:00:14,703 - root - INFO - _monitor_cycle:112 - Cycle 57: 63 anomalies detected
+2025-10-29 22:00:18,323 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 225 not in graph
+2025-10-29 22:00:18,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 22:00:18,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 231 not in graph
+2025-10-29 22:00:18,325 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 233 not in graph
+2025-10-29 22:00:18,326 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 236 not in graph
+2025-10-29 22:00:18,326 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 277 not in graph
+2025-10-29 22:00:18,326 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 22:00:18,326 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 310 not in graph
+2025-10-29 22:00:18,327 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 368 not in graph
+2025-10-29 22:00:18,327 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 22:00:19,726 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:19,726 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:00:19,726 - root - INFO - _execute_action:343 - Executing action: deploy_security_patches
+2025-10-29 22:00:19,726 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:00:19,730 - root - INFO - _monitor_cycle:112 - Cycle 58: 70 anomalies detected
+2025-10-29 22:00:22,859 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-10-29 22:00:22,859 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-10-29 22:00:22,859 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-29 22:00:22,859 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 290 not in graph
+2025-10-29 22:00:22,860 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 22:00:22,861 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 310 not in graph
+2025-10-29 22:00:22,861 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 315 not in graph
+2025-10-29 22:00:22,861 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 338 not in graph
+2025-10-29 22:00:22,861 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 345 not in graph
+2025-10-29 22:00:22,861 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 22:00:22,915 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7575, Requested 1038. Please try again in 4.5975s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:22,915 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:00:22,919 - root - INFO - _monitor_cycle:112 - Cycle 59: 70 anomalies detected
+2025-10-29 22:00:26,048 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 220 not in graph
+2025-10-29 22:00:26,048 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 237 not in graph
+2025-10-29 22:00:26,048 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 260 not in graph
+2025-10-29 22:00:26,048 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 22:00:26,050 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-29 22:00:26,050 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 22:00:26,050 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 310 not in graph
+2025-10-29 22:00:26,050 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 311 not in graph
+2025-10-29 22:00:26,051 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 352 not in graph
+2025-10-29 22:00:26,051 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 362 not in graph
+2025-10-29 22:00:26,102 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7150, Requested 1038. Please try again in 1.41s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:26,102 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:00:26,107 - root - INFO - _monitor_cycle:112 - Cycle 60: 70 anomalies detected
+2025-10-29 22:00:28,899 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 210 not in graph
+2025-10-29 22:00:28,899 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 242 not in graph
+2025-10-29 22:00:28,900 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 22:00:28,900 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 22:00:28,900 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 315 not in graph
+2025-10-29 22:00:28,900 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 365 not in graph
+2025-10-29 22:00:28,900 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 398 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 410 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 442 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 458 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 504 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 515 not in graph
+2025-10-29 22:00:28,901 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 565 not in graph
+2025-10-29 22:00:30,046 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:30,046 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:00:30,047 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:00:30,047 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:00:30,051 - root - INFO - _monitor_cycle:112 - Cycle 61: 49 anomalies detected
+2025-10-29 22:00:33,005 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 210 not in graph
+2025-10-29 22:00:33,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-10-29 22:00:33,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-29 22:00:33,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 22:00:33,006 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 262 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 290 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 410 not in graph
+2025-10-29 22:00:33,007 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 411 not in graph
+2025-10-29 22:00:33,058 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7599, Requested 1036. Please try again in 4.7625s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:33,059 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:00:33,064 - root - INFO - _monitor_cycle:112 - Cycle 62: 63 anomalies detected
+2025-10-29 22:00:36,249 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:00:36,249 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 222 not in graph
+2025-10-29 22:00:36,249 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 223 not in graph
+2025-10-29 22:00:36,249 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 250 not in graph
+2025-10-29 22:00:36,249 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 22:00:36,250 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 22:00:36,250 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-10-29 22:00:36,250 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-10-29 22:00:36,250 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 332 not in graph
+2025-10-29 22:00:36,251 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 363 not in graph
+2025-10-29 22:00:36,305 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7166, Requested 1035. Please try again in 1.5075s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:36,305 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:00:36,309 - root - INFO - _monitor_cycle:112 - Cycle 63: 70 anomalies detected
+2025-10-29 22:00:39,053 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 240 not in graph
+2025-10-29 22:00:39,054 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 22:00:39,054 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 269 not in graph
+2025-10-29 22:00:39,054 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 331 not in graph
+2025-10-29 22:00:39,054 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 346 not in graph
+2025-10-29 22:00:39,054 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 347 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 440 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 468 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 469 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 531 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 546 not in graph
+2025-10-29 22:00:39,055 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 547 not in graph
+2025-10-29 22:00:40,308 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:40,309 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:00:40,309 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:00:40,309 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:00:40,309 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:00:40,312 - root - INFO - _monitor_cycle:112 - Cycle 64: 49 anomalies detected
+2025-10-29 22:00:43,435 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 213 not in graph
+2025-10-29 22:00:43,435 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 245 not in graph
+2025-10-29 22:00:43,435 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 22:00:43,436 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 296 not in graph
+2025-10-29 22:00:43,436 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 325 not in graph
+2025-10-29 22:00:43,436 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 353 not in graph
+2025-10-29 22:00:43,436 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 367 not in graph
+2025-10-29 22:00:43,436 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 378 not in graph
+2025-10-29 22:00:43,437 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 22:00:43,437 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 413 not in graph
+2025-10-29 22:00:43,437 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 445 not in graph
+2025-10-29 22:00:43,489 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7575, Requested 1046. Please try again in 4.6575s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:43,489 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:00:43,491 - root - INFO - _monitor_cycle:112 - Cycle 65: 63 anomalies detected
+2025-10-29 22:00:46,611 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 22:00:46,612 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:00:46,612 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 253 not in graph
+2025-10-29 22:00:46,612 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 22:00:46,612 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 330 not in graph
+2025-10-29 22:00:46,612 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 333 not in graph
+2025-10-29 22:00:46,613 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 366 not in graph
+2025-10-29 22:00:46,613 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 382 not in graph
+2025-10-29 22:00:46,613 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 22:00:46,613 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 400 not in graph
+2025-10-29 22:00:46,613 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:00:46,665 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7151, Requested 1031. Please try again in 1.365s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:46,666 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:00:46,669 - root - INFO - _monitor_cycle:112 - Cycle 66: 63 anomalies detected
+2025-10-29 22:00:49,485 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:00:49,485 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 221 not in graph
+2025-10-29 22:00:49,485 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 286 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 303 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 310 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 314 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:00:49,486 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 421 not in graph
+2025-10-29 22:00:49,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 486 not in graph
+2025-10-29 22:00:49,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 503 not in graph
+2025-10-29 22:00:49,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 510 not in graph
+2025-10-29 22:00:49,487 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 514 not in graph
+2025-10-29 22:00:50,873 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:00:50,874 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:00:50,874 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:00:50,875 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:00:50,875 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:00:50,875 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:00:50,878 - root - INFO - _monitor_cycle:112 - Cycle 67: 49 anomalies detected
+2025-10-29 22:00:54,072 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-10-29 22:00:54,072 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 22:00:54,072 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 264 not in graph
+2025-10-29 22:00:54,072 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 267 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 302 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 308 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 371 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 400 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 443 not in graph
+2025-10-29 22:00:54,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 464 not in graph
+2025-10-29 22:00:54,075 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 467 not in graph
+2025-10-29 22:00:54,138 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7565, Requested 1051. Please try again in 4.62s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:54,138 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:00:54,142 - root - INFO - _monitor_cycle:112 - Cycle 68: 56 anomalies detected
+2025-10-29 22:00:57,145 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:00:57,146 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 249 not in graph
+2025-10-29 22:00:57,146 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 22:00:57,146 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 22:00:57,146 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 315 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 326 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 449 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 456 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 488 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 515 not in graph
+2025-10-29 22:00:57,147 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 524 not in graph
+2025-10-29 22:00:57,201 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7157, Requested 1045. Please try again in 1.515s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:00:57,202 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:00:57,205 - root - INFO - _monitor_cycle:112 - Cycle 69: 49 anomalies detected
+2025-10-29 22:01:00,501 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 220 not in graph
+2025-10-29 22:01:00,501 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 223 not in graph
+2025-10-29 22:01:00,502 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-10-29 22:01:00,502 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 22:01:00,502 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 22:01:00,502 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 327 not in graph
+2025-10-29 22:01:00,502 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 360 not in graph
+2025-10-29 22:01:00,503 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 399 not in graph
+2025-10-29 22:01:00,503 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 420 not in graph
+2025-10-29 22:01:00,504 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 423 not in graph
+2025-10-29 22:01:00,505 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 456 not in graph
+2025-10-29 22:01:00,505 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 488 not in graph
+2025-10-29 22:01:02,198 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:02,198 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:02,198 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:02,198 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:02,199 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:01:02,199 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:02,203 - root - INFO - _monitor_cycle:112 - Cycle 70: 56 anomalies detected
+2025-10-29 22:01:05,309 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 201 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 248 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 251 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 319 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 356 not in graph
+2025-10-29 22:01:05,310 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 22:01:05,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 398 not in graph
+2025-10-29 22:01:05,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 401 not in graph
+2025-10-29 22:01:05,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 448 not in graph
+2025-10-29 22:01:05,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 451 not in graph
+2025-10-29 22:01:05,311 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 516 not in graph
+2025-10-29 22:01:05,363 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7578, Requested 1051. Please try again in 4.7175s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:05,363 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:05,367 - root - INFO - _monitor_cycle:112 - Cycle 71: 56 anomalies detected
+2025-10-29 22:01:08,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 202 not in graph
+2025-10-29 22:01:08,073 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 285 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 363 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 368 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 371 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 402 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 485 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 516 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 563 not in graph
+2025-10-29 22:01:08,074 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 568 not in graph
+2025-10-29 22:01:08,075 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 571 not in graph
+2025-10-29 22:01:08,075 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 602 not in graph
+2025-10-29 22:01:08,075 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 685 not in graph
+2025-10-29 22:01:08,128 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7210, Requested 1051. Please try again in 1.9575s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:08,128 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 22:01:08,134 - root - INFO - _monitor_cycle:112 - Cycle 72: 42 anomalies detected
+2025-10-29 22:01:11,086 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-10-29 22:01:11,086 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 276 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 279 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 281 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 361 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 362 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 384 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 441 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 476 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 479 not in graph
+2025-10-29 22:01:11,088 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 481 not in graph
+2025-10-29 22:01:12,268 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:12,269 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:12,269 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:12,269 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:12,269 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:12,273 - root - INFO - _monitor_cycle:112 - Cycle 73: 56 anomalies detected
+2025-10-29 22:01:15,521 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 22:01:15,522 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 208 not in graph
+2025-10-29 22:01:15,522 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 210 not in graph
+2025-10-29 22:01:15,522 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-29 22:01:15,522 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 22:01:15,522 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 288 not in graph
+2025-10-29 22:01:15,523 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 346 not in graph
+2025-10-29 22:01:15,523 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 22:01:15,523 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 371 not in graph
+2025-10-29 22:01:15,523 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 396 not in graph
+2025-10-29 22:01:15,576 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7560, Requested 1049. Please try again in 4.5675s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:15,577 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:01:15,582 - root - INFO - _monitor_cycle:112 - Cycle 74: 70 anomalies detected
+2025-10-29 22:01:18,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:01:18,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 217 not in graph
+2025-10-29 22:01:18,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 240 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 250 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 286 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 289 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 307 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 339 not in graph
+2025-10-29 22:01:18,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 377 not in graph
+2025-10-29 22:01:18,864 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7121, Requested 1041. Please try again in 1.215s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:18,865 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:01:18,867 - root - INFO - _monitor_cycle:112 - Cycle 75: 70 anomalies detected
+2025-10-29 22:01:21,810 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 235 not in graph
+2025-10-29 22:01:21,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-10-29 22:01:21,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 287 not in graph
+2025-10-29 22:01:21,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 312 not in graph
+2025-10-29 22:01:21,811 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 330 not in graph
+2025-10-29 22:01:21,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 335 not in graph
+2025-10-29 22:01:21,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 364 not in graph
+2025-10-29 22:01:21,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 366 not in graph
+2025-10-29 22:01:21,812 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 435 not in graph
+2025-10-29 22:01:21,813 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 455 not in graph
+2025-10-29 22:01:21,813 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 487 not in graph
+2025-10-29 22:01:21,813 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 512 not in graph
+2025-10-29 22:01:23,415 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:23,415 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:23,416 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:23,416 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:23,416 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:01:23,416 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:23,422 - root - INFO - _monitor_cycle:112 - Cycle 76: 56 anomalies detected
+2025-10-29 22:01:26,179 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 281 not in graph
+2025-10-29 22:01:26,179 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 304 not in graph
+2025-10-29 22:01:26,179 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 322 not in graph
+2025-10-29 22:01:26,180 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 327 not in graph
+2025-10-29 22:01:26,180 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 343 not in graph
+2025-10-29 22:01:26,180 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 349 not in graph
+2025-10-29 22:01:26,180 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 22:01:26,180 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 481 not in graph
+2025-10-29 22:01:26,181 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 504 not in graph
+2025-10-29 22:01:26,181 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 522 not in graph
+2025-10-29 22:01:26,181 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 527 not in graph
+2025-10-29 22:01:26,181 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 543 not in graph
+2025-10-29 22:01:26,181 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 549 not in graph
+2025-10-29 22:01:26,236 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7624, Requested 1038. Please try again in 4.965s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:26,236 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 24.50% exceeds threshold
+2025-10-29 22:01:26,240 - root - INFO - _monitor_cycle:112 - Cycle 77: 49 anomalies detected
+2025-10-29 22:01:29,081 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 214 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 263 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 307 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 324 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 338 not in graph
+2025-10-29 22:01:29,082 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 375 not in graph
+2025-10-29 22:01:29,083 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 395 not in graph
+2025-10-29 22:01:29,083 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 414 not in graph
+2025-10-29 22:01:29,083 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 430 not in graph
+2025-10-29 22:01:29,083 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 463 not in graph
+2025-10-29 22:01:29,083 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 507 not in graph
+2025-10-29 22:01:29,139 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7237, Requested 1038. Please try again in 2.0625s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:29,139 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:29,142 - root - INFO - _monitor_cycle:112 - Cycle 78: 56 anomalies detected
+2025-10-29 22:01:31,712 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 235 not in graph
+2025-10-29 22:01:31,713 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 306 not in graph
+2025-10-29 22:01:31,713 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 317 not in graph
+2025-10-29 22:01:31,713 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 22:01:31,714 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 395 not in graph
+2025-10-29 22:01:31,714 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 435 not in graph
+2025-10-29 22:01:31,714 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 506 not in graph
+2025-10-29 22:01:31,714 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 517 not in graph
+2025-10-29 22:01:31,714 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 588 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 595 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 635 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 706 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 717 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 788 not in graph
+2025-10-29 22:01:31,716 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 795 not in graph
+2025-10-29 22:01:32,784 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:32,784 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:32,785 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:32,785 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:32,785 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 17.50% exceeds threshold
+2025-10-29 22:01:32,790 - root - INFO - _monitor_cycle:112 - Cycle 79: 35 anomalies detected
+2025-10-29 22:01:35,727 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 223 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 225 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 262 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 289 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 308 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 323 not in graph
+2025-10-29 22:01:35,729 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 343 not in graph
+2025-10-29 22:01:35,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 345 not in graph
+2025-10-29 22:01:35,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 391 not in graph
+2025-10-29 22:01:35,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 423 not in graph
+2025-10-29 22:01:35,730 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 425 not in graph
+2025-10-29 22:01:35,780 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7600, Requested 1042. Please try again in 4.815s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:35,780 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:01:35,784 - root - INFO - _monitor_cycle:112 - Cycle 80: 63 anomalies detected
+2025-10-29 22:01:38,674 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 22:01:38,675 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-10-29 22:01:38,675 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 222 not in graph
+2025-10-29 22:01:38,675 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 280 not in graph
+2025-10-29 22:01:38,675 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 306 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 336 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 404 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 409 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 422 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 480 not in graph
+2025-10-29 22:01:38,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 506 not in graph
+2025-10-29 22:01:38,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 536 not in graph
+2025-10-29 22:01:38,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 604 not in graph
+2025-10-29 22:01:38,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 609 not in graph
+2025-10-29 22:01:38,732 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7207, Requested 1056. Please try again in 1.9725s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:38,732 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 22:01:38,740 - root - INFO - _monitor_cycle:112 - Cycle 81: 42 anomalies detected
+2025-10-29 22:01:41,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:01:41,676 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 269 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 290 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 326 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 342 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 362 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 371 not in graph
+2025-10-29 22:01:41,677 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:01:41,678 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 457 not in graph
+2025-10-29 22:01:41,678 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 469 not in graph
+2025-10-29 22:01:41,678 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 490 not in graph
+2025-10-29 22:01:42,735 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:42,735 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:42,735 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:42,736 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:42,736 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:42,736 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:01:42,736 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:42,741 - root - INFO - _monitor_cycle:112 - Cycle 82: 56 anomalies detected
+2025-10-29 22:01:45,386 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 230 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 332 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 347 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 354 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 363 not in graph
+2025-10-29 22:01:45,387 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 430 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 513 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 532 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 547 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 554 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 563 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 630 not in graph
+2025-10-29 22:01:45,388 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 713 not in graph
+2025-10-29 22:01:45,440 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7640, Requested 1051. Please try again in 5.182499999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:45,440 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 21.00% exceeds threshold
+2025-10-29 22:01:45,444 - root - INFO - _monitor_cycle:112 - Cycle 83: 42 anomalies detected
+2025-10-29 22:01:48,409 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-10-29 22:01:48,410 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 253 not in graph
+2025-10-29 22:01:48,410 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 271 not in graph
+2025-10-29 22:01:48,410 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 284 not in graph
+2025-10-29 22:01:48,410 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 292 not in graph
+2025-10-29 22:01:48,411 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 22:01:48,411 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 345 not in graph
+2025-10-29 22:01:48,411 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-10-29 22:01:48,411 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 22:01:48,412 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 411 not in graph
+2025-10-29 22:01:48,412 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 453 not in graph
+2025-10-29 22:01:48,467 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7236, Requested 1056. Please try again in 2.19s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:48,467 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:01:48,471 - root - INFO - _monitor_cycle:112 - Cycle 84: 63 anomalies detected
+2025-10-29 22:01:51,572 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 242 not in graph
+2025-10-29 22:01:51,573 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 243 not in graph
+2025-10-29 22:01:51,573 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 251 not in graph
+2025-10-29 22:01:51,573 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-10-29 22:01:51,574 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 22:01:51,574 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 366 not in graph
+2025-10-29 22:01:51,574 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 22:01:51,575 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 390 not in graph
+2025-10-29 22:01:51,575 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 391 not in graph
+2025-10-29 22:01:51,575 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 398 not in graph
+2025-10-29 22:01:52,687 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:01:52,687 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:01:52,687 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:01:52,687 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:01:52,687 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:01:52,691 - root - INFO - _monitor_cycle:112 - Cycle 85: 70 anomalies detected
+2025-10-29 22:01:55,600 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 246 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 259 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 274 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 372 not in graph
+2025-10-29 22:01:55,601 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 388 not in graph
+2025-10-29 22:01:55,602 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-10-29 22:01:55,602 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 405 not in graph
+2025-10-29 22:01:55,602 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 446 not in graph
+2025-10-29 22:01:55,602 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 459 not in graph
+2025-10-29 22:01:55,602 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 474 not in graph
+2025-10-29 22:01:55,653 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7604, Requested 1054. Please try again in 4.935s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:55,653 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:01:55,657 - root - INFO - _monitor_cycle:112 - Cycle 86: 56 anomalies detected
+2025-10-29 22:01:58,702 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-10-29 22:01:58,702 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 266 not in graph
+2025-10-29 22:01:58,702 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 271 not in graph
+2025-10-29 22:01:58,702 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 299 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 323 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 357 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 390 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 411 not in graph
+2025-10-29 22:01:58,703 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 466 not in graph
+2025-10-29 22:01:58,755 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7191, Requested 1061. Please try again in 1.89s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:01:58,755 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:01:58,758 - root - INFO - _monitor_cycle:112 - Cycle 87: 63 anomalies detected
+2025-10-29 22:02:01,651 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-10-29 22:02:01,652 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 232 not in graph
+2025-10-29 22:02:01,652 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 22:02:01,652 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 272 not in graph
+2025-10-29 22:02:01,652 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 316 not in graph
+2025-10-29 22:02:01,652 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 359 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 374 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 403 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 432 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 457 not in graph
+2025-10-29 22:02:01,653 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 472 not in graph
+2025-10-29 22:02:03,127 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:02:03,127 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:02:03,127 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:02:03,127 - root - INFO - _execute_action:343 - Executing action: notify_security_team
+2025-10-29 22:02:03,127 - root - INFO - _execute_action:343 - Executing action: send_alert
+2025-10-29 22:02:03,127 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:02:03,130 - root - INFO - _monitor_cycle:112 - Cycle 88: 56 anomalies detected
+2025-10-29 22:02:06,274 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 235 not in graph
+2025-10-29 22:02:06,274 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 244 not in graph
+2025-10-29 22:02:06,274 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 258 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 265 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 268 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 293 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 358 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 376 not in graph
+2025-10-29 22:02:06,275 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 383 not in graph
+2025-10-29 22:02:06,328 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7573, Requested 1035. Please try again in 4.56s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:02:06,328 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 35.00% exceeds threshold
+2025-10-29 22:02:06,332 - root - INFO - _monitor_cycle:112 - Cycle 89: 70 anomalies detected
+2025-10-29 22:02:09,365 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 204 not in graph
+2025-10-29 22:02:09,365 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 207 not in graph
+2025-10-29 22:02:09,365 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 22:02:09,365 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 289 not in graph
+2025-10-29 22:02:09,366 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 294 not in graph
+2025-10-29 22:02:09,366 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-10-29 22:02:09,366 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 302 not in graph
+2025-10-29 22:02:09,366 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-10-29 22:02:09,366 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 380 not in graph
+2025-10-29 22:02:09,367 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 404 not in graph
+2025-10-29 22:02:09,367 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 407 not in graph
+2025-10-29 22:02:09,419 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k8r030freqyv48m3xh1fep2d` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7161, Requested 1045. Please try again in 1.545s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-10-29 22:02:09,419 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 31.50% exceeds threshold
+2025-10-29 22:02:09,421 - root - INFO - _monitor_cycle:112 - Cycle 90: 63 anomalies detected
+2025-10-29 22:02:12,495 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 216 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 222 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 231 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 257 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 313 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 318 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 321 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 327 not in graph
+2025-10-29 22:02:12,496 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 416 not in graph
+2025-10-29 22:02:12,497 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 422 not in graph
+2025-10-29 22:02:12,497 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 431 not in graph
+2025-10-29 22:02:12,497 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 457 not in graph
+2025-10-29 22:02:13,543 - root - INFO - _execute_action:343 - Executing action: isolate_node
+2025-10-29 22:02:13,543 - root - INFO - _execute_action:343 - Executing action: run_vulnerability_scan
+2025-10-29 22:02:13,543 - root - INFO - _execute_action:343 - Executing action: apply_patches
+2025-10-29 22:02:13,543 - root - WARNING - _send_alert:381 - ALERT: Anomaly rate 28.00% exceeds threshold
+2025-10-29 22:02:13,547 - root - INFO - _monitor_cycle:112 - Cycle 91: 56 anomalies detected
+2025-10-29 22:02:16,337 - root - INFO - run:59 - Agent stopped by user
+2025-10-29 22:04:04,749 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-10-29 22:04:04,749 - root - INFO - __init__:47 - Agent 'GNN-Guardian' initialized
+2025-10-29 22:04:04,750 - root - INFO - run:52 - Agent started autonomous monitoring
+2025-10-29 22:04:05,528 - root - INFO - _cleanup:73 - Resources cleaned up

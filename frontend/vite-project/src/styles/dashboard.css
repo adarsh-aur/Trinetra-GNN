@@ -262,3 +262,49 @@
   background-color: #10b981; 
   color: white;
 }
+
+
+
+/* Add these styles to your Dashboard.css file */
+
+.primary-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #9333ea, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+}
+
+.primary-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.6);
+}
+
+.secondary-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-cta-button:hover {
+  background: rgba(100, 255, 218, 0.2);
+  border-color: rgba(100, 255, 218, 0.6);
+  transform: translateY(-3px);
+}

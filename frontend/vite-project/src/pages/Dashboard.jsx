@@ -1,437 +1,307 @@
-import { useEffect, useContext } from 'react';
+import React, { useState } from 'react';
+import { Activity, TrendingUp, Users, Brain, ChevronRight, Sparkles, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import AuthContext from '../context/AuthContext';
-import Chart from 'chart.js/auto';
-import * as d3 from 'd3';
-import '../styles/dashboard.css';
+import '../styles/Dashboard.css';
 
-const Dashboard = () => {
-  const { user, logout } = useContext(AuthContext);
+export default function Dashboard() {
   const navigate = useNavigate();
+  const recentActivities = [];
 
-  useEffect(() => {
-    // Initialize charts
-    initializeCharts();
-    initializeNetworkGraph();
-  }, []);
-
-  const initializeCharts = () => {
-    // Attack Types Chart
-    const attackTypesCtx = document.getElementById('attackTypesChart');
-    if (attackTypesCtx) {
-      new Chart(attackTypesCtx.getContext('2d'), {
-        type: 'doughnut',
-        data: {
-          labels: ['SQL Injection', 'Command Injection', 'Directory Traversal', 'File Upload', 'XSS', 'CSRF', 'RFI', 'Brute Force', 'Credential Stuffing', 'RCE', 'Port Scan', 'LFI'],
-          datasets: [{
-            data: [18, 15, 12, 10, 8, 7, 6, 5, 5, 4, 3, 2],
-            backgroundColor: ['#ef4444', '#f97316', '#eab308', '#84cc16', '#10b981', '#06b6d4', '#3b82f6', '#6366f1', '#8b5cf6', '#d946ef', '#ec4899', '#f43f5e'],
-            borderWidth: 0,
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'right',
-              labels: {
-                color: '#e5e7eb',
-                padding: 20,
-                usePointStyle: true,
-                pointStyle: 'circle'
-              }
-            }
-          },
-          cutout: '70%'
-        }
-      });
-    }
-
-    // Severity Over Time Chart
-    const severityCtx = document.getElementById('severityOverTimeChart');
-    if (severityCtx) {
-      new Chart(severityCtx.getContext('2d'), {
-        type: 'line',
-        data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-          datasets: [
-            {
-              label: 'Critical',
-              data: [2, 3, 1, 4, 3, 5, 2, 6, 5],
-              borderColor: '#ef4444',
-              backgroundColor: 'rgba(239, 68, 68, 0.1)',
-              tension: 0.3,
-              fill: true
-            },
-            {
-              label: 'High',
-              data: [5, 4, 6, 5, 7, 4, 6, 5, 7],
-              borderColor: '#f97316',
-              backgroundColor: 'rgba(249, 115, 22, 0.1)',
-              tension: 0.3,
-              fill: true
-            },
-            {
-              label: 'Medium',
-              data: [8, 7, 9, 8, 6, 7, 9, 8, 10],
-              borderColor: '#eab308',
-              backgroundColor: 'rgba(234, 179, 8, 0.1)',
-              tension: 0.3,
-              fill: true
-            },
-            {
-              label: 'Low',
-              data: [12, 10, 11, 13, 12, 14, 11, 13, 15],
-              borderColor: '#10b981',
-              backgroundColor: 'rgba(16, 185, 129, 0.1)',
-              tension: 0.3,
-              fill: true
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'top',
-              labels: {
-                color: '#e5e7eb',
-                usePointStyle: true,
-                pointStyle: 'circle'
-              }
-            }
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { color: '#9ca3af' }
-            },
-            y: {
-              grid: { color: 'rgba(156, 163, 175, 0.1)' },
-              ticks: { color: '#9ca3af' }
-            }
-          }
-        }
-      });
-    }
+  const handleGNNDemoClick = () => {
+    navigate('/gnn-demo');
   };
 
-  const initializeNetworkGraph = () => {
-    const container = document.getElementById('networkGraph');
-    if (!container) return;
-
-    const width = container.clientWidth;
-    const height = 384;
-
-    const nodes = [
-      { id: 1, name: "Node1", group: 1 },
-      { id: 2, name: "Node2", group: 1 },
-      { id: 3, name: "Node3", group: 1 },
-      { id: 4, name: "Node4", group: 1 },
-      { id: 5, name: "Node5", group: 1 },
-      { id: 6, name: "Node6", group: 1 },
-      { id: 7, name: "Node7", group: 1 },
-      { id: 8, name: "Node8", group: 1 },
-      { id: 9, name: "Node9", group: 1 },
-      { id: 10, name: "Node10", group: 1 },
-      { id: 11, name: "Service1", group: 2 },
-      { id: 12, name: "Service2", group: 2 },
-      { id: 13, name: "Service3", group: 2 },
-      { id: 14, name: "Service4", group: 2 },
-      { id: 15, name: "Service5", group: 2 }
-    ];
-
-    const links = [
-      { source: 1, target: 11, value: 5 },
-      { source: 1, target: 15, value: 3 },
-      { source: 2, target: 11, value: 7 },
-      { source: 2, target: 14, value: 4 },
-      { source: 3, target: 12, value: 2 },
-      { source: 4, target: 11, value: 9 },
-      { source: 4, target: 13, value: 6 },
-      { source: 5, target: 12, value: 8 },
-      { source: 5, target: 14, value: 5 },
-      { source: 7, target: 12, value: 4 },
-      { source: 8, target: 11, value: 5 },
-      { source: 9, target: 14, value: 6 },
-      { source: 10, target: 12, value: 7 }
-    ];
-
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
-
-    const simulation = d3.forceSimulation(nodes)
-      .force("link", d3.forceLink(links).id(d => d.id).distance(100))
-      .force("charge", d3.forceManyBody().strength(-200))
-      .force("center", d3.forceCenter(width / 2, height / 2));
-
-    const svg = d3.select("#networkGraph")
-      .append("svg")
-      .attr("viewBox", [0, 0, width, height]);
-
-    const link = svg.append("g")
-      .attr("stroke", "#999")
-      .attr("stroke-opacity", 0.6)
-      .selectAll("line")
-      .data(links)
-      .join("line")
-      .attr("stroke-width", d => Math.sqrt(d.value));
-
-    const node = svg.append("g")
-      .attr("stroke", "#fff")
-      .attr("stroke-width", 1.5)
-      .selectAll("circle")
-      .data(nodes)
-      .join("circle")
-      .attr("r", 8)
-      .attr("fill", d => color(d.group))
-      .call(drag(simulation));
-
-    node.append("title").text(d => d.name);
-
-    simulation.on("tick", () => {
-      link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
-
-      node
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y);
-    });
-
-    function drag(simulation) {
-      function dragstarted(event) {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-      }
-
-      function dragged(event) {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-      }
-
-      function dragended(event) {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-      }
-
-      return d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended);
-    }
+  const handleUserProfileClick = () => {
+    navigate('/user-profile');
   };
 
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
+  const handleExploreClick = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
   };
 
   return (
     <div className="dashboard-page">
-      {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-bg-elements">
-          <div className="hero-grid"></div>
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="floating-icon">
-              {['🛡️', '🔒', '🌐', '⚡', '🔍', '📊', '📡', '🚨', '💻', '🌟', '🔧', '📡'][i]}
-            </div>
-          ))}
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className={`floating-shape ${['shape-circle', 'shape-square', 'shape-triangle', 'shape-circle', 'shape-square'][i]}`}></div>
-          ))}
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className="data-stream"></div>
-          ))}
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="pulse-dot"></div>
-          ))}
-        </div>
-        
-        <div className="hero-content">
-          <h1>CloudGraph Sentinel</h1>
-          <p>A unified threat intelligence platform that transforms fragmented multi-cloud security data into actionable security narratives using Graph Neural Networks.</p>
-          
-          <div className="hero-features">
-            <div className="feature-badge">
-              <span className="feature-icon">🤖</span>
-              <span>AI-Powered Detection</span>
-            </div>
-            <div className="feature-badge">
-              <span className="feature-icon">☁️</span>
-              <span>Multi-Cloud Support</span>
-            </div>
-            <div className="feature-badge">
-              <span className="feature-icon">📈</span>
-              <span>Real-time Analytics</span>
-            </div>
+      {recentActivities.length === 0 ? (
+        /* Hero Section - Empty State */
+        <div className="hero-section">
+          {/* Background Elements */}
+          <div className="hero-bg-elements">
+            <div className="hero-grid"></div>
+            
+            {/* Floating Icons */}
+            <div className="floating-icon">🧠</div>
+            <div className="floating-icon">📊</div>
+            <div className="floating-icon">🔒</div>
+            <div className="floating-icon">⚡</div>
+            <div className="floating-icon">🎯</div>
+            <div className="floating-icon">💡</div>
+            <div className="floating-icon">🚀</div>
+            <div className="floating-icon">🔍</div>
+            <div className="floating-icon">📈</div>
+            <div className="floating-icon">🛡️</div>
+            <div className="floating-icon">⭐</div>
+            <div className="floating-icon">🎨</div>
+            
+            {/* Floating Shapes */}
+            <div className="floating-shape shape-circle"></div>
+            <div className="floating-shape shape-square"></div>
+            <div className="floating-shape shape-triangle"></div>
+            <div className="floating-shape shape-circle"></div>
+            <div className="floating-shape shape-square"></div>
+            
+            {/* Data Streams */}
+            <div className="data-stream"></div>
+            <div className="data-stream"></div>
+            <div className="data-stream"></div>
+            <div className="data-stream"></div>
+            <div className="data-stream"></div>
+            
+            {/* Pulse Dots */}
+            <div className="pulse-dot"></div>
+            <div className="pulse-dot"></div>
+            <div className="pulse-dot"></div>
+            <div className="pulse-dot"></div>
+            <div className="pulse-dot"></div>
+            <div className="pulse-dot"></div>
           </div>
-        </div>
 
-        <div className="scroll-indicator" onClick={() => document.querySelector('.dashboard-main').scrollIntoView({ behavior: 'smooth' })}>
-          <div className="scroll-arrow"></div>
-        </div>
-      </div>
+          {/* Hero Content */}
+          <div className="hero-content">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>
+              Your intelligent command center for monitoring, analyzing, and optimizing your data. 
+              Start exploring features to unlock powerful insights and visualizations.
+            </p>
 
-      {/* Dashboard Main Content */}
-      <main className="dashboard-main max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">Cyber Attack Dashboard</h1>
-            <p className="text-gray-400">Real-time visualization of security threats and attack patterns</p>
-            {user && <p className="text-sm text-gray-500 mt-1">Welcome, {user.fullName}</p>}
-          </div>
-          <div className="mt-4 md:mt-0 flex space-x-3">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
-              Refresh
-            </button>
-            <button onClick={handleLogout} className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md">
-              Logout
-            </button>
-          </div>
-        </div>
-
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm">Total Attacks</p>
-                <h3 className="text-2xl font-bold text-white mt-1">127</h3>
+            {/* Feature Badges */}
+            <div className="hero-features">
+              <div className="feature-badge">
+                <span className="feature-icon">🧠</span>
+                <span>AI-Powered Analytics</span>
               </div>
-              <div className="bg-blue-500 bg-opacity-20 p-3 rounded-full">
-                <span className="text-blue-400 text-2xl">📊</span>
+              <div className="feature-badge">
+                <span className="feature-icon">📊</span>
+                <span>Real-time Insights</span>
+              </div>
+              <div className="feature-badge">
+                <span className="feature-icon">🔒</span>
+                <span>Secure & Private</span>
               </div>
             </div>
-            <div className="mt-4 text-green-400 text-sm">
-              ↑ 12% from last period
+
+            {/* CTA Buttons */}
+            <div style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button
+                onClick={handleGNNDemoClick}
+                className="primary-cta-button"
+              >
+                <Brain size={20} />
+                <span>Try GNN Demo</span>
+                <ChevronRight size={18} />
+              </button>
+              
+              <button 
+                onClick={handleUserProfileClick}
+                className="secondary-cta-button"
+              >
+                <User size={20} />
+                <span>View Profile</span>
+              </button>
+
+              <button 
+                onClick={handleExploreClick}
+                className="secondary-cta-button"
+              >
+                <Sparkles size={20} />
+                <span>Explore Features</span>
+              </button>
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm">Critical Severity</p>
-                <h3 className="text-2xl font-bold text-white mt-1">23</h3>
-              </div>
-              <div className="bg-red-500 bg-opacity-20 p-3 rounded-full">
-                <span className="text-red-400 text-2xl">🚨</span>
-              </div>
-            </div>
-            <div className="mt-4 text-red-400 text-sm">
-              ↑ 18% from last period
-            </div>
+          {/* Scroll Indicator */}
+          <div className="scroll-indicator" onClick={handleExploreClick}>
+            <div className="scroll-arrow"></div>
           </div>
+        </div>
+      ) : (
+        /* Active Dashboard Content */
+        <div className="dashboard-main" style={{ minHeight: '100vh', padding: '2rem' }}>
+          <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+            {/* Header */}
+            <div style={{ marginBottom: '2rem' }}>
+              <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#64ffda', marginBottom: '0.5rem' }}>
+                Dashboard
+              </h1>
+              <p style={{ color: '#94a3b8' }}>Welcome back! Here's your overview</p>
+            </div>
 
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm">Attack Types</p>
-                <h3 className="text-2xl font-bold text-white mt-1">12</h3>
+            {/* Stats Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+              {/* Stat Card 1 */}
+              <div className="glow-card" style={{ 
+                background: 'rgba(30, 41, 59, 0.8)', 
+                border: '1px solid rgba(100, 255, 218, 0.2)',
+                borderRadius: '16px',
+                padding: '1.5rem'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                  <div style={{ 
+                    padding: '12px', 
+                    background: 'rgba(168, 85, 247, 0.2)',
+                    borderRadius: '8px',
+                    display: 'inline-flex'
+                  }}>
+                    <TrendingUp color="#c084fc" size={24} />
+                  </div>
+                  <span style={{ color: '#10b981', fontSize: '0.875rem', fontWeight: '500' }}>+12.5%</span>
+                </div>
+                <h3 style={{ color: '#94a3b8', fontSize: '0.875rem', marginBottom: '0.25rem' }}>Total Growth</h3>
+                <p style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#e2e8f0' }}>2,847</p>
               </div>
-              <div className="bg-yellow-500 bg-opacity-20 p-3 rounded-full">
-                <span className="text-yellow-400 text-2xl">🛡️</span>
-              </div>
-            </div>
-            <div className="mt-4 text-yellow-400 text-sm">
-              5 new types detected
-            </div>
-          </div>
 
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm">Affected Nodes</p>
-                <h3 className="text-2xl font-bold text-white mt-1">10</h3>
+              {/* Stat Card 2 */}
+              <div className="glow-card" style={{ 
+                background: 'rgba(30, 41, 59, 0.8)', 
+                border: '1px solid rgba(100, 255, 218, 0.2)',
+                borderRadius: '16px',
+                padding: '1.5rem'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                  <div style={{ 
+                    padding: '12px', 
+                    background: 'rgba(236, 72, 153, 0.2)',
+                    borderRadius: '8px',
+                    display: 'inline-flex'
+                  }}>
+                    <Users color="#f9a8d4" size={24} />
+                  </div>
+                  <span style={{ color: '#10b981', fontSize: '0.875rem', fontWeight: '500' }}>+8.2%</span>
+                </div>
+                <h3 style={{ color: '#94a3b8', fontSize: '0.875rem', marginBottom: '0.25rem' }}>Active Users</h3>
+                <p style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#e2e8f0' }}>1,429</p>
               </div>
-              <div className="bg-purple-500 bg-opacity-20 p-3 rounded-full">
-                <span className="text-purple-400 text-2xl">💻</span>
+
+              {/* Stat Card 3 */}
+              <div className="glow-card" style={{ 
+                background: 'rgba(30, 41, 59, 0.8)', 
+                border: '1px solid rgba(100, 255, 218, 0.2)',
+                borderRadius: '16px',
+                padding: '1.5rem'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                  <div style={{ 
+                    padding: '12px', 
+                    background: 'rgba(59, 130, 246, 0.2)',
+                    borderRadius: '8px',
+                    display: 'inline-flex'
+                  }}>
+                    <Activity color="#60a5fa" size={24} />
+                  </div>
+                  <span style={{ color: '#10b981', fontSize: '0.875rem', fontWeight: '500' }}>+15.3%</span>
+                </div>
+                <h3 style={{ color: '#94a3b8', fontSize: '0.875rem', marginBottom: '0.25rem' }}>Total Sessions</h3>
+                <p style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#e2e8f0' }}>8,392</p>
               </div>
             </div>
-            <div className="mt-4 text-purple-400 text-sm">
-              Node4 most targeted
+
+            {/* Quick Access Cards */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+              {/* GNN Demo Card */}
+              <div 
+                onClick={handleGNNDemoClick}
+                className="glow-card"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2))',
+                  border: '1px solid rgba(100, 255, 218, 0.3)',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  cursor: 'pointer'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <div style={{ 
+                      padding: '1rem', 
+                      background: 'rgba(100, 255, 218, 0.1)',
+                      borderRadius: '12px',
+                      display: 'inline-flex'
+                    }}>
+                      <Brain color="#64ffda" size={32} />
+                    </div>
+                    <div>
+                      <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#e2e8f0', marginBottom: '0.25rem' }}>
+                        GNN Demo
+                      </h3>
+                      <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>Explore neural networks</p>
+                    </div>
+                  </div>
+                  <ChevronRight color="#64ffda" size={24} />
+                </div>
+              </div>
+
+              {/* User Profile Card */}
+              <div 
+                onClick={handleUserProfileClick}
+                className="glow-card"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(16, 185, 129, 0.2))',
+                  border: '1px solid rgba(100, 255, 218, 0.3)',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  cursor: 'pointer'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <div style={{ 
+                      padding: '1rem', 
+                      background: 'rgba(100, 255, 218, 0.1)',
+                      borderRadius: '12px',
+                      display: 'inline-flex'
+                    }}>
+                      <User color="#64ffda" size={32} />
+                    </div>
+                    <div>
+                      <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#e2e8f0', marginBottom: '0.25rem' }}>
+                        User Profile
+                      </h3>
+                      <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>Manage your account</p>
+                    </div>
+                  </div>
+                  <ChevronRight color="#64ffda" size={24} />
+                </div>
+              </div>
+            </div>
+
+            {/* Recent Activity Card */}
+            <div className="glow-card" style={{
+              background: 'rgba(30, 41, 59, 0.8)',
+              border: '1px solid rgba(100, 255, 218, 0.2)',
+              borderRadius: '16px',
+              padding: '1.5rem'
+            }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#e2e8f0', marginBottom: '1rem' }}>
+                Recent Activity
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {recentActivities.map((activity, idx) => (
+                  <div key={idx} style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    padding: '0.75rem',
+                    background: 'rgba(100, 255, 218, 0.05)',
+                    borderRadius: '8px'
+                  }}>
+                    <div className="pulse-dot" style={{ position: 'relative', width: '8px', height: '8px' }}></div>
+                    <span style={{ color: '#94a3b8' }}>{activity}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Charts */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <h2 className="text-lg font-semibold text-white mb-4">Attack Types Distribution</h2>
-            <div className="h-64">
-              <canvas id="attackTypesChart"></canvas>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 glow-card">
-            <h2 className="text-lg font-semibold text-white mb-4">Severity Over Time</h2>
-            <div className="h-64">
-              <canvas id="severityOverTimeChart"></canvas>
-            </div>
-          </div>
-        </div>
-
-        {/* Network Graph */}
-        <div className="bg-gray-800 rounded-lg p-6 glow-card mb-8">
-          <h2 className="text-lg font-semibold text-white mb-4">Attack Network Visualization</h2>
-          <div id="networkGraph" className="h-96 w-full rounded-md bg-gray-900"></div>
-        </div>
-
-        {/* Attack Events Table */}
-        <div className="bg-gray-800 rounded-lg overflow-hidden shadow">
-          <div className="px-6 py-4 border-b border-gray-700">
-            <h2 className="text-lg font-semibold text-white">Recent Attack Events</h2>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-700">
-              <thead className="bg-gray-700">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Event ID</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Timestamp</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Source IP</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Attack Type</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Severity</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Target</th>
-                </tr>
-              </thead>
-              <tbody className="bg-gray-800 divide-y divide-gray-700">
-                <tr className="hover:bg-gray-700">
-                  <td className="px-6 py-4 text-sm font-mono text-blue-400">EVT-688508</td>
-                  <td className="px-6 py-4 text-sm text-gray-300">2025-09-06 13:31</td>
-                  <td className="px-6 py-4 text-sm font-mono text-gray-300">63.58.36.189</td>
-                  <td className="px-6 py-4"><span className="text-sm text-red-400">Command Injection</span></td>
-                  <td className="px-6 py-4"><span className="px-2 py-1 text-xs rounded-full severity-medium">Medium</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">Node4 → Service1</td>
-                </tr>
-                <tr className="hover:bg-gray-700">
-                  <td className="px-6 py-4 text-sm font-mono text-blue-400">EVT-817870</td>
-                  <td className="px-6 py-4 text-sm text-gray-300">2025-09-02 16:51</td>
-                  <td className="px-6 py-4 text-sm font-mono text-gray-300">54.172.69.180</td>
-                  <td className="px-6 py-4"><span className="text-sm text-red-400">Command Injection</span></td>
-                  <td className="px-6 py-4"><span className="px-2 py-1 text-xs rounded-full severity-critical">Critical</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">Node5 → Service4</td>
-                </tr>
-                <tr className="hover:bg-gray-700">
-                  <td className="px-6 py-4 text-sm font-mono text-blue-400">EVT-881177</td>
-                  <td className="px-6 py-4 text-sm text-gray-300">2025-08-27 01:45</td>
-                  <td className="px-6 py-4 text-sm font-mono text-gray-300">55.234.242.146</td>
-                  <td className="px-6 py-4"><span className="text-sm text-orange-400">SQL Injection</span></td>
-                  <td className="px-6 py-4"><span className="px-2 py-1 text-xs rounded-full severity-high">High</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">Node3 → Service4</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </main>
+      )}
     </div>
   );
-};
-
-export default Dashboard;
+}

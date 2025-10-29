@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
+import { sendPasswordResetEmail } from '../services/emailService.js';
 
 // Generate JWT Token
 const generateToken = (userId) => {
@@ -313,7 +314,14 @@ export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
 
+    console.log('\n' + '='.repeat(60));
+    console.log('🔐 FORGOT PASSWORD REQUEST');
+    console.log('='.repeat(60));
+    console.log('📧 Email:', email);
+
     if (!email) {
+      console.log('❌ No email provided');
+      console.log('='.repeat(60) + '\n');
       return res.status(400).json({
         success: false,
         message: 'Please provide an email address'
@@ -323,41 +331,54 @@ export const forgotPassword = async (req, res) => {
     const user = await User.findOne({ email: email.toLowerCase() });
 
     if (!user) {
-      // Don't reveal if user exists or not (security)
+      console.log('⚠️  User not found:', email);
+      console.log('='.repeat(60) + '\n');
       return res.status(200).json({
         success: true,
         message: 'If that email exists, a reset link has been sent'
       });
     }
 
-    // Generate reset token
+    console.log('✅ User found:', user.fullName);
+
+    // Generate reset token (expires in 1 hour)
     const resetToken = jwt.sign(
       { id: user._id, email: user.email },
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
 
-    // In production, send email with reset link
-    // For now, we'll log it to console
-    const resetUrl = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
-    
-    console.log('\n' + '='.repeat(60));
-    console.log('🔐 PASSWORD RESET REQUEST');
-    console.log('='.repeat(60));
-    console.log(`📧 Email: ${user.email}`);
-    console.log(`🔗 Reset URL: ${resetUrl}`);
-    console.log(`⏰ Expires in: 1 hour`);
-    console.log('='.repeat(60) + '\n');
+    console.log('🔑 Token generated');
 
-    res.status(200).json({
-      success: true,
-      message: 'Password reset instructions sent to your email',
-      // In development, return the token (remove in production)
-      ...(process.env.NODE_ENV === 'development' && { resetToken, resetUrl })
-    });
+    // Create reset URL
+    const resetUrl = `${process.env.CLIENT_URL || 'http://localhost:5173'}/reset-password/${resetToken}`;
+    console.log('🔗 Reset URL:', resetUrl);
 
+    // Send email via SendGrid
+    try {
+      console.log('📨 Calling sendPasswordResetEmail...');
+      const result = await sendPasswordResetEmail(user.email, resetUrl, user.fullName);
+      
+      console.log('✅ Email function returned:', result);
+      console.log('='.repeat(60) + '\n');
+      
+      res.status(200).json({
+        success: true,
+        message: 'Password reset instructions sent to your email'
+      });
+    } catch (emailError) {
+      console.error('❌ Email send error:', emailError.message);
+      console.error('Full error:', emailError);
+      console.log('='.repeat(60) + '\n');
+      
+      res.status(200).json({
+        success: true,
+        message: 'If that email exists, a reset link has been sent'
+      });
+    }
   } catch (error) {
-    console.error('Forgot Password Error:', error);
+    console.error('❌ Forgot Password Error:', error);
+    console.log('='.repeat(60) + '\n');
     res.status(500).json({
       success: false,
       message: 'Server error processing request'
@@ -365,9 +386,7 @@ export const forgotPassword = async (req, res) => {
   }
 };
 
-// @desc    Reset password
-// @route   POST /api/auth/reset-password/:token
-// @access  Public
+// resetPassword function remains the same as before
 export const resetPassword = async (req, res) => {
   try {
     const { token } = req.params;

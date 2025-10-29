@@ -3,12 +3,15 @@ import { AuthProvider } from './context/AuthContext';
 import Landing from './pages/Landing';
 import Login from './pages/login';
 import Register from './pages/register';
-import ForgotPassword from './pages/ForgotPassword';      // Add this
-import ResetPassword from './pages/ResetPassword';        // Add this
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 import Dashboard from './pages/Dashboard';
 import CloudConnection from './pages/CloudConnection';
+import GNNDemo from './pages/GNNDemo';  // Add this import
+import UserProfile from './pages/UserProfile';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
+
 
 function App() {
   return (
@@ -18,8 +21,23 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />           {/* Add */}
-          <Route path="/reset-password/:token" element={<ResetPassword />} />     {/* Add */}
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+
+          {/* GNN Demo Route - can be public or protected */}
+          <Route path="/gnn-demo" element={<GNNDemo />} />
+          
+          {/* Or make it protected: */}
+          {/* <Route 
+            path="/gnn-demo" 
+            element={
+              <ProtectedRoute>
+                <GNNDemo />
+              </ProtectedRoute>
+            } 
+          /> */}
+          
           <Route 
             path="/cloud-connection" 
             element={

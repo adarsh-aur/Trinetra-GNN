@@ -1,0 +1,267 @@
+{
+  "timestamp": "2025-10-29T22:00:33.007399",
+  "iteration": 62,
+  "total_nodes": 200,
+  "total_edges": 591,
+  "anomalous_nodes": 63,
+  "anomaly_rate": 0.315,
+  "mean_score": 1.6802856922149658,
+  "max_score": 22.952579498291016,
+  "max_zscore": 9.655144691467285,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 10,
+      "anomaly_score": 15.494423866271973,
+      "z_score": 6.299084663391113,
+      "degree": 18,
+      "betweenness": 0.05161685823338893,
+      "clustering": 0.0457516339869281,
+      "neighbors": 18
+    },
+    {
+      "node_id": 11,
+      "anomaly_score": 12.509963035583496,
+      "z_score": 4.956121444702148,
+      "degree": 7,
+      "betweenness": 0.008321072037157274,
+      "clustering": 0.19047619047619047,
+      "neighbors": 7
+    },
+    {
+      "node_id": 17,
+      "anomaly_score": 22.952579498291016,
+      "z_score": 9.655144691467285,
+      "degree": 10,
+      "betweenness": 0.014854898860815686,
+      "clustering": 0.044444444444444446,
+      "neighbors": 10
+    },
+    {
+      "node_id": 58,
+      "anomaly_score": 11.100786209106445,
+      "z_score": 4.322012424468994,
+      "degree": 7,
+      "betweenness": 0.008602440805450362,
+      "clustering": 0.047619047619047616,
+      "neighbors": 7
+    },
+    {
+      "node_id": 62,
+      "anomaly_score": 11.085094451904297,
+      "z_score": 4.314951419830322,
+      "degree": 4,
+      "betweenness": 0.0024474692492238792,
+      "clustering": 0.0,
+      "neighbors": 4
+    },
+    {
+      "node_id": 90,
+      "anomaly_score": 15.892800331115723,
+      "z_score": 6.478348255157471,
+      "degree": 4,
+      "betweenness": 0.005101778016615573,
+      "clustering": 0.3333333333333333,
+      "neighbors": 4
+    },
+    {
+      "node_id": 118,
+      "anomaly_score": 18.5816707611084,
+      "z_score": 7.688299655914307,
+      "degree": 4,
+      "betweenness": 0.003320230767181079,
+      "clustering": 0.0,
+      "neighbors": 4
+    },
+    {
+      "node_id": 172,
+      "anomaly_score": 10.567296981811523,
+      "z_score": 4.0819501876831055,
+      "degree": 3,
+      "betweenness": 0.0016131866355932087,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 188,
+      "anomaly_score": 9.686798095703125,
+      "z_score": 3.6857385635375977,
+      "degree": 4,
+      "betweenness": 0.0020270014730539012,
+      "clustering": 0.0,
+      "neighbors": 4
+    },
+    {
+      "node_id": 210,
+      "anomaly_score": 15.494423866271973,
+      "z_score": 6.299084663391113,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 211,
+      "anomaly_score": 12.509963035583496,
+      "z_score": 4.956121444702148,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 217,
+      "anomaly_score": 22.952579498291016,
+      "z_score": 9.655144691467285,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 258,
+      "anomaly_score": 11.100786209106445,
+      "z_score": 4.322012424468994,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 262,
+      "anomaly_score": 11.085094451904297,
+      "z_score": 4.314951419830322,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 290,
+      "anomaly_score": 15.892800331115723,
+      "z_score": 6.478348255157471,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 318,
+      "anomaly_score": 18.5816707611084,
+      "z_score": 7.688299655914307,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 372,
+      "anomaly_score": 10.567296981811523,
+      "z_score": 4.0819501876831055,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 388,
+      "anomaly_score": 9.686798095703125,
+      "z_score": 3.6857385635375977,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 410,
+      "anomaly_score": 15.494423866271973,
+      "z_score": 6.299084663391113,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 411,
+      "anomaly_score": 12.509963035583496,
+      "z_score": 4.956121444702148,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        10,
+        7,
+        17
+      ],
+      "length": 3,
+      "source": 10,
+      "target": 17
+    },
+    {
+      "path": [
+        11,
+        1,
+        17
+      ],
+      "length": 3,
+      "source": 11,
+      "target": 17
+    },
+    {
+      "path": [
+        11,
+        10,
+        62
+      ],
+      "length": 3,
+      "source": 11,
+      "target": 62
+    },
+    {
+      "path": [
+        17,
+        2,
+        58
+      ],
+      "length": 3,
+      "source": 17,
+      "target": 58
+    },
+    {
+      "path": [
+        10,
+        7,
+        2,
+        58
+      ],
+      "length": 4,
+      "source": 10,
+      "target": 58
+    }
+  ],
+  "batch_processing_time": 0.008299112319946289,
+  "agent_response": {
+    "severity": "UNKNOWN",
+    "confidence": 0.5,
+    "reasoning": "Error: API returned status 429",
+    "threats_identified": [],
+    "recommended_actions": [],
+    "predictions": "",
+    "questions": []
+  },
+  "actions_taken": [
+    {
+      "action": "send_alert",
+      "status": "sent",
+      "timestamp": "2025-10-29T22:00:33.059546",
+      "severity": "UNKNOWN",
+      "message": "Anomaly rate 31.50% exceeds threshold"
+    }
+  ],
+  "total_anomalies_cumulative": 3605
+}
