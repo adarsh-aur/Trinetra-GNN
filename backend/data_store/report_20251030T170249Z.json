@@ -14,49 +14,7 @@
   },
   "nodes_information": [
     {
-      "id": "255.0.0.0",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
-      "id": "172.31.32.0",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
-      "id": "172.31.32.1",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
-      "id": "172.31.0.2",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
-      "id": "255.255.240.0",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
       "id": "127.0.0.1",
-      "type": "ip",
-      "risk_score": 0.0,
-      "cve": [],
-      "last_seen": null
-    },
-    {
-      "id": "172.31.42.16",
       "type": "ip",
       "risk_score": 0.0,
       "cve": [],
@@ -77,14 +35,56 @@
       "last_seen": null
     },
     {
-      "id": "cloud-init",
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "255.0.0.0",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "255.255.240.0",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.0.2",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.1",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.0",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
       "type": "process",
       "risk_score": 0.0,
       "cve": [],
       "last_seen": null
     },
     {
-      "id": "systemd-journald",
+      "id": "cloud-init",
       "type": "process",
       "risk_score": 0.0,
       "cve": [],
@@ -98,7 +98,7 @@
       "last_seen": null
     },
     {
-      "id": "systemd",
+      "id": "systemd-journald",
       "type": "process",
       "risk_score": 0.0,
       "cve": [],
@@ -107,49 +107,7 @@
   ],
   "edges_information": [
     {
-      "source": "255.0.0.0",
-      "target": "172.31.32.0",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "172.31.32.0",
-      "target": "172.31.32.1",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "172.31.32.1",
-      "target": "172.31.0.2",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "172.31.0.2",
-      "target": "255.255.240.0",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "255.255.240.0",
-      "target": "127.0.0.1",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
       "source": "127.0.0.1",
-      "target": "172.31.42.16",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "172.31.42.16",
       "target": "0.0.0.0",
       "type": "connection",
       "weight": 1.0,
@@ -164,6 +122,55 @@
     },
     {
       "source": "255.255.255.255",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.42.16",
+      "target": "255.0.0.0",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "255.0.0.0",
+      "target": "255.255.240.0",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "255.255.240.0",
+      "target": "172.31.0.2",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.0.2",
+      "target": "172.31.32.1",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.32.1",
+      "target": "172.31.32.0",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.32.0",
+      "target": "systemd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
       "target": "cloud-init",
       "type": "connection",
       "weight": 1.0,
@@ -171,13 +178,6 @@
     },
     {
       "source": "cloud-init",
-      "target": "systemd-journald",
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1
-    },
-    {
-      "source": "systemd-journald",
       "target": "config",
       "type": "connection",
       "weight": 1.0,
@@ -185,7 +185,7 @@
     },
     {
       "source": "config",
-      "target": "systemd",
+      "target": "systemd-journald",
       "type": "connection",
       "weight": 1.0,
       "count": 1
@@ -194,70 +194,70 @@
   "anomalies_detected": [],
   "anomalies_confirmed": [],
   "llm_categorization": {
-    "255.0.0.0": {
-      "category": "network",
-      "cloud_platform": "generic",
-      "reasoning": "Broadcast address, not specific to any cloud provider."
-    },
-    "172.31.32.0": {
-      "category": "network",
-      "cloud_platform": "aws",
-      "reasoning": "Default VPC CIDR block in AWS EC2 environment."
-    },
-    "172.31.32.1": {
-      "category": "network",
-      "cloud_platform": "aws",
-      "reasoning": "Private IP of an EC2 instance within AWS VPC."
-    },
-    "172.31.0.2": {
-      "category": "network",
-      "cloud_platform": "aws",
-      "reasoning": "Private IP in AWS default VPC subnet."
-    },
-    "255.255.240.0": {
-      "category": "network",
-      "cloud_platform": "generic",
-      "reasoning": "Subnet mask for /20, generic network configuration."
-    },
     "127.0.0.1": {
       "category": "network",
       "cloud_platform": "generic",
-      "reasoning": "Loopback address for local host communication."
-    },
-    "172.31.42.16": {
-      "category": "network",
-      "cloud_platform": "aws",
-      "reasoning": "Private IP of an EC2 instance in AWS VPC."
+      "reasoning": "Loopback address used for local host communication."
     },
     "0.0.0.0": {
       "category": "network",
       "cloud_platform": "generic",
-      "reasoning": "Unspecified address used for default routing."
+      "reasoning": "Unspecified address representing any IP on the host."
     },
     "255.255.255.255": {
       "category": "network",
       "cloud_platform": "generic",
-      "reasoning": "Limited broadcast address for local network."
+      "reasoning": "Broadcast address for all hosts on the local network."
+    },
+    "172.31.42.16": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP within AWS default VPC CIDR 172.31.0.0/16."
+    },
+    "255.0.0.0": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Subnet mask for a /8 network, used in routing."
+    },
+    "255.255.240.0": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Subnet mask for a /20 network, defines network boundaries."
+    },
+    "172.31.0.2": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP in AWS default VPC, typical instance address."
+    },
+    "172.31.32.1": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP in AWS default VPC, within 172.31.0.0/16."
+    },
+    "172.31.32.0": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Network address for a subnet in AWS default VPC."
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Init system process running on Amazon Linux instance."
     },
     "cloud-init": {
       "category": "compute",
       "cloud_platform": "aws",
-      "reasoning": "Instance bootstrap process on Amazon Linux EC2."
+      "reasoning": "Cloud initialization process for EC2 instance configuration."
+    },
+    "config": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Process handling configuration tasks on the instance."
     },
     "systemd-journald": {
       "category": "monitoring",
-      "cloud_platform": "generic",
-      "reasoning": "Systemd journal service for logging and metrics."
-    },
-    "config": {
-      "category": "other",
-      "cloud_platform": "generic",
-      "reasoning": "Generic configuration process, no specific cloud context."
-    },
-    "systemd": {
-      "category": "other",
-      "cloud_platform": "generic",
-      "reasoning": "System initialization and service manager."
+      "cloud_platform": "aws",
+      "reasoning": "Logging service collecting system logs on Amazon Linux."
     }
   },
   "gnn_analysis": {
@@ -280,85 +280,85 @@
     ],
     "predictions": [
       {
-        "node_id": "255.0.0.0",
-        "anomaly_probability": 0.27816444635391235,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
-        "node_id": "172.31.32.0",
-        "anomaly_probability": 0.2525148391723633,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
-        "node_id": "172.31.32.1",
-        "anomaly_probability": 0.25531110167503357,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
-        "node_id": "172.31.0.2",
-        "anomaly_probability": 0.2514995038509369,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
-        "node_id": "255.255.240.0",
-        "anomaly_probability": 0.2514995038509369,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
         "node_id": "127.0.0.1",
-        "anomaly_probability": 0.2514995038509369,
-        "predicted_label": 0,
-        "actual_label": 0
-      },
-      {
-        "node_id": "172.31.42.16",
-        "anomaly_probability": 0.2514995038509369,
+        "anomaly_probability": 0.40904492139816284,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
         "node_id": "0.0.0.0",
-        "anomaly_probability": 0.28954988718032837,
+        "anomaly_probability": 0.3785296082496643,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
         "node_id": "255.255.255.255",
-        "anomaly_probability": 0.3355224132537842,
+        "anomaly_probability": 0.3792004883289337,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
-        "node_id": "cloud-init",
-        "anomaly_probability": 0.2939150631427765,
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.39103129506111145,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
-        "node_id": "systemd-journald",
-        "anomaly_probability": 0.27868136763572693,
+        "node_id": "255.0.0.0",
+        "anomaly_probability": 0.39103129506111145,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
-        "node_id": "config",
-        "anomaly_probability": 0.2647935152053833,
+        "node_id": "255.255.240.0",
+        "anomaly_probability": 0.39103129506111145,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.0.2",
+        "anomaly_probability": 0.39103129506111145,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.1",
+        "anomaly_probability": 0.4493241012096405,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.0",
+        "anomaly_probability": 0.46090391278266907,
         "predicted_label": 0,
         "actual_label": 0
       },
       {
         "node_id": "systemd",
-        "anomaly_probability": 0.27238762378692627,
+        "anomaly_probability": 0.34514951705932617,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.32165661454200745,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "config",
+        "anomaly_probability": 0.31281059980392456,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd-journald",
+        "anomaly_probability": 0.3188830018043518,
         "predicted_label": 0,
         "actual_label": 0
       }
     ],
-    "final_loss": 0.30074432492256165
+    "final_loss": 0.4913681447505951
   },
   "embeddings_shape": [
     13,
@@ -375,47 +375,7 @@
         "description": "IP address",
         "risk_score": 0.0,
         "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "255.0.0.0"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "172.31.32.0"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "172.31.32.1"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "172.31.0.2"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "255.255.240.0"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
+        "last_seen": "2025-10-30 22:32:48 IST",
         "id": "127.0.0.1"
       },
       {
@@ -423,15 +383,7 @@
         "description": "IP address",
         "risk_score": 0.0,
         "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "172.31.42.16"
-      },
-      {
-        "cve": [],
-        "description": "IP address",
-        "risk_score": 0.0,
-        "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
+        "last_seen": "2025-10-30 22:32:48 IST",
         "id": "0.0.0.0"
       },
       {
@@ -439,40 +391,88 @@
         "description": "IP address",
         "risk_score": 0.0,
         "type": "ip",
-        "last_seen": "2025-10-27 16:55:07 IST",
+        "last_seen": "2025-10-30 22:32:48 IST",
         "id": "255.255.255.255"
       },
       {
         "cve": [],
-        "description": "Process cloud-init",
+        "description": "IP address",
         "risk_score": 0.0,
-        "type": "process",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "cloud-init"
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "172.31.42.16"
       },
       {
         "cve": [],
-        "description": "Process systemd-journald",
+        "description": "IP address",
         "risk_score": 0.0,
-        "type": "process",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "systemd-journald"
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "255.0.0.0"
       },
       {
         "cve": [],
-        "description": "Process config",
+        "description": "IP address",
         "risk_score": 0.0,
-        "type": "process",
-        "last_seen": "2025-10-27 16:55:07 IST",
-        "id": "config"
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "255.255.240.0"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "172.31.0.2"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "172.31.32.1"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "172.31.32.0"
       },
       {
         "cve": [],
         "description": "Process systemd",
         "risk_score": 0.0,
         "type": "process",
-        "last_seen": "2025-10-27 16:55:07 IST",
+        "last_seen": "2025-10-30 22:32:48 IST",
         "id": "systemd"
+      },
+      {
+        "cve": [],
+        "description": "Process cloud-init",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "cloud-init"
+      },
+      {
+        "cve": [],
+        "description": "Process config",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "config"
+      },
+      {
+        "cve": [],
+        "description": "Process systemd-journald",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-30 22:32:48 IST",
+        "id": "systemd-journald"
       }
     ],
     "links": [
@@ -480,49 +480,7 @@
         "type": "connection",
         "weight": 1.0,
         "count": 1,
-        "source": "255.0.0.0",
-        "target": "172.31.32.0"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "172.31.32.0",
-        "target": "172.31.32.1"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "172.31.32.1",
-        "target": "172.31.0.2"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "172.31.0.2",
-        "target": "255.255.240.0"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "255.255.240.0",
-        "target": "127.0.0.1"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
         "source": "127.0.0.1",
-        "target": "172.31.42.16"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "172.31.42.16",
         "target": "0.0.0.0"
       },
       {
@@ -537,6 +495,55 @@
         "weight": 1.0,
         "count": 1,
         "source": "255.255.255.255",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.42.16",
+        "target": "255.0.0.0"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "255.0.0.0",
+        "target": "255.255.240.0"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "255.255.240.0",
+        "target": "172.31.0.2"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.0.2",
+        "target": "172.31.32.1"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.32.1",
+        "target": "172.31.32.0"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.32.0",
+        "target": "systemd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
         "target": "cloud-init"
       },
       {
@@ -544,13 +551,6 @@
         "weight": 1.0,
         "count": 1,
         "source": "cloud-init",
-        "target": "systemd-journald"
-      },
-      {
-        "type": "connection",
-        "weight": 1.0,
-        "count": 1,
-        "source": "systemd-journald",
         "target": "config"
       },
       {
@@ -558,10 +558,8 @@
         "weight": 1.0,
         "count": 1,
         "source": "config",
-        "target": "systemd"
+        "target": "systemd-journald"
       }
     ]
-  },
-  "report_path": "data_store\\report_20251027T112509Z.json",
-  "d3_results_path": "data_store\\results.json"
+  }
 }

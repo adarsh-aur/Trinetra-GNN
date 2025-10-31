@@ -20,7 +20,7 @@ app.json.sort_keys = False
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 # Dynamic path configuration
-SAMPLE_LOG_PATH = os.path.join("sample_data", "syslogs.log")
+SAMPLE_LOG_PATH = os.path.join("sample_data")
 DATA_STORE_DIR = "data_store"
 RESULTS_OUTPUT_PATH = os.path.join(DATA_STORE_DIR, "results.json")
 

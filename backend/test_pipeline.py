@@ -8,6 +8,7 @@ Features:
 - Validates LLM categorization results
 - Checks D3.js output generation
 - Displays detailed metrics and analysis
+- Saves test responses in dedicated test_response folder
 
 Run this while your backend (app.py) is running.
 """
@@ -25,12 +26,25 @@ load_dotenv()
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000").rstrip("/")
 LOG_FILE_PATH = os.getenv(
     "LOG_FILE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/syslogs.log"
+    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/generated_synthetic_logs.log"
 )
 DATA_STORE_PATH = os.getenv(
     "DATA_STORE_PATH",
     "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/data_store"
 )
+
+# Test response folder
+TEST_RESPONSE_FOLDER = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "test_response"
+)
+
+def ensure_test_response_folder():
+    """Create test_response folder if it doesn't exist"""
+    if not os.path.exists(TEST_RESPONSE_FOLDER):
+        os.makedirs(TEST_RESPONSE_FOLDER)
+        print(f"📁 Created test_response folder: {TEST_RESPONSE_FOLDER}")
+    return TEST_RESPONSE_FOLDER
 
 def print_banner():
     """Print fancy banner"""
@@ -40,6 +54,7 @@ def print_banner():
     print(f"Backend URL: {BACKEND_URL}")
     print(f"Log File:    {LOG_FILE_PATH}")
     print(f"Data Store:  {DATA_STORE_PATH}")
+    print(f"Test Output: {TEST_RESPONSE_FOLDER}")
     print("="*80 + "\n")
 
 def check_backend_alive():
@@ -291,7 +306,37 @@ def verify_output_files(response_data):
     else:
         print(f"❌ D3.js file not found: {d3_path}")
 
-def print_summary(response_data):
+def save_test_response(response_data):
+    """Save test response to test_response folder"""
+    if not response_data:
+        print("⚠️  No response data to save")
+        return None
+    
+    try:
+        # Ensure folder exists
+        folder = ensure_test_response_folder()
+        
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        output_file = os.path.join(folder, f"test_response_{timestamp}.json")
+        
+        # Save full response
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(response_data, f, indent=2, ensure_ascii=False)
+        
+        file_size = os.path.getsize(output_file) / 1024
+        print(f"✅ Test response saved to: {output_file}")
+        print(f"   File size: {file_size:.2f} KB")
+        
+        return output_file
+        
+    except Exception as e:
+        print(f"❌ Error saving test response: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+def print_summary(response_data, saved_file=None):
     """Print final summary"""
     print("\n[6/6] ✨ Test Summary")
     print("="*80)
@@ -301,10 +346,15 @@ def print_summary(response_data):
         print("✅ LLM categorization is working")
         print("✅ GNN training completed successfully")
         print("✅ Output files generated")
+        
+        if saved_file:
+            print(f"✅ Test response saved to: {saved_file}")
+        
         print("\n💡 Next Steps:")
         print("   1. Open data_store/results.json in D3.js visualizer")
         print("   2. Review the comprehensive analysis report")
         print("   3. Check terminal logs for detailed processing info")
+        print(f"   4. Review saved test response in: {TEST_RESPONSE_FOLDER}")
     else:
         print("❌ Test failed - review errors above")
         print("\n💡 Common Issues:")
@@ -317,6 +367,9 @@ def print_summary(response_data):
 
 def main():
     """Main test execution"""
+    # Ensure test_response folder exists
+    ensure_test_response_folder()
+    
     print_banner()
 
     # Step 1: Check backend
@@ -348,17 +401,14 @@ def main():
     # Step 5: Verify files
     verify_output_files(response_data)
 
-    # Step 6: Summary
-    print_summary(response_data)
-
-    # Optional: Save full response
+    # Step 6: Auto-save response to test_response folder
+    saved_file = None
     if response_data:
-        save_choice = input("\n💾 Save full response to file? (y/n) [n]: ").strip().lower()
-        if save_choice == 'y':
-            output_file = f"test_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-            with open(output_file, 'w') as f:
-                json.dump(response_data, f, indent=2)
-            print(f"✅ Saved to: {output_file}")
+        print("\n💾 Saving test response...")
+        saved_file = save_test_response(response_data)
+
+    # Step 7: Summary
+    print_summary(response_data, saved_file)
 
 if __name__ == "__main__":
     try:

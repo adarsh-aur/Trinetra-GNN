@@ -1,0 +1,850 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "benign",
+    "confidence": 0.95
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 22,
+    "total_edges": 15,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.1",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.0.2",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.0",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "fe80::bc:42ff:fe58:f5e7",
+      "type": "ipv6",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "interface",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "lo",
+      "type": "interface",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "loop",
+      "type": "module",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "fuse",
+      "type": "module",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ena",
+      "type": "hardware",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "0000:00:05.0",
+      "type": "hardware",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "systemd-journald",
+      "type": "service",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "rpc",
+      "type": "service",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "zram_generator",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "input:Power Button",
+      "type": "device",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "input:Sleep Button",
+      "type": "device",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ec2-user",
+      "type": "user",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ssh_host_keys",
+      "type": "artifact",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "authorized_keys",
+      "type": "artifact",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "hostname",
+      "type": "hostname",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "ens5",
+      "target": "0000:00:05.0",
+      "type": "connected_to",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "ena",
+      "type": "uses",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ena",
+      "target": "0000:00:05.0",
+      "type": "located_at",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "systemd-journald",
+      "type": "starts",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ens5",
+      "type": "configures",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "172.31.42.16",
+      "type": "assign_ip",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "172.31.32.1",
+      "type": "set_gateway",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "172.31.0.2",
+      "type": "set_route",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "172.31.32.0",
+      "type": "set_network",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "fe80::bc:42ff:fe58:f5e7",
+      "type": "set_ipv6",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ssh_host_keys",
+      "type": "generates",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "authorized_keys",
+      "type": "writes",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ec2-user",
+      "type": "runs_as",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "input:Power Button",
+      "target": "systemd",
+      "type": "input_device_of",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "input:Sleep Button",
+      "target": "systemd",
+      "type": "input_device_of",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "172.31.42.16": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP within AWS VPC subnet"
+    },
+    "172.31.32.1": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP in AWS VPC"
+    },
+    "172.31.0.2": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP in AWS VPC"
+    },
+    "172.31.32.0": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP in AWS VPC"
+    },
+    "fe80::bc:42ff:fe58:f5e7": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Link\u2011local IPv6 derived from ENA MAC"
+    },
+    "ens5": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Primary ENA network interface on EC2 instance"
+    },
+    "lo": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Loopback interface for local communication"
+    },
+    "loop": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "Kernel loop device driver for loopback files"
+    },
+    "fuse": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "Kernel FUSE module for user\u2011space file systems"
+    },
+    "ena": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "Elastic Network Adapter hardware on EC2 instance"
+    },
+    "0000:00:05.0": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "PCI address of ENA device"
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "System init process running on EC2 instance"
+    },
+    "systemd-journald": {
+      "category": "monitoring",
+      "cloud_platform": "aws",
+      "reasoning": "Logging service collecting system logs"
+    },
+    "cloud-init": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Instance initialization process on EC2"
+    },
+    "rpc": {
+      "category": "other",
+      "cloud_platform": "aws",
+      "reasoning": "RPC transport service for system calls"
+    },
+    "zram_generator": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "ZRAM memory compression process"
+    },
+    "input:Power Button": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "Power button input device"
+    },
+    "input:Sleep Button": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "Sleep button input device"
+    },
+    "ec2-user": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "Default EC2 instance user account"
+    },
+    "ssh_host_keys": {
+      "category": "security",
+      "cloud_platform": "aws",
+      "reasoning": "SSH host key files for secure access"
+    },
+    "authorized_keys": {
+      "category": "security",
+      "cloud_platform": "aws",
+      "reasoning": "Authorized SSH public keys for ec2-user"
+    },
+    "hostname": {
+      "category": "other",
+      "cloud_platform": "aws",
+      "reasoning": "Instance hostname identifying EC2 instance"
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_artifact",
+      "type_device",
+      "type_hardware",
+      "type_hostname",
+      "type_interface",
+      "type_ip",
+      "type_ipv6",
+      "type_module",
+      "type_process",
+      "type_service",
+      "type_user"
+    ],
+    "predictions": [
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.26054996252059937,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.1",
+        "anomaly_probability": 0.26054996252059937,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.0.2",
+        "anomaly_probability": 0.26054996252059937,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.0",
+        "anomaly_probability": 0.26054996252059937,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "fe80::bc:42ff:fe58:f5e7",
+        "anomaly_probability": 0.3068104088306427,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.2865597903728485,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "lo",
+        "anomaly_probability": 0.3062439560890198,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "loop",
+        "anomaly_probability": 0.29021382331848145,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "fuse",
+        "anomaly_probability": 0.29021382331848145,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ena",
+        "anomaly_probability": 0.2729402780532837,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "0000:00:05.0",
+        "anomaly_probability": 0.2729402780532837,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.1964944750070572,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd-journald",
+        "anomaly_probability": 0.3380841016769409,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3163246214389801,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "rpc",
+        "anomaly_probability": 0.28841447830200195,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "zram_generator",
+        "anomaly_probability": 0.3415987193584442,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "input:Power Button",
+        "anomaly_probability": 0.3010496497154236,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "input:Sleep Button",
+        "anomaly_probability": 0.3010496497154236,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ec2-user",
+        "anomaly_probability": 0.34431135654449463,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh_host_keys",
+        "anomaly_probability": 0.31930047273635864,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "authorized_keys",
+        "anomaly_probability": 0.31930044293403625,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "hostname",
+        "anomaly_probability": 0.31127217411994934,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.2965961694717407
+  },
+  "embeddings_shape": [
+    22,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "description": "Instance IP address",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "description": "Default gateway",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "172.31.32.1"
+      },
+      {
+        "description": "Route IP",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "172.31.0.2"
+      },
+      {
+        "description": "Network subnet",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "172.31.32.0"
+      },
+      {
+        "description": "Link-local IPv6 address",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ipv6",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "fe80::bc:42ff:fe58:f5e7"
+      },
+      {
+        "description": "Elastic Network Adapter interface",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "interface",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "ens5"
+      },
+      {
+        "description": "Loopback interface",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "interface",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "lo"
+      },
+      {
+        "description": "Loop module",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "module",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "loop"
+      },
+      {
+        "description": "FUSE filesystem module",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "module",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "fuse"
+      },
+      {
+        "description": "Elastic Network Adapter device",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "hardware",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "ena"
+      },
+      {
+        "description": "PCI bus address for ENA",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "hardware",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "0000:00:05.0"
+      },
+      {
+        "description": "System initialization daemon",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "systemd"
+      },
+      {
+        "description": "Journal logging service",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "service",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "systemd-journald"
+      },
+      {
+        "description": "Cloud initialization service",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "cloud-init"
+      },
+      {
+        "description": "RPC transport service",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "service",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "rpc"
+      },
+      {
+        "description": "ZRAM configuration generator",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "zram_generator"
+      },
+      {
+        "description": "Power button input device",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "device",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "input:Power Button"
+      },
+      {
+        "description": "Sleep button input device",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "device",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "input:Sleep Button"
+      },
+      {
+        "description": "Default EC2 user",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "user",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "ec2-user"
+      },
+      {
+        "description": "SSH host key files",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "artifact",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "ssh_host_keys"
+      },
+      {
+        "description": "Authorized SSH keys file",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "artifact",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "authorized_keys"
+      },
+      {
+        "description": "Instance hostname",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "hostname",
+        "last_seen": "2025-10-31 11:31:01 IST",
+        "id": "hostname"
+      }
+    ],
+    "links": [
+      {
+        "type": "connected_to",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "0000:00:05.0"
+      },
+      {
+        "type": "uses",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "ena"
+      },
+      {
+        "type": "located_at",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ena",
+        "target": "0000:00:05.0"
+      },
+      {
+        "type": "starts",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "systemd-journald"
+      },
+      {
+        "type": "configures",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ens5"
+      },
+      {
+        "type": "assign_ip",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "set_gateway",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "172.31.32.1"
+      },
+      {
+        "type": "set_route",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "172.31.0.2"
+      },
+      {
+        "type": "set_network",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "172.31.32.0"
+      },
+      {
+        "type": "set_ipv6",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "fe80::bc:42ff:fe58:f5e7"
+      },
+      {
+        "type": "generates",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ssh_host_keys"
+      },
+      {
+        "type": "writes",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "authorized_keys"
+      },
+      {
+        "type": "runs_as",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ec2-user"
+      },
+      {
+        "type": "input_device_of",
+        "weight": 1.0,
+        "count": 1,
+        "source": "input:Power Button",
+        "target": "systemd"
+      },
+      {
+        "type": "input_device_of",
+        "weight": 1.0,
+        "count": 1,
+        "source": "input:Sleep Button",
+        "target": "systemd"
+      }
+    ]
+  }
+}
