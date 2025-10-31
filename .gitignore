@@ -10,3 +10,6 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
+
+# Environment variable files
+.env
