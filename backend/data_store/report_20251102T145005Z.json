@@ -1,0 +1,808 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.235889894354067,
+    "total_nodes": 20,
+    "total_edges": 19,
+    "anomalies_detected_count": 1,
+    "anomalies_confirmed_count": 1
+  },
+  "cve_analysis": {
+    "total_cves_found": 1,
+    "nodes_with_cves": 1,
+    "unique_cves": [
+      "CVE-2001-0201"
+    ],
+    "high_severity_cves": [
+      "CVE-2001-0201"
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "211.55.190.32",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.173.195",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "255.255.240.0",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.27.54.7",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.80.77.121",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.21.79.146",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.29.40.223",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.23.76.227",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.17.34.217",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.187.173.68",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "kubelet",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "mysqld",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "nginx",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "apache2",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "cron",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "containerd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "google-osconfig-agent",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "chronyd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "docker",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "postgres",
+      "type": "process",
+      "risk_score": 9.75,
+      "cve": [
+        "CVE-2001-0201"
+      ],
+      "cve_scores": {
+        "CVE-2001-0201": 7.5
+      },
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "211.55.190.32",
+      "target": "192.168.173.195",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.173.195",
+      "target": "255.255.240.0",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "255.255.240.0",
+      "target": "172.27.54.7",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.27.54.7",
+      "target": "10.80.77.121",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.80.77.121",
+      "target": "172.21.79.146",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.21.79.146",
+      "target": "172.29.40.223",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.29.40.223",
+      "target": "172.23.76.227",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.23.76.227",
+      "target": "172.17.34.217",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.17.34.217",
+      "target": "10.187.173.68",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.187.173.68",
+      "target": "kubelet",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "kubelet",
+      "target": "mysqld",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "mysqld",
+      "target": "nginx",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "nginx",
+      "target": "apache2",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "apache2",
+      "target": "cron",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cron",
+      "target": "containerd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "containerd",
+      "target": "google-osconfig-agent",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "google-osconfig-agent",
+      "target": "chronyd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "chronyd",
+      "target": "docker",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "docker",
+      "target": "postgres",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "postgres",
+      "risk_score": 9.75,
+      "type": "process",
+      "z_score": null,
+      "cve": [
+        "CVE-2001-0201"
+      ]
+    }
+  ],
+  "anomalies_confirmed": [
+    {
+      "id": "postgres",
+      "risk_score": 9.75,
+      "type": "process",
+      "reason": "LLM confirmed",
+      "cve": [
+        "CVE-2001-0201"
+      ]
+    }
+  ],
+  "llm_categorization": {},
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 0.95,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1_score": 0.6666666666666666,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip",
+      "type_process"
+    ],
+    "predictions": [
+      {
+        "node_id": "211.55.190.32",
+        "anomaly_probability": 0.32443585991859436,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.173.195",
+        "anomaly_probability": 0.27858835458755493,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "255.255.240.0",
+        "anomaly_probability": 0.29162082076072693,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.27.54.7",
+        "anomaly_probability": 0.295482337474823,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.80.77.121",
+        "anomaly_probability": 0.295482337474823,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.21.79.146",
+        "anomaly_probability": 0.295482337474823,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.29.40.223",
+        "anomaly_probability": 0.295482337474823,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.23.76.227",
+        "anomaly_probability": 0.295482337474823,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.17.34.217",
+        "anomaly_probability": 0.34880638122558594,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.187.173.68",
+        "anomaly_probability": 0.4359852969646454,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "kubelet",
+        "anomaly_probability": 0.42430824041366577,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "mysqld",
+        "anomaly_probability": 0.3366113305091858,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "nginx",
+        "anomaly_probability": 0.29559218883514404,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "apache2",
+        "anomaly_probability": 0.29559218883514404,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cron",
+        "anomaly_probability": 0.29559218883514404,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "containerd",
+        "anomaly_probability": 0.29559218883514404,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "google-osconfig-agent",
+        "anomaly_probability": 0.29559218883514404,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "chronyd",
+        "anomaly_probability": 0.40791869163513184,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "docker",
+        "anomaly_probability": 0.729706883430481,
+        "predicted_label": 1,
+        "actual_label": 0
+      },
+      {
+        "node_id": "postgres",
+        "anomaly_probability": 0.8294929265975952,
+        "predicted_label": 1,
+        "actual_label": 1
+      }
+    ],
+    "final_loss": 0.4153597354888916
+  },
+  "embeddings_shape": [
+    20,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "211.55.190.32"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "192.168.173.195"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "255.255.240.0"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "172.27.54.7"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "10.80.77.121"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "172.21.79.146"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "172.29.40.223"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "172.23.76.227"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "172.17.34.217"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "10.187.173.68"
+      },
+      {
+        "cve": [],
+        "description": "Process kubelet",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "kubelet"
+      },
+      {
+        "cve": [],
+        "description": "Process mysqld",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "mysqld"
+      },
+      {
+        "cve": [],
+        "description": "Process nginx",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "nginx"
+      },
+      {
+        "cve": [],
+        "description": "Process apache2",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "apache2"
+      },
+      {
+        "cve": [],
+        "description": "Process cron",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "cron"
+      },
+      {
+        "cve": [],
+        "description": "Process containerd",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "containerd"
+      },
+      {
+        "cve": [],
+        "description": "Process google-osconfig-agent",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "google-osconfig-agent"
+      },
+      {
+        "cve": [],
+        "description": "Process chronyd",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "chronyd"
+      },
+      {
+        "cve": [],
+        "description": "Process docker",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "docker"
+      },
+      {
+        "cve": [],
+        "description": "Process postgres",
+        "cve_details": {
+          "CVE-2001-0201": {
+            "cve_id": "CVE-2001-0201",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+            "published": "2001-03-26T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 9.75,
+        "type": "process",
+        "last_seen": "2025-11-02 20:20:03 IST",
+        "id": "postgres"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "211.55.190.32",
+        "target": "192.168.173.195"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.173.195",
+        "target": "255.255.240.0"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "255.255.240.0",
+        "target": "172.27.54.7"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.27.54.7",
+        "target": "10.80.77.121"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.80.77.121",
+        "target": "172.21.79.146"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.21.79.146",
+        "target": "172.29.40.223"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.29.40.223",
+        "target": "172.23.76.227"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.23.76.227",
+        "target": "172.17.34.217"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.17.34.217",
+        "target": "10.187.173.68"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.187.173.68",
+        "target": "kubelet"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "kubelet",
+        "target": "mysqld"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "mysqld",
+        "target": "nginx"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "nginx",
+        "target": "apache2"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "apache2",
+        "target": "cron"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cron",
+        "target": "containerd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "containerd",
+        "target": "google-osconfig-agent"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "google-osconfig-agent",
+        "target": "chronyd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "chronyd",
+        "target": "docker"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "docker",
+        "target": "postgres"
+      }
+    ]
+  }
+}

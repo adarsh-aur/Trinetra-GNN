@@ -1,0 +1,262 @@
+{
+  "timestamp": "2025-11-02T21:40:21.539482",
+  "iteration": 4,
+  "total_nodes": 100,
+  "total_edges": 291,
+  "anomalous_nodes": 12,
+  "anomaly_rate": 0.12,
+  "mean_score": 1.5919359922409058,
+  "max_score": 16.436189651489258,
+  "max_zscore": 6.370922088623047,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 21,
+      "anomaly_score": 12.559991836547852,
+      "z_score": 4.707318305969238,
+      "degree": 9,
+      "betweenness": 0.023443461164064282,
+      "clustering": 0.1111111111111111,
+      "neighbors": 9,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 69,
+      "anomaly_score": 16.436189651489258,
+      "z_score": 6.370922088623047,
+      "degree": 3,
+      "betweenness": 0.0014565985258807842,
+      "clustering": 0.0,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 92,
+      "anomaly_score": 11.444328308105469,
+      "z_score": 4.228492736816406,
+      "degree": 3,
+      "betweenness": 0.0016884247249120468,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 121,
+      "anomaly_score": 12.559991836547852,
+      "z_score": 4.707318305969238,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 169,
+      "anomaly_score": 16.436189651489258,
+      "z_score": 6.370922088623047,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 192,
+      "anomaly_score": 11.444328308105469,
+      "z_score": 4.228492736816406,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 221,
+      "anomaly_score": 12.559991836547852,
+      "z_score": 4.707318305969238,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 269,
+      "anomaly_score": 16.436189651489258,
+      "z_score": 6.370922088623047,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 292,
+      "anomaly_score": 11.444328308105469,
+      "z_score": 4.228492736816406,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 321,
+      "anomaly_score": 12.559991836547852,
+      "z_score": 4.707318305969238,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 369,
+      "anomaly_score": 16.436189651489258,
+      "z_score": 6.370922088623047,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 392,
+      "anomaly_score": 11.444328308105469,
+      "z_score": 4.228492736816406,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        21,
+        11,
+        69
+      ],
+      "length": 3,
+      "source": 21,
+      "target": 69
+    },
+    {
+      "path": [
+        21,
+        1,
+        48,
+        92
+      ],
+      "length": 4,
+      "source": 21,
+      "target": 92
+    },
+    {
+      "path": [
+        69,
+        22,
+        5,
+        40,
+        92
+      ],
+      "length": 5,
+      "source": 69,
+      "target": 92
+    }
+  ],
+  "batch_processing_time": 0.0023012161254882812,
+  "cve_intelligence": {
+    "total_cves_found": 0,
+    "critical_cves": [],
+    "high_cves": [],
+    "node_cve_mapping": {},
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": []
+  },
+  "agent_response": {
+    "severity": "MEDIUM",
+    "confidence": 0.6,
+    "reasoning": "The GNN flagged node 69 with the highest anomaly score (16.44) and a z\u2011score of 6.37, indicating a statistically significant deviation from normal graph behavior. Node 69 has a very low clustering coefficient (0.0) and only three neighbors, suggesting it is a potential bridge or isolated point that could be exploited for lateral movement. Node 21 also shows a high anomaly score (12.56) and moderate clustering (0.11), implying it may be a central hub with abnormal traffic patterns. The critical paths identified (21\u201111\u201169, 21\u20111\u201148\u201192, 69\u201122\u20115\u201140\u201192) connect these anomalous nodes to other parts of the network, forming potential attack corridors.\n\nExternal CVE intelligence returned no known CVEs for the affected nodes, which means the anomalies are likely due to misconfigurations, zero\u2011day vulnerabilities, or undocumented software issues. The absence of CVEs reduces the immediate risk level, but the high anomaly scores and the presence of critical paths still warrant a medium severity assessment. Confidence is moderate (0.6) because the lack of CVE data introduces uncertainty about the true threat vector.\n\nIn the absence of identified CVEs, the focus shifts to hardening the network: ensuring all software is up\u2011to\u2011date, tightening access controls on the anomalous nodes, and monitoring traffic along the critical paths for suspicious activity.",
+    "threats_identified": [
+      "Potential lateral movement via anomalous node 69",
+      "Unpatched high\u2011risk asset with abnormal graph metrics"
+    ],
+    "cve_analysis": "No CVEs were matched to the anomalous nodes in the current external CVE feed. This suggests that the anomalies may stem from configuration drift, undocumented software, or zero\u2011day exploits that are not yet catalogued. The high z\u2011score of node 69 indicates a significant deviation that could be exploited if a vulnerability exists, even if it is not publicly known.",
+    "recommended_actions": [
+      {
+        "action": "send_alert",
+        "priority": "HIGH",
+        "reason": "Immediate notification to security operations for manual investigation of node 69 and its critical paths.",
+        "cve_related": ""
+      },
+      {
+        "action": "manual_inspection",
+        "priority": "HIGH",
+        "reason": "Verify configuration, software versions, and access controls on nodes 21 and 69.",
+        "cve_related": ""
+      },
+      {
+        "action": "apply_latest_patches",
+        "priority": "MEDIUM",
+        "reason": "Reduce risk of unknown vulnerabilities by ensuring all software is current.",
+        "cve_related": ""
+      }
+    ],
+    "patch_priority": [],
+    "predictions": "If an undiscovered vulnerability exists on node 69, an attacker could use it to pivot to node 92 via the identified critical paths, potentially compromising downstream assets. Even without a known CVE, the anomalous topology suggests a high likelihood of exploitation if an attacker identifies a weakness.",
+    "questions": [
+      "Are there any internal or proprietary applications running on nodes 21 and 69 that could contain undisclosed vulnerabilities?",
+      "Could the high anomaly scores be due to benign configuration changes or legitimate traffic spikes?",
+      "Is there a need to perform a deeper forensic analysis of the traffic between the critical nodes?"
+    ]
+  },
+  "actions_taken": [
+    {
+      "action": "send_alert",
+      "status": "executed",
+      "timestamp": "2025-11-02T21:40:23.265642",
+      "details": "Immediate notification to security operations for manual investigation of node 69 and its critical paths."
+    },
+    {
+      "action": "manual_inspection",
+      "status": "executed",
+      "timestamp": "2025-11-02T21:40:23.265642",
+      "details": "Verify configuration, software versions, and access controls on nodes 21 and 69."
+    },
+    {
+      "action": "send_alert",
+      "status": "sent",
+      "timestamp": "2025-11-02T21:40:23.265642",
+      "severity": "MEDIUM",
+      "message": "Anomaly rate 12.00% exceeds threshold"
+    }
+  ],
+  "total_anomalies_cumulative": 68
+}

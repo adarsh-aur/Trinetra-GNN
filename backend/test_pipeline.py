@@ -26,7 +26,7 @@ load_dotenv()
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000").rstrip("/")
 LOG_FILE_PATH = os.getenv(
     "LOG_FILE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/security_logs.log"
+    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/syslogs2.log"
 )
 DATA_STORE_PATH = os.getenv(
     "DATA_STORE_PATH",
