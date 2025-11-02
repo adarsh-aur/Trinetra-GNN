@@ -21,10 +21,12 @@ class GNNAgent:
     """
 
     def __init__(self, config: Config):
+        from core.cve_analyzer import CVEAnalyzer  # Import here to avoid circular dependency
         self.config = config
         self.logger = setup_logger(config.LOG_LEVEL, config.LOG_FILE)
 
         # Core components
+        self.cve_analyzer = CVEAnalyzer(config)
         self.llm_client = GroqClient(config)
         self.token_manager = TokenManager(config)
         self.gnn_detector = GNNAnomalyDetector(config)
@@ -137,16 +139,35 @@ class GNNAgent:
             batch_results: Dict[str, Any],
             graph_data: Dict[str, Any]
     ) -> Dict[str, Any]:
-        """Analyze batch processing results"""
+        """Analyze batch processing results, now including CVE analysis."""
 
         anomalous_nodes = batch_results['anomalous_nodes']
         scores = batch_results['scores']
         z_scores = batch_results['z_scores']
 
-        # Analyze top anomalous nodes
+        # --- 1. Analyze CVEs for anomalous nodes (New Integration) ---
+        cve_intelligence = None
+        if hasattr(self, 'cve_analyzer') and self.cve_analyzer:
+            cve_intelligence = await self.cve_analyzer.analyze_anomalous_nodes(
+                anomalous_nodes,
+                # Pass a placeholder list for node_details since we generate them next
+                [] 
+            )
+            
+            # Print CVE report for console visibility
+            cve_report = self.cve_analyzer.generate_cve_report(cve_intelligence)
+            print(cve_report)
+        # -------------------------------------------------------------
+
+        # 2. Analyze top anomalous nodes and MERGE CVE data
         node_details = []
         for node_id in anomalous_nodes[:20]:
             metrics = self.graph_analyzer.analyze_node_importance(node_id)
+            
+            # 🎯 CRITICAL: Look up CVE data for the specific node_id
+            node_cve_mapping = cve_intelligence.get('node_cve_mapping', {}) if cve_intelligence else {}
+            node_cves = node_cve_mapping.get(node_id, [])
+
             node_details.append({
                 'node_id': int(node_id),
                 'anomaly_score': float(scores[node_id]),
@@ -154,17 +175,22 @@ class GNNAgent:
                 'degree': metrics['degree'],
                 'betweenness': float(metrics['betweenness']),
                 'clustering': float(metrics['clustering']),
-                'neighbors': len(metrics['neighbors'])
+                'neighbors': len(metrics['neighbors']),
+                # ADDED CVE CONTEXT for the LLM prompt and report
+                'cves': node_cves, 
+                'cve_count': len(node_cves),
+                'cve_critical_count': len([c for c in node_cves if c['severity'] == 'CRITICAL'])
             })
 
-        # Find vulnerable paths
+        # Find vulnerable paths (retains original logic)
         vulnerable_paths = self.graph_analyzer.find_vulnerable_paths(
             anomalous_nodes,
             top_k=5
         )
 
-        # Calculate statistics
+        # 3. Calculate final analysis dictionary
         analysis = {
+            # ... (All existing fields like timestamp, iteration, etc. remain the same)
             'timestamp': datetime.now().isoformat(),
             'iteration': self.iteration,
             'total_nodes': graph_data['num_nodes'],
@@ -177,11 +203,12 @@ class GNNAgent:
             'threshold': self.config.ZSCORE_THRESHOLD,
             'node_details': node_details,
             'vulnerable_paths': vulnerable_paths,
-            'batch_processing_time': batch_results['processing_time']
+            'batch_processing_time': batch_results['processing_time'],
+            # ADDED CVE INTELLIGENCE AT TOP LEVEL
+            'cve_intelligence': cve_intelligence 
         }
 
         self.total_anomalies_detected += len(anomalous_nodes)
-
         return analysis
 
     async def _agent_reasoning(self, analysis: Dict[str, Any]) -> Dict[str, Any]:
@@ -238,40 +265,74 @@ class GNNAgent:
         return "\n".join(context_parts)
 
     def _build_agent_prompt(self, analysis: Dict[str, Any], context: str) -> str:
-        """Build the agent reasoning prompt"""
+        """Enhanced prompt with CVE data for trusted, contextual reasoning (XAI Logic)."""
+        
+        cve_section = ""
+        cve_intel = analysis.get('cve_intelligence')  # Retrieve the intelligence added in _analyze_batch_results
+        
+        # Build CVE summary section only if data exists
+        if cve_intel and cve_intel.get('total_cves_found', 0) > 0:
+            critical_cves = [cve['cve_id'] for cve in cve_intel.get('critical_cves', [])]
+            high_cves = cve_intel.get('high_cves', [])
+            kev_listed = [cve['cve_id'] for cve in cve_intel.get('kev_listed', [])]
+            
+            cve_section = f"""
+    CVE INTELLIGENCE SUMMARY (External Context):
+    - Total CVEs Found: {cve_intel.get('total_cves_found', 0)}
+    - Critical/High Severity Count: {len(cve_intel.get('critical_cves', [])) + len(high_cves)}
+    - Known Exploited (CISA KEV): {len(kev_listed)} ({', '.join(kev_listed[:3]) if kev_listed else 'None'})
 
+    Top Critical CVEs: {', '.join(critical_cves[:3]) if critical_cves else 'None'}
+    """
+
+        # Prepare the core analysis data structure for the LLM
+        prompt_data = {
+            'timestamp': analysis['timestamp'],
+            'graph_metrics': {
+                'size': f"{analysis['total_nodes']} nodes, {analysis['total_edges']} edges",
+                'anomaly_rate': f"{analysis['anomaly_rate']:.2%}",
+                'max_zscore': analysis['max_zscore'],
+            },
+            # CRITICAL: Pass the entire enriched top nodes list (now containing CVEs)
+            'top_anomalies_and_vulnerabilities': analysis['node_details'][:10],
+            'critical_paths': analysis['vulnerable_paths'][:3]
+        }
+        
         prompt = f"""You are {self.config.AGENT_NAME}, an autonomous AI agent specialized in {self.config.AGENT_ROLE}.
 
-{context}
+    {context}
 
-CURRENT ANALYSIS:
-```json
-{json.dumps({
-            'timestamp': analysis['timestamp'],
-            'graph_size': f"{analysis['total_nodes']} nodes, {analysis['total_edges']} edges",
-            'anomalies': analysis['anomalous_nodes'],
-            'anomaly_rate': f"{analysis['anomaly_rate']:.2%}",
-            'max_zscore': analysis['max_zscore'],
-            'top_vulnerable_nodes': analysis['node_details'][:5],
-            'critical_paths': analysis['vulnerable_paths'][:3]
-        }, indent=2)}
-```
+    CURRENT ANALYSIS (GNN XAI OUTPUT):
+    ```json
+    {json.dumps(prompt_data, indent=2)}
+    ```
 
-As an autonomous agent, analyze this situation and respond in JSON format:
+    {cve_section}
 
-{{
-  "severity": "CRITICAL|HIGH|MEDIUM|LOW",
-  "confidence": 0.0-1.0,
-  "reasoning": "Your analysis of what's happening",
-  "threats_identified": ["threat1", "threat2"],
-  "recommended_actions": [
-    {{"action": "action_name", "priority": "HIGH|MEDIUM|LOW", "reason": "why"}}
-  ],
-  "predictions": "What might happen next",
-  "questions": ["Any uncertainties or questions"]
-}}
+    As an autonomous agent with **External CVE Intelligence**, analyze the GNN's topological findings and the integrated vulnerability data.
 
-Respond ONLY with valid JSON."""
+    **XAI Reasoning Task:**
+    1. Determine **Severity** and **Confidence** by correlating the GNN's anomaly score (XAI) with the external **CVE Risk Score**. (e.g., High Z-score + Critical CVE = CRITICAL Severity).
+    2. Generate **Reasoning** that explicitly connects the GNN's topological feature (e.g., 'degree: 0', 'clustering: 0') to the identified CVE. (e.g., "Isolated node [ID] running vulnerable software [CVE] suggests an external staging point.").
+    3. Populate the **cve_analysis** field describing how the vulnerability contributes to the threat.
+    4. Populate the **patch_priority** list with the top 3 CVE IDs that require immediate patching.
+
+    Response Format (JSON only):
+    {{
+    "severity": "CRITICAL|HIGH|MEDIUM|LOW",
+    "confidence": 0.0-1.0,
+    "reasoning": "Your analysis of the GNN metrics and CVE correlation.",
+    "threats_identified": ["Exploitation via CVE-XXXX-XXXXX", "Unpatched High-Risk Asset"],
+    "cve_analysis": "Detailed explanation of CVE impact on the anomalous nodes.",
+    "recommended_actions": [
+        {{"action": "action_name", "priority": "HIGH|MEDIUM|LOW", "reason": "why", "cve_related": "CVE-XXXX-XXXXX"}}
+    ],
+    "patch_priority": ["CVE-XXXX-XXXXX", "CVE-YYYY-YYYYY"],
+    "predictions": "What might happen next (e.g., Lateral movement via exploit).",
+    "questions": ["Any uncertainties or questions"]
+    }}
+
+    Respond ONLY with valid JSON."""
 
         return prompt
 
@@ -402,11 +463,11 @@ Respond ONLY with valid JSON."""
         self.memory.append(memory_entry)
 
     async def _generate_report(
-            self,
-            analysis: Dict[str, Any],
-            agent_response: Dict[str, Any],
-            actions: List[Dict[str, Any]]
-    ):
+        self,
+        analysis: Dict[str, Any],
+        agent_response: Dict[str, Any],
+        actions: List[Dict[str, Any]]
+):
         """Generate and display report"""
 
         report = {
@@ -421,9 +482,20 @@ Respond ONLY with valid JSON."""
 
         # Save to file
         if self.config.SAVE_REPORTS:
-            filename = f"{self.config.REPORT_DIR}/report_{self.iteration:06d}.json"
-            with open(filename, 'w') as f:
-                json.dump(report, f, indent=2)
+            try:
+                # ✅ FIX: Create directory if it doesn't exist
+                import os
+                os.makedirs(self.config.REPORT_DIR, exist_ok=True)
+                
+                filename = f"{self.config.REPORT_DIR}/report_{self.iteration:06d}.json"
+                with open(filename, 'w') as f:
+                    json.dump(report, f, indent=2)
+                
+                self.logger.info(f"Report saved to {filename}")
+            except Exception as e:
+                self.logger.error(f"Failed to save report: {e}", exc_info=True)
+        else:
+            self.logger.debug("Report saving disabled (SAVE_REPORTS=False)")
 
     def _print_report(self, report: Dict[str, Any]):
         """Print formatted report"""

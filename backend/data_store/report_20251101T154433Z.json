@@ -1,0 +1,543 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 12,
+    "total_edges": 11,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 0,
+    "nodes_with_cves": 0,
+    "unique_cves": [],
+    "high_severity_cves": []
+  },
+  "nodes_information": [
+    {
+      "id": "177.30.123.75",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "95.228.162.28",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "99.126.180.234",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "116.61.20.205",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "105.72.85.168",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "175.178.210.62",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "110.60.222.188",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "184.66.89.60",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "170.205.73.85",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "62.34.227.224",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "systemd-journald",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "177.30.123.75",
+      "target": "95.228.162.28",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "95.228.162.28",
+      "target": "99.126.180.234",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "99.126.180.234",
+      "target": "116.61.20.205",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "116.61.20.205",
+      "target": "105.72.85.168",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "105.72.85.168",
+      "target": "175.178.210.62",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "175.178.210.62",
+      "target": "110.60.222.188",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "110.60.222.188",
+      "target": "184.66.89.60",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "184.66.89.60",
+      "target": "170.205.73.85",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "170.205.73.85",
+      "target": "62.34.227.224",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "62.34.227.224",
+      "target": "systemd-journald",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd-journald",
+      "target": "systemd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "177.30.123.75": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP detected in attack logs"
+    },
+    "95.228.162.28": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP involved in port scan"
+    },
+    "99.126.180.234": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP detected in port scan"
+    },
+    "116.61.20.205": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "105.72.85.168": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP involved in SYN flood"
+    },
+    "175.178.210.62": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "110.60.222.188": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "184.66.89.60": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "170.205.73.85": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "62.34.227.224": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP not referenced in logs, generic network entity"
+    },
+    "systemd-journald": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Systemd journald process on Linux instance"
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Systemd init process on Linux instance"
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip",
+      "type_process"
+    ],
+    "predictions": [
+      {
+        "node_id": "177.30.123.75",
+        "anomaly_probability": 0.37091952562332153,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "95.228.162.28",
+        "anomaly_probability": 0.35308972001075745,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "99.126.180.234",
+        "anomaly_probability": 0.35697081685066223,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "116.61.20.205",
+        "anomaly_probability": 0.36069440841674805,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "105.72.85.168",
+        "anomaly_probability": 0.36069440841674805,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "175.178.210.62",
+        "anomaly_probability": 0.36069440841674805,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "110.60.222.188",
+        "anomaly_probability": 0.36069440841674805,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "184.66.89.60",
+        "anomaly_probability": 0.36069440841674805,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "170.205.73.85",
+        "anomaly_probability": 0.39365914463996887,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "62.34.227.224",
+        "anomaly_probability": 0.3671334385871887,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd-journald",
+        "anomaly_probability": 0.35113298892974854,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.3517317473888397,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.37444186210632324
+  },
+  "embeddings_shape": [
+    12,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "177.30.123.75"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "95.228.162.28"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "99.126.180.234"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "116.61.20.205"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "105.72.85.168"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "175.178.210.62"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "110.60.222.188"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "184.66.89.60"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "170.205.73.85"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "62.34.227.224"
+      },
+      {
+        "cve": [],
+        "description": "Process systemd-journald",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "systemd-journald"
+      },
+      {
+        "cve": [],
+        "description": "Process systemd",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 21:14:32 IST",
+        "id": "systemd"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "177.30.123.75",
+        "target": "95.228.162.28"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "95.228.162.28",
+        "target": "99.126.180.234"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "99.126.180.234",
+        "target": "116.61.20.205"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "116.61.20.205",
+        "target": "105.72.85.168"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "105.72.85.168",
+        "target": "175.178.210.62"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "175.178.210.62",
+        "target": "110.60.222.188"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "110.60.222.188",
+        "target": "184.66.89.60"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "184.66.89.60",
+        "target": "170.205.73.85"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "170.205.73.85",
+        "target": "62.34.227.224"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "62.34.227.224",
+        "target": "systemd-journald"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd-journald",
+        "target": "systemd"
+      }
+    ]
+  }
+}

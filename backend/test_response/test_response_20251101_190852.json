@@ -1,0 +1,447 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 10,
+    "total_edges": 9,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "nodes_information": [
+    {
+      "id": "192.168.1.10",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "203.0.113.45",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "192.168.1.15",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "10.0.0.5",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "198.51.100.23",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "db",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "ssh",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "web",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "s3",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    },
+    {
+      "id": "logging",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "192.168.1.10",
+      "target": "203.0.113.45",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "203.0.113.45",
+      "target": "192.168.1.15",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.1.15",
+      "target": "10.0.0.5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.0.5",
+      "target": "198.51.100.23",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "198.51.100.23",
+      "target": "db",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "db",
+      "target": "ssh",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ssh",
+      "target": "web",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "web",
+      "target": "s3",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "s3",
+      "target": "logging",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "192.168.1.10": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Internal private IP, no cloud indicator."
+    },
+    "203.0.113.45": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Reserved test IP, no cloud indicator."
+    },
+    "192.168.1.15": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Internal private IP, no cloud indicator."
+    },
+    "10.0.0.5": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Internal network IP, no cloud indicator."
+    },
+    "198.51.100.23": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP, no cloud indicator."
+    },
+    "db": {
+      "category": "database",
+      "cloud_platform": "generic",
+      "reasoning": "Database service process, no cloud indicator."
+    },
+    "ssh": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "SSH daemon process, compute instance."
+    },
+    "web": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Web server process, compute instance."
+    },
+    "s3": {
+      "category": "storage",
+      "cloud_platform": "aws",
+      "reasoning": "Amazon S3 storage service."
+    },
+    "logging": {
+      "category": "monitoring",
+      "cloud_platform": "generic",
+      "reasoning": "Logging service process, monitoring."
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip",
+      "type_process"
+    ],
+    "predictions": [
+      {
+        "node_id": "192.168.1.10",
+        "anomaly_probability": 0.34234878420829773,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "203.0.113.45",
+        "anomaly_probability": 0.3291011154651642,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.1.15",
+        "anomaly_probability": 0.3305521011352539,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.0.5",
+        "anomaly_probability": 0.354753702878952,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "198.51.100.23",
+        "anomaly_probability": 0.4097919166088104,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "db",
+        "anomaly_probability": 0.41795676946640015,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh",
+        "anomaly_probability": 0.3842543065547943,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "web",
+        "anomaly_probability": 0.37163451313972473,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3",
+        "anomaly_probability": 0.3688148558139801,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "logging",
+        "anomaly_probability": 0.374159574508667,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.4535033702850342
+  },
+  "embeddings_shape": [
+    10,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "192.168.1.10"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "203.0.113.45"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "192.168.1.15"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "10.0.0.5"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "198.51.100.23"
+      },
+      {
+        "cve": [],
+        "description": "Process db",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "db"
+      },
+      {
+        "cve": [],
+        "description": "Process ssh",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "ssh"
+      },
+      {
+        "cve": [],
+        "description": "Process web",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "web"
+      },
+      {
+        "cve": [],
+        "description": "Process s3",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "s3"
+      },
+      {
+        "cve": [],
+        "description": "Process logging",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:08:50 IST",
+        "id": "logging"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.10",
+        "target": "203.0.113.45"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "203.0.113.45",
+        "target": "192.168.1.15"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.15",
+        "target": "10.0.0.5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.5",
+        "target": "198.51.100.23"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.23",
+        "target": "db"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "db",
+        "target": "ssh"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ssh",
+        "target": "web"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "web",
+        "target": "s3"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "s3",
+        "target": "logging"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251101T133852Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

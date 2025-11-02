@@ -1,0 +1,267 @@
+{
+  "timestamp": "2025-10-31T20:15:05.434896",
+  "iteration": 112,
+  "total_nodes": 200,
+  "total_edges": 591,
+  "anomalous_nodes": 70,
+  "anomaly_rate": 0.35,
+  "mean_score": 1.7001440525054932,
+  "max_score": 17.17844009399414,
+  "max_zscore": 6.94817590713501,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 4,
+      "anomaly_score": 13.067890167236328,
+      "z_score": 5.129034519195557,
+      "degree": 34,
+      "betweenness": 0.12902464078197465,
+      "clustering": 0.05169340463458111,
+      "neighbors": 34
+    },
+    {
+      "node_id": 9,
+      "anomaly_score": 8.28036880493164,
+      "z_score": 3.0102968215942383,
+      "degree": 29,
+      "betweenness": 0.11342097097288277,
+      "clustering": 0.05172413793103448,
+      "neighbors": 29
+    },
+    {
+      "node_id": 21,
+      "anomaly_score": 15.332632064819336,
+      "z_score": 6.131305694580078,
+      "degree": 5,
+      "betweenness": 0.003935517589845212,
+      "clustering": 0.1,
+      "neighbors": 5
+    },
+    {
+      "node_id": 53,
+      "anomaly_score": 12.255428314208984,
+      "z_score": 4.769476413726807,
+      "degree": 4,
+      "betweenness": 0.0015633091132880763,
+      "clustering": 0.16666666666666666,
+      "neighbors": 4
+    },
+    {
+      "node_id": 65,
+      "anomaly_score": 11.548419952392578,
+      "z_score": 4.456586837768555,
+      "degree": 10,
+      "betweenness": 0.010171729672242082,
+      "clustering": 0.0,
+      "neighbors": 10
+    },
+    {
+      "node_id": 66,
+      "anomaly_score": 17.17844009399414,
+      "z_score": 6.94817590713501,
+      "degree": 5,
+      "betweenness": 0.0028648640269786736,
+      "clustering": 0.1,
+      "neighbors": 5
+    },
+    {
+      "node_id": 99,
+      "anomaly_score": 15.872627258300781,
+      "z_score": 6.370283126831055,
+      "degree": 3,
+      "betweenness": 0.001244050180900661,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 125,
+      "anomaly_score": 12.128667831420898,
+      "z_score": 4.713377952575684,
+      "degree": 3,
+      "betweenness": 0.0013241850373139623,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 130,
+      "anomaly_score": 16.663658142089844,
+      "z_score": 6.7203569412231445,
+      "degree": 3,
+      "betweenness": 0.0008287838473750207,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 175,
+      "anomaly_score": 13.445188522338867,
+      "z_score": 5.296009540557861,
+      "degree": 3,
+      "betweenness": 0.0009726419650282696,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 204,
+      "anomaly_score": 13.067890167236328,
+      "z_score": 5.129034519195557,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 209,
+      "anomaly_score": 8.28036880493164,
+      "z_score": 3.0102968215942383,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 221,
+      "anomaly_score": 15.332632064819336,
+      "z_score": 6.131305694580078,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 253,
+      "anomaly_score": 12.255428314208984,
+      "z_score": 4.769476413726807,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 265,
+      "anomaly_score": 11.548419952392578,
+      "z_score": 4.456586837768555,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 266,
+      "anomaly_score": 17.17844009399414,
+      "z_score": 6.94817590713501,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 299,
+      "anomaly_score": 15.872627258300781,
+      "z_score": 6.370283126831055,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 325,
+      "anomaly_score": 12.128667831420898,
+      "z_score": 4.713377952575684,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 330,
+      "anomaly_score": 16.663658142089844,
+      "z_score": 6.7203569412231445,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 375,
+      "anomaly_score": 13.445188522338867,
+      "z_score": 5.296009540557861,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        4,
+        2,
+        53
+      ],
+      "length": 3,
+      "source": 4,
+      "target": 53
+    },
+    {
+      "path": [
+        4,
+        199,
+        65
+      ],
+      "length": 3,
+      "source": 4,
+      "target": 65
+    },
+    {
+      "path": [
+        9,
+        61,
+        53
+      ],
+      "length": 3,
+      "source": 9,
+      "target": 53
+    },
+    {
+      "path": [
+        53,
+        28,
+        65
+      ],
+      "length": 3,
+      "source": 53,
+      "target": 65
+    },
+    {
+      "path": [
+        9,
+        10,
+        28,
+        65
+      ],
+      "length": 4,
+      "source": 9,
+      "target": 65
+    }
+  ],
+  "batch_processing_time": 0.0057718753814697266,
+  "agent_response": {
+    "severity": "UNKNOWN",
+    "confidence": 0.5,
+    "reasoning": "Error: API returned status 429",
+    "threats_identified": [],
+    "recommended_actions": [],
+    "predictions": "",
+    "questions": []
+  },
+  "actions_taken": [
+    {
+      "action": "send_alert",
+      "status": "sent",
+      "timestamp": "2025-10-31T20:15:05.487378",
+      "severity": "UNKNOWN",
+      "message": "Anomaly rate 35.00% exceeds threshold"
+    }
+  ],
+  "total_anomalies_cumulative": 6664
+}

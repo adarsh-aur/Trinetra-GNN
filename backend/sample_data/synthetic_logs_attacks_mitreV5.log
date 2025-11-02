@@ -1,0 +1,189 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[=3h[2J[01;01H[0m[37m[40m  Booting `Amazon Linux (6.1.150-174.273.amzn2023.x86_64) 2023'
+
+
+[    0.036775] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    2.804897] fuse: init (API version 7.38)
+[    2.809857] loop: module loaded
+Sep 23 16:34:03 kernel: [DDOS] SYN flood detected from 138.82.134.107:30523 - approx 758 packets observed, rate ~179879/s MITRE=T1498
+Sep 23 03:06:22 firewall: [PORT_SCAN] Port sweep detected from 80.224.123.102 against 129.75.83.30 ports [33,165,313,336,353,371,380,398,403,519,534,604,702,861,1032,1105,1234,1283,1326,1332,1503,1559,1567,1699,1772,1911] MITRE=T1046
+Sep 23 20:47:29 kernel: [DDOS] SYN flood detected from 125.34.53.155:49459 - approx 7158 packets observed, rate ~101071/s MITRE=T1498
+Sep 23 15:06:30 kernel: [DDOS] SYN flood detected from 105.72.85.168:12632 - approx 14635 packets observed, rate ~180072/s MITRE=T1498
+Sep 23 20:08:22 firewall: [PORT_SCAN] Port sweep detected from 99.126.180.234 against 184.187.137.74 ports [204,233,396,397,545,759,762,834,873,915,1015,1021,1138,1169,1179,1205,1266,1526,1549,1555,1748,1977] MITRE=T1046
+Sep 23 14:24:04 kernel: [DDOS] SYN flood detected from 79.231.28.47:59237 - approx 16703 packets observed, rate ~11139/s MITRE=T1498
+Sep 23 21:48:16 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 60.138.1.206 to 73.61.9.4 - 3955.5MB MITRE=T1048
+Sep 23 22:57:57 firewall: [PORT_SCAN] Port sweep detected from 96.141.132.5 against 95.228.162.28 ports [76,102,215,252,314,344,363,581,632,695,1247,1342,1349,1379,1407,1587,1659,1721,1807,1873,1994] MITRE=T1046
+Sep 23 14:54:47 kernel: [DDOS] SYN flood detected from 106.79.173.146:55236 - approx 12480 packets observed, rate ~64564/s MITRE=T1498
+Sep 23 06:03:37 kernel: [DDOS] SYN flood detected from 98.207.209.137:43685 - approx 2004 packets observed, rate ~111243/s MITRE=T1498
+Sep 23 23:00:15 firewall: [PORT_SCAN] Port sweep detected from 83.23.15.141 against 175.178.210.62 ports [25,72,205,277,637,932,979,1097,1145,1199,1336,1435,1643,1816] MITRE=T1046
+Sep 23 22:58:10 firewall: [PORT_SCAN] Port sweep detected from 62.34.227.224 against 174.215.68.64 ports [131,549,956,1114,1460,1572,1991] MITRE=T1046
+Sep 23 04:02:01 kernel: [DDOS] SYN flood detected from 57.175.233.28:62530 - approx 2556 packets observed, rate ~59684/s MITRE=T1498
+Sep 23 19:03:38 kernel: [DDOS] SYN flood detected from 153.58.226.47:21933 - approx 19186 packets observed, rate ~100131/s MITRE=T1498
+Sep 23 07:08:31 kernel: [DDOS] SYN flood detected from 51.248.174.16:19429 - approx 2952 packets observed, rate ~64613/s MITRE=T1498
+Sep 23 11:26:24 firewall: [PORT_SCAN] Port sweep detected from 104.55.82.27 against 110.60.222.188 ports [115,277,332,369,399,472,594,674,725,742,785,968,971,1414,1446,1449,1652,1698,1706,1896,1927] MITRE=T1046
+Sep 23 03:29:28 firewall: [PORT_SCAN] Port sweep detected from 115.148.100.109 against 177.30.123.75 ports [493,645,722,1222,1319,1450,1706] MITRE=T1046
+Sep 23 09:12:00 kernel: [DDOS] SYN flood detected from 72.149.32.249:10496 - approx 13155 packets observed, rate ~121955/s MITRE=T1498
+Sep 23 11:52:43 auditd: [DATA_EXFIL] Large outbound transfer: scp from 170.205.73.85 to 22.25.248.65 - 571.0MB MITRE=T1048
+Sep 23 02:51:36 firewall: [PORT_SCAN] Port sweep detected from 175.160.48.9 against 142.79.137.53 ports [5,137,172,338,453,516,531,626,757,789,814,881,936,1075,1123,1125,1258,1299,1419,1472,1479,1492,1556,1655,1673,1763,1825] MITRE=T1046
+Sep 23 01:06:31 kernel: [DDOS] SYN flood detected from 24.247.138.74:38817 - approx 2768 packets observed, rate ~50230/s MITRE=T1498
+Sep 23 14:28:28 firewall: [PORT_SCAN] Port sweep detected from 42.13.120.205 against 112.244.190.145 ports [832,853,877,1028,1283,1981] MITRE=T1046
+Sep 23 21:16:41 firewall: [PORT_SCAN] Port sweep detected from 50.26.212.223 against 36.116.55.184 ports [143,280,382,446,532,880,908,926,980,1066,1074,1131,1417,1419,1508,1660,1893,1950,1980] MITRE=T1046
+Sep 23 20:31:15 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 147.93.153.11 to 138.254.203.161 - 1911.1MB MITRE=T1048
+Sep 23 23:12:39 firewall: [PORT_SCAN] Port sweep detected from 194.54.62.14 against 116.61.20.205 ports [62,262,359,483,534,629,751,807,881,913,944,958,1118,1349,1359,1480,1494,1679,1798,1923] MITRE=T1046
+[    2.833655] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[    2.834798] systemd[1]: Started systemd-journald.service - Journal Service.
+[    3.365874] systemd-journald[829]: Received client request to flush runtime journal.
+[    3.675571] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.693699] ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.14.1g
+[    3.701876] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    3.702755] i8042: Warning: Keylock active
+[    3.707273] ena 0000:00:05.0: ENA device version: 0.10
+[    3.707743] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+[    3.728736] ACPI: button: Power Button [PWRF]
+[    3.729236] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    3.730154] ACPI: button: Sleep Button [SLPF]
+[    3.747574] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.748009] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.815399] ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+[    3.825948] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem 80400000, mac addr 02:bc:42:58:f5:e7
+[    3.903752] RPC: Registered named UNIX socket transport module.
+[    3.904298] RPC: Registered udp transport module.
+[    3.904729] RPC: Registered tcp transport module.
+[    3.905137] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Sep 23 05:33:39 kernel: [DDOS] SYN flood detected from 56.108.74.170:48365 - approx 3191 packets observed, rate ~175873/s MITRE=T1498
+Sep 23 21:18:00 firewall: [PORT_SCAN] Port sweep detected from 22.76.134.151 against 79.25.145.248 ports [7,124,222,245,293,653,804,999,1067,1102,1159,1212,1338,1442,1919] MITRE=T1046
+Sep 23 23:01:24 firewall: [PORT_SCAN] Port sweep detected from 179.3.88.208 against 86.174.179.82 ports [181,233,270,273,313,330,410,411,496,562,657,687,717,827,910,924,1258,1285,1341,1408,1550,1663,1847,1912,1916] MITRE=T1046
+Sep 23 04:01:27 firewall: [PORT_SCAN] Port sweep detected from 39.198.221.38 against 108.39.143.198 ports [216,499,513,737,741,1070,1407,1562,1798] MITRE=T1046
+Sep 23 04:13:29 firewall: [PORT_SCAN] Port sweep detected from 67.1.121.154 against 120.86.210.31 ports [45,70,190,208,304,398,424,431,707,749,1124,1177,1192,1337,1372,1383,1465,1717,1742,1745,1775,1844,1858,1877,1954,1969,1994] MITRE=T1046
+Sep 23 13:07:25 auditd: [DATA_EXFIL] Large outbound transfer: scp from 144.62.17.192 to 184.66.89.60 - 1038.6MB MITRE=T1048
+Sep 23 00:53:39 firewall: [PORT_SCAN] Port sweep detected from 71.217.45.125 against 124.176.40.186 ports [143,214,542,546,803,814,910,935,1408,1620,1678,1965] MITRE=T1046
+Sep 23 01:47:02 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 107.105.4.141 to 116.193.253.38 - 3299.8MB MITRE=T1048
+Sep 23 02:09:56 auditd: [DATA_EXFIL] Large outbound transfer: scp from 123.226.166.87 to 132.196.172.150 - 2037.8MB MITRE=T1048
+Sep 23 06:45:38 firewall: [PORT_SCAN] Port sweep detected from 83.180.67.79 against 23.128.223.123 ports [36,56,71,90,107,203,259,304,342,421,433,446,622,673,781,929,1073,1143,1240,1245,1252,1347,1356,1450,1550,1754,1912,1940,1941,1967] MITRE=T1046
+Sep 23 11:17:55 kernel: [DDOS] SYN flood detected from 71.23.143.75:4333 - approx 2941 packets observed, rate ~11111/s MITRE=T1498
+Sep 23 14:23:45 kernel: [DDOS] SYN flood detected from 188.174.216.41:58340 - approx 3092 packets observed, rate ~197084/s MITRE=T1498
+Sep 23 09:20:26 kernel: [DDOS] SYN flood detected from 86.227.88.204:26562 - approx 7279 packets observed, rate ~56070/s MITRE=T1498
+Sep 23 02:14:45 kernel: [DDOS] SYN flood detected from 37.174.170.237:40513 - approx 3997 packets observed, rate ~183106/s MITRE=T1498
+Sep 23 17:28:56 firewall: [PORT_SCAN] Port sweep detected from 107.225.234.150 against 68.66.15.55 ports [416,504,1216,1301,1529,1863] MITRE=T1046
+Sep 23 00:36:39 auditd: [DATA_EXFIL] Large outbound transfer: aws s3 cp from 147.194.103.176 to 148.170.193.95 - 205.6MB MITRE=T1048
+Sep 23 22:59:49 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 132.149.62.30 to 92.109.241.126 - 1451.4MB MITRE=T1048
+Sep 23 13:04:25 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 57.40.36.84 to 99.79.101.95 - 3254.6MB MITRE=T1048
+Sep 23 16:15:09 auditd: [DATA_EXFIL] Large outbound transfer: scp from 123.180.139.251 to 150.78.12.190 - 1611.0MB MITRE=T1048
+Sep 23 22:46:56 firewall: [PORT_SCAN] Port sweep detected from 195.75.78.188 against 47.185.217.73 ports [91,178,180,229,664,679,845,999,1076,1088,1140,1289,1307,1602] MITRE=T1046
+Sep 23 06:50:39 auditd: [DATA_EXFIL] Large outbound transfer: ftp from 75.163.32.5 to 161.21.199.9 - 3852.4MB MITRE=T1048
+Sep 23 09:45:56 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 189.86.74.67 to 124.234.15.114 - 2593.1MB MITRE=T1048
+Sep 23 15:19:58 firewall: [PORT_SCAN] Port sweep detected from 189.82.134.76 against 57.197.248.111 ports [43,241,791,1095,1131,1225,1460,1688] MITRE=T1046
+Sep 23 05:04:55 kernel: [DDOS] SYN flood detected from 168.42.196.17:31440 - approx 14403 packets observed, rate ~162027/s MITRE=T1498
+Sep 23 09:06:54 auditd: [DATA_EXFIL] Large outbound transfer: http POST from 71.23.241.132 to 19.81.236.125 - 2118.7MB MITRE=T1567
+[    3.933196] ena 0000:00:05.0 ens5: renamed from eth0
+[    4.114607] zram_generator::config[1373]: zram0: system has too much memory (904MB), limit is 800MB, ignoring.
+[    4.914329] ena 0000:00:05.0 ens5: Local page cache is disabled for less than 16 channels
+[    5.888950] cloud-init[1535]: Cloud-init v. 22.2.2 running 'init' at Tue, 23 Sep 2025 15:26:13 +0000. Up 5.86 seconds.
+[    5.963496] cloud-init[1535]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+[    5.965462] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.967402] cloud-init[1535]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[    5.969269] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.971175] cloud-init[1535]: ci-info: |  ens5  | True |        172.31.42.16        | 255.255.240.0 | global | 02:bc:42:58:f5:e7 |
+[    5.973040] cloud-init[1535]: ci-info: |  ens5  | True | fe80::bc:42ff:fe58:f5e7/64 |       .       |  link  | 02:bc:42:58:f5:e7 |
+[    5.974968] cloud-init[1535]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[    5.976824] cloud-init[1535]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+[    5.978733] cloud-init[1535]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    5.980688] cloud-init[1535]: ci-info: ++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++++
+[    5.982348] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.984038] cloud-init[1535]: ci-info: | Route | Destination |   Gateway   |     Genmask     | Interface | Flags |
+[    5.985711] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.987388] cloud-init[1535]: ci-info: |   0   |   0.0.0.0   | 172.31.32.1 |     0.0.0.0     |    ens5   |   UG  |
+[    5.989061] cloud-init[1535]: ci-info: |   1   |  172.31.0.2 | 172.31.32.1 | 255.255.255.255 |    ens5   |  UGH  |
+[    5.990844] cloud-init[1535]: ci-info: |   2   | 172.31.32.0 |   0.0.0.0   |  255.255.240.0  |    ens5   |   U   |
+[    5.992516] cloud-init[1535]: ci-info: |   3   | 172.31.32.1 |   0.0.0.0   | 255.255.255.255 |    ens5   |   UH  |
+[    5.994184] cloud-init[1535]: ci-info: +-------+-------------+-------------+-----------------+-----------+-------+
+[    5.995833] cloud-init[1535]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[    5.997213] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    5.998632] cloud-init[1535]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[    6.000027] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    6.001408] cloud-init[1535]: ci-info: |   0   |  fe80::/64  |    ::   |    ens5   |   U   |
+[    6.002856] cloud-init[1535]: ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+[    6.004261] cloud-init[1535]: ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+[    6.005664] cloud-init[1535]: ci-info: +-------+-------------+---------+-----------+-------+
+[    7.146412] cloud-init[1535]: Generating public/private ed25519 key pair.
+[    7.147838] cloud-init[1535]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+[    7.149404] cloud-init[1535]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+[    7.151685] cloud-init[1535]: The key fingerprint is:
+[    7.152638] cloud-init[1535]: SHA256:EnSXaeH+VIVC5W7BuEG/sjP/kZEzfojr5TyIKhYkFQg root@ip-172-31-42-16.ap-south-1.compute.internal
+[    7.154652] cloud-init[1535]: The key's randomart image is:
+[    7.155690] cloud-init[1535]: +--[ED25519 256]--+
+[    7.156546] cloud-init[1535]: |  E. .o.. o=o....|
+[    7.157491] cloud-init[1535]: |    .... o+..=.. |
+[    7.158356] cloud-init[1535]: |     ..  .. o.*  |
+[    7.159213] cloud-init[1535]: |    . .. .   = o.|
+[    7.160146] cloud-init[1535]: |     o. S . + += |
+[    7.161029] cloud-init[1535]: |      ..   o =..=|
+[    7.161903] cloud-init[1535]: |       .   .*.o+.|
+[    7.162772] cloud-init[1535]: |      o   . .O. o|
+[    7.163623] cloud-init[1535]: |     . ... .o +o.|
+[    7.164488] cloud-init[1535]: +----[SHA256]-----+
+[    7.165356] cloud-init[1535]: Generating public/private ecdsa key pair.
+[    7.166490] cloud-init[1535]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+[    7.168034] cloud-init[1535]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+[    7.169495] cloud-init[1535]: The key fingerprint is:
+[    7.170374] cloud-init[1535]: SHA256:G6vz7uKpeo4FiO3ulK7myODQEaKQL/e/3C3VY30vQQk root@ip-172-31-42-16.ap-south-1.compute.internal
+[    7.172355] cloud-init[1535]: The key's randomart image is:
+[    7.173362] cloud-init[1535]: +---[ECDSA 256]---+
+[    7.174236] cloud-init[1535]: |                 |
+[    7.175220] cloud-init[1535]: | .          E    |
+[    7.176094] cloud-init[1535]: |+ .          . . |
+[    7.176932] cloud-init[1535]: |+= .          o  |
+[    7.177794] cloud-init[1535]: |= *     S  . o   |
+[    7.178651] cloud-init[1535]: | = =     +. + o .|
+[    7.179528] cloud-init[1535]: |o = o   o. . . o.|
+[    7.180396] cloud-init[1535]: |*= o.oo+..    . .|
+[    7.181251] cloud-init[1535]: |=**+ooBB=..    . |
+[    7.182102] cloud-init[1535]: +----[SHA256]-----+
+[    7.719989] cloud-init[1662]: Cloud-init v. 22.2.2 running 'modules:config' at Tue, 23 Sep 2025 15:26:14 +0000. Up 7.62 seconds.
+[    8.234302] cloud-init[1673]: Cloud-init v. 22.2.2 running 'modules:final' at Tue, 23 Sep 2025 15:26:15 +0000. Up 8.18 seconds.
+ci-info: +++++++++++++++++++++++++++Authorized keys from /home/ec2-user/.ssh/authorized_keys for user ec2-user++++++++++++++++++++++++++++
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+ci-info: | Keytype |                                       Fingerprint (sha256)                                      | Options | Comment |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+ci-info: | ssh-rsa | 95:17:76:38:82:70:04:db:0c:4e:09:ae:dd:5b:fd:1e:d0:52:1a:4c:7a:d0:e8:91:ea:27:e6:de:75:77:b1:0d |    -    |  pbkey  |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+---------+
+<14>Sep 23 15:26:15 cloud-init: #############################################################
+<14>Sep 23 15:26:15 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Sep 23 15:26:15 cloud-init: 256 SHA256:G6vz7uKpeo4FiO3ulK7myODQEaKQL/e/3C3VY30vQQk root@ip-172-31-42-16.ap-south-1.compute.internal (ECDSA)
+<14>Sep 23 15:26:15 cloud-init: 256 SHA256:EnSXaeH+VIVC5W7BuEG/sjP/kZEzfojr5TyIKhYkFQg root@ip-172-31-42-16.ap-south-1.compute.internal (ED25519)
+<14>Sep 23 15:26:15 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+Sep 23 01:42:38 auditd: [DATA_EXFIL] Large outbound transfer: aws s3 cp from 123.137.226.31 to 152.74.143.132 - 881.3MB MITRE=T1048
+Sep 23 03:20:25 firewall: [PORT_SCAN] Port sweep detected from 27.182.218.137 against 63.251.6.89 ports [205,214,300,527,581,910,911,1031,1270,1360,1370,1387,1391,1451,1490,1517,1545,1633,1682,1974] MITRE=T1046
+Sep 23 18:53:20 firewall: [PORT_SCAN] Port sweep detected from 146.64.116.75 against 107.122.100.63 ports [3,36,53,145,146,502,514,593,839,1028,1047,1111,1251,1252,1753,1758,1793,1808] MITRE=T1046
+Sep 23 00:11:47 firewall: [PORT_SCAN] Port sweep detected from 64.64.137.117 against 179.9.198.106 ports [383,406,601,613,636,690,695,754,879,1031,1084,1167,1197,1226,1557,1776,1895] MITRE=T1046
+Sep 23 19:19:38 auditd: [DATA_EXFIL] Large outbound transfer: ftp from 57.192.236.51 to 61.157.95.50 - 814.0MB MITRE=T1048
+Sep 23 09:02:41 auditd: [DATA_EXFIL] Large outbound transfer: ftp from 24.83.197.182 to 183.99.192.174 - 4676.0MB MITRE=T1048
+Sep 23 13:25:43 firewall: [PORT_SCAN] Port sweep detected from 40.62.239.151 against 161.98.227.95 ports [37,203,310,386,432,454,631,636,714,731,949,1059,1127,1222,1298,1319,1394,1708,1712,1713,1790,1843,1871,1895,1995] MITRE=T1046
+Sep 23 14:18:57 kernel: [DDOS] SYN flood detected from 90.80.45.248:43166 - approx 2022 packets observed, rate ~163787/s MITRE=T1498
+Sep 23 07:50:28 kernel: [DDOS] SYN flood detected from 192.11.84.161:49234 - approx 3637 packets observed, rate ~107234/s MITRE=T1498
+Sep 23 15:48:04 firewall: [PORT_SCAN] Port sweep detected from 169.11.161.107 against 82.134.250.227 ports [42,114,161,262,339,510,529,575,583,613,774,811,844,1037,1201,1307,1465,1508,1698,1707,1787,1824,1950] MITRE=T1046
+Sep 23 08:32:56 kernel: [DDOS] SYN flood detected from 176.149.28.122:31049 - approx 7269 packets observed, rate ~176685/s MITRE=T1498
+Sep 23 08:28:10 auditd: [DATA_EXFIL] Large outbound transfer: rsync from 28.82.22.106 to 60.25.228.183 - 3739.2MB MITRE=T1048
+Sep 23 00:03:46 firewall: [PORT_SCAN] Port sweep detected from 89.92.193.151 against 110.129.83.65 ports [119,474,694,813,854,902,933,1053,1123,1162,1262,1619,1735,1917] MITRE=T1046
+Sep 23 12:57:28 kernel: [DDOS] SYN flood detected from 169.22.123.72:61514 - approx 16173 packets observed, rate ~52399/s MITRE=T1498
+Sep 23 00:36:00 firewall: [PORT_SCAN] Port sweep detected from 143.88.98.38 against 26.94.126.75 ports [106,190,399,555,645,738,869,1022,1051,1251,1372,1746,1910,1994] MITRE=T1046
+Sep 23 05:30:46 auditd: [DATA_EXFIL] Large outbound transfer: aws s3 cp from 48.108.72.223 to 119.69.70.41 - 3838.9MB MITRE=T1048
+Sep 23 22:17:01 firewall: [PORT_SCAN] Port sweep detected from 191.177.167.154 against 160.73.12.95 ports [60,78,101,722,762,1015,1039,1380,1509,1753,1867] MITRE=T1046
+Sep 23 18:02:05 firewall: [PORT_SCAN] Port sweep detected from 180.83.136.243 against 104.125.81.171 ports [225,234,259,261,266,277,323,555,583,1020,1131,1259,1450,1694,1752,1945] MITRE=T1046
+Sep 23 08:19:19 firewall: [PORT_SCAN] Port sweep detected from 65.195.151.171 against 58.128.199.30 ports [61,405,712,724,871,1179,1196,1507,1796,1821,1910,1953] MITRE=T1046
+Sep 23 14:11:30 kernel: [DDOS] SYN flood detected from 82.42.114.215:63258 - approx 5687 packets observed, rate ~145218/s MITRE=T1498
+Sep 23 18:49:34 auditd: [DATA_EXFIL] Large outbound transfer: aws s3 cp from 83.76.179.169 to 11.165.51.72 - 1523.2MB MITRE=T1048
+Sep 23 18:38:15 auditd: [DATA_EXFIL] Large outbound transfer: ftp from 62.225.171.23 to 109.100.55.83 - 2989.4MB MITRE=T1048
+Sep 23 13:14:14 kernel: [DDOS] SYN flood detected from 65.12.126.64:61203 - approx 15802 packets observed, rate ~25057/s MITRE=T1498
+Sep 23 21:35:50 kernel: [DDOS] SYN flood detected from 46.201.245.227:53515 - approx 18000 packets observed, rate ~92542/s MITRE=T1498
+Sep 23 05:38:26 kernel: [DDOS] SYN flood detected from 59.35.229.223:33272 - approx 8499 packets observed, rate ~107665/s MITRE=T1498
+<14>Sep 23 15:26:15 cloud-init: #############################################################
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNqzx8uGd6ouo4hVFagIBmbYqz7Mk9gyadq1pK7QzHcHjcKvs22DY81lVO4YPctPRXPhFodHgRwXMXlUmIvFVE4= root@ip-172-31-42-16.ap-south-1.compute.internal
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDHybV3C0DKWFoMitK03Hjj7EAyUuIy/qtue41BYsrKx root@ip-172-31-42-16.ap-south-1.compute.internal
+-----END SSH HOST KEY KEYS-----
+[    8.380407] cloud-init[1673]: Cloud-init v. 22.2.2 finished at Tue, 23 Sep 2025 15:26:15 +0000. Datasource DataSourceEc2.  Up 8.37 seconds
+
+
+Amazon Linux 2023.8.20250915
+Kernel 6.1.150-174.273.amzn2023.x86_64 on an x86_64 (-)
+

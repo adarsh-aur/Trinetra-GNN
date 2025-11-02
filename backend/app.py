@@ -5,7 +5,7 @@ from datetime import datetime, timezone, timedelta
 from flask import Flask, request, jsonify, send_file
 from flask_socketio import SocketIO
 from llm_processor import process_logs_with_llm, call_groq_llm
-from cve_scorer import get_cve_score
+from cve_scorer import enrich_node_with_cves, compute_cve_risk_score, get_cve_score
 from graph_builder import build_graph
 from anomaly_detector import compute_node_risk, zscore_anomaly_detection, llm_consensus_check
 from gnn_trainer import train_on_examples
@@ -378,7 +378,7 @@ def ingest_text():
 
 def process_and_emit(raw_logs):
     """
-    Universal log processing pipeline with LLM-driven categorization
+    Universal log processing pipeline with LLM-driven categorization and CVE enrichment
     """
     print(f"\n{'=' * 70}")
     print(f"🚀 Processing {len(raw_logs)} characters of log data")
@@ -399,24 +399,52 @@ def process_and_emit(raw_logs):
     print(f"✅ LLM extracted {len(parsed.get('nodes', []))} nodes")
 
     # ================================================================
-    # STEP 2: Compute risk scores
+    # STEP 2: Enrich nodes with CVE information and compute risk
     # ================================================================
+    print(f"\n🔍 Enriching nodes with CVE data...")
+    
     nodes_with_risk = []
+    total_cves_found = 0
 
     for n in parsed.get("nodes", []):
         attrs = n.get("attrs", {})
+        node_id = n.get("id")
+        
+        # Find relevant log lines for this node
+        log_excerpt = ""
+        for line in raw_logs.split("\n"):
+            if node_id in line:
+                log_excerpt += line + "\n"
+        
+        # Enrich with CVEs
+        cve_list = enrich_node_with_cves(n, log_excerpt)
+        attrs["cve"] = cve_list
+        total_cves_found += len(cve_list)
+        
+        # Compute CVE-based risk
+        cve_risk = compute_cve_risk_score(cve_list)
+        
+        # Compute base risk
+        base_risk = compute_node_risk(n)
+        
+        # Combine risks (CVE risk weighted at 30%)
+        total_risk = min(10.0, base_risk + (cve_risk * 0.3))
+        
         n["attrs"] = attrs
-        n["risk"] = compute_node_risk(n)
+        n["risk"] = total_risk
 
         nodes_with_risk.append({
-            "id": n.get("id"),
+            "id": node_id,
             "type": n.get("type"),
-            "risk_score": n.get("risk", 0.0),
-            "cve": attrs.get("cve", []),
+            "risk_score": total_risk,
+            "cve": cve_list,
+            "cve_scores": {cve: get_cve_score(cve) for cve in cve_list} if cve_list else {},
             "last_seen": convert_to_ist(attrs.get("last_seen"))
         })
 
-    print(f"✅ Computed risk scores for {len(nodes_with_risk)} nodes")
+    print(f"✅ Enriched {len(nodes_with_risk)} nodes with CVE data")
+    print(f"   Total CVEs found: {total_cves_found}")
+    print(f"   Nodes with CVEs: {sum(1 for n in nodes_with_risk if n['cve'])}")
 
     # ================================================================
     # STEP 2.5: LLM-Driven Node Categorization & Cloud Detection
@@ -449,7 +477,8 @@ def process_and_emit(raw_logs):
             "id": a.get("id"),
             "risk_score": a.get("risk"),
             "type": a.get("type"),
-            "z_score": a.get("z_score", None)
+            "z_score": a.get("z_score", None),
+            "cve": a.get("attrs", {}).get("cve", [])
         })
 
     confirmed_detailed = []
@@ -458,7 +487,8 @@ def process_and_emit(raw_logs):
             "id": c.get("id"),
             "risk_score": c.get("risk"),
             "type": c.get("type"),
-            "reason": c.get("reason", "LLM confirmed")
+            "reason": c.get("reason", "LLM confirmed"),
+            "cve": c.get("attrs", {}).get("cve", [])
         })
 
     # ================================================================
@@ -540,6 +570,16 @@ def process_and_emit(raw_logs):
             "anomalies_detected_count": len(anomalies),
             "anomalies_confirmed_count": len(confirmed),
         },
+        "cve_analysis": {
+            "total_cves_found": total_cves_found,
+            "nodes_with_cves": sum(1 for n in nodes_with_risk if n['cve']),
+            "unique_cves": list(set([cve for n in nodes_with_risk for cve in n.get('cve', [])])),
+            "high_severity_cves": [
+                cve for n in nodes_with_risk 
+                for cve in n.get('cve', []) 
+                if get_cve_score(cve) >= 7.0
+            ]
+        },
         "nodes_information": nodes_with_risk,
         "edges_information": edges_info,
         "anomalies_detected": anomalies_detailed,
@@ -609,6 +649,8 @@ def process_and_emit(raw_logs):
     print(f"{'=' * 70}")
     print(f"   Total nodes:          {len(nodes_with_risk)}")
     print(f"   Total edges:          {len(edges_info)}")
+    print(f"   CVEs found:           {total_cves_found}")
+    print(f"   Nodes with CVEs:      {sum(1 for n in nodes_with_risk if n['cve'])}")
     print(f"   Anomalies detected:   {len(anomalies)}")
     print(f"   Anomalies confirmed:  {len(confirmed)}")
     print(f"   GNN Accuracy:         {train_result.get('accuracy', 0.0):.2%}")
@@ -644,11 +686,12 @@ def on_disconnect():
 
 if __name__ == "__main__":
     print("\n" + "=" * 70)
-    print("🛡️  Multi-Cloud GNN Threat Analyzer - LLM-Driven Edition")
+    print("🛡️  Multi-Cloud GNN Threat Analyzer - LLM-Driven Edition with CVE Analysis")
     print("=" * 70)
     print(f"📂 Sample log path: {os.path.abspath(SAMPLE_LOG_PATH)}")
     print(f"💾 Data store path: {os.path.abspath(DATA_STORE_DIR)}")
     print(f"🤖 Categorization: Groq LLM-Driven (Intelligent)")
+    print(f"🛡️  CVE Analysis: Enabled with MITRE ATT&CK mapping")
     print(f"🌐 Starting server on http://0.0.0.0:5000")
     print("=" * 70 + "\n")
 

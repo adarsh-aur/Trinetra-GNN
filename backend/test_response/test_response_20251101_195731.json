@@ -1,0 +1,659 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "benign",
+    "confidence": 0.9
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 15,
+    "total_edges": 13,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 0,
+    "nodes_with_cves": 0,
+    "unique_cves": [],
+    "high_severity_cves": []
+  },
+  "nodes_information": [
+    {
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.31.32.1",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.31.0.2",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "127.0.0.1",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "fe80::bc:42ff:fe58:f5e7",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "02:bc:42:58:f5:e7",
+      "type": "mac",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "ens5",
+      "type": "interface",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "0000:00:05.0",
+      "type": "hardware",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "cloud-init",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "ena",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "fuse",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "rpc",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "ec2-user",
+      "type": "user",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "ssh-host",
+      "type": "service",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "ens5",
+      "target": "02:bc:42:58:f5:e7",
+      "type": "has_mac",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "172.31.42.16",
+      "type": "has_ip",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "172.31.32.1",
+      "type": "routes_to",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ens5",
+      "target": "0000:00:05.0",
+      "type": "uses_hardware",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "0000:00:05.0",
+      "target": "ena",
+      "type": "driven_by",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ens5",
+      "type": "configures",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "cloud-init",
+      "target": "ssh-host",
+      "type": "generates_keys",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "cloud-init",
+      "type": "starts",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "ena",
+      "type": "starts",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "rpc",
+      "type": "starts",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "fuse",
+      "type": "starts",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ec2-user",
+      "target": "ssh-host",
+      "type": "authorized",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "ssh-host",
+      "target": "172.31.42.16",
+      "type": "runs_on",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "172.31.42.16": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal AWS VPC IP address"
+    },
+    "172.31.32.1": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal AWS VPC IP address"
+    },
+    "172.31.0.2": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal AWS VPC IP address"
+    },
+    "127.0.0.1": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Loopback interface on AWS instance"
+    },
+    "fe80::bc:42ff:fe58:f5e7": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Link‑local IPv6 derived from ENA MAC"
+    },
+    "02:bc:42:58:f5:e7": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "MAC address of ENA network adapter"
+    },
+    "ens5": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "ENABLED network interface on EC2"
+    },
+    "0000:00:05.0": {
+      "category": "hardware",
+      "cloud_platform": "generic",
+      "reasoning": "PCI device address for ENA adapter"
+    },
+    "cloud-init": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Instance initialization process"
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "System init and service manager"
+    },
+    "ena": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "ENA kernel driver for network"
+    },
+    "fuse": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "FUSE filesystem driver"
+    },
+    "rpc": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "RPC transport services"
+    },
+    "ec2-user": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "Default EC2 user account"
+    },
+    "ssh-host": {
+      "category": "security",
+      "cloud_platform": "aws",
+      "reasoning": "SSH authentication service"
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_hardware",
+      "type_interface",
+      "type_ip",
+      "type_mac",
+      "type_process",
+      "type_service",
+      "type_user"
+    ],
+    "predictions": [
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.3532242476940155,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.32.1",
+        "anomaly_probability": 0.32654789090156555,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.0.2",
+        "anomaly_probability": 0.35124489665031433,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "127.0.0.1",
+        "anomaly_probability": 0.35124489665031433,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "fe80::bc:42ff:fe58:f5e7",
+        "anomaly_probability": 0.35124489665031433,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "02:bc:42:58:f5:e7",
+        "anomaly_probability": 0.332959920167923,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ens5",
+        "anomaly_probability": 0.30597221851348877,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "0000:00:05.0",
+        "anomaly_probability": 0.3320663571357727,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloud-init",
+        "anomaly_probability": 0.3523402810096741,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.2504446804523468,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ena",
+        "anomaly_probability": 0.2930896580219269,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "fuse",
+        "anomaly_probability": 0.26758989691734314,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "rpc",
+        "anomaly_probability": 0.26758989691734314,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ec2-user",
+        "anomaly_probability": 0.2922673523426056,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh-host",
+        "anomaly_probability": 0.329286128282547,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.3484106659889221
+  },
+  "embeddings_shape": [
+    15,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "description": "Instance internal IP",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "description": "Default gateway",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "172.31.32.1"
+      },
+      {
+        "description": "Route entry IP",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "172.31.0.2"
+      },
+      {
+        "description": "Loopback",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "127.0.0.1"
+      },
+      {
+        "description": "Link-local IPv6",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "fe80::bc:42ff:fe58:f5e7"
+      },
+      {
+        "description": "MAC address of ens5",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "mac",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "02:bc:42:58:f5:e7"
+      },
+      {
+        "description": "Elastic Network Adapter interface",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "interface",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "ens5"
+      },
+      {
+        "description": "ENA device",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "hardware",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "0000:00:05.0"
+      },
+      {
+        "description": "Cloud-init initialization",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "cloud-init"
+      },
+      {
+        "description": "Systemd init system",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "systemd"
+      },
+      {
+        "description": "ENA driver",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "ena"
+      },
+      {
+        "description": "FUSE filesystem",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "fuse"
+      },
+      {
+        "description": "RPC services",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "rpc"
+      },
+      {
+        "description": "Default EC2 user",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "user",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "ec2-user"
+      },
+      {
+        "description": "SSH host service",
+        "cve": [],
+        "risk_score": 0.0,
+        "type": "service",
+        "last_seen": "2025-11-01 19:57:30 IST",
+        "id": "ssh-host"
+      }
+    ],
+    "links": [
+      {
+        "type": "has_mac",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "02:bc:42:58:f5:e7"
+      },
+      {
+        "type": "has_ip",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "routes_to",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "172.31.32.1"
+      },
+      {
+        "type": "uses_hardware",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ens5",
+        "target": "0000:00:05.0"
+      },
+      {
+        "type": "driven_by",
+        "weight": 1.0,
+        "count": 1,
+        "source": "0000:00:05.0",
+        "target": "ena"
+      },
+      {
+        "type": "configures",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ens5"
+      },
+      {
+        "type": "generates_keys",
+        "weight": 1.0,
+        "count": 1,
+        "source": "cloud-init",
+        "target": "ssh-host"
+      },
+      {
+        "type": "starts",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "cloud-init"
+      },
+      {
+        "type": "starts",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "ena"
+      },
+      {
+        "type": "starts",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "rpc"
+      },
+      {
+        "type": "starts",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "fuse"
+      },
+      {
+        "type": "authorized",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ec2-user",
+        "target": "ssh-host"
+      },
+      {
+        "type": "runs_on",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ssh-host",
+        "target": "172.31.42.16"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251101T142731Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

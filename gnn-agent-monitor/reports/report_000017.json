@@ -1,359 +1,1078 @@
 {
-  "timestamp": "2025-10-29T21:57:46.732957",
+  "timestamp": "2025-11-02T01:02:28.067799",
   "iteration": 17,
   "total_nodes": 200,
   "total_edges": 591,
-  "anomalous_nodes": 42,
-  "anomaly_rate": 0.21,
-  "mean_score": 1.7200987339019775,
-  "max_score": 19.303905487060547,
-  "max_zscore": 4.697071075439453,
+  "anomalous_nodes": 70,
+  "anomaly_rate": 0.35,
+  "mean_score": 1.7414301633834839,
+  "max_score": 24.75265884399414,
+  "max_zscore": 9.829822540283203,
   "threshold": 3.0,
   "node_details": [
     {
-      "node_id": 94,
-      "anomaly_score": 13.851667404174805,
-      "z_score": 3.21649432182312,
-      "degree": 3,
-      "betweenness": 0.0006223678226397644,
-      "clustering": 0.3333333333333333,
-      "neighbors": 3
+      "node_id": 13,
+      "anomaly_score": 14.717546463012695,
+      "z_score": 5.598281383514404,
+      "degree": 15,
+      "betweenness": 0.034566465980277634,
+      "clustering": 0.06666666666666667,
+      "neighbors": 15,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 124,
-      "anomaly_score": 19.303905487060547,
-      "z_score": 4.697071075439453,
+      "node_id": 19,
+      "anomaly_score": 11.608409881591797,
+      "z_score": 4.287240982055664,
+      "degree": 14,
+      "betweenness": 0.02565750587379486,
+      "clustering": 0.04395604395604396,
+      "neighbors": 14,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 38,
+      "anomaly_score": 14.64439868927002,
+      "z_score": 5.567436695098877,
+      "degree": 13,
+      "betweenness": 0.027060607324233443,
+      "clustering": 0.0,
+      "neighbors": 13,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 62,
+      "anomaly_score": 12.6380033493042,
+      "z_score": 4.721392631530762,
       "degree": 3,
-      "betweenness": 0.0007781286546622434,
-      "clustering": 0.3333333333333333,
-      "neighbors": 3
+      "betweenness": 0.0012650629329976097,
+      "clustering": 0.0,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 63,
+      "anomaly_score": 24.75265884399414,
+      "z_score": 9.829822540283203,
+      "degree": 8,
+      "betweenness": 0.012182487749905987,
+      "clustering": 0.07142857142857142,
+      "neighbors": 8,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 78,
+      "anomaly_score": 14.756952285766602,
+      "z_score": 5.614897727966309,
+      "degree": 5,
+      "betweenness": 0.00529793836794771,
+      "clustering": 0.2,
+      "neighbors": 5,
+      "cves": [
+        {
+          "cve_id": "CVE-1999-0862",
+          "severity": "LOW",
+          "score": 2.1,
+          "vector": "",
+          "description": "Insecure directory permissions in RPM distribution for PostgreSQL allows local users to gain privileges by reading a plaintext password file.",
+          "published": "1999-12-02T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0862",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0862"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2001-0201",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+          "published": "2001-03-26T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+            "http://www.securityfocus.com/bid/2230",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972",
+            "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+            "http://www.securityfocus.com/bid/2230",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2001-1379",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The PostgreSQL authentication modules (1) mod_auth_pgsql 0.9.5, and (2) mod_auth_pgsql_sys 0.9.4, allow remote attackers to bypass authentication and execute arbitrary SQL via a SQL injection attack on the user name.",
+          "published": "2001-08-29T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+            "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+            "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+            "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+            "http://www.iss.net/security_center/static/7054.php",
+            "http://www.securityfocus.com/bid/3251",
+            "http://www.securityfocus.com/bid/3253",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059",
+            "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+            "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+            "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+            "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+            "http://www.iss.net/security_center/static/7054.php",
+            "http://www.securityfocus.com/bid/3251",
+            "http://www.securityfocus.com/bid/3253",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2000-1199",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "PostgreSQL stores usernames and passwords in plaintext in (1) pg_shadow and (2) pg_pwd, which allows attackers with sufficient privileges to gain access to databases.",
+          "published": "2001-08-31T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=95659987018649&w=2",
+            "http://www.securityfocus.com/bid/1139",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/4364",
+            "http://marc.info/?l=bugtraq&m=95659987018649&w=2",
+            "http://www.securityfocus.com/bid/1139",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/4364"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0802",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The multibyte support in PostgreSQL 6.5.x with SQL_ASCII encoding consumes an extra character when processing a character that cannot be converted, which could remove an escape character from the query and make the application subject to SQL injection attacks.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=postgresql-general&m=102032794322362",
+            "http://www.iss.net/security_center/static/10328.php",
+            "http://www.redhat.com/support/errata/RHSA-2002-149.html",
+            "http://marc.info/?l=postgresql-general&m=102032794322362",
+            "http://www.iss.net/security_center/static/10328.php",
+            "http://www.redhat.com/support/errata/RHSA-2002-149.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0972",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "Buffer overflows in PostgreSQL 7.2 allow attackers to cause a denial of service and possibly execute arbitrary code via long arguments to the functions (1) lpad or (2) rpad.",
+          "published": "2002-09-24T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=102987608300785&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://marc.info/?l=bugtraq&m=102987608300785&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1642",
+          "severity": "HIGH",
+          "score": 7.2,
+          "vector": "",
+          "description": "PostgreSQL 7.2.1 and 7.2.2 allows local users to delete transaction log (pg_clog) data and cause a denial of service (data loss) via the VACUUM command.",
+          "published": "2002-10-03T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+            "http://www.kb.cert.org/vuls/id/891177",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/7657",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102",
+            "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+            "http://www.kb.cert.org/vuls/id/891177",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/7657",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1657",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "description": "PostgreSQL uses the username for a salt when generating passwords, which makes it easier for remote attackers to guess passwords via a brute force attack.",
+          "published": "2002-12-31T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "N",
+          "attack_complexity": "L",
+          "privileges_required": "N",
+          "user_interaction": "N",
+          "references": [
+            "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+            "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+            "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215",
+            "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+            "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+            "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215"
+          ],
+          "cwe": "CWE-916"
+        },
+        {
+          "cve_id": "CVE-2002-1397",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Vulnerability in the cash_words() function for PostgreSQL 7.2 and earlier allows local users to cause a denial of service and possibly execute arbitrary code via a large negative argument, possibly triggering an integer signedness error or buffer overflow.",
+          "published": "2003-01-17T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+            "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/5497",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891",
+            "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+            "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/5497",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1398",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "Buffer overflow in the date parser for PostgreSQL before 7.2.2 allows attackers to cause a denial of service and possibly execute arbitrary code via a long date string, aka a vulnerability \"in handling long datetime input.\"",
+          "published": "2003-01-17T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.postgresql.org/pgsql-announce/2002-08/msg00004.php",
+            "http://marc.info/?l=bugtraq&m=102978152712430&w=2",
+            "http://marc.info/?l=bugtraq&m=102996089613404&w=2",
+            "http://marc.info/?l=bugtraq&m=103021186622725&w=2",
+            "http://marc.info/?l=bugtraq&m=103036987114437&w=2",
+            "http://marc.info/?l=postgresql-announce&m=103062536330644",
+            "http://secunia.com/advisories/8034",
+            "http://www.debian.org/security/2002/dsa-165",
+            "http://www.novell.com/linux/security/advisories/2002_038_postgresql.html",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://archives.postgresql.org/pgsql-announce/2002-08/msg00004.php",
+            "http://marc.info/?l=bugtraq&m=102978152712430&w=2",
+            "http://marc.info/?l=bugtraq&m=102996089613404&w=2",
+            "http://marc.info/?l=bugtraq&m=103021186622725&w=2",
+            "http://marc.info/?l=bugtraq&m=103036987114437&w=2",
+            "http://marc.info/?l=postgresql-announce&m=103062536330644",
+            "http://secunia.com/advisories/8034",
+            "http://www.debian.org/security/2002/dsa-165",
+            "http://www.novell.com/linux/security/advisories/2002_038_postgresql.html",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        }
+      ],
+      "cve_count": 10,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 86,
+      "anomaly_score": 13.528241157531738,
+      "z_score": 5.096782207489014,
+      "degree": 3,
+      "betweenness": 0.0005166161034739603,
+      "clustering": 0.0,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
       "node_id": 149,
-      "anomaly_score": 19.051061630249023,
-      "z_score": 4.628410339355469,
+      "anomaly_score": 17.017189025878906,
+      "z_score": 6.56797981262207,
       "degree": 3,
-      "betweenness": 0.0007049072607804684,
+      "betweenness": 0.0007550981016794934,
       "clustering": 0.0,
-      "neighbors": 3
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 161,
-      "anomaly_score": 16.943037033081055,
-      "z_score": 4.055967807769775,
+      "node_id": 165,
+      "anomaly_score": 12.751605033874512,
+      "z_score": 4.769295692443848,
       "degree": 3,
-      "betweenness": 0.0006088705096220392,
-      "clustering": 0.0,
-      "neighbors": 3
+      "betweenness": 0.00024556818499859087,
+      "clustering": 0.6666666666666666,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 173,
-      "anomaly_score": 13.192183494567871,
-      "z_score": 3.0374088287353516,
+      "node_id": 166,
+      "anomaly_score": 14.46618938446045,
+      "z_score": 5.492290496826172,
       "degree": 3,
-      "betweenness": 0.0013449485053128865,
-      "clustering": 0.0,
-      "neighbors": 3
+      "betweenness": 0.0008066282091215594,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 192,
-      "anomaly_score": 14.358172416687012,
-      "z_score": 3.3540377616882324,
-      "degree": 3,
-      "betweenness": 0.0007753941603970116,
-      "clustering": 0.0,
-      "neighbors": 3
-    },
-    {
-      "node_id": 294,
-      "anomaly_score": 13.851667404174805,
-      "z_score": 3.21649432182312,
+      "node_id": 213,
+      "anomaly_score": 14.717546463012695,
+      "z_score": 5.598281383514404,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 324,
-      "anomaly_score": 19.303905487060547,
-      "z_score": 4.697071075439453,
+      "node_id": 219,
+      "anomaly_score": 11.608409881591797,
+      "z_score": 4.287240982055664,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 238,
+      "anomaly_score": 14.64439868927002,
+      "z_score": 5.567436695098877,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 262,
+      "anomaly_score": 12.6380033493042,
+      "z_score": 4.721392631530762,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 263,
+      "anomaly_score": 24.75265884399414,
+      "z_score": 9.829822540283203,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 278,
+      "anomaly_score": 14.756952285766602,
+      "z_score": 5.614897727966309,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 286,
+      "anomaly_score": 13.528241157531738,
+      "z_score": 5.096782207489014,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
       "node_id": 349,
-      "anomaly_score": 19.051061630249023,
-      "z_score": 4.628410339355469,
+      "anomaly_score": 17.017189025878906,
+      "z_score": 6.56797981262207,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 361,
-      "anomaly_score": 16.943037033081055,
-      "z_score": 4.055967807769775,
+      "node_id": 365,
+      "anomaly_score": 12.751605033874512,
+      "z_score": 4.769295692443848,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 373,
-      "anomaly_score": 13.192183494567871,
-      "z_score": 3.0374088287353516,
+      "node_id": 366,
+      "anomaly_score": 14.46618938446045,
+      "z_score": 5.492290496826172,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 392,
-      "anomaly_score": 14.358172416687012,
-      "z_score": 3.3540377616882324,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 494,
-      "anomaly_score": 13.851667404174805,
-      "z_score": 3.21649432182312,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 524,
-      "anomaly_score": 19.303905487060547,
-      "z_score": 4.697071075439453,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 549,
-      "anomaly_score": 19.051061630249023,
-      "z_score": 4.628410339355469,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 561,
-      "anomaly_score": 16.943037033081055,
-      "z_score": 4.055967807769775,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 573,
-      "anomaly_score": 13.192183494567871,
-      "z_score": 3.0374088287353516,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 592,
-      "anomaly_score": 14.358172416687012,
-      "z_score": 3.3540377616882324,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 694,
-      "anomaly_score": 13.851667404174805,
-      "z_score": 3.21649432182312,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
-    },
-    {
-      "node_id": 724,
-      "anomaly_score": 19.303905487060547,
-      "z_score": 4.697071075439453,
-      "degree": 0,
-      "betweenness": 0.0,
-      "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     }
   ],
   "vulnerable_paths": [
     {
       "path": [
-        94,
+        13,
+        183,
+        38
+      ],
+      "length": 3,
+      "source": 13,
+      "target": 38
+    },
+    {
+      "path": [
+        13,
+        72,
+        63
+      ],
+      "length": 3,
+      "source": 13,
+      "target": 63
+    },
+    {
+      "path": [
+        62,
+        12,
+        63
+      ],
+      "length": 3,
+      "source": 62,
+      "target": 63
+    },
+    {
+      "path": [
+        13,
         0,
-        53,
-        149
+        2,
+        19
       ],
       "length": 4,
-      "source": 94,
-      "target": 149
+      "source": 13,
+      "target": 19
     },
     {
       "path": [
-        94,
-        0,
-        1,
-        173
+        13,
+        7,
+        12,
+        62
       ],
       "length": 4,
-      "source": 94,
-      "target": 173
-    },
-    {
-      "path": [
-        124,
-        22,
-        40,
-        161
-      ],
-      "length": 4,
-      "source": 124,
-      "target": 161
-    },
-    {
-      "path": [
-        124,
-        44,
-        69,
-        173
-      ],
-      "length": 4,
-      "source": 124,
-      "target": 173
-    },
-    {
-      "path": [
-        149,
-        17,
-        5,
-        161
-      ],
-      "length": 4,
-      "source": 149,
-      "target": 161
+      "source": 13,
+      "target": 62
     }
   ],
-  "batch_processing_time": 0.006552219390869141,
-  "agent_response": {
-    "severity": "CRITICAL",
-    "confidence": 0.85,
-    "reasoning": "The anomaly rate is 21% with 42 anomalies in a 200-node graph, indicating widespread abnormal activity. The top five nodes (94, 124, 149, 161, 173) all have z-scores above 3.0, with node 124 exceeding 4.6, which is well above the typical 3.0 threshold for significant deviation. Critical paths link these nodes, forming a potential attack corridor that could allow lateral movement or data exfiltration. The combination of high anomaly scores, multiple critical paths, and the presence of vulnerable nodes suggests an active compromise or imminent threat.",
-    "threats_identified": [
-      "Lateral movement through critical paths",
-      "Potential data exfiltration from compromised nodes",
-      "Privilege escalation via vulnerable nodes",
-      "Possible exploitation of known CVEs on affected hosts"
-    ],
-    "recommended_actions": [
+  "batch_processing_time": 0.009501457214355469,
+  "cve_intelligence": {
+    "total_cves_found": 10,
+    "critical_cves": [],
+    "high_cves": [
       {
-        "action": "isolate_node",
-        "priority": "HIGH",
-        "reason": "Node 124 has the highest anomaly score and is a central point in critical paths; isolating it prevents further spread."
+        "cve_id": "CVE-2001-0201",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+        "published": "2001-03-26T05:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+          "http://www.securityfocus.com/bid/2230",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972",
+          "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+          "http://www.securityfocus.com/bid/2230",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972"
+        ],
+        "cwe": "NVD-CWE-Other"
       },
       {
-        "action": "isolate_node",
-        "priority": "HIGH",
-        "reason": "Node 149 is also highly anomalous and connected to node 94; isolation limits lateral movement."
+        "cve_id": "CVE-2001-1379",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "The PostgreSQL authentication modules (1) mod_auth_pgsql 0.9.5, and (2) mod_auth_pgsql_sys 0.9.4, allow remote attackers to bypass authentication and execute arbitrary SQL via a SQL injection attack on the user name.",
+        "published": "2001-08-29T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+          "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+          "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+          "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+          "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+          "http://www.iss.net/security_center/static/7054.php",
+          "http://www.securityfocus.com/bid/3251",
+          "http://www.securityfocus.com/bid/3253",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059",
+          "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+          "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+          "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+          "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+          "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+          "http://www.iss.net/security_center/static/7054.php",
+          "http://www.securityfocus.com/bid/3251",
+          "http://www.securityfocus.com/bid/3253",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059"
+        ],
+        "cwe": "NVD-CWE-Other"
       },
       {
-        "action": "block_outbound",
-        "priority": "HIGH",
-        "reason": "Prevent potential exfiltration from nodes 94, 124, 149, 161, and 173."
+        "cve_id": "CVE-2002-0802",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "The multibyte support in PostgreSQL 6.5.x with SQL_ASCII encoding consumes an extra character when processing a character that cannot be converted, which could remove an escape character from the query and make the application subject to SQL injection attacks.",
+        "published": "2002-08-12T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://marc.info/?l=postgresql-general&m=102032794322362",
+          "http://www.iss.net/security_center/static/10328.php",
+          "http://www.redhat.com/support/errata/RHSA-2002-149.html",
+          "http://marc.info/?l=postgresql-general&m=102032794322362",
+          "http://www.iss.net/security_center/static/10328.php",
+          "http://www.redhat.com/support/errata/RHSA-2002-149.html"
+        ],
+        "cwe": "NVD-CWE-Other"
       },
       {
-        "action": "run_vulnerability_scan",
-        "priority": "HIGH",
-        "reason": "Identify specific CVEs or misconfigurations that may be exploited on the top vulnerable nodes."
+        "cve_id": "CVE-2002-1642",
+        "severity": "HIGH",
+        "score": 7.2,
+        "vector": "",
+        "description": "PostgreSQL 7.2.1 and 7.2.2 allows local users to delete transaction log (pg_clog) data and cause a denial of service (data loss) via the VACUUM command.",
+        "published": "2002-10-03T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+          "http://www.kb.cert.org/vuls/id/891177",
+          "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+          "http://www.securityfocus.com/bid/7657",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102",
+          "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+          "http://www.kb.cert.org/vuls/id/891177",
+          "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+          "http://www.securityfocus.com/bid/7657",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102"
+        ],
+        "cwe": "NVD-CWE-Other"
       },
       {
-        "action": "apply_patches",
-        "priority": "HIGH",
-        "reason": "Patch identified vulnerabilities to close attack vectors."
+        "cve_id": "CVE-2002-1657",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "description": "PostgreSQL uses the username for a salt when generating passwords, which makes it easier for remote attackers to guess passwords via a brute force attack.",
+        "published": "2002-12-31T05:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "N",
+        "attack_complexity": "L",
+        "privileges_required": "N",
+        "user_interaction": "N",
+        "references": [
+          "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+          "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+          "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215",
+          "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+          "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+          "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215"
+        ],
+        "cwe": "CWE-916"
       },
       {
-        "action": "send_alert",
-        "priority": "HIGH",
-        "reason": "Notify SOC and incident response teams immediately."
-      },
-      {
-        "action": "monitor_network_traffic",
-        "priority": "MEDIUM",
-        "reason": "Detect any anomalous outbound connections or data flows that may indicate exfiltration."
-      },
-      {
-        "action": "investigate_processes",
-        "priority": "MEDIUM",
-        "reason": "Check for malicious or unauthorized processes on the isolated nodes."
+        "cve_id": "CVE-2002-1397",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "Vulnerability in the cash_words() function for PostgreSQL 7.2 and earlier allows local users to cause a denial of service and possibly execute arbitrary code via a large negative argument, possibly triggering an integer signedness error or buffer overflow.",
+        "published": "2003-01-17T05:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+          "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+          "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+          "http://secunia.com/advisories/8034",
+          "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+          "http://www.securityfocus.com/bid/5497",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891",
+          "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+          "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+          "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+          "http://secunia.com/advisories/8034",
+          "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+          "http://www.securityfocus.com/bid/5497",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891"
+        ],
+        "cwe": "NVD-CWE-Other"
       }
     ],
-    "predictions": "If the current trend continues, the attacker may use the identified critical paths to pivot to other high-value nodes, potentially exfiltrating sensitive data or escalating privileges. Without immediate isolation and patching, the anomaly rate could rise above 30%, and additional nodes may become compromised.",
-    "questions": [
-      "Are there any known CVEs or exploit signatures associated with nodes 94, 124, 149, 161, or 173?",
-      "Do any of these nodes host critical business services or contain sensitive data?",
-      "What external connections are currently allowed from the isolated nodes?",
-      "Are there any suspicious processes or binaries detected on these nodes?",
-      "Has there been any recent patching or configuration changes that could explain the anomalies?"
+    "node_cve_mapping": {
+      "78": [
+        {
+          "cve_id": "CVE-1999-0862",
+          "severity": "LOW",
+          "score": 2.1,
+          "vector": "",
+          "description": "Insecure directory permissions in RPM distribution for PostgreSQL allows local users to gain privileges by reading a plaintext password file.",
+          "published": "1999-12-02T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0862",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0862"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2001-0201",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+          "published": "2001-03-26T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+            "http://www.securityfocus.com/bid/2230",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972",
+            "http://archives.neohapsis.com/archives/bugtraq/2001-01/0287.html",
+            "http://www.securityfocus.com/bid/2230",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5972"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2001-1379",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The PostgreSQL authentication modules (1) mod_auth_pgsql 0.9.5, and (2) mod_auth_pgsql_sys 0.9.4, allow remote attackers to bypass authentication and execute arbitrary SQL via a SQL injection attack on the user name.",
+          "published": "2001-08-29T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+            "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+            "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+            "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+            "http://www.iss.net/security_center/static/7054.php",
+            "http://www.securityfocus.com/bid/3251",
+            "http://www.securityfocus.com/bid/3253",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059",
+            "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:03.mod_auth_pgsql.asc",
+            "http://archives.neohapsis.com/archives/vulnwatch/2001-q3/0040.html",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000427",
+            "http://marc.info/?l=bugtraq&m=99911895901812&w=2",
+            "http://rhn.redhat.com/errata/RHSA-2001-124.html",
+            "http://www.iss.net/security_center/static/7054.php",
+            "http://www.securityfocus.com/bid/3251",
+            "http://www.securityfocus.com/bid/3253",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7059"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2000-1199",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "PostgreSQL stores usernames and passwords in plaintext in (1) pg_shadow and (2) pg_pwd, which allows attackers with sufficient privileges to gain access to databases.",
+          "published": "2001-08-31T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=95659987018649&w=2",
+            "http://www.securityfocus.com/bid/1139",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/4364",
+            "http://marc.info/?l=bugtraq&m=95659987018649&w=2",
+            "http://www.securityfocus.com/bid/1139",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/4364"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0802",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "The multibyte support in PostgreSQL 6.5.x with SQL_ASCII encoding consumes an extra character when processing a character that cannot be converted, which could remove an escape character from the query and make the application subject to SQL injection attacks.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=postgresql-general&m=102032794322362",
+            "http://www.iss.net/security_center/static/10328.php",
+            "http://www.redhat.com/support/errata/RHSA-2002-149.html",
+            "http://marc.info/?l=postgresql-general&m=102032794322362",
+            "http://www.iss.net/security_center/static/10328.php",
+            "http://www.redhat.com/support/errata/RHSA-2002-149.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0972",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "Buffer overflows in PostgreSQL 7.2 allow attackers to cause a denial of service and possibly execute arbitrary code via long arguments to the functions (1) lpad or (2) rpad.",
+          "published": "2002-09-24T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=102987608300785&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://marc.info/?l=bugtraq&m=102987608300785&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1642",
+          "severity": "HIGH",
+          "score": 7.2,
+          "vector": "",
+          "description": "PostgreSQL 7.2.1 and 7.2.2 allows local users to delete transaction log (pg_clog) data and cause a denial of service (data loss) via the VACUUM command.",
+          "published": "2002-10-03T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+            "http://www.kb.cert.org/vuls/id/891177",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/7657",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102",
+            "http://archives.postgresql.org/pgsql-announce/2002-10/msg00000.php",
+            "http://www.kb.cert.org/vuls/id/891177",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/7657",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/11102"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1657",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "description": "PostgreSQL uses the username for a salt when generating passwords, which makes it easier for remote attackers to guess passwords via a brute force attack.",
+          "published": "2002-12-31T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "N",
+          "attack_complexity": "L",
+          "privileges_required": "N",
+          "user_interaction": "N",
+          "references": [
+            "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+            "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+            "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215",
+            "http://archives.postgresql.org/pgsql-admin/2002-08/msg00253.php",
+            "http://marc.info/?l=bugtraq&m=111402558115859&w=2",
+            "http://marc.info/?l=bugtraq&m=111403050902165&w=2",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/20215"
+          ],
+          "cwe": "CWE-916"
+        },
+        {
+          "cve_id": "CVE-2002-1397",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Vulnerability in the cash_words() function for PostgreSQL 7.2 and earlier allows local users to cause a denial of service and possibly execute arbitrary code via a large negative argument, possibly triggering an integer signedness error or buffer overflow.",
+          "published": "2003-01-17T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+            "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/5497",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891",
+            "http://developer.postgresql.org/cvsweb.cgi/pgsql-server/src/backend/utils/adt/cash.c.diff?r1=1.51&r2=1.52",
+            "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000524",
+            "http://marc.info/?l=bugtraq&m=102977465204357&w=2",
+            "http://secunia.com/advisories/8034",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://www.securityfocus.com/bid/5497",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/9891"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-1398",
+          "severity": "MEDIUM",
+          "score": 4.6,
+          "vector": "",
+          "description": "Buffer overflow in the date parser for PostgreSQL before 7.2.2 allows attackers to cause a denial of service and possibly execute arbitrary code via a long date string, aka a vulnerability \"in handling long datetime input.\"",
+          "published": "2003-01-17T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://archives.postgresql.org/pgsql-announce/2002-08/msg00004.php",
+            "http://marc.info/?l=bugtraq&m=102978152712430&w=2",
+            "http://marc.info/?l=bugtraq&m=102996089613404&w=2",
+            "http://marc.info/?l=bugtraq&m=103021186622725&w=2",
+            "http://marc.info/?l=bugtraq&m=103036987114437&w=2",
+            "http://marc.info/?l=postgresql-announce&m=103062536330644",
+            "http://secunia.com/advisories/8034",
+            "http://www.debian.org/security/2002/dsa-165",
+            "http://www.novell.com/linux/security/advisories/2002_038_postgresql.html",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html",
+            "http://archives.postgresql.org/pgsql-announce/2002-08/msg00004.php",
+            "http://marc.info/?l=bugtraq&m=102978152712430&w=2",
+            "http://marc.info/?l=bugtraq&m=102996089613404&w=2",
+            "http://marc.info/?l=bugtraq&m=103021186622725&w=2",
+            "http://marc.info/?l=bugtraq&m=103036987114437&w=2",
+            "http://marc.info/?l=postgresql-announce&m=103062536330644",
+            "http://secunia.com/advisories/8034",
+            "http://www.debian.org/security/2002/dsa-165",
+            "http://www.novell.com/linux/security/advisories/2002_038_postgresql.html",
+            "http://www.redhat.com/support/errata/RHSA-2003-001.html"
+          ],
+          "cwe": "NVD-CWE-Other"
+        }
+      ]
+    },
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": [
+      {
+        "priority": "MEDIUM",
+        "action": "schedule_high_severity_patches",
+        "reason": "6 high severity CVEs",
+        "cves": [
+          "CVE-2001-0201",
+          "CVE-2001-1379",
+          "CVE-2002-0802",
+          "CVE-2002-1642",
+          "CVE-2002-1657"
+        ],
+        "timeline": "Within 30 days"
+      }
     ]
+  },
+  "agent_response": {
+    "severity": "UNKNOWN",
+    "confidence": 0.5,
+    "reasoning": "Error: API returned status 429",
+    "threats_identified": [],
+    "recommended_actions": [],
+    "predictions": "",
+    "questions": []
   },
   "actions_taken": [
     {
-      "action": "isolate_node",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Node 124 has the highest anomaly score and is a central point in critical paths; isolating it prevents further spread."
-    },
-    {
-      "action": "isolate_node",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Node 149 is also highly anomalous and connected to node 94; isolation limits lateral movement."
-    },
-    {
-      "action": "block_outbound",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Prevent potential exfiltration from nodes 94, 124, 149, 161, and 173."
-    },
-    {
-      "action": "run_vulnerability_scan",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Identify specific CVEs or misconfigurations that may be exploited on the top vulnerable nodes."
-    },
-    {
-      "action": "apply_patches",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Patch identified vulnerabilities to close attack vectors."
-    },
-    {
-      "action": "send_alert",
-      "status": "executed",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "details": "Notify SOC and incident response teams immediately."
-    },
-    {
       "action": "send_alert",
       "status": "sent",
-      "timestamp": "2025-10-29T21:57:47.918703",
-      "severity": "CRITICAL",
-      "message": "Anomaly rate 21.00% exceeds threshold"
+      "timestamp": "2025-11-02T01:02:28.125819",
+      "severity": "UNKNOWN",
+      "message": "Anomaly rate 35.00% exceeds threshold"
     }
   ],
-  "total_anomalies_cumulative": 1015
+  "total_anomalies_cumulative": 1008
 }

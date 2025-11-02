@@ -1,0 +1,1348 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "malicious",
+    "confidence": 0.97
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.110973074216857,
+    "total_nodes": 35,
+    "total_edges": 15,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 30,
+    "nodes_with_cves": 26,
+    "unique_cves": [
+      "CVE-2023-46604",
+      "CVE-2024-8765",
+      "CVE-2023-5528",
+      "CVE-2024-1086",
+      "CVE-2023-48795",
+      "CVE-2024-21123"
+    ],
+    "high_severity_cves": []
+  },
+  "nodes_information": [
+    {
+      "id": "198.51.100.23",
+      "type": "ip",
+      "risk_score": 2.5,
+      "cve": [
+        "CVE-2023-48795"
+      ],
+      "cve_scores": {
+        "CVE-2023-48795": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "185.220.101.45",
+      "type": "ip",
+      "risk_score": 2.5,
+      "cve": [
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "10.0.2.50",
+      "type": "ip",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "192.0.2.100",
+      "type": "ip",
+      "risk_score": 2.5,
+      "cve": [
+        "CVE-2024-21123"
+      ],
+      "cve_scores": {
+        "CVE-2024-21123": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 1.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "i-0abc123def456",
+      "type": "hardware",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "c8f3a9b2d1e4",
+      "type": "container",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "s3://attacker-bucket",
+      "type": "bucket",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-8765"
+      ],
+      "cve_scores": {
+        "CVE-2024-8765": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "/host",
+      "type": "path",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "/var/log/auth.log*",
+      "type": "path",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "aws-instance",
+      "type": "instance",
+      "risk_score": 3.0,
+      "cve": [
+        "CVE-2024-1086",
+        "CVE-2023-48795"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 0.0,
+        "CVE-2023-48795": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "aws-web-server",
+      "type": "instance",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "aws-ecs-host",
+      "type": "instance",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "aws-rds-mysql",
+      "type": "instance",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-21123"
+      ],
+      "cve_scores": {
+        "CVE-2024-21123": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "aws-instance-2",
+      "type": "instance",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "sshd",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-48795"
+      ],
+      "cve_scores": {
+        "CVE-2023-48795": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "httpd",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "mysqld",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-21123"
+      ],
+      "cve_scores": {
+        "CVE-2024-21123": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "dockerd",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "service",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "kernel",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-1086"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "s3-sync",
+      "type": "service",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-8765"
+      ],
+      "cve_scores": {
+        "CVE-2024-8765": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "cloudwatch-agent",
+      "type": "service",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "compromised_user",
+      "type": "user",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "admin",
+      "type": "user",
+      "risk_score": 3.0,
+      "cve": [
+        "CVE-2023-48795",
+        "CVE-2024-21123"
+      ],
+      "cve_scores": {
+        "CVE-2023-48795": 0.0,
+        "CVE-2024-21123": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "root",
+      "type": "user",
+      "risk_score": 3.0,
+      "cve": [
+        "CVE-2024-1086",
+        "CVE-2023-48795"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 0.0,
+        "CVE-2023-48795": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "www-data",
+      "type": "user",
+      "risk_score": 3.0,
+      "cve": [
+        "CVE-2024-1086",
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 0.0,
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "sshd[12345]",
+      "type": "process",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-48795"
+      ],
+      "cve_scores": {
+        "CVE-2023-48795": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "sshd[9876]",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "sshd[9877]",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "httpd[8080]",
+      "type": "process",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-46604"
+      ],
+      "cve_scores": {
+        "CVE-2023-46604": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "mysqld[5432]",
+      "type": "process",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-21123"
+      ],
+      "cve_scores": {
+        "CVE-2024-21123": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "dockerd[2341]",
+      "type": "process",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2023-5528"
+      ],
+      "cve_scores": {
+        "CVE-2023-5528": 0.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "systemd[1]",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "s3-sync[4321]",
+      "type": "process",
+      "risk_score": 1.5,
+      "cve": [
+        "CVE-2024-8765"
+      ],
+      "cve_scores": {
+        "CVE-2024-8765": 0.0
+      },
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "198.51.100.23",
+      "target": "aws-instance",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "185.220.101.45",
+      "target": "aws-web-server",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.100",
+      "target": "aws-rds-mysql",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.42.16",
+      "target": "aws-instance",
+      "type": "lateral_movement",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.42.16",
+      "target": "aws-instance-2",
+      "type": "lateral_movement",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "c8f3a9b2d1e4",
+      "target": "/host",
+      "type": "mount",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "aws-instance",
+      "target": "c8f3a9b2d1e4",
+      "type": "container_escape",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "aws-instance",
+      "target": "s3://attacker-bucket",
+      "type": "exfiltration",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "aws-instance",
+      "target": "/var/log/auth.log*",
+      "type": "defense_evasion",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "aws-instance",
+      "target": "cloudwatch-agent",
+      "type": "defense_evasion",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "compromised_user",
+      "target": "aws-instance",
+      "type": "user_to_instance",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "admin",
+      "target": "aws-rds-mysql",
+      "type": "user_to_instance",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "root",
+      "target": "aws-instance",
+      "type": "user_to_instance",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "www-data",
+      "target": "aws-instance",
+      "type": "user_to_instance",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "www-data",
+      "target": "root",
+      "type": "privilege_escalation",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "198.51.100.23": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP used in SSH brute force, indicates network traffic."
+    },
+    "185.220.101.45": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP initiating web exploitation, network source."
+    },
+    "10.0.2.50": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal target IP for web exploit, network destination."
+    },
+    "192.0.2.100": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP attempting SQL injection, network source."
+    },
+    "172.31.42.16": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private AWS IP, internal network address."
+    },
+    "i-0abc123def456": {
+      "category": "hardware",
+      "cloud_platform": "aws",
+      "reasoning": "EC2 instance ID, physical hardware."
+    },
+    "c8f3a9b2d1e4": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Container ID running on ECS, compute resource."
+    },
+    "s3://attacker-bucket": {
+      "category": "storage",
+      "cloud_platform": "aws",
+      "reasoning": "S3 bucket used by attacker, storage resource."
+    },
+    "/host": {
+      "category": "storage",
+      "cloud_platform": "aws",
+      "reasoning": "Host filesystem path exposed to container, storage location."
+    },
+    "/var/log/auth.log*": {
+      "category": "monitoring",
+      "cloud_platform": "aws",
+      "reasoning": "Log file path for authentication logs, monitoring data."
+    },
+    "aws-instance": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "EC2 instance hosting SSH service, compute resource."
+    },
+    "aws-web-server": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "EC2 instance running web server, compute resource."
+    },
+    "aws-ecs-host": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "ECS host instance, compute resource."
+    },
+    "aws-rds-mysql": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "RDS MySQL instance, database resource."
+    },
+    "aws-instance-2": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Uncompromised EC2 instance, compute resource."
+    },
+    "sshd": {
+      "category": "security",
+      "cloud_platform": "aws",
+      "reasoning": "SSH daemon, security authentication service."
+    },
+    "httpd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Apache HTTP server, compute web service."
+    },
+    "mysqld": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "MySQL database server, database service."
+    },
+    "dockerd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Docker daemon, container runtime compute service."
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "System init process, compute service."
+    },
+    "kernel": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Linux kernel process, compute core."
+    },
+    "s3-sync": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "S3 sync tool, compute process."
+    },
+    "cloudwatch-agent": {
+      "category": "monitoring",
+      "cloud_platform": "aws",
+      "reasoning": "AWS CloudWatch agent, monitoring service."
+    },
+    "compromised_user": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "User account compromised, identity."
+    },
+    "admin": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "Administrative user, identity."
+    },
+    "root": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "Root user, identity."
+    },
+    "www-data": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "Web server user, identity."
+    },
+    "sshd[12345]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "SSHD process instance, compute."
+    },
+    "sshd[9876]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "SSHD process instance, compute."
+    },
+    "sshd[9877]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "SSHD process instance, compute."
+    },
+    "httpd[8080]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Apache process on port 8080, compute."
+    },
+    "mysqld[5432]": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "MySQL process on port 5432, database."
+    },
+    "dockerd[2341]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Docker daemon process, compute."
+    },
+    "systemd[1]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Systemd init process, compute."
+    },
+    "s3-sync[4321]": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "S3 sync process, compute."
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_bucket",
+      "type_container",
+      "type_hardware",
+      "type_instance",
+      "type_ip",
+      "type_path",
+      "type_process",
+      "type_service",
+      "type_user"
+    ],
+    "predictions": [
+      {
+        "node_id": "198.51.100.23",
+        "anomaly_probability": 0.3710184395313263,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "185.220.101.45",
+        "anomaly_probability": 0.3138907849788666,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.2.50",
+        "anomaly_probability": 0.39347460865974426,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.0.2.100",
+        "anomaly_probability": 0.3257717788219452,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.361651748418808,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "i-0abc123def456",
+        "anomaly_probability": 0.4565856158733368,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "c8f3a9b2d1e4",
+        "anomaly_probability": 0.369280070066452,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3://attacker-bucket",
+        "anomaly_probability": 0.4054828882217407,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "/host",
+        "anomaly_probability": 0.34023362398147583,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "/var/log/auth.log*",
+        "anomaly_probability": 0.38033416867256165,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "aws-instance",
+        "anomaly_probability": 0.37201040983200073,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "aws-web-server",
+        "anomaly_probability": 0.3138907849788666,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "aws-ecs-host",
+        "anomaly_probability": 0.3555344045162201,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "aws-rds-mysql",
+        "anomaly_probability": 0.3167179524898529,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "aws-instance-2",
+        "anomaly_probability": 0.3120535612106323,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "httpd",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "mysqld",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "dockerd",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.271499365568161,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "kernel",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3-sync",
+        "anomaly_probability": 0.3324854075908661,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "cloudwatch-agent",
+        "anomaly_probability": 0.41429024934768677,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "compromised_user",
+        "anomaly_probability": 0.4369993805885315,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "admin",
+        "anomaly_probability": 0.32940220832824707,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "root",
+        "anomaly_probability": 0.34640440344810486,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "www-data",
+        "anomaly_probability": 0.34640440344810486,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd[12345]",
+        "anomaly_probability": 0.31811851263046265,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd[9876]",
+        "anomaly_probability": 0.40886759757995605,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd[9877]",
+        "anomaly_probability": 0.40886759757995605,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "httpd[8080]",
+        "anomaly_probability": 0.31811851263046265,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "mysqld[5432]",
+        "anomaly_probability": 0.31811851263046265,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "dockerd[2341]",
+        "anomaly_probability": 0.31811851263046265,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd[1]",
+        "anomaly_probability": 0.4088675379753113,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3-sync[4321]",
+        "anomaly_probability": 0.31811851263046265,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.4149046540260315
+  },
+  "embeddings_shape": [
+    35,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "External attacker IP",
+        "risk_score": 2.5,
+        "type": "ip",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "198.51.100.23"
+      },
+      {
+        "cve": [],
+        "description": "External attacker IP",
+        "risk_score": 2.5,
+        "type": "ip",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "185.220.101.45"
+      },
+      {
+        "cve": [],
+        "description": "Internal target IP",
+        "risk_score": 1.5,
+        "type": "ip",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "10.0.2.50"
+      },
+      {
+        "cve": [],
+        "description": "External attacker IP",
+        "risk_score": 2.5,
+        "type": "ip",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "192.0.2.100"
+      },
+      {
+        "cve": [],
+        "description": "Internal attacker IP",
+        "risk_score": 1.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "cve": [],
+        "description": "EC2 instance ID",
+        "risk_score": 1.5,
+        "type": "hardware",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "i-0abc123def456"
+      },
+      {
+        "cve": [],
+        "description": "Container ID",
+        "risk_score": 1.5,
+        "type": "container",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "c8f3a9b2d1e4"
+      },
+      {
+        "cve": [],
+        "description": "Exfiltration target bucket",
+        "risk_score": 1.5,
+        "type": "bucket",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "s3://attacker-bucket"
+      },
+      {
+        "cve": [],
+        "description": "Host filesystem path",
+        "risk_score": 1.5,
+        "type": "path",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "/host"
+      },
+      {
+        "cve": [],
+        "description": "Log files",
+        "risk_score": 0.0,
+        "type": "path",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "/var/log/auth.log*"
+      },
+      {
+        "cve": [],
+        "description": "EC2 instance",
+        "risk_score": 3.0,
+        "type": "instance",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "aws-instance"
+      },
+      {
+        "cve": [],
+        "description": "Web server instance",
+        "risk_score": 1.5,
+        "type": "instance",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "aws-web-server"
+      },
+      {
+        "cve": [],
+        "description": "ECS host instance",
+        "risk_score": 1.5,
+        "type": "instance",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "aws-ecs-host"
+      },
+      {
+        "cve": [],
+        "description": "RDS MySQL instance",
+        "risk_score": 1.5,
+        "type": "instance",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "aws-rds-mysql"
+      },
+      {
+        "cve": [],
+        "description": "EC2 instance",
+        "risk_score": 0.0,
+        "type": "instance",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "aws-instance-2"
+      },
+      {
+        "cve": [],
+        "description": "SSH daemon",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "sshd"
+      },
+      {
+        "cve": [],
+        "description": "HTTP daemon",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "httpd"
+      },
+      {
+        "cve": [],
+        "description": "MySQL daemon",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "mysqld"
+      },
+      {
+        "cve": [],
+        "description": "Docker daemon",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "dockerd"
+      },
+      {
+        "cve": [],
+        "description": "Systemd",
+        "risk_score": 0.0,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "systemd"
+      },
+      {
+        "cve": [],
+        "description": "Kernel",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "kernel"
+      },
+      {
+        "cve": [],
+        "description": "S3 sync service",
+        "risk_score": 1.5,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "s3-sync"
+      },
+      {
+        "cve": [],
+        "description": "CloudWatch agent",
+        "risk_score": 0.0,
+        "type": "service",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "cloudwatch-agent"
+      },
+      {
+        "cve": [],
+        "description": "Compromised internal user",
+        "risk_score": 0.0,
+        "type": "user",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "compromised_user"
+      },
+      {
+        "cve": [],
+        "description": "Administrator user",
+        "risk_score": 3.0,
+        "type": "user",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "admin"
+      },
+      {
+        "cve": [],
+        "description": "Root user",
+        "risk_score": 3.0,
+        "type": "user",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "root"
+      },
+      {
+        "cve": [],
+        "description": "Web server user",
+        "risk_score": 3.0,
+        "type": "user",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "www-data"
+      },
+      {
+        "cve": [],
+        "description": "SSH process",
+        "risk_score": 1.5,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "sshd[12345]"
+      },
+      {
+        "cve": [],
+        "description": "SSH process",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "sshd[9876]"
+      },
+      {
+        "cve": [],
+        "description": "SSH process",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "sshd[9877]"
+      },
+      {
+        "cve": [],
+        "description": "HTTP process",
+        "risk_score": 1.5,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "httpd[8080]"
+      },
+      {
+        "cve": [],
+        "description": "MySQL process",
+        "risk_score": 1.5,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "mysqld[5432]"
+      },
+      {
+        "cve": [],
+        "description": "Docker process",
+        "risk_score": 1.5,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "dockerd[2341]"
+      },
+      {
+        "cve": [],
+        "description": "Systemd process",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "systemd[1]"
+      },
+      {
+        "cve": [],
+        "description": "S3 sync process",
+        "risk_score": 1.5,
+        "type": "process",
+        "last_seen": "2025-11-01 20:10:55 IST",
+        "id": "s3-sync[4321]"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.23",
+        "target": "aws-instance"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "185.220.101.45",
+        "target": "aws-web-server"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.0.2.100",
+        "target": "aws-rds-mysql"
+      },
+      {
+        "type": "lateral_movement",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.42.16",
+        "target": "aws-instance"
+      },
+      {
+        "type": "lateral_movement",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.42.16",
+        "target": "aws-instance-2"
+      },
+      {
+        "type": "mount",
+        "weight": 1.0,
+        "count": 1,
+        "source": "c8f3a9b2d1e4",
+        "target": "/host"
+      },
+      {
+        "type": "container_escape",
+        "weight": 1.0,
+        "count": 1,
+        "source": "aws-instance",
+        "target": "c8f3a9b2d1e4"
+      },
+      {
+        "type": "exfiltration",
+        "weight": 1.0,
+        "count": 1,
+        "source": "aws-instance",
+        "target": "s3://attacker-bucket"
+      },
+      {
+        "type": "defense_evasion",
+        "weight": 1.0,
+        "count": 1,
+        "source": "aws-instance",
+        "target": "/var/log/auth.log*"
+      },
+      {
+        "type": "defense_evasion",
+        "weight": 1.0,
+        "count": 1,
+        "source": "aws-instance",
+        "target": "cloudwatch-agent"
+      },
+      {
+        "type": "user_to_instance",
+        "weight": 1.0,
+        "count": 1,
+        "source": "compromised_user",
+        "target": "aws-instance"
+      },
+      {
+        "type": "user_to_instance",
+        "weight": 1.0,
+        "count": 1,
+        "source": "admin",
+        "target": "aws-rds-mysql"
+      },
+      {
+        "type": "user_to_instance",
+        "weight": 1.0,
+        "count": 1,
+        "source": "root",
+        "target": "aws-instance"
+      },
+      {
+        "type": "user_to_instance",
+        "weight": 1.0,
+        "count": 1,
+        "source": "www-data",
+        "target": "aws-instance"
+      },
+      {
+        "type": "privilege_escalation",
+        "weight": 1.0,
+        "count": 1,
+        "source": "www-data",
+        "target": "root"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251101T144057Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

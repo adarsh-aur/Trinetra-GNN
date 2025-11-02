@@ -1,10 +1,12 @@
 import nvdlib
 import asyncio
+import os
 from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 from collections import defaultdict
 import logging
 import json
+import numpy as np
 
 
 class CVEAnalyzer:
@@ -19,7 +21,7 @@ class CVEAnalyzer:
 
         # CVE cache to avoid repeated API calls
         self.cve_cache = {}
-        self.cache_timeout = timedelta(hours=24)
+        self.cache_timeout = timedelta(hours=self.config.NVD_CACHE_TIMEOUT if hasattr(self.config, 'NVD_CACHE_TIMEOUT') else 24)
 
         # Track which nodes map to which software/services
         self.node_to_software = {}  # node_id -> {'name': 'Apache', 'version': '2.4.49'}
@@ -34,8 +36,10 @@ class CVEAnalyzer:
         Register what software/service a node is running
         Example: register_node_software(45, {'name': 'Apache', 'version': '2.4.49'})
         """
-        self.node_to_software[node_id] = software_info
-        self.logger.debug(f"Registered node {node_id}: {software_info}")
+        # 🔧 FIX: Ensure node_id is native Python int
+        node_id_int = int(node_id)
+        self.node_to_software[node_id_int] = software_info
+        self.logger.debug(f"Registered node {node_id_int}: {software_info}")
 
     async def analyze_anomalous_nodes(
             self,
@@ -51,7 +55,7 @@ class CVEAnalyzer:
             'total_cves_found': 0,
             'critical_cves': [],
             'high_cves': [],
-            'node_cve_mapping': {},
+            'node_cve_mapping': {},  # This will store int keys, not int64
             'exploit_available': [],
             'kev_listed': [],  # CISA Known Exploited Vulnerabilities
             'recommended_actions': []
@@ -59,14 +63,18 @@ class CVEAnalyzer:
 
         # Process each anomalous node
         for node_id in anomalous_nodes[:20]:  # Limit to avoid rate limiting
-            if node_id in self.node_to_software:
-                software_info = self.node_to_software[node_id]
+            # 🔧 FIX: Convert numpy int64 to native Python int
+            node_id_int = int(node_id)
+            
+            if node_id_int in self.node_to_software:
+                software_info = self.node_to_software[node_id_int]
 
                 # Search for CVEs
                 cves = await self._search_cves_for_software(software_info)
 
                 if cves:
-                    cve_intelligence['node_cve_mapping'][node_id] = cves
+                    # 🔧 FIX: Use native Python int as key, not numpy int64
+                    cve_intelligence['node_cve_mapping'][node_id_int] = cves
                     cve_intelligence['total_cves_found'] += len(cves)
 
                     # Categorize by severity
@@ -89,6 +97,27 @@ class CVEAnalyzer:
             cve_intelligence
         )
 
+        # 🔧 FIX: Ensure all data is JSON serializable before returning
+        cve_intelligence = self._ensure_json_serializable(cve_intelligence)
+
+        return cve_intelligence
+
+    def _ensure_json_serializable(self, cve_intelligence: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Ensure all data in CVE intelligence is JSON serializable
+        Converts numpy types to native Python types
+        """
+        # Convert node_cve_mapping keys from int64 to int
+        if 'node_cve_mapping' in cve_intelligence:
+            cve_intelligence['node_cve_mapping'] = {
+                int(k): v for k, v in cve_intelligence['node_cve_mapping'].items()
+            }
+        
+        # Ensure all numeric values are native Python types
+        for key in ['total_cves_found']:
+            if key in cve_intelligence and isinstance(cve_intelligence[key], np.integer):
+                cve_intelligence[key] = int(cve_intelligence[key])
+        
         return cve_intelligence
 
     async def _search_cves_for_software(
@@ -111,8 +140,9 @@ class CVEAnalyzer:
             # Search by keyword
             keyword = software_info['name']
 
-            # Rate limiting: 6 seconds without API key, 0.6 with key
-            delay = 0.6 if self.config.NVD_API_KEY else 6
+            # Rate limiting logic
+            api_key = self.config.NVD_API_KEY if hasattr(self.config, 'NVD_API_KEY') else None
+            delay = 0.6 if api_key else 6
 
             # Run in executor to avoid blocking
             loop = asyncio.get_event_loop()
@@ -120,7 +150,7 @@ class CVEAnalyzer:
                 None,
                 lambda: nvdlib.searchCVE(
                     keywordSearch=keyword,
-                    key=self.config.NVD_API_KEY if self.config.NVD_API_KEY else None,
+                    key=api_key,
                     delay=delay,
                     limit=10  # Limit results per software
                 )
@@ -130,7 +160,7 @@ class CVEAnalyzer:
             for cve in search_results:
                 cve_data = self._extract_cve_info(cve)
 
-                # Filter by version if specified
+                # Filter by version if specified (simplified check)
                 if 'version' in software_info:
                     if self._version_affected(cve, software_info['version']):
                         cve_results.append(cve_data)
@@ -153,48 +183,68 @@ class CVEAnalyzer:
         return cve_results
 
     def _extract_cve_info(self, cve) -> Dict[str, Any]:
-        """Extract relevant information from CVE object"""
+        """Extract relevant information from CVE object with proper type conversion"""
 
         # Get CVSS score and severity
         severity = 'UNKNOWN'
         score = 0.0
         vector = ''
 
+        # Use v3.1 if available, fallback to v2
         if hasattr(cve, 'v31severity') and cve.v31severity:
-            severity = cve.v31severity
-            score = cve.v31score if hasattr(cve, 'v31score') else 0.0
-            vector = cve.v31vector if hasattr(cve, 'v31vector') else ''
+            severity = str(cve.v31severity)
+            score = float(cve.v31score) if hasattr(cve, 'v31score') else 0.0
+            vector = str(cve.v31vector) if hasattr(cve, 'v31vector') else ''
         elif hasattr(cve, 'v2severity') and cve.v2severity:
-            severity = cve.v2severity
-            score = cve.v2score if hasattr(cve, 'v2score') else 0.0
+            severity = str(cve.v2severity)
+            score = float(cve.v2score) if hasattr(cve, 'v2score') else 0.0
 
         # Get description
         description = ''
         if hasattr(cve, 'descriptions') and cve.descriptions:
-            description = cve.descriptions[0].value
+            description = str(cve.descriptions[0].value)
 
-        # Check KEV catalog
-        kev_listed = hasattr(cve, 'exploitAdd') and cve.exploitAdd
+        # Check KEV catalog (simplified)
+        kev_listed = bool(hasattr(cve, 'exploitAdd') and cve.exploitAdd)
 
         # Extract attack complexity and other metrics
         metrics = self._parse_cvss_vector(vector)
 
+        # Get published and modified dates
+        published = None
+        if hasattr(cve, 'published'):
+            published = str(cve.published) if cve.published else None
+        
+        last_modified = None
+        if hasattr(cve, 'lastModified'):
+            last_modified = str(cve.lastModified) if cve.lastModified else None
+
+        # Get references (URLs)
+        references = []
+        if hasattr(cve, 'references') and cve.references:
+            references = [str(ref.url) for ref in cve.references]
+
+        # Get CWE
+        cwe = None
+        if hasattr(cve, 'cwe') and cve.cwe and len(cve.cwe) > 0:
+            cwe = str(cve.cwe[0].value) if hasattr(cve.cwe[0], 'value') else None
+
         return {
-            'cve_id': cve.id,
+            'cve_id': str(cve.id),
             'severity': severity,
-            'score': score,
+            'score': float(score),
             'vector': vector,
             'description': description,
-            'published': cve.published if hasattr(cve, 'published') else None,
-            'lastModified': cve.lastModified if hasattr(cve, 'lastModified') else None,
-            'kev_listed': kev_listed,
-            'exploit_available': kev_listed,  # If in KEV, exploit exists
-            'attack_vector': metrics.get('AV', 'UNKNOWN'),
-            'attack_complexity': metrics.get('AC', 'UNKNOWN'),
-            'privileges_required': metrics.get('PR', 'UNKNOWN'),
-            'user_interaction': metrics.get('UI', 'UNKNOWN'),
-            'references': [ref.url for ref in cve.references] if hasattr(cve, 'references') else [],
-            'cwe': cve.cwe[0].value if hasattr(cve, 'cwe') and cve.cwe else None
+            'published': published,
+            'lastModified': last_modified,
+            'kev_listed': bool(kev_listed),
+            'exploit_available': bool(kev_listed),  # If in KEV, exploit exists
+            'attack_vector': str(metrics.get('AV', 'UNKNOWN')),
+            'attack_complexity': str(metrics.get('AC', 'UNKNOWN')),
+            'privileges_required': str(metrics.get('PR', 'UNKNOWN')),
+            'user_interaction': str(metrics.get('UI', 'UNKNOWN')),
+            'references': references,
+            'cwe': cwe
         }
 
     def _parse_cvss_vector(self, vector: str) -> Dict[str, str]:
@@ -210,15 +260,9 @@ class CVEAnalyzer:
 
     def _version_affected(self, cve, version: str) -> bool:
         """Check if specific version is affected (simplified)"""
-        # This is a simplified version check
-        # In production, use proper CPE matching
-
         if not hasattr(cve, 'cpe'):
             return True  # Assume affected if no CPE data
-
-        # Check CPE configurations
-        # This is simplified - proper implementation should use CPE matching
-        return True
+        return True  # Simplified check
 
     def _generate_cve_actions(self, cve_intelligence: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Generate recommended actions based on CVE findings"""
@@ -270,7 +314,8 @@ class CVEAnalyzer:
     def get_cve_details(self, cve_id: str) -> Optional[Dict[str, Any]]:
         """Get detailed information about a specific CVE"""
         try:
-            cve = nvdlib.searchCVE(cveId=cve_id, key=self.config.NVD_API_KEY)[0]
+            api_key = self.config.NVD_API_KEY if hasattr(self.config, 'NVD_API_KEY') else None
+            cve = nvdlib.searchCVE(cveId=cve_id, key=api_key)[0]
             return self._extract_cve_info(cve)
         except Exception as e:
             self.logger.error(f"Failed to get CVE {cve_id}: {e}")
@@ -323,220 +368,3 @@ class CVEAnalyzer:
         report.append("=" * 80)
 
         return "\n".join(report)
-
-
-"""
-Enhanced core/config.py - Add NVD API configuration
-"""
-
-
-@dataclass
-class Config:
-    """Agent configuration with CVE integration"""
-
-    # ... (previous config) ...
-
-    # NVD API Configuration
-    NVD_API_KEY: Optional[str] = os.getenv("NVD_API_KEY", None)  # Optional but recommended
-    NVD_CACHE_TIMEOUT: int = 24  # hours
-    NVD_ENABLED: bool = True
-
-    # CVE Analysis
-    ANALYZE_CVES: bool = True
-    MAX_CVES_PER_NODE: int = 10
-    CVE_SEVERITY_FILTER: List[str] = None  # ['CRITICAL', 'HIGH'] or None for all
-
-
-"""
-Enhanced core/agent.py - Integrate CVE Analysis
-Add to existing GNNAgent class:
-"""
-
-
-class GNNAgent:
-    """Enhanced with CVE intelligence"""
-
-    def __init__(self, config: Config):
-        # ... (existing init) ...
-
-        # Add CVE analyzer
-        if config.ANALYZE_CVES and config.NVD_ENABLED:
-            self.cve_analyzer = CVEAnalyzer(config)
-            self.logger.info("CVE analysis enabled")
-        else:
-            self.cve_analyzer = None
-            self.logger.info("CVE analysis disabled")
-
-    async def _analyze_batch_results(
-            self,
-            batch_results: Dict[str, Any],
-            graph_data: Dict[str, Any]
-    ) -> Dict[str, Any]:
-        """Enhanced with CVE analysis"""
-
-        # ... (existing analysis code) ...
-
-        # Add CVE intelligence
-        if self.cve_analyzer:
-            cve_intelligence = await self.cve_analyzer.analyze_anomalous_nodes(
-                anomalous_nodes,
-                node_details
-            )
-            analysis['cve_intelligence'] = cve_intelligence
-
-            # Print CVE report
-            cve_report = self.cve_analyzer.generate_cve_report(cve_intelligence)
-            print(cve_report)
-        else:
-            analysis['cve_intelligence'] = None
-
-        return analysis
-
-    def _build_agent_prompt(self, analysis: Dict[str, Any], context: str) -> str:
-        """Enhanced prompt with CVE data"""
-
-        cve_section = ""
-        if analysis.get('cve_intelligence'):
-            cve_intel = analysis['cve_intelligence']
-            cve_section = f"""
-CVE INTELLIGENCE:
-- Total CVEs: {cve_intel['total_cves_found']}
-- Critical: {len(cve_intel['critical_cves'])}
-- High: {len(cve_intel['high_cves'])}
-- Known Exploited: {len(cve_intel['kev_listed'])}
-- Top CVEs: {[cve['cve_id'] for cve in cve_intel['critical_cves'][:3]]}
-"""
-
-        prompt = f"""You are {self.config.AGENT_NAME}, an autonomous AI agent specialized in {self.config.AGENT_ROLE}.
-
-{context}
-
-CURRENT ANALYSIS:
-```json
-{json.dumps({
-            'timestamp': analysis['timestamp'],
-            'graph_size': f"{analysis['total_nodes']} nodes, {analysis['total_edges']} edges",
-            'anomalies': analysis['anomalous_nodes'],
-            'anomaly_rate': f"{analysis['anomaly_rate']:.2%}",
-            'max_zscore': analysis['max_zscore'],
-            'top_vulnerable_nodes': analysis['node_details'][:5],
-            'critical_paths': analysis['vulnerable_paths'][:3]
-        }, indent=2)}
-```
-
-{cve_section}
-
-As an autonomous agent with CVE intelligence, analyze this situation and respond in JSON format:
-
-{{
-  "severity": "CRITICAL|HIGH|MEDIUM|LOW",
-  "confidence": 0.0-1.0,
-  "reasoning": "Your analysis including CVE context",
-  "threats_identified": ["threat1 (CVE-XXXX-XXXXX)", "threat2"],
-  "cve_analysis": "How detected anomalies relate to known CVEs",
-  "recommended_actions": [
-    {{"action": "action_name", "priority": "HIGH|MEDIUM|LOW", "reason": "why", "cve_related": "CVE-XXXX-XXXXX"}}
-  ],
-  "patch_priority": ["CVE-XXXX-XXXXX", "CVE-YYYY-YYYYY"],
-  "predictions": "What might happen next",
-  "questions": ["Any uncertainties"]
-}}
-
-Respond ONLY with valid JSON."""
-
-        return prompt
-
-
-"""
-Example usage in main.py:
-"""
-
-
-async def setup_node_software_mapping(agent):
-    """
-    Register which software each node is running
-    This would come from your asset inventory or discovery system
-    """
-
-    # Example: Map nodes to software
-    software_mappings = {
-        45: {'name': 'Apache', 'version': '2.4.49'},
-        67: {'name': 'OpenSSH', 'version': '7.4'},
-        89: {'name': 'Microsoft Exchange', 'version': '2019'},
-        12: {'name': 'nginx', 'version': '1.18.0'},
-        34: {'name': 'WordPress', 'version': '5.8'},
-        # Add more mappings...
-    }
-
-    for node_id, software in software_mappings.items():
-        agent.cve_analyzer.register_node_software(node_id, software)
-
-    print(f"Registered {len(software_mappings)} node-software mappings")
-
-
-async def main():
-    """Enhanced main with CVE intelligence"""
-    config = Config()
-    agent = GNNAgent(config)
-
-    # Setup software mappings
-    if agent.cve_analyzer:
-        await setup_node_software_mapping(agent)
-
-    print("=" * 80)
-    print("AGENTIC AI GNN MONITORING SYSTEM WITH CVE INTELLIGENCE")
-    print("=" * 80)
-    print(f"Agent: {config.AGENT_NAME}")
-    print(f"LLM: Groq ({config.GROQ_MODEL})")
-    print(f"CVE Analysis: {'Enabled' if config.ANALYZE_CVES else 'Disabled'}")
-    print(f"NVD API Key: {'Configured' if config.NVD_API_KEY else 'Not configured (rate limited)'}")
-    print("=" * 80 + "\n")
-
-    await agent.run()
-
-
-"""
-Enhanced requirements.txt - Add nvdlib
-"""
-REQUIREMENTS = """torch>=2.0.0
-torch-geometric>=2.3.0
-networkx>=3.0
-numpy>=1.24.0
-scipy>=1.10.0
-aiohttp>=3.8.0
-tiktoken>=0.5.0
-python-dotenv>=1.0.0
-nvdlib>=0.7.4
-"""
-
-"""
-Enhanced .env.example
-"""
-ENV_EXAMPLE = """# Groq API Configuration
-GROQ_API_KEY=your_groq_api_key_here
-
-# NVD API Configuration (Optional but recommended)
-# Get free key from: https://nvd.nist.gov/developers/request-an-api-key
-NVD_API_KEY=your_nvd_api_key_here
-
-# Configuration
-ZSCORE_THRESHOLD=3.0
-BATCH_SIZE=32
-UPDATE_INTERVAL=2.0
-LOG_LEVEL=INFO
-ANALYZE_CVES=true
-"""
-
-if __name__ == "__main__":
-    print("=" * 80)
-    print("CVE-ENHANCED AGENTIC AI GNN SYSTEM")
-    print("=" * 80)
-    print("\nThis enhanced system adds CVE intelligence capabilities!")
-    print("\nNew Features:")
-    print("  ✓ Real-time CVE lookup for anomalous nodes")
-    print("  ✓ CVSS severity scoring")
-    print("  ✓ CISA KEV catalog integration")
-    print("  ✓ Exploit availability detection")
-    print("  ✓ Automated patch prioritization")
-    print("  ✓ Type-specific solutions from NVD")
-    print("\n" + "=" * 80)

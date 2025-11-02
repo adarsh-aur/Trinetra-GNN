@@ -1,0 +1,266 @@
+{
+  "timestamp": "2025-10-31T20:14:33.596819",
+  "iteration": 104,
+  "total_nodes": 200,
+  "total_edges": 591,
+  "anomalous_nodes": 70,
+  "anomaly_rate": 0.35,
+  "mean_score": 1.6388134956359863,
+  "max_score": 16.99022674560547,
+  "max_zscore": 7.330557823181152,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 0,
+      "anomaly_score": 10.10942554473877,
+      "z_score": 4.084327697753906,
+      "degree": 41,
+      "betweenness": 0.19129360441049653,
+      "clustering": 0.0524390243902439,
+      "neighbors": 41
+    },
+    {
+      "node_id": 3,
+      "anomaly_score": 10.91257095336914,
+      "z_score": 4.463236331939697,
+      "degree": 18,
+      "betweenness": 0.05694391492715887,
+      "clustering": 0.0784313725490196,
+      "neighbors": 18
+    },
+    {
+      "node_id": 31,
+      "anomaly_score": 15.705684661865234,
+      "z_score": 6.7245354652404785,
+      "degree": 9,
+      "betweenness": 0.014006559465933259,
+      "clustering": 0.027777777777777776,
+      "neighbors": 9
+    },
+    {
+      "node_id": 36,
+      "anomaly_score": 12.993149757385254,
+      "z_score": 5.4448137283325195,
+      "degree": 6,
+      "betweenness": 0.0060750549267110385,
+      "clustering": 0.26666666666666666,
+      "neighbors": 6
+    },
+    {
+      "node_id": 47,
+      "anomaly_score": 15.700399398803711,
+      "z_score": 6.722042083740234,
+      "degree": 8,
+      "betweenness": 0.018673167040868195,
+      "clustering": 0.03571428571428571,
+      "neighbors": 8
+    },
+    {
+      "node_id": 92,
+      "anomaly_score": 16.99022674560547,
+      "z_score": 7.330557823181152,
+      "degree": 5,
+      "betweenness": 0.0035997430050516387,
+      "clustering": 0.0,
+      "neighbors": 5
+    },
+    {
+      "node_id": 115,
+      "anomaly_score": 12.807031631469727,
+      "z_score": 5.357006549835205,
+      "degree": 5,
+      "betweenness": 0.004169981183269954,
+      "clustering": 0.0,
+      "neighbors": 5
+    },
+    {
+      "node_id": 143,
+      "anomaly_score": 9.3228759765625,
+      "z_score": 3.7132489681243896,
+      "degree": 4,
+      "betweenness": 0.0017352557751418771,
+      "clustering": 0.0,
+      "neighbors": 4
+    },
+    {
+      "node_id": 187,
+      "anomaly_score": 13.312917709350586,
+      "z_score": 5.59567403793335,
+      "degree": 3,
+      "betweenness": 0.002062528185456841,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 192,
+      "anomaly_score": 11.114163398742676,
+      "z_score": 4.558343887329102,
+      "degree": 3,
+      "betweenness": 0.0009664108681925035,
+      "clustering": 0.0,
+      "neighbors": 3
+    },
+    {
+      "node_id": 200,
+      "anomaly_score": 10.10942554473877,
+      "z_score": 4.084327697753906,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 203,
+      "anomaly_score": 10.91257095336914,
+      "z_score": 4.463236331939697,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 231,
+      "anomaly_score": 15.705684661865234,
+      "z_score": 6.7245354652404785,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 236,
+      "anomaly_score": 12.993149757385254,
+      "z_score": 5.4448137283325195,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 247,
+      "anomaly_score": 15.700399398803711,
+      "z_score": 6.722042083740234,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 292,
+      "anomaly_score": 16.99022674560547,
+      "z_score": 7.330557823181152,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 315,
+      "anomaly_score": 12.807031631469727,
+      "z_score": 5.357006549835205,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 343,
+      "anomaly_score": 9.3228759765625,
+      "z_score": 3.7132489681243896,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 387,
+      "anomaly_score": 13.312917709350586,
+      "z_score": 5.59567403793335,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    },
+    {
+      "node_id": 392,
+      "anomaly_score": 11.114163398742676,
+      "z_score": 4.558343887329102,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        0,
+        1,
+        31
+      ],
+      "length": 3,
+      "source": 0,
+      "target": 31
+    },
+    {
+      "path": [
+        0,
+        4,
+        36
+      ],
+      "length": 3,
+      "source": 0,
+      "target": 36
+    },
+    {
+      "path": [
+        3,
+        9,
+        31
+      ],
+      "length": 3,
+      "source": 3,
+      "target": 31
+    },
+    {
+      "path": [
+        3,
+        4,
+        36
+      ],
+      "length": 3,
+      "source": 3,
+      "target": 36
+    },
+    {
+      "path": [
+        3,
+        0,
+        47
+      ],
+      "length": 3,
+      "source": 3,
+      "target": 47
+    }
+  ],
+  "batch_processing_time": 0.006410360336303711,
+  "agent_response": {
+    "severity": "UNKNOWN",
+    "confidence": 0.5,
+    "reasoning": "Error: API returned status 429",
+    "threats_identified": [],
+    "recommended_actions": [],
+    "predictions": "",
+    "questions": []
+  },
+  "actions_taken": [
+    {
+      "action": "send_alert",
+      "status": "sent",
+      "timestamp": "2025-10-31T20:14:33.651455",
+      "severity": "UNKNOWN",
+      "message": "Anomaly rate 35.00% exceeds threshold"
+    }
+  ],
+  "total_anomalies_cumulative": 6132
+}

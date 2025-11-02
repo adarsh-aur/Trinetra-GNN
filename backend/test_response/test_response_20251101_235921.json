@@ -1,0 +1,541 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.1999999999999997,
+    "total_nodes": 10,
+    "total_edges": 9,
+    "anomalies_detected_count": 1,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 5,
+    "nodes_with_cves": 1,
+    "unique_cves": [
+      "CVE-1999-0236",
+      "CVE-1999-0071",
+      "CVE-2024-27393",
+      "CVE-2003-0135",
+      "CVE-1999-0428"
+    ],
+    "high_severity_cves": [
+      "CVE-1999-0428",
+      "CVE-1999-0236",
+      "CVE-1999-0071",
+      "CVE-2003-0135"
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "172.16.109.223",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.1.45",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.160.31.237",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.23.152.178",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.1.23",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.0.0.12",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.55.73",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.0.0.5",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "91.113.121.48",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "185.220.101.5",
+      "type": "ip",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-27393",
+        "CVE-1999-0428",
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-2003-0135"
+      ],
+      "cve_scores": {
+        "CVE-2024-27393": 5.5,
+        "CVE-1999-0428": 7.5,
+        "CVE-1999-0236": 7.5,
+        "CVE-1999-0071": 7.5,
+        "CVE-2003-0135": 7.5
+      },
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "172.16.109.223",
+      "target": "192.168.1.45",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.1.45",
+      "target": "10.160.31.237",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.160.31.237",
+      "target": "172.23.152.178",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.23.152.178",
+      "target": "192.168.1.23",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.1.23",
+      "target": "10.0.0.12",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.0.12",
+      "target": "192.168.55.73",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.55.73",
+      "target": "10.0.0.5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.0.5",
+      "target": "91.113.121.48",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "91.113.121.48",
+      "target": "185.220.101.5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "185.220.101.5",
+      "risk_score": 10.0,
+      "type": "ip",
+      "z_score": null,
+      "cve": [
+        "CVE-2024-27393",
+        "CVE-1999-0428",
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-2003-0135"
+      ]
+    }
+  ],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "172.16.109.223": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Private IP likely a compute instance in internal network."
+    },
+    "192.168.1.45": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Internal host performing SSH to Redis, typical compute node."
+    },
+    "10.160.31.237": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Private IP in 10.160.0.0/16, likely a compute server."
+    },
+    "172.23.152.178": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Destination IP in internal network, likely a compute instance."
+    },
+    "192.168.1.23": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Internal host handling HTTP, typical compute node."
+    },
+    "10.0.0.12": {
+      "category": "database",
+      "cloud_platform": "generic",
+      "reasoning": "PostgreSQL service on internal IP, database server."
+    },
+    "192.168.55.73": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Private IP, likely a compute host."
+    },
+    "10.0.0.5": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "Redis service endpoint, internal compute node."
+    },
+    "91.113.121.48": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "Public IP, external network address, likely attacker source."
+    },
+    "185.220.101.5": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External attacker IP, involved in MITM, high risk."
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip"
+    ],
+    "predictions": [
+      {
+        "node_id": "172.16.109.223",
+        "anomaly_probability": 0.29303932189941406,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.1.45",
+        "anomaly_probability": 0.2757883667945862,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.160.31.237",
+        "anomaly_probability": 0.2739192843437195,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.23.152.178",
+        "anomaly_probability": 0.27997612953186035,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.1.23",
+        "anomaly_probability": 0.27997612953186035,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.0.12",
+        "anomaly_probability": 0.27997612953186035,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.55.73",
+        "anomaly_probability": 0.27997612953186035,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.0.5",
+        "anomaly_probability": 0.43355482816696167,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "91.113.121.48",
+        "anomaly_probability": 0.29580754041671753,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "185.220.101.5",
+        "anomaly_probability": 0.25494086742401123,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.3150288164615631
+  },
+  "embeddings_shape": [
+    10,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "172.16.109.223"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "192.168.1.45"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "10.160.31.237"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "172.23.152.178"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "192.168.1.23"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "10.0.0.12"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "192.168.55.73"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "10.0.0.5"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "91.113.121.48"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-2024-27393": {
+            "cve_id": "CVE-2024-27393",
+            "score": 5.5,
+            "severity": "MEDIUM",
+            "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nxen-netfront: Add missing skb_mark_for_recycle\n\nNotice that skb_mark_for_recycle() is introduced later than fixes tag in\ncommit 6a5",
+            "published": "2024-05-14T15:12:26.993",
+            "last_modified": "2025-04-08T19:42:11.457"
+          },
+          "CVE-1999-0428": {
+            "cve_id": "CVE-1999-0428",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "OpenSSL and SSLeay allow remote attackers to reuse SSL sessions and bypass access controls.",
+            "published": "1999-03-22T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2003-0135": {
+            "cve_id": "CVE-2003-0135",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "vsftpd FTP daemon in Red Hat Linux 9 is not compiled against TCP wrappers (tcp_wrappers) but is installed as a standalone service, which inadvertently prevents vsftpd from restricting access as intend",
+            "published": "2003-04-11T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "ip",
+        "last_seen": "2025-11-01 23:59:19 IST",
+        "id": "185.220.101.5"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.16.109.223",
+        "target": "192.168.1.45"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.45",
+        "target": "10.160.31.237"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.160.31.237",
+        "target": "172.23.152.178"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.23.152.178",
+        "target": "192.168.1.23"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.23",
+        "target": "10.0.0.12"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.12",
+        "target": "192.168.55.73"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.55.73",
+        "target": "10.0.0.5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.5",
+        "target": "91.113.121.48"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "91.113.121.48",
+        "target": "185.220.101.5"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251101T182921Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

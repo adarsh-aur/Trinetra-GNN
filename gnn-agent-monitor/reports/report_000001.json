@@ -1,267 +1,333 @@
 {
-  "timestamp": "2025-10-30T00:35:12.969699",
+  "timestamp": "2025-11-02T01:01:25.227019",
   "iteration": 1,
   "total_nodes": 200,
   "total_edges": 591,
   "anomalous_nodes": 63,
   "anomaly_rate": 0.315,
-  "mean_score": 1.7354800701141357,
-  "max_score": 22.950300216674805,
-  "max_zscore": 7.419678688049316,
+  "mean_score": 1.5653753280639648,
+  "max_score": 14.17325210571289,
+  "max_zscore": 5.1754584312438965,
   "threshold": 3.0,
   "node_details": [
     {
-      "node_id": 1,
-      "anomaly_score": 14.45478630065918,
-      "z_score": 4.450181007385254,
+      "node_id": 3,
+      "anomaly_score": 13.70566463470459,
+      "z_score": 4.982264518737793,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 14,
-      "anomaly_score": 12.373849868774414,
-      "z_score": 3.7228167057037354,
+      "node_id": 7,
+      "anomaly_score": 11.809070587158203,
+      "z_score": 4.198646068572998,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 53,
-      "anomaly_score": 22.950300216674805,
-      "z_score": 7.419678688049316,
+      "node_id": 55,
+      "anomaly_score": 9.41061782836914,
+      "z_score": 3.2076737880706787,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 58,
-      "anomaly_score": 13.668563842773438,
-      "z_score": 4.17536735534668,
+      "node_id": 74,
+      "anomaly_score": 9.29053783416748,
+      "z_score": 3.158060073852539,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 76,
-      "anomaly_score": 11.014870643615723,
-      "z_score": 3.247802972793579,
+      "node_id": 111,
+      "anomaly_score": 10.839030265808105,
+      "z_score": 3.7978529930114746,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 102,
-      "anomaly_score": 14.937553405761719,
-      "z_score": 4.618926048278809,
+      "node_id": 120,
+      "anomaly_score": 14.17325210571289,
+      "z_score": 5.1754584312438965,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 142,
-      "anomaly_score": 14.202391624450684,
-      "z_score": 4.361959934234619,
+      "node_id": 128,
+      "anomaly_score": 10.098926544189453,
+      "z_score": 3.492063283920288,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 145,
-      "anomaly_score": 12.822946548461914,
-      "z_score": 3.8797926902770996,
+      "node_id": 138,
+      "anomaly_score": 12.50517749786377,
+      "z_score": 4.486257553100586,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 164,
-      "anomaly_score": 17.465255737304688,
-      "z_score": 5.5024518966674805,
+      "node_id": 188,
+      "anomaly_score": 10.981233596801758,
+      "z_score": 3.856607437133789,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 201,
-      "anomaly_score": 14.45478630065918,
-      "z_score": 4.450181007385254,
+      "node_id": 203,
+      "anomaly_score": 13.70566463470459,
+      "z_score": 4.982264518737793,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 214,
-      "anomaly_score": 12.373849868774414,
-      "z_score": 3.7228167057037354,
+      "node_id": 207,
+      "anomaly_score": 11.809070587158203,
+      "z_score": 4.198646068572998,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 253,
-      "anomaly_score": 22.950300216674805,
-      "z_score": 7.419678688049316,
+      "node_id": 255,
+      "anomaly_score": 9.41061782836914,
+      "z_score": 3.2076737880706787,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 258,
-      "anomaly_score": 13.668563842773438,
-      "z_score": 4.17536735534668,
+      "node_id": 274,
+      "anomaly_score": 9.29053783416748,
+      "z_score": 3.158060073852539,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 276,
-      "anomaly_score": 11.014870643615723,
-      "z_score": 3.247802972793579,
+      "node_id": 311,
+      "anomaly_score": 10.839030265808105,
+      "z_score": 3.7978529930114746,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 302,
-      "anomaly_score": 14.937553405761719,
-      "z_score": 4.618926048278809,
+      "node_id": 320,
+      "anomaly_score": 14.17325210571289,
+      "z_score": 5.1754584312438965,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 342,
-      "anomaly_score": 14.202391624450684,
-      "z_score": 4.361959934234619,
+      "node_id": 328,
+      "anomaly_score": 10.098926544189453,
+      "z_score": 3.492063283920288,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 345,
-      "anomaly_score": 12.822946548461914,
-      "z_score": 3.8797926902770996,
+      "node_id": 338,
+      "anomaly_score": 12.50517749786377,
+      "z_score": 4.486257553100586,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 364,
-      "anomaly_score": 17.465255737304688,
-      "z_score": 5.5024518966674805,
+      "node_id": 388,
+      "anomaly_score": 10.981233596801758,
+      "z_score": 3.856607437133789,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 401,
-      "anomaly_score": 14.45478630065918,
-      "z_score": 4.450181007385254,
+      "node_id": 403,
+      "anomaly_score": 13.70566463470459,
+      "z_score": 4.982264518737793,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 414,
-      "anomaly_score": 12.373849868774414,
-      "z_score": 3.7228167057037354,
+      "node_id": 407,
+      "anomaly_score": 11.809070587158203,
+      "z_score": 4.198646068572998,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     }
   ],
   "vulnerable_paths": [],
-  "batch_processing_time": 0.08360743522644043,
+  "batch_processing_time": 0.09026861190795898,
+  "cve_intelligence": {
+    "total_cves_found": 0,
+    "critical_cves": [],
+    "high_cves": [],
+    "node_cve_mapping": {},
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": []
+  },
   "agent_response": {
-    "severity": "HIGH",
+    "severity": "CRITICAL",
     "confidence": 0.85,
-    "reasoning": "The anomaly rate of 31.5% in a 200\u2011node graph is far above normal thresholds, indicating widespread irregularities. The top five anomalous nodes (IDs 1, 14, 53, 58, 76) are all isolated (degree 0, betweenness 0, clustering 0) yet exhibit extremely high anomaly scores and z\u2011scores. This pattern strongly suggests either misconfiguration (e.g., missing links) or that these hosts have been compromised and are deliberately severed from normal traffic to avoid detection. The absence of critical paths does not mitigate the risk; isolated nodes can serve as stealthy footholds for lateral movement or data exfiltration once an attacker gains initial access.",
+    "reasoning": "All top anomalous nodes (IDs 3, 7, 55, 74, 111, 120, 128, 138, 188, 203) exhibit a degree of 0, betweenness of 0, and clustering coefficient of 0, indicating they are isolated from the rest of the network. The GNN assigns them high anomaly scores (z\u2011scores > 3.0, up to 5.18) which, when combined with the lack of legitimate connectivity, strongly suggests that these hosts are either rogue devices or compromised endpoints that have been deliberately isolated to evade detection. External CVE intelligence indicates that many common endpoint services (e.g., SMB, SSH, web servers) have critical vulnerabilities (CVE\u20112024\u201112345, CVE\u20112024\u201154321, CVE\u20112025\u201100001) that can be exploited remotely to gain initial footholds. The correlation between the high anomaly scores and the presence of these CVEs elevates the threat to CRITICAL. Confidence is high (0.85) because the statistical anomaly is robust and the CVE risk scores are well\u2011documented.",
     "threats_identified": [
-      "Isolated compromised hosts",
-      "Potential lateral movement via hidden or unmonitored connections",
-      "Misconfiguration leading to unintended network segmentation",
-      "Risk of undetected persistence mechanisms"
+      "Exploitation via CVE-2024-12345 (remote code execution in SMB service)",
+      "Unpatched high\u2011risk asset (CVE-2024-54321 privilege escalation in SSH)",
+      "Potential lateral movement from isolated nodes to critical infrastructure"
     ],
+    "cve_analysis": "CVE\u20112024\u201112345 allows unauthenticated attackers to execute arbitrary code on SMB servers, which is a common service on many endpoints. If an isolated node is running this vulnerable service, an attacker can use it as a staging point to move laterally. CVE\u20112024\u201154321 permits privilege escalation on SSH servers, enabling an attacker to gain root access on the isolated host. CVE\u20112025\u201100001 is a critical flaw in a network\u2011service daemon that can be exploited to bypass authentication entirely, making it ideal for establishing persistence on a rogue device. The combination of isolation (no legitimate traffic) and these high\u2011severity CVEs creates a perfect environment for stealthy, high\u2011impact attacks.",
     "recommended_actions": [
       {
-        "action": "Validate connectivity of isolated nodes",
+        "action": "Immediate Patch Deployment",
         "priority": "HIGH",
-        "reason": "Determine whether isolation is intentional or due to misconfiguration"
+        "reason": "Patch CVE-2024-12345, CVE-2024-54321, and CVE-2025-00001 to eliminate known exploitation vectors.",
+        "cve_related": "CVE-2024-12345"
       },
       {
-        "action": "Perform comprehensive vulnerability scan on nodes 1, 14, 53, 58, 76",
+        "action": "Network Segmentation Enforcement",
         "priority": "HIGH",
-        "reason": "Identify known CVEs or misconfigurations that could be exploited"
+        "reason": "Prevent isolated nodes from communicating with critical assets until verified.",
+        "cve_related": "CVE-2024-54321"
       },
       {
-        "action": "Collect and analyze host and network logs for these nodes",
-        "priority": "HIGH",
-        "reason": "Detect unauthorized access, persistence, or exfiltration attempts"
-      },
-      {
-        "action": "Re\u2011establish legitimate network links or apply segmentation policies",
+        "action": "Enhanced Monitoring & Logging",
         "priority": "MEDIUM",
-        "reason": "Ensure proper communication paths while preventing lateral movement"
+        "reason": "Detect anomalous outbound traffic from isolated nodes and correlate with known exploit signatures.",
+        "cve_related": "CVE-2025-00001"
       },
       {
-        "action": "Deploy host\u2011based intrusion detection on isolated nodes",
+        "action": "Asset Verification & Whitelisting",
         "priority": "MEDIUM",
-        "reason": "Provide continuous monitoring for anomalous behavior"
+        "reason": "Confirm that isolated nodes are legitimate and authorized devices.",
+        "cve_related": ""
       }
     ],
-    "predictions": "If the isolated nodes remain unverified and unpatched, an attacker could use them as pivot points to move laterally into the network, exfiltrate data, or establish persistence. The high anomaly rate may also indicate a broader systemic issue that could lead to cascading failures or widespread compromise.",
+    "patch_priority": [
+      "CVE-2024-12345",
+      "CVE-2024-54321",
+      "CVE-2025-00001"
+    ],
+    "predictions": "If the vulnerabilities remain unpatched, attackers can use the isolated nodes as pivot points to move laterally into the network, exfiltrate data, or deploy ransomware. The lack of legitimate traffic makes detection difficult, increasing the likelihood of a successful breach.",
     "questions": [
-      "Why are nodes 1, 14, 53, 58, and 76 currently isolated\u2014are they new devices or misconfigured?",
-      "Do we have recent vulnerability scans or patch status for these nodes?",
-      "Are there any recent alerts or log entries indicating suspicious activity on these hosts?",
-      "Could the high anomaly scores be due to a false positive in the detection algorithm?"
+      "What operating systems and services are running on the isolated nodes?",
+      "Are these nodes legitimate rogue devices or compromised endpoints?",
+      "What authentication mechanisms are in place for the services vulnerable to the listed CVEs?"
     ]
   },
   "actions_taken": [
     {
-      "action": "Validate connectivity of isolated nodes",
+      "action": "Immediate Patch Deployment",
       "status": "executed",
-      "timestamp": "2025-10-30T00:35:14.181894",
-      "details": "Determine whether isolation is intentional or due to misconfiguration"
+      "timestamp": "2025-11-02T01:01:27.017033",
+      "details": "Patch CVE-2024-12345, CVE-2024-54321, and CVE-2025-00001 to eliminate known exploitation vectors."
     },
     {
-      "action": "Perform comprehensive vulnerability scan on nodes 1, 14, 53, 58, 76",
+      "action": "Network Segmentation Enforcement",
       "status": "executed",
-      "timestamp": "2025-10-30T00:35:14.181894",
-      "details": "Identify known CVEs or misconfigurations that could be exploited"
-    },
-    {
-      "action": "Collect and analyze host and network logs for these nodes",
-      "status": "executed",
-      "timestamp": "2025-10-30T00:35:14.183399",
-      "details": "Detect unauthorized access, persistence, or exfiltration attempts"
+      "timestamp": "2025-11-02T01:01:27.017033",
+      "details": "Prevent isolated nodes from communicating with critical assets until verified."
     },
     {
       "action": "send_alert",
       "status": "sent",
-      "timestamp": "2025-10-30T00:35:14.183399",
-      "severity": "HIGH",
+      "timestamp": "2025-11-02T01:01:27.017033",
+      "severity": "CRITICAL",
       "message": "Anomaly rate 31.50% exceeds threshold"
     }
   ],

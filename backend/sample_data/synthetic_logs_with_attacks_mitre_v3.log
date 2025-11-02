@@ -1,0 +1,77 @@
+<14>Oct 30 22:05:15 synthetic-host ssh[5258]: event="Successful Cloud Login" user=bob src=10.0.0.5 service=ssh status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<6>Oct 30 22:05:25 synthetic-host web[793]: event=NormalLogin user=bob src=198.51.100.23 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:05:35 synthetic-host ssh[6909]: event="Log Deletion" user=alice src=10.0.0.5 service=ssh status=Malicious technique=T1070.004 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<14>Oct 30 22:05:45 synthetic-host db[1267]: event="Failed SSH Login" user=admin src=203.0.113.45 service=db status=Malicious technique=T1110.003 tactic=Credential Access binary=1 nodes=3 edges=2
+<6>Oct 30 22:05:55 synthetic-host db[7948]: event=NormalLogin user=root src=192.168.1.10 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:06:05 synthetic-host db[5465]: event=NormalLogin user=root src=203.0.113.45 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:06:15 synthetic-host db[2131]: event=NormalLogin user=attacker src=198.51.100.23 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:06:25 synthetic-host ssh[4298]: event=NormalLogin user=attacker src=198.51.100.23 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:06:35 synthetic-host s3[4741]: event=NormalLogin user=bob src=10.0.0.5 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:06:45 synthetic-host db[2263]: event=NormalLogin user=attacker src=198.51.100.23 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:06:55 synthetic-host ssh[6647]: event="Successful Cloud Login" user=root src=198.51.100.23 service=ssh status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<14>Oct 30 22:07:05 synthetic-host ssh[119]: event="Log Deletion" user=root src=198.51.100.23 service=ssh status=Malicious technique=T1070.004 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<6>Oct 30 22:07:15 synthetic-host s3[3384]: event=NormalLogin user=admin src=10.0.0.5 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:07:25 synthetic-host web[7519]: event=NormalLogin user=admin src=10.0.0.5 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:07:35 synthetic-host db[4044]: event=NormalLogin user=admin src=203.0.113.45 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:07:45 synthetic-host ssh[3700]: event="Successful Cloud Login" user=root src=192.168.1.10 service=ssh status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<6>Oct 30 22:07:55 synthetic-host ssh[3663]: event=NormalLogin user=alice src=198.51.100.23 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:08:05 synthetic-host db[4375]: event="Successful Cloud Login" user=admin src=203.0.113.45 service=db status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<6>Oct 30 22:08:15 synthetic-host s3[219]: event=NormalLogin user=alice src=198.51.100.23 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:08:25 synthetic-host s3[1142]: event=NormalLogin user=admin src=192.168.1.10 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:08:35 synthetic-host s3[8479]: event="Failed SSH Login" user=alice src=203.0.113.45 service=s3 status=Malicious technique=T1110.003 tactic=Credential Access binary=1 nodes=3 edges=2
+<6>Oct 30 22:08:45 synthetic-host logging[2462]: event=NormalLogin user=alice src=198.51.100.23 service=logging status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:08:55 synthetic-host s3[5024]: event="Stop Cloud Logging" user=attacker src=198.51.100.23 service=s3 status=Malicious technique=T1562.008 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<6>Oct 30 22:09:05 synthetic-host db[3856]: event=NormalLogin user=alice src=192.168.1.10 service=db status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:09:15 synthetic-host logging[8316]: event="Log Deletion" user=alice src=192.168.1.10 service=logging status=Malicious technique=T1070.004 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<6>Oct 30 22:09:25 synthetic-host web[6001]: event=NormalLogin user=bob src=192.168.1.10 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:09:35 synthetic-host web[3289]: event=NormalLogin user=root src=192.168.1.15 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:09:45 synthetic-host logging[5077]: event="Stop Cloud Logging" user=alice src=198.51.100.23 service=logging status=Malicious technique=T1562.008 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<14>Oct 30 22:09:55 synthetic-host ssh[9553]: event="Successful Cloud Login" user=bob src=192.168.1.10 service=ssh status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<6>Oct 30 22:10:05 synthetic-host s3[3811]: event=NormalLogin user=bob src=203.0.113.45 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:10:15 synthetic-host logging[5999]: event=NormalLogin user=bob src=198.51.100.23 service=logging status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:10:25 synthetic-host logging[3080]: event=NormalLogin user=bob src=203.0.113.45 service=logging status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:10:35 synthetic-host web[3983]: event=NormalLogin user=root src=203.0.113.45 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:10:45 synthetic-host web[5274]: event="Stop Cloud Logging" user=attacker src=10.0.0.5 service=web status=Malicious technique=T1562.008 tactic=Defense Evasion binary=1 nodes=3 edges=2
+<6>Oct 30 22:10:55 synthetic-host s3[802]: event=NormalLogin user=bob src=192.168.1.10 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:11:05 synthetic-host web[2556]: event=NormalLogin user=admin src=203.0.113.45 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:11:15 synthetic-host web[2114]: event=NormalLogin user=attacker src=10.0.0.5 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:11:25 synthetic-host web[9557]: event="Successful Cloud Login" user=admin src=203.0.113.45 service=web status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<14>Oct 30 22:11:35 synthetic-host logging[1373]: event="Large S3 Download" user=admin src=203.0.113.45 service=logging status=Malicious technique=T1530 tactic=Exfiltration binary=1 nodes=3 edges=2
+<6>Oct 30 22:11:45 synthetic-host ssh[1493]: event=NormalLogin user=bob src=203.0.113.45 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:11:55 synthetic-host web[8111]: event="Large S3 Download" user=attacker src=192.168.1.15 service=web status=Malicious technique=T1530 tactic=Exfiltration binary=1 nodes=3 edges=2
+<14>Oct 30 22:12:05 synthetic-host s3[5841]: event="Failed SSH Login" user=bob src=198.51.100.23 service=s3 status=Malicious technique=T1110.003 tactic=Credential Access binary=1 nodes=3 edges=2
+<6>Oct 30 22:12:15 synthetic-host ssh[2362]: event=NormalLogin user=root src=192.168.1.15 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:12:25 synthetic-host ssh[1220]: event=NormalLogin user=admin src=203.0.113.45 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:12:35 synthetic-host logging[2037]: event=NormalLogin user=alice src=192.168.1.15 service=logging status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:12:45 synthetic-host s3[4202]: event=NormalLogin user=attacker src=198.51.100.23 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:12:55 synthetic-host ssh[1017]: event=NormalLogin user=root src=192.168.1.10 service=ssh status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<6>Oct 30 22:13:05 synthetic-host web[109]: event=NormalLogin user=root src=10.0.0.5 service=web status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+<14>Oct 30 22:13:15 synthetic-host s3[2359]: event="Successful Cloud Login" user=admin src=192.168.1.10 service=s3 status=Malicious technique=T1078.004 tactic=Persistence binary=1 nodes=3 edges=2
+<6>Oct 30 22:13:25 synthetic-host s3[9942]: event=NormalLogin user=admin src=10.0.0.5 service=s3 status=Success technique=- tactic=- binary=0 nodes=3 edges=2
+# --- ADDED ATTACK EVENTS: DDOS (mitre=T1499) ---
+<14>Oct 30 22:14:25 synthetic-host web[6038]: event="DDOS Attack" user=unknown src=198.51.100.202 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:30 synthetic-host web[6335]: event="DDOS Attack" user=unknown src=198.51.100.202 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:35 synthetic-host web[5598]: event="DDOS Attack" user=unknown src=203.0.113.150 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:40 synthetic-host web[7923]: event="DDOS Attack" user=unknown src=203.0.113.150 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:45 synthetic-host web[4863]: event="DDOS Attack" user=unknown src=192.0.2.66 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:50 synthetic-host web[4606]: event="DDOS Attack" user=unknown src=203.0.113.100 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:14:55 synthetic-host web[4110]: event="DDOS Attack" user=unknown src=10.0.0.50 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+<14>Oct 30 22:15:00 synthetic-host web[5546]: event="DDOS Attack" user=unknown src=198.51.100.202 service=http status=Malicious technique=T1499 tactic=Impact mitre=T1499 mitre_tactic=Impact binary=1 nodes=3 edges=2
+# --- ADDED ATTACK EVENTS: DATA EXFILTRATION (mitre=T1567) ---
+<14>Oct 30 22:15:05 synthetic-host s3[627]: event="Large S3 Download" user=admin src=203.0.113.45 service=s3 status=Malicious technique=T1567 tactic=Exfiltration mitre=T1567 mitre_tactic=Exfiltration binary=1 nodes=3 edges=2
+<14>Oct 30 22:15:12 synthetic-host s3[6822]: event="Large S3 Download" user=admin src=198.51.100.23 service=s3 status=Malicious technique=T1567 tactic=Exfiltration mitre=T1567 mitre_tactic=Exfiltration binary=1 nodes=3 edges=2
+<14>Oct 30 22:15:19 synthetic-host s3[3568]: event="Large S3 Download" user=admin src=192.168.1.55 service=s3 status=Malicious technique=T1567 tactic=Exfiltration mitre=T1567 mitre_tactic=Exfiltration binary=1 nodes=3 edges=2
+<14>Oct 30 22:15:26 synthetic-host s3[7528]: event="Large S3 Download" user=admin src=192.168.1.55 service=s3 status=Malicious technique=T1567 tactic=Exfiltration mitre=T1567 mitre_tactic=Exfiltration binary=1 nodes=3 edges=2
+# --- ADDED ATTACK EVENTS: PORT SCAN (mitre=T1046) ---
+<6>Oct 30 22:15:33 synthetic-host netmon[8773]: event="Port Scan" user=scanner src=192.168.1.200 service=db status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:36 synthetic-host netmon[1125]: event="Port Scan" user=scanner src=203.0.113.200 service=db status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:39 synthetic-host netmon[4440]: event="Port Scan" user=scanner src=192.168.1.200 service=db status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:42 synthetic-host netmon[5929]: event="Port Scan" user=scanner src=203.0.113.200 service=smtp status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:45 synthetic-host netmon[5155]: event="Port Scan" user=scanner src=192.168.1.200 service=db status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:48 synthetic-host netmon[7219]: event="Port Scan" user=scanner src=203.0.113.200 service=ssh status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:51 synthetic-host netmon[5343]: event="Port Scan" user=scanner src=192.168.1.200 service=smtp status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:54 synthetic-host netmon[3851]: event="Port Scan" user=scanner src=198.51.100.99 service=db status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:15:57 synthetic-host netmon[7058]: event="Port Scan" user=scanner src=203.0.113.200 service=ssh status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:16:00 synthetic-host netmon[7418]: event="Port Scan" user=scanner src=192.168.1.200 service=ssh status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:16:03 synthetic-host netmon[5917]: event="Port Scan" user=scanner src=203.0.113.200 service=web status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2
+<6>Oct 30 22:16:06 synthetic-host netmon[7536]: event="Port Scan" user=scanner src=10.0.0.9 service=ssh status=Malicious technique=T1046 tactic=Discovery mitre=T1046 mitre_tactic=Discovery binary=1 nodes=3 edges=2

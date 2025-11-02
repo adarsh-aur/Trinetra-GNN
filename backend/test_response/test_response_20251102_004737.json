@@ -1,0 +1,491 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.2,
+    "total_nodes": 10,
+    "total_edges": 9,
+    "anomalies_detected_count": 1,
+    "anomalies_confirmed_count": 1
+  },
+  "cve_analysis": {
+    "total_cves_found": 4,
+    "nodes_with_cves": 1,
+    "unique_cves": [
+      "CVE-2000-0525",
+      "CVE-2001-1158",
+      "CVE-1999-0661",
+      "CVE-2001-0201"
+    ],
+    "high_severity_cves": [
+      "CVE-2001-0201",
+      "CVE-1999-0661",
+      "CVE-2000-0525",
+      "CVE-2001-1158"
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "192.168.1.45",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "91.113.121.48",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.0.0.5",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "77.16.12.95",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.204.216.111",
+      "type": "ip",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2001-0201",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2001-1158"
+      ],
+      "cve_scores": {
+        "CVE-2001-0201": 7.5,
+        "CVE-1999-0661": 10.0,
+        "CVE-2000-0525": 10.0,
+        "CVE-2001-1158": 7.5
+      },
+      "last_seen": null
+    },
+    {
+      "id": "172.31.249.87",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "135.253.249.81",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.135.69",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.55.73",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.24.191.163",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "192.168.1.45",
+      "target": "91.113.121.48",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "91.113.121.48",
+      "target": "10.0.0.5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.0.5",
+      "target": "77.16.12.95",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "77.16.12.95",
+      "target": "10.204.216.111",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.204.216.111",
+      "target": "172.31.249.87",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.249.87",
+      "target": "135.253.249.81",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "135.253.249.81",
+      "target": "192.168.135.69",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.135.69",
+      "target": "192.168.55.73",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.55.73",
+      "target": "172.24.191.163",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "10.204.216.111",
+      "risk_score": 10.0,
+      "type": "ip",
+      "z_score": null,
+      "cve": [
+        "CVE-2001-0201",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2001-1158"
+      ]
+    }
+  ],
+  "anomalies_confirmed": [
+    {
+      "id": "10.204.216.111",
+      "risk_score": 10.0,
+      "type": "ip",
+      "reason": "LLM confirmed",
+      "cve": [
+        "CVE-2001-0201",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2001-1158"
+      ]
+    }
+  ],
+  "llm_categorization": {},
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 0.8,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1_score": 0.5,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip"
+    ],
+    "predictions": [
+      {
+        "node_id": "192.168.1.45",
+        "anomaly_probability": 0.2614693343639374,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "91.113.121.48",
+        "anomaly_probability": 0.2507961392402649,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.0.5",
+        "anomaly_probability": 0.4365858733654022,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "77.16.12.95",
+        "anomaly_probability": 0.5436156392097473,
+        "predicted_label": 1,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.204.216.111",
+        "anomaly_probability": 0.6372074484825134,
+        "predicted_label": 1,
+        "actual_label": 1
+      },
+      {
+        "node_id": "172.31.249.87",
+        "anomaly_probability": 0.5436156392097473,
+        "predicted_label": 1,
+        "actual_label": 0
+      },
+      {
+        "node_id": "135.253.249.81",
+        "anomaly_probability": 0.4369876980781555,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.135.69",
+        "anomaly_probability": 0.2534317672252655,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.55.73",
+        "anomaly_probability": 0.2507961392402649,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.24.191.163",
+        "anomaly_probability": 0.2614693343639374,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.3827015459537506
+  },
+  "embeddings_shape": [
+    10,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "192.168.1.45"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "91.113.121.48"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "10.0.0.5"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "77.16.12.95"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-2001-0201": {
+            "cve_id": "CVE-2001-0201",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+            "published": "2001-03-26T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2001-1158": {
+            "cve_id": "CVE-2001-1158",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Check Point VPN-1/FireWall-1 4.1 base.def contains a default macro, accept_fw1_rdp, which can allow remote attackers to bypass intended restrictions with forged RDP (internal protocol) headers to UDP ",
+            "published": "2001-07-09T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "10.204.216.111"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "172.31.249.87"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "135.253.249.81"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "192.168.135.69"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "192.168.55.73"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-02 00:47:35 IST",
+        "id": "172.24.191.163"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.45",
+        "target": "91.113.121.48"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "91.113.121.48",
+        "target": "10.0.0.5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.5",
+        "target": "77.16.12.95"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "77.16.12.95",
+        "target": "10.204.216.111"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.204.216.111",
+        "target": "172.31.249.87"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.249.87",
+        "target": "135.253.249.81"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "135.253.249.81",
+        "target": "192.168.135.69"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.135.69",
+        "target": "192.168.55.73"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.55.73",
+        "target": "172.24.191.163"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251101T191737Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

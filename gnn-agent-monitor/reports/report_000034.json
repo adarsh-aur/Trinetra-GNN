@@ -1,253 +1,323 @@
 {
-  "timestamp": "2025-10-29T21:58:47.721221",
+  "timestamp": "2025-11-02T01:03:24.280205",
   "iteration": 34,
   "total_nodes": 200,
   "total_edges": 591,
-  "anomalous_nodes": 42,
-  "anomaly_rate": 0.21,
-  "mean_score": 1.6220695972442627,
-  "max_score": 19.721458435058594,
-  "max_zscore": 5.897493362426758,
+  "anomalous_nodes": 28,
+  "anomaly_rate": 0.14,
+  "mean_score": 1.57790207862854,
+  "max_score": 19.813369750976562,
+  "max_zscore": 5.86055326461792,
   "threshold": 3.0,
   "node_details": [
     {
-      "node_id": 40,
-      "anomaly_score": 12.376859664916992,
-      "z_score": 3.4739136695861816,
-      "degree": 6,
-      "betweenness": 0.005648734786387347,
-      "clustering": 0.0,
-      "neighbors": 6
-    },
-    {
-      "node_id": 60,
-      "anomaly_score": 13.773555755615234,
-      "z_score": 3.9347970485687256,
+      "node_id": 86,
+      "anomaly_score": 13.701900482177734,
+      "z_score": 3.861494302749634,
       "degree": 5,
-      "betweenness": 0.0035653429039967923,
-      "clustering": 0.1,
-      "neighbors": 5
+      "betweenness": 0.008053496222670539,
+      "clustering": 0.0,
+      "neighbors": 5,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 118,
-      "anomaly_score": 19.721458435058594,
-      "z_score": 5.897493362426758,
-      "degree": 6,
-      "betweenness": 0.008259600107119498,
-      "clustering": 0.2,
-      "neighbors": 6
+      "node_id": 120,
+      "anomaly_score": 19.813369750976562,
+      "z_score": 5.86055326461792,
+      "degree": 4,
+      "betweenness": 0.005280118651397364,
+      "clustering": 0.0,
+      "neighbors": 4,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 119,
-      "anomaly_score": 11.252517700195312,
-      "z_score": 3.1029019355773926,
+      "node_id": 124,
+      "anomaly_score": 12.641645431518555,
+      "z_score": 3.5146851539611816,
       "degree": 3,
-      "betweenness": 0.0006174599947753249,
-      "clustering": 0.3333333333333333,
-      "neighbors": 3
+      "betweenness": 0.0007811190758756874,
+      "clustering": 0.0,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 128,
-      "anomaly_score": 12.584308624267578,
-      "z_score": 3.542367935180664,
+      "node_id": 168,
+      "anomaly_score": 13.865702629089355,
+      "z_score": 3.915073871612549,
       "degree": 3,
-      "betweenness": 0.0007406035529586159,
+      "betweenness": 0.0013747678378530368,
       "clustering": 0.0,
-      "neighbors": 3
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 197,
-      "anomaly_score": 12.576836585998535,
-      "z_score": 3.5399022102355957,
-      "degree": 3,
-      "betweenness": 0.00033364624337124514,
-      "clustering": 0.0,
-      "neighbors": 3
-    },
-    {
-      "node_id": 240,
-      "anomaly_score": 12.376859664916992,
-      "z_score": 3.4739136695861816,
+      "node_id": 286,
+      "anomaly_score": 13.701900482177734,
+      "z_score": 3.861494302749634,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 260,
-      "anomaly_score": 13.773555755615234,
-      "z_score": 3.9347970485687256,
+      "node_id": 320,
+      "anomaly_score": 19.813369750976562,
+      "z_score": 5.86055326461792,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 318,
-      "anomaly_score": 19.721458435058594,
-      "z_score": 5.897493362426758,
+      "node_id": 324,
+      "anomaly_score": 12.641645431518555,
+      "z_score": 3.5146851539611816,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 319,
-      "anomaly_score": 11.252517700195312,
-      "z_score": 3.1029019355773926,
+      "node_id": 368,
+      "anomaly_score": 13.865702629089355,
+      "z_score": 3.915073871612549,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 328,
-      "anomaly_score": 12.584308624267578,
-      "z_score": 3.542367935180664,
+      "node_id": 486,
+      "anomaly_score": 13.701900482177734,
+      "z_score": 3.861494302749634,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 397,
-      "anomaly_score": 12.576836585998535,
-      "z_score": 3.5399022102355957,
+      "node_id": 520,
+      "anomaly_score": 19.813369750976562,
+      "z_score": 5.86055326461792,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 440,
-      "anomaly_score": 12.376859664916992,
-      "z_score": 3.4739136695861816,
+      "node_id": 524,
+      "anomaly_score": 12.641645431518555,
+      "z_score": 3.5146851539611816,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 460,
-      "anomaly_score": 13.773555755615234,
-      "z_score": 3.9347970485687256,
+      "node_id": 568,
+      "anomaly_score": 13.865702629089355,
+      "z_score": 3.915073871612549,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 518,
-      "anomaly_score": 19.721458435058594,
-      "z_score": 5.897493362426758,
+      "node_id": 686,
+      "anomaly_score": 13.701900482177734,
+      "z_score": 3.861494302749634,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 519,
-      "anomaly_score": 11.252517700195312,
-      "z_score": 3.1029019355773926,
+      "node_id": 720,
+      "anomaly_score": 19.813369750976562,
+      "z_score": 5.86055326461792,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 528,
-      "anomaly_score": 12.584308624267578,
-      "z_score": 3.542367935180664,
+      "node_id": 724,
+      "anomaly_score": 12.641645431518555,
+      "z_score": 3.5146851539611816,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 597,
-      "anomaly_score": 12.576836585998535,
-      "z_score": 3.5399022102355957,
+      "node_id": 768,
+      "anomaly_score": 13.865702629089355,
+      "z_score": 3.915073871612549,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 640,
-      "anomaly_score": 12.376859664916992,
-      "z_score": 3.4739136695861816,
+      "node_id": 886,
+      "anomaly_score": 13.701900482177734,
+      "z_score": 3.861494302749634,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 660,
-      "anomaly_score": 13.773555755615234,
-      "z_score": 3.9347970485687256,
+      "node_id": 920,
+      "anomaly_score": 19.813369750976562,
+      "z_score": 5.86055326461792,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 924,
+      "anomaly_score": 12.641645431518555,
+      "z_score": 3.5146851539611816,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 968,
+      "anomaly_score": 13.865702629089355,
+      "z_score": 3.915073871612549,
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     }
   ],
   "vulnerable_paths": [
     {
       "path": [
-        118,
-        0,
-        119
+        86,
+        36,
+        124
       ],
       "length": 3,
-      "source": 118,
-      "target": 119
+      "source": 86,
+      "target": 124
     },
     {
       "path": [
-        40,
-        10,
-        6,
-        60
+        86,
+        9,
+        47,
+        168
       ],
       "length": 4,
-      "source": 40,
-      "target": 60
+      "source": 86,
+      "target": 168
     },
     {
       "path": [
-        40,
-        10,
-        0,
-        118
+        120,
+        176,
+        122,
+        124
       ],
       "length": 4,
-      "source": 40,
-      "target": 118
+      "source": 120,
+      "target": 124
     },
     {
       "path": [
-        40,
-        10,
-        0,
-        119
+        120,
+        26,
+        20,
+        168
       ],
       "length": 4,
-      "source": 40,
-      "target": 119
+      "source": 120,
+      "target": 168
     },
     {
       "path": [
-        40,
-        10,
-        62,
-        128
+        86,
+        4,
+        12,
+        56,
+        120
       ],
-      "length": 4,
-      "source": 40,
-      "target": 128
+      "length": 5,
+      "source": 86,
+      "target": 120
     }
   ],
-  "batch_processing_time": 0.013172626495361328,
+  "batch_processing_time": 0.007245540618896484,
+  "cve_intelligence": {
+    "total_cves_found": 0,
+    "critical_cves": [],
+    "high_cves": [],
+    "node_cve_mapping": {},
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": []
+  },
   "agent_response": {
     "severity": "UNKNOWN",
     "confidence": 0.5,
@@ -261,10 +331,10 @@
     {
       "action": "send_alert",
       "status": "sent",
-      "timestamp": "2025-10-29T21:58:47.777191",
+      "timestamp": "2025-11-02T01:03:24.333982",
       "severity": "UNKNOWN",
-      "message": "Anomaly rate 21.00% exceeds threshold"
+      "message": "Anomaly rate 14.00% exceeds threshold"
     }
   ],
-  "total_anomalies_cumulative": 2009
+  "total_anomalies_cumulative": 1995
 }

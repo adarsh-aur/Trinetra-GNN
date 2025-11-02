@@ -1,249 +1,960 @@
 {
-  "timestamp": "2025-10-29T21:58:12.759068",
+  "timestamp": "2025-11-02T01:02:50.304446",
   "iteration": 24,
   "total_nodes": 200,
   "total_edges": 591,
   "anomalous_nodes": 70,
   "anomaly_rate": 0.35,
-  "mean_score": 1.7134530544281006,
-  "max_score": 15.893749237060547,
-  "max_zscore": 7.832515239715576,
+  "mean_score": 1.5810731649398804,
+  "max_score": 16.74816131591797,
+  "max_zscore": 6.08875036239624,
   "threshold": 3.0,
   "node_details": [
     {
-      "node_id": 5,
-      "anomaly_score": 13.487764358520508,
-      "z_score": 6.527620315551758,
-      "degree": 29,
-      "betweenness": 0.10461881572213991,
-      "clustering": 0.06157635467980296,
-      "neighbors": 29
+      "node_id": 15,
+      "anomaly_score": 11.203909873962402,
+      "z_score": 3.8543167114257812,
+      "degree": 10,
+      "betweenness": 0.017279165896726734,
+      "clustering": 0.06666666666666667,
+      "neighbors": 10,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 13,
-      "anomaly_score": 13.228282928466797,
-      "z_score": 6.386889457702637,
+      "node_id": 26,
+      "anomaly_score": 10.843806266784668,
+      "z_score": 3.709188461303711,
+      "degree": 5,
+      "betweenness": 0.0029399901748443473,
+      "clustering": 0.4,
+      "neighbors": 5,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 89,
+      "anomaly_score": 13.532798767089844,
+      "z_score": 4.792901039123535,
+      "degree": 6,
+      "betweenness": 0.006693967967742556,
+      "clustering": 0.0,
+      "neighbors": 6,
+      "cves": [
+        {
+          "cve_id": "CVE-1999-1368",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "AV Option for MS Exchange Server option for InoculateIT 4.53, and possibly other versions, only scans the Inbox folder tree of a Microsoft Exchange server, which could allow viruses to escape detection if a user's rules cause the message to be moved to a different mailbox.",
+          "published": "1999-05-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+            "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2",
+            "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+            "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-1999-1043",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Microsoft Exchange Server 5.5 and 5.0 does not properly handle (1) malformed NNTP data, or (2) malformed SMTP data, which allows remote attackers to cause a denial of service (application error).",
+          "published": "1999-12-31T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-007",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-007"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2000-1006",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Microsoft Exchange Server 5.5 does not properly handle a MIME header with a blank charset specified, which allows remote attackers to cause a denial of service via a charset=\"\" command, aka the \"Malformed MIME Header\" vulnerability.",
+          "published": "2000-12-11T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.securityfocus.com/bid/1869",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2000/ms00-082",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5448",
+            "http://www.securityfocus.com/bid/1869",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2000/ms00-082",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5448"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2001-0340",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "An interaction between the Outlook Web Access (OWA) service in Microsoft Exchange 2000 Server and Internet Explorer allows attackers to execute malicious script code against a user's mailbox via a message attachment that contains HTML code, which is executed automatically.",
+          "published": "2001-07-21T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652",
+            "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652"
+          ],
+          "cwe": "CWE-434"
+        },
+        {
+          "cve_id": "CVE-2001-0509",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Vulnerabilities in RPC servers in (1) Microsoft Exchange Server 2000 and earlier, (2) Microsoft SQL Server 2000 and earlier, (3) Windows NT 4.0, and (4) Windows 2000 allow remote attackers to cause a denial of service via malformed inputs.",
+          "published": "2001-09-20T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-041",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A82",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-041",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A82"
+          ],
+          "cwe": "CWE-20"
+        },
+        {
+          "cve_id": "CVE-2001-0726",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Outlook Web Access (OWA) in Microsoft Exchange 5.5 Server, when used with Internet Explorer, does not properly detect certain inline script, which can allow remote attackers to perform arbitrary actions on a user's Exchange mailbox via an HTML e-mail message.",
+          "published": "2001-12-06T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.osvdb.org/5557",
+            "http://www.securityfocus.com/bid/3650",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663",
+            "http://www.osvdb.org/5557",
+            "http://www.securityfocus.com/bid/3650",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2002-0049",
+          "severity": "MEDIUM",
+          "score": 6.4,
+          "vector": "",
+          "description": "Microsoft Exchange Server 2000 System Attendant gives \"Everyone\" group privileges to the WinReg key, which could allow remote attackers to read or modify registry keys.",
+          "published": "2002-03-08T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.osvdb.org/2042",
+            "http://www.securityfocus.com/bid/4053",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-003",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/8092",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1022",
+            "http://www.osvdb.org/2042",
+            "http://www.securityfocus.com/bid/4053",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-003",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/8092",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1022"
+          ],
+          "cwe": "CWE-269"
+        },
+        {
+          "cve_id": "CVE-2002-0054",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "SMTP service in (1) Microsoft Windows 2000 and (2) Internet Mail Connector (IMC) in Exchange Server 5.5 does not properly handle responses to NTLM authentication, which allows remote attackers to perform mail relaying via an SMTP AUTH command using null session credentials.",
+          "published": "2002-03-08T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+            "http://www.securityfocus.com/bid/4205",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011",
+            "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+            "http://www.securityfocus.com/bid/4205",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011"
+          ],
+          "cwe": "CWE-294"
+        },
+        {
+          "cve_id": "CVE-2002-0650",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "The keep-alive mechanism for Microsoft SQL Server 2000 allows remote attackers to cause a denial of service (bandwidth consumption) via a \"ping\" style packet to the Resolution Service (UDP port 1434) with a spoofed IP address of another SQL Server system, which causes the two servers to exchange packets in an infinite loop.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=102760196931518&w=2",
+            "http://marc.info/?l=ntbugtraq&m=102760479902411&w=2",
+            "http://www.iss.net/security_center/static/9662.php",
+            "http://www.osvdb.org/878",
+            "http://www.securityfocus.com/bid/5312",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039",
+            "http://marc.info/?l=bugtraq&m=102760196931518&w=2",
+            "http://marc.info/?l=ntbugtraq&m=102760479902411&w=2",
+            "http://www.iss.net/security_center/static/9662.php",
+            "http://www.osvdb.org/878",
+            "http://www.securityfocus.com/bid/5312",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0698",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Buffer overflow in Internet Mail Connector (IMC) for Microsoft Exchange Server 5.5 allows remote attackers to execute arbitrary code via an EHLO request from a system with a long name as obtained through a reverse DNS lookup, which triggers the overflow in IMC's hello response.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+            "http://www.iss.net/security_center/static/9658.php",
+            "http://www.securityfocus.com/bid/5306",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037",
+            "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+            "http://www.iss.net/security_center/static/9658.php",
+            "http://www.securityfocus.com/bid/5306",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037"
+          ],
+          "cwe": "CWE-120"
+        }
+      ],
+      "cve_count": 10,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 98,
+      "anomaly_score": 16.74816131591797,
+      "z_score": 6.08875036239624,
       "degree": 12,
-      "betweenness": 0.025239526897174205,
-      "clustering": 0.07575757575757576,
-      "neighbors": 12
+      "betweenness": 0.02102115925510945,
+      "clustering": 0.015151515151515152,
+      "neighbors": 12,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 55,
-      "anomaly_score": 14.709433555603027,
-      "z_score": 7.190196990966797,
-      "degree": 6,
-      "betweenness": 0.006778719053104226,
-      "clustering": 0.2,
-      "neighbors": 6
-    },
-    {
-      "node_id": 71,
-      "anomaly_score": 13.958974838256836,
-      "z_score": 6.7831830978393555,
+      "node_id": 115,
+      "anomaly_score": 10.115002632141113,
+      "z_score": 3.4154672622680664,
       "degree": 3,
-      "betweenness": 0.0009627782414057828,
+      "betweenness": 0.0011790840476385354,
       "clustering": 0.3333333333333333,
-      "neighbors": 3
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 79,
-      "anomaly_score": 10.274975776672363,
-      "z_score": 4.785152435302734,
+      "node_id": 126,
+      "anomaly_score": 11.608467102050781,
+      "z_score": 4.017360687255859,
+      "degree": 3,
+      "betweenness": 0.0008166193046091804,
+      "clustering": 0.0,
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 127,
+      "anomaly_score": 13.407649040222168,
+      "z_score": 4.7424635887146,
       "degree": 4,
-      "betweenness": 0.0031105396134717615,
+      "betweenness": 0.0033559628189994586,
+      "clustering": 0.0,
+      "neighbors": 4,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 141,
+      "anomaly_score": 11.43032455444336,
+      "z_score": 3.945565938949585,
+      "degree": 4,
+      "betweenness": 0.004110533177738832,
       "clustering": 0.16666666666666666,
-      "neighbors": 4
+      "neighbors": 4,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 83,
-      "anomaly_score": 13.802066802978516,
-      "z_score": 6.698083400726318,
-      "degree": 6,
-      "betweenness": 0.00447129878968056,
+      "node_id": 155,
+      "anomaly_score": 12.176494598388672,
+      "z_score": 4.246285915374756,
+      "degree": 4,
+      "betweenness": 0.0021394442147206582,
       "clustering": 0.0,
-      "neighbors": 6
+      "neighbors": 4,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 93,
-      "anomaly_score": 15.893749237060547,
-      "z_score": 7.832515239715576,
+      "node_id": 182,
+      "anomaly_score": 9.237115859985352,
+      "z_score": 3.0616631507873535,
       "degree": 3,
-      "betweenness": 0.000363478736277281,
-      "clustering": 0.3333333333333333,
-      "neighbors": 3
-    },
-    {
-      "node_id": 111,
-      "anomaly_score": 14.462892532348633,
-      "z_score": 7.056484699249268,
-      "degree": 3,
-      "betweenness": 0.0012780046318952973,
+      "betweenness": 0.0006466591473693783,
       "clustering": 0.0,
-      "neighbors": 3
+      "neighbors": 3,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 128,
-      "anomaly_score": 10.910006523132324,
-      "z_score": 5.129563808441162,
-      "degree": 3,
-      "betweenness": 0.0009764664084838766,
-      "clustering": 0.3333333333333333,
-      "neighbors": 3
-    },
-    {
-      "node_id": 180,
-      "anomaly_score": 9.495529174804688,
-      "z_score": 4.362416744232178,
-      "degree": 3,
-      "betweenness": 0.0013762521768682192,
-      "clustering": 0.0,
-      "neighbors": 3
-    },
-    {
-      "node_id": 205,
-      "anomaly_score": 13.487764358520508,
-      "z_score": 6.527620315551758,
+      "node_id": 215,
+      "anomaly_score": 11.203909873962402,
+      "z_score": 3.8543167114257812,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 213,
-      "anomaly_score": 13.228282928466797,
-      "z_score": 6.386889457702637,
+      "node_id": 226,
+      "anomaly_score": 10.843806266784668,
+      "z_score": 3.709188461303711,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 255,
-      "anomaly_score": 14.709433555603027,
-      "z_score": 7.190196990966797,
+      "node_id": 289,
+      "anomaly_score": 13.532798767089844,
+      "z_score": 4.792901039123535,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 271,
-      "anomaly_score": 13.958974838256836,
-      "z_score": 6.7831830978393555,
+      "node_id": 298,
+      "anomaly_score": 16.74816131591797,
+      "z_score": 6.08875036239624,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 279,
-      "anomaly_score": 10.274975776672363,
-      "z_score": 4.785152435302734,
+      "node_id": 315,
+      "anomaly_score": 10.115002632141113,
+      "z_score": 3.4154672622680664,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 283,
-      "anomaly_score": 13.802066802978516,
-      "z_score": 6.698083400726318,
+      "node_id": 326,
+      "anomaly_score": 11.608467102050781,
+      "z_score": 4.017360687255859,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 293,
-      "anomaly_score": 15.893749237060547,
-      "z_score": 7.832515239715576,
+      "node_id": 327,
+      "anomaly_score": 13.407649040222168,
+      "z_score": 4.7424635887146,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 311,
-      "anomaly_score": 14.462892532348633,
-      "z_score": 7.056484699249268,
+      "node_id": 341,
+      "anomaly_score": 11.43032455444336,
+      "z_score": 3.945565938949585,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 328,
-      "anomaly_score": 10.910006523132324,
-      "z_score": 5.129563808441162,
+      "node_id": 355,
+      "anomaly_score": 12.176494598388672,
+      "z_score": 4.246285915374756,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     },
     {
-      "node_id": 380,
-      "anomaly_score": 9.495529174804688,
-      "z_score": 4.362416744232178,
+      "node_id": 382,
+      "anomaly_score": 9.237115859985352,
+      "z_score": 3.0616631507873535,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
-      "neighbors": 0
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
     }
   ],
   "vulnerable_paths": [
     {
       "path": [
-        5,
-        0,
-        13
+        15,
+        3,
+        26
       ],
       "length": 3,
-      "source": 5,
-      "target": 13
+      "source": 15,
+      "target": 26
     },
     {
       "path": [
-        5,
-        0,
-        55
+        15,
+        74,
+        98
       ],
       "length": 3,
-      "source": 5,
-      "target": 55
+      "source": 15,
+      "target": 98
     },
     {
       "path": [
-        5,
-        0,
-        79
+        15,
+        3,
+        21,
+        89
       ],
-      "length": 3,
-      "source": 5,
-      "target": 79
+      "length": 4,
+      "source": 15,
+      "target": 89
     },
     {
       "path": [
-        13,
-        0,
-        55
+        26,
+        3,
+        21,
+        89
       ],
-      "length": 3,
-      "source": 13,
-      "target": 55
+      "length": 4,
+      "source": 26,
+      "target": 89
     },
     {
       "path": [
-        13,
+        26,
         0,
-        71
+        19,
+        98
       ],
-      "length": 3,
-      "source": 13,
-      "target": 71
+      "length": 4,
+      "source": 26,
+      "target": 98
     }
   ],
-  "batch_processing_time": 0.006766080856323242,
+  "batch_processing_time": 0.005322456359863281,
+  "cve_intelligence": {
+    "total_cves_found": 10,
+    "critical_cves": [],
+    "high_cves": [
+      {
+        "cve_id": "CVE-1999-1368",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "AV Option for MS Exchange Server option for InoculateIT 4.53, and possibly other versions, only scans the Inbox folder tree of a Microsoft Exchange server, which could allow viruses to escape detection if a user's rules cause the message to be moved to a different mailbox.",
+        "published": "1999-05-12T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+          "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2",
+          "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+          "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2"
+        ],
+        "cwe": "NVD-CWE-Other"
+      },
+      {
+        "cve_id": "CVE-2001-0340",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "An interaction between the Outlook Web Access (OWA) service in Microsoft Exchange 2000 Server and Internet Explorer allows attackers to execute malicious script code against a user's mailbox via a message attachment that contains HTML code, which is executed automatically.",
+        "published": "2001-07-21T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652",
+          "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652"
+        ],
+        "cwe": "CWE-434"
+      },
+      {
+        "cve_id": "CVE-2001-0726",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "Outlook Web Access (OWA) in Microsoft Exchange 5.5 Server, when used with Internet Explorer, does not properly detect certain inline script, which can allow remote attackers to perform arbitrary actions on a user's Exchange mailbox via an HTML e-mail message.",
+        "published": "2001-12-06T05:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://www.osvdb.org/5557",
+          "http://www.securityfocus.com/bid/3650",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663",
+          "http://www.osvdb.org/5557",
+          "http://www.securityfocus.com/bid/3650",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663"
+        ],
+        "cwe": "NVD-CWE-noinfo"
+      },
+      {
+        "cve_id": "CVE-2002-0054",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "SMTP service in (1) Microsoft Windows 2000 and (2) Internet Mail Connector (IMC) in Exchange Server 5.5 does not properly handle responses to NTLM authentication, which allows remote attackers to perform mail relaying via an SMTP AUTH command using null session credentials.",
+        "published": "2002-03-08T05:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+          "http://www.securityfocus.com/bid/4205",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011",
+          "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+          "http://www.securityfocus.com/bid/4205",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011"
+        ],
+        "cwe": "CWE-294"
+      },
+      {
+        "cve_id": "CVE-2002-0698",
+        "severity": "HIGH",
+        "score": 7.5,
+        "vector": "",
+        "description": "Buffer overflow in Internet Mail Connector (IMC) for Microsoft Exchange Server 5.5 allows remote attackers to execute arbitrary code via an EHLO request from a system with a long name as obtained through a reverse DNS lookup, which triggers the overflow in IMC's hello response.",
+        "published": "2002-08-12T04:00:00.000",
+        "lastModified": "2025-04-03T01:03:51.193",
+        "kev_listed": false,
+        "exploit_available": false,
+        "attack_vector": "UNKNOWN",
+        "attack_complexity": "UNKNOWN",
+        "privileges_required": "UNKNOWN",
+        "user_interaction": "UNKNOWN",
+        "references": [
+          "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+          "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+          "http://www.iss.net/security_center/static/9658.php",
+          "http://www.securityfocus.com/bid/5306",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037",
+          "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+          "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+          "http://www.iss.net/security_center/static/9658.php",
+          "http://www.securityfocus.com/bid/5306",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037"
+        ],
+        "cwe": "CWE-120"
+      }
+    ],
+    "node_cve_mapping": {
+      "89": [
+        {
+          "cve_id": "CVE-1999-1368",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "AV Option for MS Exchange Server option for InoculateIT 4.53, and possibly other versions, only scans the Inbox folder tree of a Microsoft Exchange server, which could allow viruses to escape detection if a user's rules cause the message to be moved to a different mailbox.",
+          "published": "1999-05-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+            "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2",
+            "http://marc.info/?l=ntbugtraq&m=92652152723629&w=2",
+            "http://marc.info/?l=ntbugtraq&m=97439568517355&w=2"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-1999-1043",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Microsoft Exchange Server 5.5 and 5.0 does not properly handle (1) malformed NNTP data, or (2) malformed SMTP data, which allows remote attackers to cause a denial of service (application error).",
+          "published": "1999-12-31T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-007",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-007"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2000-1006",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Microsoft Exchange Server 5.5 does not properly handle a MIME header with a blank charset specified, which allows remote attackers to cause a denial of service via a charset=\"\" command, aka the \"Malformed MIME Header\" vulnerability.",
+          "published": "2000-12-11T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.securityfocus.com/bid/1869",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2000/ms00-082",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5448",
+            "http://www.securityfocus.com/bid/1869",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2000/ms00-082",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/5448"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2001-0340",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "An interaction between the Outlook Web Access (OWA) service in Microsoft Exchange 2000 Server and Internet Explorer allows attackers to execute malicious script code against a user's mailbox via a message attachment that contains HTML code, which is executed automatically.",
+          "published": "2001-07-21T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652",
+            "http://www.ciac.org/ciac/bulletins/l-091.shtml",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-030",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/6652"
+          ],
+          "cwe": "CWE-434"
+        },
+        {
+          "cve_id": "CVE-2001-0509",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "Vulnerabilities in RPC servers in (1) Microsoft Exchange Server 2000 and earlier, (2) Microsoft SQL Server 2000 and earlier, (3) Windows NT 4.0, and (4) Windows 2000 allow remote attackers to cause a denial of service via malformed inputs.",
+          "published": "2001-09-20T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-041",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A82",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-041",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A82"
+          ],
+          "cwe": "CWE-20"
+        },
+        {
+          "cve_id": "CVE-2001-0726",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Outlook Web Access (OWA) in Microsoft Exchange 5.5 Server, when used with Internet Explorer, does not properly detect certain inline script, which can allow remote attackers to perform arbitrary actions on a user's Exchange mailbox via an HTML e-mail message.",
+          "published": "2001-12-06T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.osvdb.org/5557",
+            "http://www.securityfocus.com/bid/3650",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663",
+            "http://www.osvdb.org/5557",
+            "http://www.securityfocus.com/bid/3650",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-057",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/7663"
+          ],
+          "cwe": "NVD-CWE-noinfo"
+        },
+        {
+          "cve_id": "CVE-2002-0049",
+          "severity": "MEDIUM",
+          "score": 6.4,
+          "vector": "",
+          "description": "Microsoft Exchange Server 2000 System Attendant gives \"Everyone\" group privileges to the WinReg key, which could allow remote attackers to read or modify registry keys.",
+          "published": "2002-03-08T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://www.osvdb.org/2042",
+            "http://www.securityfocus.com/bid/4053",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-003",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/8092",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1022",
+            "http://www.osvdb.org/2042",
+            "http://www.securityfocus.com/bid/4053",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-003",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/8092",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1022"
+          ],
+          "cwe": "CWE-269"
+        },
+        {
+          "cve_id": "CVE-2002-0054",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "SMTP service in (1) Microsoft Windows 2000 and (2) Internet Mail Connector (IMC) in Exchange Server 5.5 does not properly handle responses to NTLM authentication, which allows remote attackers to perform mail relaying via an SMTP AUTH command using null session credentials.",
+          "published": "2002-03-08T05:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+            "http://www.securityfocus.com/bid/4205",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011",
+            "http://marc.info/?l=bugtraq&m=101501580409373&w=2",
+            "http://www.securityfocus.com/bid/4205",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-011"
+          ],
+          "cwe": "CWE-294"
+        },
+        {
+          "cve_id": "CVE-2002-0650",
+          "severity": "MEDIUM",
+          "score": 5.0,
+          "vector": "",
+          "description": "The keep-alive mechanism for Microsoft SQL Server 2000 allows remote attackers to cause a denial of service (bandwidth consumption) via a \"ping\" style packet to the Resolution Service (UDP port 1434) with a spoofed IP address of another SQL Server system, which causes the two servers to exchange packets in an infinite loop.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=102760196931518&w=2",
+            "http://marc.info/?l=ntbugtraq&m=102760479902411&w=2",
+            "http://www.iss.net/security_center/static/9662.php",
+            "http://www.osvdb.org/878",
+            "http://www.securityfocus.com/bid/5312",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039",
+            "http://marc.info/?l=bugtraq&m=102760196931518&w=2",
+            "http://marc.info/?l=ntbugtraq&m=102760479902411&w=2",
+            "http://www.iss.net/security_center/static/9662.php",
+            "http://www.osvdb.org/878",
+            "http://www.securityfocus.com/bid/5312",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039"
+          ],
+          "cwe": "NVD-CWE-Other"
+        },
+        {
+          "cve_id": "CVE-2002-0698",
+          "severity": "HIGH",
+          "score": 7.5,
+          "vector": "",
+          "description": "Buffer overflow in Internet Mail Connector (IMC) for Microsoft Exchange Server 5.5 allows remote attackers to execute arbitrary code via an EHLO request from a system with a long name as obtained through a reverse DNS lookup, which triggers the overflow in IMC's hello response.",
+          "published": "2002-08-12T04:00:00.000",
+          "lastModified": "2025-04-03T01:03:51.193",
+          "kev_listed": false,
+          "exploit_available": false,
+          "attack_vector": "UNKNOWN",
+          "attack_complexity": "UNKNOWN",
+          "privileges_required": "UNKNOWN",
+          "user_interaction": "UNKNOWN",
+          "references": [
+            "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+            "http://www.iss.net/security_center/static/9658.php",
+            "http://www.securityfocus.com/bid/5306",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037",
+            "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20759",
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ326322",
+            "http://www.iss.net/security_center/static/9658.php",
+            "http://www.securityfocus.com/bid/5306",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-037"
+          ],
+          "cwe": "CWE-120"
+        }
+      ]
+    },
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": [
+      {
+        "priority": "MEDIUM",
+        "action": "schedule_high_severity_patches",
+        "reason": "5 high severity CVEs",
+        "cves": [
+          "CVE-1999-1368",
+          "CVE-2001-0340",
+          "CVE-2001-0726",
+          "CVE-2002-0054",
+          "CVE-2002-0698"
+        ],
+        "timeline": "Within 30 days"
+      }
+    ]
+  },
   "agent_response": {
     "severity": "UNKNOWN",
     "confidence": 0.5,
@@ -257,10 +968,10 @@
     {
       "action": "send_alert",
       "status": "sent",
-      "timestamp": "2025-10-29T21:58:12.810419",
+      "timestamp": "2025-11-02T01:02:50.362760",
       "severity": "UNKNOWN",
       "message": "Anomaly rate 35.00% exceeds threshold"
     }
   ],
-  "total_anomalies_cumulative": 1421
+  "total_anomalies_cumulative": 1428
 }
