@@ -1736,3 +1736,96 @@
 2025-11-02 21:40:29,877 - root - INFO - _generate_report:507 - Report saved to reports/report_000007.json
 2025-11-02 21:40:29,878 - root - INFO - _monitor_cycle:114 - Cycle 7: 8 anomalies detected
 2025-11-02 21:40:30,254 - root - INFO - _cleanup:75 - Resources cleaned up
+2025-11-04 15:21:46,363 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-04 15:21:46,549 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-04 15:21:46,549 - root - INFO - __init__:49 - Agent 'GNN-Guardian' initialized
+2025-11-04 15:21:46,550 - root - INFO - run:54 - Agent started autonomous monitoring
+2025-11-04 15:21:46,554 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 15:21:46,554 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 15:21:48,617 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for PostgreSQL
+2025-11-04 15:21:50,659 - root - INFO - _execute_action:417 - Executing action: Patch PostgreSQL to the latest supported version
+2025-11-04 15:21:50,659 - root - WARNING - _send_alert:455 - ALERT: Anomaly rate 16.00% exceeds threshold
+2025-11-04 15:21:50,663 - root - INFO - _generate_report:507 - Report saved to reports/report_000001.json
+2025-11-04 15:21:50,664 - root - INFO - _monitor_cycle:114 - Cycle 1: 16 anomalies detected
+2025-11-04 15:21:52,667 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 15:21:52,667 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 15:21:52,796 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 109 not in graph
+2025-11-04 15:21:52,796 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 127 not in graph
+2025-11-04 15:21:52,797 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 155 not in graph
+2025-11-04 15:21:52,797 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 174 not in graph
+2025-11-04 15:21:52,798 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 209 not in graph
+2025-11-04 15:21:52,798 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 227 not in graph
+2025-11-04 15:21:52,798 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 255 not in graph
+2025-11-04 15:21:52,798 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 274 not in graph
+2025-11-04 15:21:52,798 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 309 not in graph
+2025-11-04 15:21:52,799 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 327 not in graph
+2025-11-04 15:21:52,799 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 355 not in graph
+2025-11-04 15:21:52,799 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 374 not in graph
+2025-11-04 15:21:52,859 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k94z00dpf21sga7gv13a9r5r` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6677, Requested 1838. Please try again in 3.8625s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 15:21:52,859 - root - WARNING - _send_alert:455 - ALERT: Anomaly rate 16.00% exceeds threshold
+2025-11-04 15:21:52,863 - root - INFO - _generate_report:507 - Report saved to reports/report_000002.json
+2025-11-04 15:21:52,863 - root - INFO - _monitor_cycle:114 - Cycle 2: 16 anomalies detected
+2025-11-04 15:21:54,866 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 15:21:54,866 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 15:21:55,027 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 100 not in graph
+2025-11-04 15:21:55,027 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 141 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 163 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 192 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 200 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 241 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 263 not in graph
+2025-11-04 15:21:55,028 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 292 not in graph
+2025-11-04 15:21:55,029 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 300 not in graph
+2025-11-04 15:21:55,029 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 341 not in graph
+2025-11-04 15:21:55,029 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 363 not in graph
+2025-11-04 15:21:55,029 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 392 not in graph
+2025-11-04 15:21:55,088 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k94z00dpf21sga7gv13a9r5r` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6380, Requested 1857. Please try again in 1.777499999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 15:21:55,088 - root - WARNING - _send_alert:455 - ALERT: Anomaly rate 16.00% exceeds threshold
+2025-11-04 15:21:55,091 - root - INFO - _generate_report:507 - Report saved to reports/report_000003.json
+2025-11-04 15:21:55,092 - root - INFO - _monitor_cycle:114 - Cycle 3: 16 anomalies detected
+2025-11-04 15:21:57,099 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 15:21:57,099 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 15:21:57,220 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 105 not in graph
+2025-11-04 15:21:57,221 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 128 not in graph
+2025-11-04 15:21:57,221 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 160 not in graph
+2025-11-04 15:21:57,221 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 195 not in graph
+2025-11-04 15:21:57,221 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 205 not in graph
+2025-11-04 15:21:57,221 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 228 not in graph
+2025-11-04 15:21:57,222 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 260 not in graph
+2025-11-04 15:21:57,222 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 295 not in graph
+2025-11-04 15:21:57,222 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 305 not in graph
+2025-11-04 15:21:57,222 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 328 not in graph
+2025-11-04 15:21:57,223 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 360 not in graph
+2025-11-04 15:21:57,223 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 395 not in graph
+2025-11-04 15:21:59,145 - root - INFO - _execute_action:417 - Executing action: apply_patch
+2025-11-04 15:21:59,145 - root - INFO - _execute_action:417 - Executing action: apply_patch
+2025-11-04 15:21:59,146 - root - INFO - _execute_action:417 - Executing action: isolate_node
+2025-11-04 15:21:59,146 - root - WARNING - _send_alert:455 - ALERT: Anomaly rate 16.00% exceeds threshold
+2025-11-04 15:21:59,149 - root - INFO - _generate_report:507 - Report saved to reports/report_000004.json
+2025-11-04 15:21:59,149 - root - INFO - _monitor_cycle:114 - Cycle 4: 16 anomalies detected
+2025-11-04 15:22:01,155 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 15:22:01,156 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 15:22:03,053 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for MySQL
+2025-11-04 15:22:03,172 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 103 not in graph
+2025-11-04 15:22:03,172 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 111 not in graph
+2025-11-04 15:22:03,173 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 148 not in graph
+2025-11-04 15:22:03,173 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 156 not in graph
+2025-11-04 15:22:03,173 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 178 not in graph
+2025-11-04 15:22:03,173 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 203 not in graph
+2025-11-04 15:22:03,174 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 211 not in graph
+2025-11-04 15:22:03,174 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 248 not in graph
+2025-11-04 15:22:03,174 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 256 not in graph
+2025-11-04 15:22:03,174 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 278 not in graph
+2025-11-04 15:22:03,175 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 303 not in graph
+2025-11-04 15:22:03,175 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 311 not in graph
+2025-11-04 15:22:03,175 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 348 not in graph
+2025-11-04 15:22:03,175 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 356 not in graph
+2025-11-04 15:22:03,175 - utils.graph_analyzer - WARNING - analyze_node_importance:74 - Node 378 not in graph
+2025-11-04 15:22:03,253 - core.llm_client - ERROR - generate:60 - Groq API error 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01k94z00dpf21sga7gv13a9r5r` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9087, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 15:22:03,254 - root - WARNING - _send_alert:455 - ALERT: Anomaly rate 20.00% exceeds threshold
+2025-11-04 15:22:03,260 - root - INFO - _generate_report:507 - Report saved to reports/report_000005.json
+2025-11-04 15:22:03,261 - root - INFO - _monitor_cycle:114 - Cycle 5: 20 anomalies detected
+2025-11-04 15:22:04,558 - root - INFO - _cleanup:75 - Resources cleaned up

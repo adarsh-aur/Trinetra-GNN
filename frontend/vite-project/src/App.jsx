@@ -11,6 +11,7 @@ import GNNDemo from './pages/GNNDemo';  // Add this import
 import UserProfile from './pages/UserProfile';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
+import GraphDisplay from './pages/GraphDisplay';  // Graph Display Page
 
 
 function App() {
@@ -28,6 +29,16 @@ function App() {
           {/* GNN Demo Route - can be public or protected */}
           <Route path="/gnn-demo" element={<GNNDemo />} />
           
+          {/* Graph Display Route - uses Graph Visulaization from components */}
+          <Route 
+            path="/GraphDisplay" 
+            element={
+              <ProtectedRoute>
+                <GraphDisplay />
+              </ProtectedRoute>
+            } 
+          />
+
           {/* Or make it protected: */}
           {/* <Route 
             path="/gnn-demo" 

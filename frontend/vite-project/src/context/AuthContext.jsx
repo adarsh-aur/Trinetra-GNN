@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext();
@@ -7,9 +7,10 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [graphData, setGraphData] = useState(null);
 
-  // Get backend URL from environment variable
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  // 🧩 Backend URLs
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';   // Node / Express (Auth)
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -21,6 +22,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  // 🔐 Fetch current user
   const fetchUser = async () => {
     try {
       const { data } = await axios.get(`${API_URL}/api/auth/me`);
@@ -34,13 +36,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // 🔑 Login user
   const login = async (email, password) => {
     try {
       setError(null);
-      const { data } = await axios.post(`${API_URL}/api/auth/login`, { 
-        email, 
-        password 
-      });
+      const { data } = await axios.post(`${API_URL}/api/auth/login`, { email, password });
 
       sessionStorage.setItem('token', data.data.token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${data.data.token}`;
@@ -54,19 +54,17 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // 🧾 Register new user
   const register = async (fullName, email, company, password) => {
     try {
       setError(null);
-      
-      // Send request to backend
       const { data } = await axios.post(`${API_URL}/api/auth/register`, {
-        fullName,  // Backend expects fullName
+        fullName,
         email,
         company,
-        password
+        password,
       });
 
-      // Store token and set user
       sessionStorage.setItem('token', data.data.token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${data.data.token}`;
       setUser(data.data);
@@ -80,17 +78,19 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // 🚪 Logout
   const logout = () => {
     sessionStorage.removeItem('token');
     delete axios.defaults.headers.common['Authorization'];
     setUser(null);
   };
 
+  // ☁️ Update connected cloud provider credentials
   const updateCloudProvider = async (provider, credentials) => {
     try {
       const { data } = await axios.put(`${API_URL}/api/auth/cloud-provider`, {
         provider,
-        credentials
+        credentials,
       });
       setUser(data.data);
       return { success: true };
@@ -100,14 +100,30 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // 🌐 Fetch graph data from Flask backend
+  const getGraphData = async () => {
+    try {
+      const { data } = await axios.get(`${API_URL}/api/graph/data`) || console.log('Nehi ho raha hai!!');
+      setGraphData(data.elements || data);
+      return { success: true, data };
+    } catch (err) {
+      console.error('Error fetching graph data:', err);
+      const message = err.response?.data?.message || 'Failed to fetch graph data';
+      return { success: false, message };
+    }
+  };
+
+  // Provide all context values
   const value = {
     user,
     loading,
     error,
+    graphData,
     login,
     register,
     logout,
-    updateCloudProvider
+    updateCloudProvider,
+    getGraphData,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -26,11 +26,11 @@ load_dotenv()
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000").rstrip("/")
 LOG_FILE_PATH = os.getenv(
     "LOG_FILE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/syslogs2.log"
+    "D:/College/Final Year Project/Trinetra-GNN/backend/sample_data/syslogs2.log"
 )
 DATA_STORE_PATH = os.getenv(
     "DATA_STORE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/data_store"
+    "D:/College/Final Year Project/Trinetra-GNN/backend/data_store"
 )
 
 # Test response folder

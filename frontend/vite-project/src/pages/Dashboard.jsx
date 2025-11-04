@@ -145,7 +145,7 @@ export default function Dashboard() {
   };
 
   const handleExploreClick = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    navigate('/GraphDisplay');
   };
 
   return (
