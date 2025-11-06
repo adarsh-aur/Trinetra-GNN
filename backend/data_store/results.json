@@ -2,23 +2,10 @@
   "nodes": [
     {
       "id": 0,
-<<<<<<< Updated upstream
-      "name": "110.111.159.210",
-=======
       "name": "192.168.1.15",
->>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
-<<<<<<< Updated upstream
-      "categorization_reasoning": "External source IP interacting with GCP instance, flagged by firewall.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.31008780002593994,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-=======
       "categorization_reasoning": "Private IP in internal network, no cloud indicator.",
       "risk_score": 10.0,
       "anomaly_probability": 0.3725845217704773,
@@ -26,30 +13,16 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-05 22:24:17 IST",
->>>>>>> Stashed changes
       "group": 0,
       "size": 25.0,
       "color": "#e74c3c"
     },
     {
       "id": 1,
-<<<<<<< Updated upstream
-      "name": "172.26.237.203",
-=======
       "name": "203.0.113.45",
->>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
-<<<<<<< Updated upstream
-      "categorization_reasoning": "Internal GCP network address, part of instance's subnet.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.25809693336486816,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-=======
       "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
       "risk_score": 10.0,
       "anomaly_probability": 0.34912335872650146,
@@ -57,28 +30,12 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-05 22:24:17 IST",
->>>>>>> Stashed changes
       "group": 0,
       "size": 25.0,
       "color": "#e74c3c"
     },
     {
       "id": 2,
-<<<<<<< Updated upstream
-      "name": "169.254.169.254",
-      "type": "ip",
-      "cloud_platform": "gcp",
-      "category": "security",
-      "categorization_reasoning": "GCP metadata endpoint abused, indicates potential credential theft.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2795826494693756,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 1,
-      "size": 5,
-=======
       "name": "10.0.0.5",
       "type": "ip",
       "cloud_platform": "generic",
@@ -92,28 +49,14 @@
       "last_seen": "2025-11-05 22:24:17 IST",
       "group": 0,
       "size": 25.0,
->>>>>>> Stashed changes
       "color": "#e74c3c"
     },
     {
       "id": 3,
-<<<<<<< Updated upstream
-      "name": "10.157.67.27",
-=======
       "name": "192.168.1.10",
->>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
-<<<<<<< Updated upstream
-      "categorization_reasoning": "Private GCP instance IP, used for internal communication.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2797577679157257,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-=======
       "categorization_reasoning": "Private IP, internal network, no cloud indicator.",
       "risk_score": 10.0,
       "anomaly_probability": 0.3291052579879761,
@@ -121,30 +64,16 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-05 22:24:17 IST",
->>>>>>> Stashed changes
       "group": 0,
       "size": 25.0,
       "color": "#e74c3c"
     },
     {
       "id": 4,
-<<<<<<< Updated upstream
-      "name": "192.168.240.65",
-=======
       "name": "198.51.100.202",
->>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
-<<<<<<< Updated upstream
-      "categorization_reasoning": "Private GCP address within VPC, typical internal traffic.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2797577679157257,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-=======
       "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
       "risk_score": 10.0,
       "anomaly_probability": 0.35058021545410156,
@@ -152,30 +81,16 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-05 22:24:17 IST",
->>>>>>> Stashed changes
       "group": 0,
       "size": 25.0,
       "color": "#e74c3c"
     },
     {
       "id": 5,
-<<<<<<< Updated upstream
-      "name": "172.24.129.16",
-=======
       "name": "198.51.100.23",
->>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
-<<<<<<< Updated upstream
-      "categorization_reasoning": "GCP internal address, part of VPC subnet.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2797577679157257,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-=======
       "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
       "risk_score": 10.0,
       "anomaly_probability": 0.41685813665390015,
@@ -183,250 +98,12 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-05 22:24:17 IST",
->>>>>>> Stashed changes
       "group": 0,
       "size": 25.0,
       "color": "#e74c3c"
     },
     {
       "id": 6,
-<<<<<<< Updated upstream
-      "name": "10.187.173.68",
-      "type": "ip",
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "Private GCP instance IP, used for internal services.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2797577679157257,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
-    },
-    {
-      "id": 7,
-      "name": "172.18.197.40",
-      "type": "ip",
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "GCP internal address, part of VPC.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2797577679157257,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
-    },
-    {
-      "id": 8,
-      "name": "172.16.221.225",
-      "type": "ip",
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "Private GCP address, used for internal communication.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.3771282136440277,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
-    },
-    {
-      "id": 9,
-      "name": "71.165.20.222",
-      "type": "ip",
-      "cloud_platform": "generic",
-      "category": "network",
-      "categorization_reasoning": "External attacker IP, not tied to known cloud provider.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.4274251163005829,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
-    },
-    {
-      "id": 10,
-      "name": "postgres",
-      "type": "process",
-      "cloud_platform": "gcp",
-      "category": "database",
-      "categorization_reasoning": "PostgreSQL database running on GCP instance, flagged for privilege escalation.",
-      "risk_score": 10.0,
-      "anomaly_probability": 0.2701466381549835,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 2,
-      "size": 25.0,
-      "color": "#e74c3c"
-    },
-    {
-      "id": 11,
-      "name": "apache2",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "Web server process, typical compute resource.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2376217395067215,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 5,
-      "color": "#3498db"
-    },
-    {
-      "id": 12,
-      "name": "containerd",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "Container runtime managing containers on host.",
-      "risk_score": 10.0,
-      "anomaly_probability": 0.221099853515625,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 25.0,
-      "color": "#e74c3c"
-    },
-    {
-      "id": 13,
-      "name": "systemd",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "System init and service manager, core compute component.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.306582510471344,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 5,
-      "color": "#3498db"
-    },
-    {
-      "id": 14,
-      "name": "google-osconfig-agent",
-      "type": "process",
-      "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "GCP OS configuration agent managing instance settings.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.306582510471344,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 5,
-      "color": "#3498db"
-    },
-    {
-      "id": 15,
-      "name": "auditd",
-      "type": "process",
-      "cloud_platform": "gcp",
-      "category": "monitoring",
-      "categorization_reasoning": "Audit daemon collecting logs on GCP instance.",
-      "risk_score": 0.0,
-      "anomaly_probability": 0.2938641607761383,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 4,
-      "size": 5,
-      "color": "#1abc9c"
-    },
-    {
-      "id": 16,
-      "name": "google-startup-scripts",
-      "type": "process",
-      "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "GCP startup scripts executing during instance boot.",
-      "risk_score": 10.0,
-      "anomaly_probability": 0.23907946050167084,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 25.0,
-      "color": "#e74c3c"
-    },
-    {
-      "id": 17,
-      "name": "docker",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "Docker engine managing containers on host.",
-      "risk_score": 10.0,
-      "anomaly_probability": 0.24861086905002594,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 25.0,
-      "color": "#e74c3c"
-    },
-    {
-      "id": 18,
-      "name": "cron",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "Scheduled job daemon, core compute service.",
-      "risk_score": 10.0,
-      "anomaly_probability": 0.24718359112739563,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 25.0,
-      "color": "#e74c3c"
-    },
-    {
-      "id": 19,
-      "name": "chronyd",
-      "type": "process",
-      "cloud_platform": "generic",
-      "category": "compute",
-      "categorization_reasoning": "NTP daemon synchronizing time on host.",
-      "risk_score": 9.36,
-      "anomaly_probability": 0.25822722911834717,
-      "is_anomaly": false,
-      "cve": [],
-      "cve_count": 0,
-      "last_seen": "2025-11-03 19:17:26 IST",
-      "group": 3,
-      "size": 23.72,
-      "color": "#e74c3c"
-=======
       "name": "logging",
       "type": "process",
       "cloud_platform": "generic",
@@ -509,7 +186,6 @@
       "group": 4,
       "size": 25.0,
       "color": "#e74c3c"
->>>>>>> Stashed changes
     }
   ],
   "links": [
@@ -596,11 +272,7 @@
   ],
   "metadata": {
     "timestamp": null,
-<<<<<<< Updated upstream
-    "generated_at": "2025-11-03 13:47:27 UTC",
-=======
     "generated_at": "2025-11-05 16:54:17 UTC",
->>>>>>> Stashed changes
     "analysis_summary": {
       "total_nodes": 11,
       "total_links": 10,
@@ -614,24 +286,6 @@
       "gnn_f1_score": 0.0
     },
     "cloud_platforms": {
-<<<<<<< Updated upstream
-      "gcp": 13,
-      "generic": 7
-    },
-    "category_distribution": {
-      "network": 9,
-      "security": 1,
-      "database": 1,
-      "compute": 8,
-      "monitoring": 1
-    },
-    "risk_statistics": {
-      "avg_risk_score": 2.97,
-      "max_risk_score": 10.0,
-      "min_risk_score": 0.0,
-      "avg_anomaly_probability": 0.28,
-      "high_risk_nodes": 6,
-=======
       "generic": 10,
       "aws": 1
     },
@@ -648,7 +302,6 @@
       "min_risk_score": 10.0,
       "avg_anomaly_probability": 0.34,
       "high_risk_nodes": 11,
->>>>>>> Stashed changes
       "anomalous_nodes": 0,
       "total_cves": 0,
       "nodes_with_cves": 0
