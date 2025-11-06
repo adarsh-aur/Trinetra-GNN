@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "timestamp": "2025-11-04T15:22:03.176435",
   "iteration": 5,
   "total_nodes": 100,
@@ -18,11 +19,33 @@
       "betweenness": 0.013735410782919767,
       "clustering": 0.2857142857142857,
       "neighbors": 8,
+=======
+  "timestamp": "2025-11-04T10:48:14.150731",
+  "iteration": 5,
+  "total_nodes": 100,
+  "total_edges": 291,
+  "anomalous_nodes": 5,
+  "anomaly_rate": 0.05,
+  "mean_score": 1.5821468830108643,
+  "max_score": 15.500747680664062,
+  "max_zscore": 5.689404487609863,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 36,
+      "anomaly_score": 11.263204574584961,
+      "z_score": 3.9572551250457764,
+      "degree": 5,
+      "betweenness": 0.006194436631850835,
+      "clustering": 0.0,
+      "neighbors": 5,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 11,
       "anomaly_score": 11.740702629089355,
       "z_score": 4.625694751739502,
@@ -298,6 +321,13 @@
       "z_score": 5.1214118003845215,
       "degree": 3,
       "betweenness": 0.002439950030652978,
+=======
+      "node_id": 37,
+      "anomaly_score": 9.617942810058594,
+      "z_score": 3.284733533859253,
+      "degree": 3,
+      "betweenness": 0.001378664005197872,
+>>>>>>> Stashed changes
       "clustering": 0.0,
       "neighbors": 3,
       "cves": [
@@ -582,6 +612,7 @@
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 103,
       "anomaly_score": 12.633785247802734,
       "z_score": 5.029234886169434,
@@ -589,11 +620,33 @@
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+=======
+      "node_id": 43,
+      "anomaly_score": 10.155245780944824,
+      "z_score": 3.5043628215789795,
+      "degree": 3,
+      "betweenness": 0.0010659302488713676,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3,
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
     },
     {
+      "node_id": 69,
+      "anomaly_score": 15.500747680664062,
+      "z_score": 5.689404487609863,
+      "degree": 3,
+      "betweenness": 0.0010153058602103292,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3,
+>>>>>>> Stashed changes
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+<<<<<<< Updated upstream
       "node_id": 111,
       "anomaly_score": 11.740702629089355,
       "z_score": 4.625694751739502,
@@ -757,6 +810,15 @@
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+=======
+      "node_id": 92,
+      "anomaly_score": 13.027807235717773,
+      "z_score": 4.678558826446533,
+      "degree": 3,
+      "betweenness": 0.003509148288423634,
+      "clustering": 0.0,
+      "neighbors": 3,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
@@ -765,6 +827,7 @@
   "vulnerable_paths": [
     {
       "path": [
+<<<<<<< Updated upstream
         3,
         0,
         11
@@ -817,6 +880,60 @@
     }
   ],
   "batch_processing_time": 0.0030069351196289062,
+=======
+        36,
+        28,
+        69
+      ],
+      "length": 3,
+      "source": 36,
+      "target": 69
+    },
+    {
+      "path": [
+        36,
+        7,
+        92
+      ],
+      "length": 3,
+      "source": 36,
+      "target": 92
+    },
+    {
+      "path": [
+        37,
+        23,
+        43
+      ],
+      "length": 3,
+      "source": 37,
+      "target": 43
+    },
+    {
+      "path": [
+        36,
+        28,
+        34,
+        37
+      ],
+      "length": 4,
+      "source": 36,
+      "target": 37
+    },
+    {
+      "path": [
+        36,
+        1,
+        0,
+        43
+      ],
+      "length": 4,
+      "source": 36,
+      "target": 43
+    }
+  ],
+  "batch_processing_time": 0.007091045379638672,
+>>>>>>> Stashed changes
   "cve_intelligence": {
     "total_cves_found": 20,
     "critical_cves": [],
@@ -1702,6 +1819,7 @@
   "agent_response": {
     "severity": "UNKNOWN",
     "confidence": 0.5,
+<<<<<<< Updated upstream
     "reasoning": "Error: API returned status 413",
     "threats_identified": [],
     "recommended_actions": [],
@@ -1718,4 +1836,36 @@
     }
   ],
   "total_anomalies_cumulative": 84
+=======
+    "executive_summary": "Unable to parse AI analysis - manual review required",
+    "detailed_reasoning": "Error: API returned status 429",
+    "recommended_actions": [
+      {
+        "priority": 1,
+        "urgency": "IMMEDIATE",
+        "action_name": "Manual Security Review",
+        "business_friendly_explanation": "AI analysis failed - security team should manually review the detected anomalies",
+        "estimated_time": "2-4 hours"
+      }
+    ],
+    "questions_for_team": [
+      "What caused the AI analysis to fail?",
+      "Should we investigate the anomalies manually?"
+    ]
+  },
+  "actions_taken": [
+    {
+      "action": "Manual Security Review",
+      "action_type": "Manual Security Review",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:14.208854",
+      "priority": 1,
+      "urgency": "IMMEDIATE",
+      "details": "AI analysis failed - security team should manually review the detected anomalies",
+      "estimated_time": "2-4 hours",
+      "cve_related": []
+    }
+  ],
+  "total_anomalies_cumulative": 21
+>>>>>>> Stashed changes
 }

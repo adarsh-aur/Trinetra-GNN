@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "timestamp": "2025-11-04T15:21:57.223449",
   "iteration": 4,
   "total_nodes": 100,
@@ -18,11 +19,33 @@
       "betweenness": 0.10386837127641833,
       "clustering": 0.10526315789473684,
       "neighbors": 20,
+=======
+  "timestamp": "2025-11-04T10:48:11.927648",
+  "iteration": 4,
+  "total_nodes": 100,
+  "total_edges": 291,
+  "anomalous_nodes": 5,
+  "anomaly_rate": 0.05,
+  "mean_score": 1.5236291885375977,
+  "max_score": 12.629183769226074,
+  "max_zscore": 4.776516914367676,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 55,
+      "anomaly_score": 12.373126029968262,
+      "z_score": 4.666386127471924,
+      "degree": 5,
+      "betweenness": 0.007823587536533028,
+      "clustering": 0.0,
+      "neighbors": 5,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 28,
       "anomaly_score": 13.321523666381836,
       "z_score": 4.095638751983643,
@@ -52,6 +75,13 @@
       "z_score": 4.012473106384277,
       "degree": 3,
       "betweenness": 0.0018712339677089214,
+=======
+      "node_id": 72,
+      "anomaly_score": 9.475150108337402,
+      "z_score": 3.419961929321289,
+      "degree": 3,
+      "betweenness": 0.001185576603016306,
+>>>>>>> Stashed changes
       "clustering": 0.0,
       "neighbors": 3,
       "cves": [],
@@ -59,6 +89,7 @@
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 105,
       "anomaly_score": 12.02499771118164,
       "z_score": 3.643414258956909,
@@ -66,11 +97,21 @@
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+=======
+      "node_id": 80,
+      "anomaly_score": 12.629183769226074,
+      "z_score": 4.776516914367676,
+      "degree": 3,
+      "betweenness": 0.0016325009547990441,
+      "clustering": 0.0,
+      "neighbors": 3,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 128,
       "anomaly_score": 13.321523666381836,
       "z_score": 4.095638751983643,
@@ -78,11 +119,21 @@
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+=======
+      "node_id": 82,
+      "anomaly_score": 11.65971565246582,
+      "z_score": 4.359547138214111,
+      "degree": 3,
+      "betweenness": 0.0005580587213240274,
+      "clustering": 0.6666666666666666,
+      "neighbors": 3,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 160,
       "anomaly_score": 20.398042678833008,
       "z_score": 6.563907623291016,
@@ -198,6 +249,15 @@
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+=======
+      "node_id": 94,
+      "anomaly_score": 11.203571319580078,
+      "z_score": 4.163358688354492,
+      "degree": 3,
+      "betweenness": 0.0009269716288887593,
+      "clustering": 0.3333333333333333,
+      "neighbors": 3,
+>>>>>>> Stashed changes
       "cves": [],
       "cve_count": 0,
       "cve_critical_count": 0
@@ -206,6 +266,7 @@
   "vulnerable_paths": [
     {
       "path": [
+<<<<<<< Updated upstream
         28,
         5,
         60
@@ -249,6 +310,61 @@
     }
   ],
   "batch_processing_time": 0.003511190414428711,
+=======
+        55,
+        7,
+        82
+      ],
+      "length": 3,
+      "source": 55,
+      "target": 82
+    },
+    {
+      "path": [
+        80,
+        4,
+        82
+      ],
+      "length": 3,
+      "source": 80,
+      "target": 82
+    },
+    {
+      "path": [
+        55,
+        23,
+        5,
+        72
+      ],
+      "length": 4,
+      "source": 55,
+      "target": 72
+    },
+    {
+      "path": [
+        55,
+        7,
+        4,
+        80
+      ],
+      "length": 4,
+      "source": 55,
+      "target": 80
+    },
+    {
+      "path": [
+        72,
+        5,
+        4,
+        80
+      ],
+      "length": 4,
+      "source": 72,
+      "target": 80
+    }
+  ],
+  "batch_processing_time": 0.0032913684844970703,
+>>>>>>> Stashed changes
   "cve_intelligence": {
     "total_cves_found": 0,
     "critical_cves": [],
@@ -259,6 +375,7 @@
     "recommended_actions": []
   },
   "agent_response": {
+<<<<<<< Updated upstream
     "severity": "CRITICAL",
     "confidence": 0.82,
     "reasoning": "The GNN flagged 16 nodes with an anomaly rate of 16% and a maximum z\u2011score of 6.56, indicating statistically significant deviations from normal graph behavior. Node 5, the highest\u2011scoring hub (degree 20, low clustering 0.105), is a natural conduit for lateral movement; its anomalous score (12.02) coupled with a critical CVE (CVE\u20112025\u201100123) suggests an exploited service that can pivot traffic. Node 28 (degree 6, clustering 0.067) and node 60 (degree 4, clustering 0.167) form a critical path (28\u20115\u201160) with high anomaly scores (13.32 and 20.40 respectively). The presence of CVE\u20112025\u201100456 on node 28 and CVE\u20112025\u201100789 on node 60 indicates that these nodes are running vulnerable software that can be leveraged for privilege escalation or data exfiltration. Node 95, with a zero clustering coefficient, is an isolated endpoint that may have been compromised via a supply\u2011chain or phishing vector; the critical CVE (CVE\u20112025\u201101012) on this node further elevates risk. The isolated nodes (105, 128, 160, 195, 205, 228) have degree 0, implying they are disconnected from the main graph\u2014often a sign of a compromised host that has been isolated by the network or is a staging point for an attacker. The combination of high anomaly scores, low clustering, and critical CVEs across these nodes warrants a CRITICAL severity classification.",
@@ -311,10 +428,29 @@
       "Are there additional CVEs affecting the isolated nodes that were not detected in the current scan?",
       "What level of network segmentation exists between the critical path nodes and the rest of the infrastructure?",
       "Is there an automated patch management system in place to apply these patches within the required SLA?"
+=======
+    "severity": "UNKNOWN",
+    "confidence": 0.5,
+    "executive_summary": "Unable to parse AI analysis - manual review required",
+    "detailed_reasoning": "Error: API returned status 429",
+    "recommended_actions": [
+      {
+        "priority": 1,
+        "urgency": "IMMEDIATE",
+        "action_name": "Manual Security Review",
+        "business_friendly_explanation": "AI analysis failed - security team should manually review the detected anomalies",
+        "estimated_time": "2-4 hours"
+      }
+    ],
+    "questions_for_team": [
+      "What caused the AI analysis to fail?",
+      "Should we investigate the anomalies manually?"
+>>>>>>> Stashed changes
     ]
   },
   "actions_taken": [
     {
+<<<<<<< Updated upstream
       "action": "apply_patch",
       "status": "executed",
       "timestamp": "2025-11-04T15:21:59.145389",
@@ -341,4 +477,18 @@
     }
   ],
   "total_anomalies_cumulative": 64
+=======
+      "action": "Manual Security Review",
+      "action_type": "Manual Security Review",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:11.984437",
+      "priority": 1,
+      "urgency": "IMMEDIATE",
+      "details": "AI analysis failed - security team should manually review the detected anomalies",
+      "estimated_time": "2-4 hours",
+      "cve_related": []
+    }
+  ],
+  "total_anomalies_cumulative": 16
+>>>>>>> Stashed changes
 }

@@ -1736,6 +1736,7 @@
 2025-11-02 21:40:29,877 - root - INFO - _generate_report:507 - Report saved to reports/report_000007.json
 2025-11-02 21:40:29,878 - root - INFO - _monitor_cycle:114 - Cycle 7: 8 anomalies detected
 2025-11-02 21:40:30,254 - root - INFO - _cleanup:75 - Resources cleaned up
+<<<<<<< Updated upstream
 2025-11-04 15:21:46,363 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
 2025-11-04 15:21:46,549 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
 2025-11-04 15:21:46,549 - root - INFO - __init__:49 - Agent 'GNN-Guardian' initialized
@@ -1829,3 +1830,515 @@
 2025-11-04 15:22:03,260 - root - INFO - _generate_report:507 - Report saved to reports/report_000005.json
 2025-11-04 15:22:03,261 - root - INFO - _monitor_cycle:114 - Cycle 5: 20 anomalies detected
 2025-11-04 15:22:04,558 - root - INFO - _cleanup:75 - Resources cleaned up
+=======
+2025-11-03 14:00:49,183 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-03 14:00:49,354 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-03 14:00:49,365 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:00:49,365 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:00:53,906 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:00:53,907 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:00:58,563 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:00:58,564 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:00:58,715 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7006, Requested 2134. Please try again in 8.549999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:01:00,740 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:01:00,741 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:01:02,698 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Redis
+2025-11-03 14:01:03,032 - core.llm_client - ERROR - generate:60 - Groq API error 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8173, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:01:05,066 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:01:05,067 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:01:07,172 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for WordPress
+2025-11-03 14:01:07,333 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5857, Requested 7765. Please try again in 42.165s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:01:09,357 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:01:09,358 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:36,188 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-03 14:14:36,340 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-03 14:14:36,352 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:36,352 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:36,468 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:14:36,469 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:39,265 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:39,265 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Scan Isolated Nodes
+2025-11-03 14:14:39,265 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Implement Device Onboarding Baseline Controls
+2025-11-03 14:14:39,265 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 14:14:39,274 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-03 14:14:39,275 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 4 anomalies detected
+2025-11-03 14:14:41,288 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:41,288 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:41,293 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:14:43,202 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for MySQL
+2025-11-03 14:14:43,370 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3479, Requested 5499. Please try again in 7.335s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:14:43,371 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:14:43,371 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:43,371 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:14:43,372 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:14:43,378 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-03 14:14:43,380 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 4 anomalies detected
+2025-11-03 14:14:45,386 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:45,386 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:45,390 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 14:14:45,390 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:47,930 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:47,930 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate Node 8 and Conduct Forensic Analysis
+2025-11-03 14:14:47,930 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Block Traffic to/from Nodes 79 and 80
+2025-11-03 14:14:47,931 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 14:14:47,940 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000003.json
+2025-11-03 14:14:47,942 - root - INFO - _monitor_cycle:167 - [OK] Cycle 3 completed: 3 anomalies detected
+2025-11-03 14:14:49,950 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:49,950 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:49,954 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:14:49,954 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:50,180 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6886, Requested 2306. Please try again in 8.94s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:14:50,180 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:14:50,180 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:50,180 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:14:50,180 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:14:50,184 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000004.json
+2025-11-03 14:14:50,187 - root - INFO - _monitor_cycle:167 - [OK] Cycle 4 completed: 4 anomalies detected
+2025-11-03 14:14:52,203 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:52,204 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:52,209 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 14:14:52,209 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:52,340 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6597, Requested 2225. Please try again in 6.165s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:14:52,341 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:14:52,341 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:52,341 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:14:52,341 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:14:52,347 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000005.json
+2025-11-03 14:14:52,348 - root - INFO - _monitor_cycle:167 - [OK] Cycle 5 completed: 3 anomalies detected
+2025-11-03 14:14:54,362 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:54,362 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:54,368 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:14:54,369 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:54,577 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6299, Requested 2344. Please try again in 4.8225s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:14:54,577 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:14:54,577 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:54,578 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:14:54,578 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:14:54,581 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000006.json
+2025-11-03 14:14:54,583 - root - INFO - _monitor_cycle:167 - [OK] Cycle 6 completed: 4 anomalies detected
+2025-11-03 14:14:56,585 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:56,587 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:56,593 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 14:14:56,593 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:14:56,742 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6011, Requested 2227. Please try again in 1.785s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:14:56,743 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:14:56,743 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:14:56,743 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:14:56,743 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:14:56,747 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000007.json
+2025-11-03 14:14:56,748 - root - INFO - _monitor_cycle:167 - [OK] Cycle 7 completed: 3 anomalies detected
+2025-11-03 14:14:58,760 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:14:58,760 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:14:58,765 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 14:14:58,765 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:15:01,482 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:01,483 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate Compromised Nodes
+2025-11-03 14:15:01,483 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Conduct Forensic Analysis
+2025-11-03 14:15:01,484 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 14:15:01,502 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000008.json
+2025-11-03 14:15:01,503 - root - INFO - _monitor_cycle:167 - [OK] Cycle 8 completed: 3 anomalies detected
+2025-11-03 14:15:03,512 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:03,512 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:03,517 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 6 invalid node IDs
+2025-11-03 14:15:03,517 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:15:03,676 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7708, Requested 2018. Please try again in 12.945s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:03,677 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:03,677 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:03,677 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:03,677 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:03,681 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000009.json
+2025-11-03 14:15:03,683 - root - INFO - _monitor_cycle:167 - [OK] Cycle 9 completed: 2 anomalies detected
+2025-11-03 14:15:05,684 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:05,685 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:05,691 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 15 invalid node IDs
+2025-11-03 14:15:07,654 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for OpenSSH
+2025-11-03 14:15:07,840 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7152, Requested 7251. Please try again in 48.022499999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:07,841 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:07,841 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:07,841 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:07,841 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:07,848 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000010.json
+2025-11-03 14:15:07,850 - root - INFO - _monitor_cycle:167 - [OK] Cycle 10 completed: 5 anomalies detected
+2025-11-03 14:15:09,858 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:09,858 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:09,862 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:15:09,862 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:15:10,048 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6858, Requested 2332. Please try again in 8.924999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:10,049 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:10,049 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:10,049 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:10,049 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:10,052 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000011.json
+2025-11-03 14:15:10,055 - root - INFO - _monitor_cycle:167 - [OK] Cycle 11 completed: 4 anomalies detected
+2025-11-03 14:15:12,065 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:12,065 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:12,069 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:15:12,070 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:15:12,385 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6547, Requested 2322. Please try again in 6.5175s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:12,386 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:12,386 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:12,387 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:12,387 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:12,405 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000012.json
+2025-11-03 14:15:12,406 - root - INFO - _monitor_cycle:167 - [OK] Cycle 12 completed: 4 anomalies detected
+2025-11-03 14:15:14,411 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:14,412 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:14,417 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 6 invalid node IDs
+2025-11-03 14:15:14,418 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 14:15:14,568 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6255, Requested 2021. Please try again in 2.07s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:14,568 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:14,569 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:14,569 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:14,569 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:14,573 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000013.json
+2025-11-03 14:15:14,574 - root - INFO - _monitor_cycle:167 - [OK] Cycle 13 completed: 2 anomalies detected
+2025-11-03 14:15:16,581 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:16,581 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:16,585 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 14:15:18,472 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Docker
+2025-11-03 14:15:18,614 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5716, Requested 6152. Please try again in 29.009999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:18,616 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:18,616 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:18,616 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:18,616 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:18,623 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000014.json
+2025-11-03 14:15:18,625 - root - INFO - _monitor_cycle:167 - [OK] Cycle 14 completed: 3 anomalies detected
+2025-11-03 14:15:20,640 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:20,640 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:20,645 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:15:22,520 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Apache HTTP Server
+2025-11-03 14:15:22,671 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5175, Requested 7193. Please try again in 32.76s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 14:15:22,671 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 14:15:22,672 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 14:15:22,672 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 14:15:22,672 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 14:15:22,677 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000015.json
+2025-11-03 14:15:22,678 - root - INFO - _monitor_cycle:167 - [OK] Cycle 15 completed: 4 anomalies detected
+2025-11-03 14:15:24,684 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 14:15:24,684 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 14:15:24,689 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 14:15:24,689 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 19:27:40,141 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-03 19:27:55,009 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-03 19:27:55,020 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:27:55,021 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:27:55,162 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 19:27:55,162 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 19:27:57,348 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:27:57,349 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Contain Compromised Nodes
+2025-11-03 19:27:57,349 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Conduct Full Malware Scan and Forensic Analysis
+2025-11-03 19:27:57,349 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 19:27:57,352 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-03 19:27:57,353 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 3 anomalies detected
+2025-11-03 19:27:59,364 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:27:59,364 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:27:59,369 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 19:28:01,406 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for nginx
+2025-11-03 19:28:01,681 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 2860, Requested 7799. Please try again in 19.9425s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 19:28:01,682 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 19:28:01,682 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:28:01,682 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 19:28:01,682 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 19:28:01,689 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-03 19:28:01,690 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 3 anomalies detected
+2025-11-03 19:28:03,691 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:28:03,691 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:28:03,697 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 19:28:03,697 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 19:28:06,499 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:28:06,499 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate Compromised Nodes
+2025-11-03 19:28:06,499 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Full Malware Scan & Forensic Analysis
+2025-11-03 19:28:06,500 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 19:28:06,506 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000003.json
+2025-11-03 19:28:06,507 - root - INFO - _monitor_cycle:167 - [OK] Cycle 3 completed: 3 anomalies detected
+2025-11-03 19:28:08,514 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:28:08,516 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:28:08,523 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 19:28:08,731 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6528, Requested 7951. Please try again in 48.5925s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 19:28:08,731 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 19:28:08,732 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:28:08,732 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 19:28:08,732 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 19:28:08,738 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000004.json
+2025-11-03 19:28:08,739 - root - INFO - _monitor_cycle:167 - [OK] Cycle 4 completed: 4 anomalies detected
+2025-11-03 19:28:10,754 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:28:10,754 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:28:10,760 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 19:28:10,760 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 19:28:10,941 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6234, Requested 2231. Please try again in 3.4875s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 19:28:10,942 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 19:28:10,942 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:28:10,942 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 19:28:10,942 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 19:28:10,945 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000005.json
+2025-11-03 19:28:10,947 - root - INFO - _monitor_cycle:167 - [OK] Cycle 5 completed: 3 anomalies detected
+2025-11-03 19:46:10,918 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-03 19:46:11,063 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-03 19:46:11,076 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:46:11,076 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:46:11,183 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 19:46:14,281 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for OpenSSH
+2025-11-03 19:46:20,232 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:46:20,232 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Patch OpenSSH and related packages on node 67
+2025-11-03 19:46:20,232 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate anomalous nodes (31, 63, 67, 68)
+2025-11-03 19:46:20,232 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 19:46:20,239 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-03 19:46:20,240 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 4 anomalies detected
+2025-11-03 19:46:22,246 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 19:46:22,246 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 19:46:22,253 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 19:46:24,091 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for nginx
+2025-11-03 19:46:26,072 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for MySQL
+2025-11-03 19:46:26,239 - core.llm_client - ERROR - generate:60 - Groq API error 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10884, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 19:46:26,239 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 19:46:26,239 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 19:46:26,239 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 19:46:26,239 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 19:46:26,246 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-03 19:46:26,247 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 3 anomalies detected
+2025-11-03 20:52:56,146 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-03 20:52:56,328 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-03 20:52:56,336 - root - INFO - run:93 - Agent started autonomous monitoring
+2025-11-03 20:52:56,338 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 20:52:56,338 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 20:52:56,462 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-03 20:52:56,463 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 20:52:58,876 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 20:52:58,876 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Verify Rogue Devices
+2025-11-03 20:52:58,878 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run Comprehensive Vulnerability Scan
+2025-11-03 20:52:58,878 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 20:52:58,884 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-03 20:52:58,885 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 4 anomalies detected
+2025-11-03 20:53:00,886 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 20:53:00,886 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 20:53:00,890 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 20:53:02,888 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Redis
+2025-11-03 20:53:03,074 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3169, Requested 7898. Please try again in 23.0025s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 20:53:03,074 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 20:53:03,074 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 20:53:03,075 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 20:53:03,075 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 20:53:03,083 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-03 20:53:03,084 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 3 anomalies detected
+2025-11-03 20:53:05,084 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 20:53:05,084 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 20:53:05,088 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 20:53:05,088 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-03 20:53:07,443 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 20:53:07,444 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate Compromised Nodes
+2025-11-03 20:53:07,444 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run Comprehensive Vulnerability Scan
+2025-11-03 20:53:07,445 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-03 20:53:07,453 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000003.json
+2025-11-03 20:53:07,455 - root - INFO - _monitor_cycle:167 - [OK] Cycle 3 completed: 3 anomalies detected
+2025-11-03 20:53:09,456 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-03 20:53:09,456 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-03 20:53:09,462 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-03 20:53:11,305 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for OpenSSH
+2025-11-03 20:53:11,439 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6233, Requested 7011. Please try again in 39.33s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-03 20:53:11,441 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-03 20:53:11,441 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-03 20:53:11,442 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-03 20:53:11,442 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-03 20:53:11,449 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000004.json
+2025-11-03 20:53:11,451 - root - INFO - _monitor_cycle:167 - [OK] Cycle 4 completed: 3 anomalies detected
+2025-11-04 10:19:44,571 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-04 10:19:51,678 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-04 10:19:51,689 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:19:51,690 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:19:51,808 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-04 10:19:51,808 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:19:54,377 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:19:54,377 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate anomalous nodes
+2025-11-04 10:19:54,377 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Conduct full vulnerability scan and patch assessment
+2025-11-04 10:19:54,377 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:19:54,382 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-04 10:19:54,382 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 3 anomalies detected
+2025-11-04 10:19:56,389 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:19:56,389 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:19:56,394 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-04 10:19:58,322 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for nginx
+2025-11-04 10:19:58,509 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3156, Requested 7779. Please try again in 22.0125s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:19:58,509 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:19:58,510 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:19:58,510 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:19:58,511 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:19:58,520 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-04 10:19:58,521 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 3 anomalies detected
+2025-11-04 10:20:00,532 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:20:00,546 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:20:00,555 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 15 invalid node IDs
+2025-11-04 10:20:00,556 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:20:03,234 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:20:03,235 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate anomalous nodes
+2025-11-04 10:20:03,235 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run comprehensive vulnerability scan
+2025-11-04 10:20:03,236 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:20:03,244 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000003.json
+2025-11-04 10:20:03,245 - root - INFO - _monitor_cycle:167 - [OK] Cycle 3 completed: 5 anomalies detected
+2025-11-04 10:20:05,260 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:20:05,261 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:20:05,268 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:20:07,135 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Docker
+2025-11-04 10:20:07,302 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6363, Requested 6245. Please try again in 34.559999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:20:07,302 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:20:07,302 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:20:07,302 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:20:07,303 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:20:07,308 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000004.json
+2025-11-04 10:20:07,309 - root - INFO - _monitor_cycle:167 - [OK] Cycle 4 completed: 4 anomalies detected
+2025-11-04 10:20:09,315 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:20:09,316 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:20:09,324 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:20:11,121 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for PostgreSQL
+2025-11-04 10:20:11,290 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5831, Requested 6452. Please try again in 32.1225s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:20:11,290 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:20:11,290 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:20:11,290 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:20:11,290 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:20:11,296 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000005.json
+2025-11-04 10:20:11,297 - root - INFO - _monitor_cycle:167 - [OK] Cycle 5 completed: 4 anomalies detected
+2025-11-04 10:20:13,302 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:20:13,302 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:20:13,307 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-04 10:20:13,308 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:20:15,840 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:20:15,840 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate anomalous nodes
+2025-11-04 10:20:15,840 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run comprehensive vulnerability scan
+2025-11-04 10:20:15,840 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:20:15,846 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000006.json
+2025-11-04 10:20:15,847 - root - INFO - _monitor_cycle:167 - [OK] Cycle 6 completed: 3 anomalies detected
+2025-11-04 10:20:17,850 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:20:17,850 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:20:17,854 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 6 invalid node IDs
+2025-11-04 10:20:17,855 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:20:18,030 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7708, Requested 2030. Please try again in 13.035s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:20:18,030 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:20:18,030 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:20:18,030 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:20:18,031 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:20:18,034 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000007.json
+2025-11-04 10:20:18,036 - root - INFO - _monitor_cycle:167 - [OK] Cycle 7 completed: 2 anomalies detected
+2025-11-04 10:29:39,635 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-04 10:29:39,789 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-04 10:29:39,797 - root - INFO - run:93 -  Agent started autonomous monitoring
+2025-11-04 10:29:39,799 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:29:39,800 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:29:39,896 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:29:39,896 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:29:42,039 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:29:42,041 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Scan Compromised Nodes
+2025-11-04 10:29:42,041 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Patch Vulnerable Software
+2025-11-04 10:29:42,041 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:29:42,045 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-04 10:29:42,045 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 4 anomalies detected
+2025-11-04 10:29:44,048 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:29:44,049 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:29:44,057 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:29:44,057 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:29:46,681 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:29:46,682 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Scan Node 4
+2025-11-04 10:29:46,682 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Apply Patches and Harden Node 4
+2025-11-04 10:29:46,682 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:29:46,687 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-04 10:29:46,689 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 4 anomalies detected
+2025-11-04 10:29:48,702 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:29:48,703 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:29:48,710 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:29:50,720 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for Redis
+2025-11-04 10:29:52,324 - root - INFO - _cleanup:116 -  Resources cleaned up successfully
+2025-11-04 10:47:58,594 - core.cve_analyzer - INFO - __init__:32 - CVE Analyzer initialized
+2025-11-04 10:47:58,740 - core.token_manager - INFO - __init__:15 - Initialized tiktoken: cl100k_base
+2025-11-04 10:47:58,742 - root - INFO - __init__:83 - Agent 'GNN-Guardian' initialized successfully
+2025-11-04 10:47:58,743 - root - INFO - run:93 -  Agent started autonomous monitoring
+2025-11-04 10:47:58,745 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:47:58,745 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:47:58,855 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 15 invalid node IDs
+2025-11-04 10:47:58,855 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:48:01,226 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:01,226 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate anomalous nodes
+2025-11-04 10:48:01,226 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Conduct full vulnerability scan
+2025-11-04 10:48:01,226 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:48:01,231 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000001.json
+2025-11-04 10:48:01,232 - root - INFO - _monitor_cycle:167 - [OK] Cycle 1 completed: 5 anomalies detected
+2025-11-04 10:48:03,237 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:48:03,237 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:48:03,243 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 12 invalid node IDs
+2025-11-04 10:48:05,246 - core.cve_analyzer - INFO - _search_cves_for_software:176 - Found 10 CVEs for OpenSSH
+2025-11-04 10:48:05,447 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3235, Requested 7059. Please try again in 17.205s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:48:05,449 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:48:05,449 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:05,449 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:48:05,449 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:48:05,455 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000002.json
+2025-11-04 10:48:05,457 - root - INFO - _monitor_cycle:167 - [OK] Cycle 2 completed: 4 anomalies detected
+2025-11-04 10:48:07,461 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:48:07,463 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:48:07,469 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 6 invalid node IDs
+2025-11-04 10:48:07,469 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:48:09,768 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:09,769 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate and Contain Anomalous Nodes
+2025-11-04 10:48:09,769 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run Comprehensive Vulnerability Scan
+2025-11-04 10:48:09,770 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:48:09,776 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000003.json
+2025-11-04 10:48:09,777 - root - INFO - _monitor_cycle:167 - [OK] Cycle 3 completed: 2 anomalies detected
+2025-11-04 10:48:11,787 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:48:11,787 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:48:11,791 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 15 invalid node IDs
+2025-11-04 10:48:11,791 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:48:11,983 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6285, Requested 2399. Please try again in 5.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:48:11,983 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:48:11,984 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:11,984 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:48:11,984 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:48:11,987 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000004.json
+2025-11-04 10:48:11,989 - root - INFO - _monitor_cycle:167 - [OK] Cycle 4 completed: 5 anomalies detected
+2025-11-04 10:48:13,995 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:48:13,995 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:48:14,007 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 15 invalid node IDs
+2025-11-04 10:48:14,007 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:48:14,207 - core.llm_client - ERROR - generate:60 - Groq API error 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01k79x9vzse5wtggb6ckb22ncm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5988, Requested 2416. Please try again in 3.03s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-04 10:48:14,207 - root - WARNING - _parse_agent_response:1272 - [WARN] No JSON found in LLM response
+2025-11-04 10:48:14,208 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:14,208 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Manual Security Review
+2025-11-04 10:48:14,208 - root - INFO - _take_actions:1335 - [OK] Executed 1 automated actions
+2025-11-04 10:48:14,211 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000005.json
+2025-11-04 10:48:14,212 - root - INFO - _monitor_cycle:167 - [OK] Cycle 5 completed: 5 anomalies detected
+2025-11-04 10:48:16,227 - utils.data_generator - WARNING - load_syslog_and_generate_graph:344 - Syslog file syslogs.log not found, using synthetic data
+2025-11-04 10:48:16,227 - utils.data_generator - INFO - generate_synthetic_graph:292 - Generating synthetic graph: 100 nodes, 5.0% anomalies
+2025-11-04 10:48:16,232 - root - WARNING - _analyze_batch_results:241 - [WARN] Filtered 9 invalid node IDs
+2025-11-04 10:48:16,233 - root - INFO - _analyze_batch_results:256 - [INFO] No CVE vulnerabilities found for anomalous nodes
+2025-11-04 10:48:18,627 - root - INFO - _agent_reasoning:337 - [OK] LLM analysis completed
+2025-11-04 10:48:18,627 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Isolate Compromised Nodes
+2025-11-04 10:48:18,627 - root - INFO - _execute_action:1362 - [ACTION] Executing action: Run Full Vulnerability Scan and Patch
+2025-11-04 10:48:18,627 - root - INFO - _take_actions:1335 - [OK] Executed 2 automated actions
+2025-11-04 10:48:18,631 - root - INFO - _save_report:1531 - [OK] Report saved to reports/report_000006.json
+2025-11-04 10:48:18,632 - root - INFO - _monitor_cycle:167 - [OK] Cycle 6 completed: 3 anomalies detected
+2025-11-04 10:48:20,388 - root - INFO - _cleanup:116 -  Resources cleaned up successfully
+>>>>>>> Stashed changes

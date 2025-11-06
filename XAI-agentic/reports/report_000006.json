@@ -1,0 +1,228 @@
+{
+  "timestamp": "2025-11-04T10:48:16.327298",
+  "iteration": 6,
+  "total_nodes": 100,
+  "total_edges": 291,
+  "anomalous_nodes": 3,
+  "anomaly_rate": 0.03,
+  "mean_score": 1.5994925498962402,
+  "max_score": 19.63104820251465,
+  "max_zscore": 6.536350727081299,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 15,
+      "anomaly_score": 19.63104820251465,
+      "z_score": 6.536350727081299,
+      "degree": 7,
+      "betweenness": 0.020556527881952138,
+      "clustering": 0.19047619047619047,
+      "neighbors": 7,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 21,
+      "anomaly_score": 12.296403884887695,
+      "z_score": 3.8775782585144043,
+      "degree": 5,
+      "betweenness": 0.013650461177380967,
+      "clustering": 0.2,
+      "neighbors": 5,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 59,
+      "anomaly_score": 16.75638771057129,
+      "z_score": 5.494300365447998,
+      "degree": 5,
+      "betweenness": 0.007954344484391496,
+      "clustering": 0.1,
+      "neighbors": 5,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    }
+  ],
+  "vulnerable_paths": [
+    {
+      "path": [
+        15,
+        5,
+        21
+      ],
+      "length": 3,
+      "source": 15,
+      "target": 21
+    },
+    {
+      "path": [
+        15,
+        99,
+        59
+      ],
+      "length": 3,
+      "source": 15,
+      "target": 59
+    },
+    {
+      "path": [
+        21,
+        3,
+        8,
+        59
+      ],
+      "length": 4,
+      "source": 21,
+      "target": 59
+    }
+  ],
+  "batch_processing_time": 0.003077983856201172,
+  "cve_intelligence": {
+    "total_cves_found": 0,
+    "critical_cves": [],
+    "high_cves": [],
+    "node_cve_mapping": {},
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": []
+  },
+  "agent_response": {
+    "severity": "HIGH",
+    "confidence": 0.88,
+    "executive_summary": "Three nodes (15, 21, 59) exhibit anomalous behavior with Z\u2011scores above 5, indicating a likely lateral movement attack. The business faces immediate risk of data exfiltration or service disruption, potentially costing millions in downtime and reputational damage.",
+    "cve_explanations": [],
+    "threat_analysis": {
+      "attack_stage": "Lateral Movement",
+      "topology_correlation": "Node 15 has the highest anomaly score and a moderate degree, acting as a pivot point. Its connections to nodes 5 and 99 create short paths to 21 and 59, which also show high Z\u2011scores. The clustering coefficients suggest these nodes are part of loosely connected subnets, facilitating stealthy movement.",
+      "severity_rationale": "High anomaly scores combined with critical attack paths and the absence of immediate containment indicate a serious threat that could lead to data compromise or service outages.",
+      "attack_vector_assessment": "Attackers likely compromised node 15 via credential theft or a zero\u2011day exploit, then moved to 21 and 59 through existing network links. The low clustering of node 59 indicates it may be a gateway to more sensitive systems.",
+      "predicted_next_steps": "If left unchecked, attackers will expand to adjacent nodes, potentially reaching core servers or data stores, and may exfiltrate sensitive data or deploy ransomware."
+    },
+    "root_cause": {
+      "primary_vulnerability": "Weak authentication and lack of network segmentation allow compromised nodes to pivot.",
+      "contributing_factors": [
+        "Insufficient monitoring of lateral traffic",
+        "No mandatory MFA for privileged accounts",
+        "Outdated OS/firmware on critical nodes"
+      ],
+      "why_detected_now": "The GNN model flagged sudden spikes in node activity and unusual connectivity patterns, which were previously masked by normal traffic noise.",
+      "systemic_vs_isolated": "The issue is systemic\u2014multiple nodes share the same misconfiguration, but the attack is currently localized to the identified path."
+    },
+    "business_impact": {
+      "immediate_risks": [
+        "Potential data exfiltration from compromised nodes",
+        "Service downtime affecting customer-facing applications"
+      ],
+      "potential_losses": "Estimated $2\u20135 million in direct losses, $10\u201315 million in reputational damage, and possible regulatory fines up to $1 million.",
+      "compliance_implications": "Non\u2011compliance with PCI\u2011DSS, GDPR, and HIPAA due to unauthorized access and potential data breach.",
+      "affected_operations": "Finance, HR, and customer support systems that rely on the affected network segments."
+    },
+    "recommended_actions": [
+      {
+        "priority": 1,
+        "urgency": "IMMEDIATE",
+        "action_name": "Isolate Compromised Nodes",
+        "technical_steps": [
+          "Place nodes 15, 21, and 59 in a quarantine VLAN.",
+          "Block all inbound/outbound traffic except for essential services.",
+          "Verify isolation with ping and traceroute."
+        ],
+        "business_friendly_explanation": "We\u2019ll temporarily cut off the suspicious computers from the rest of the network to stop any further spread.",
+        "estimated_time": "30 minutes",
+        "resources_needed": "Network admin, 1 engineer",
+        "cve_related": [],
+        "risk_if_delayed": "Attackers could reach core servers and exfiltrate data."
+      },
+      {
+        "priority": 2,
+        "urgency": "24hrs",
+        "action_name": "Run Full Vulnerability Scan and Patch",
+        "technical_steps": [
+          "Execute Nessus/Qualys scan on all nodes in the subnet.",
+          "Prioritize patches for OS and application vulnerabilities.",
+          "Apply patches and reboot affected systems."
+        ],
+        "business_friendly_explanation": "We\u2019ll check for known software weaknesses and fix them so attackers can\u2019t use them.",
+        "estimated_time": "4 hours",
+        "resources_needed": "Security ops team, 2 engineers",
+        "cve_related": [],
+        "risk_if_delayed": "Unpatched systems remain open to exploitation."
+      },
+      {
+        "priority": 3,
+        "urgency": "Week",
+        "action_name": "Implement MFA and Network Segmentation",
+        "technical_steps": [
+          "Enable MFA for all privileged accounts.",
+          "Create separate VLANs for critical services.",
+          "Deploy micro\u2011segmentation policies on firewalls."
+        ],
+        "business_friendly_explanation": "We\u2019ll add an extra login step and separate the network so attackers can\u2019t move freely.",
+        "estimated_time": "1 day",
+        "resources_needed": "Security architect, network engineer, 3 staff",
+        "cve_related": [],
+        "risk_if_delayed": "Attackers could still pivot if segmentation is missing."
+      },
+      {
+        "priority": 4,
+        "urgency": "Month",
+        "action_name": "Deploy Continuous Monitoring and Incident Response Playbooks",
+        "technical_steps": [
+          "Integrate SIEM with GNN alerts.",
+          "Create playbooks for lateral movement detection.",
+          "Train SOC analysts on new playbooks."
+        ],
+        "business_friendly_explanation": "We\u2019ll set up tools that automatically spot suspicious moves and give clear steps for the team to follow.",
+        "estimated_time": "2 weeks",
+        "resources_needed": "SIEM specialist, SOC analysts, 4 staff",
+        "cve_related": [],
+        "risk_if_delayed": "Future attacks may go unnoticed longer."
+      }
+    ],
+    "immediate_mitigations": [
+      "Right now: Isolate nodes 15, 21, and 59 (5 minutes).",
+      "Today: Run vulnerability scan and patch critical OS updates (1 hour).",
+      "This week: Deploy MFA for privileged accounts and segment network (1 day)."
+    ],
+    "long_term_recommendations": [
+      "Implement automated patch management to reduce manual effort.",
+      "Deploy network segmentation and micro\u2011segmentation to limit lateral movement.",
+      "Enhance monitoring with real\u2011time anomaly detection and automated playbooks."
+    ],
+    "detailed_reasoning": "The GNN model identified nodes 15, 21, and 59 as outliers with Z\u2011scores exceeding 5, indicating statistically significant deviations from normal traffic patterns. Node 15\u2019s high degree and moderate betweenness suggest it is a hub that can influence many connections, making it an ideal pivot for attackers. The identified attack paths (15\u20115\u201121, 15\u201199\u201159, 21\u20113\u20118\u201159) reveal a clear lateral movement strategy, moving from a compromised node to adjacent nodes with lower clustering coefficients, which typically represent less monitored or less secure segments. The absence of CVE data in the current snapshot indicates that the attack may rely on credential theft or exploitation of unpatched software not yet cataloged, or on misconfigurations such as open ports or weak authentication. The root cause analysis points to systemic gaps: lack of MFA, insufficient network segmentation, and outdated software. Immediate isolation of the affected nodes stops the spread, while a full vulnerability scan and patching address the underlying weaknesses. Implementing MFA and segmentation provides a robust barrier against future lateral movement. Continuous monitoring and playbooks ensure that any future anomalies are detected and responded to quickly, protecting business operations and compliance obligations. Failure to act promptly could lead to data exfiltration, regulatory fines, and significant reputational damage.",
+    "questions_for_team": [
+      "What authentication methods are currently enforced for privileged accounts?",
+      "Do we have a documented incident response plan for lateral movement scenarios?",
+      "What is the current patch management cycle for critical operating systems?"
+    ]
+  },
+  "actions_taken": [
+    {
+      "action": "Isolate Compromised Nodes",
+      "action_type": "Isolate Compromised Nodes",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:18.627172",
+      "priority": 1,
+      "urgency": "IMMEDIATE",
+      "details": "We\u2019ll temporarily cut off the suspicious computers from the rest of the network to stop any further spread.",
+      "estimated_time": "30 minutes",
+      "cve_related": []
+    },
+    {
+      "action": "Run Full Vulnerability Scan and Patch",
+      "action_type": "Run Full Vulnerability Scan and Patch",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:18.627172",
+      "priority": 2,
+      "urgency": "24hrs",
+      "details": "We\u2019ll check for known software weaknesses and fix them so attackers can\u2019t use them.",
+      "estimated_time": "4 hours",
+      "cve_related": []
+    }
+  ],
+  "total_anomalies_cumulative": 24
+}

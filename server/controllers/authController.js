@@ -446,3 +446,59 @@ export const resetPassword = async (req, res) => {
     });
   }
 };
+
+
+  // Add this to your authController.js
+  export const updateProfile = async (req, res) => {
+    try {
+      const { fullName, phone, location, bio, role } = req.body;
+      const userId = req.user._id; // From protect middleware
+
+      // Validate that at least one field is being updated
+      if (!fullName && !phone && !location && !bio && !role) {
+        return res.status(400).json({
+          success: false,
+          message: 'Please provide at least one field to update'
+        });
+      }
+
+      // Build update object with only provided fields
+      const updateData = {};
+      if (fullName) updateData.fullName = fullName;
+      if (phone) updateData.phone = phone;
+      if (location) updateData.location = location;
+      if (bio) updateData.bio = bio;
+      if (role) updateData.role = role;
+
+      // Find and update user
+      const user = await User.findByIdAndUpdate(
+        userId,
+        updateData,
+        { 
+          new: true,           // Return updated document
+          runValidators: true  // Run schema validators
+        }
+      ).select('-password'); // Exclude password from response
+
+      if (!user) {
+        return res.status(404).json({
+          success: false,
+          message: 'User not found'
+        });
+      }
+
+      res.status(200).json({
+        success: true,
+        message: 'Profile updated successfully',
+        data: user
+      });
+
+    } catch (error) {
+      console.error('Profile update error:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Failed to update profile',
+        error: error.message
+      });
+    }
+  };

@@ -24,7 +24,14 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
-          <Route path="/user-profile" element={<UserProfile />} />
+          <Route 
+            path="/user-profile" 
+            element={
+              <ProtectedRoute>
+                <UserProfile />
+              </ProtectedRoute>
+            } 
+          />
 
           {/* GNN Demo Route - can be public or protected */}
           <Route path="/gnn-demo" element={<GNNDemo />} />

@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "timestamp": "2025-11-04T15:21:48.619149",
   "iteration": 1,
   "total_nodes": 100,
@@ -14,10 +15,28 @@
       "node_id": 78,
       "anomaly_score": 25.936229705810547,
       "z_score": 6.439570903778076,
+=======
+  "timestamp": "2025-11-04T10:47:58.857678",
+  "iteration": 1,
+  "total_nodes": 100,
+  "total_edges": 291,
+  "anomalous_nodes": 5,
+  "anomaly_rate": 0.05,
+  "mean_score": 1.9015463590621948,
+  "max_score": 21.50887680053711,
+  "max_zscore": 5.77223539352417,
+  "threshold": 3.0,
+  "node_details": [
+    {
+      "node_id": 14,
+      "anomaly_score": 19.466394424438477,
+      "z_score": 5.170945644378662,
+>>>>>>> Stashed changes
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
       "neighbors": 0,
+<<<<<<< Updated upstream
       "cves": [
         {
           "cve_id": "CVE-1999-0862",
@@ -303,6 +322,15 @@
       "node_id": 86,
       "anomaly_score": 14.265562057495117,
       "z_score": 3.311288356781006,
+=======
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+      "node_id": 35,
+      "anomaly_score": 21.50887680053711,
+      "z_score": 5.77223539352417,
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
@@ -312,9 +340,28 @@
       "cve_critical_count": 0
     },
     {
+      "node_id": 41,
+      "anomaly_score": 12.418095588684082,
+      "z_score": 3.095984697341919,
+>>>>>>> Stashed changes
+      "degree": 0,
+      "betweenness": 0.0,
+      "clustering": 0.0,
+      "neighbors": 0,
+      "cves": [],
+      "cve_count": 0,
+      "cve_critical_count": 0
+    },
+    {
+<<<<<<< Updated upstream
       "node_id": 88,
       "anomaly_score": 14.789870262145996,
       "z_score": 3.45182728767395,
+=======
+      "node_id": 51,
+      "anomaly_score": 12.76177978515625,
+      "z_score": 3.197162628173828,
+>>>>>>> Stashed changes
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
@@ -324,6 +371,7 @@
       "cve_critical_count": 0
     },
     {
+<<<<<<< Updated upstream
       "node_id": 94,
       "anomaly_score": 19.12788200378418,
       "z_score": 4.614616394042969,
@@ -471,6 +519,11 @@
       "node_id": 394,
       "anomaly_score": 19.12788200378418,
       "z_score": 4.614616394042969,
+=======
+      "node_id": 98,
+      "anomaly_score": 14.629749298095703,
+      "z_score": 3.747077226638794,
+>>>>>>> Stashed changes
       "degree": 0,
       "betweenness": 0.0,
       "clustering": 0.0,
@@ -481,10 +534,15 @@
     }
   ],
   "vulnerable_paths": [],
+<<<<<<< Updated upstream
   "batch_processing_time": 0.11984586715698242,
+=======
+  "batch_processing_time": 0.07260441780090332,
+>>>>>>> Stashed changes
   "cve_intelligence": {
-    "total_cves_found": 10,
+    "total_cves_found": 0,
     "critical_cves": [],
+<<<<<<< Updated upstream
     "high_cves": [
       {
         "cve_id": "CVE-2001-0201",
@@ -995,10 +1053,111 @@
       "Is node 78 confirmed to be running PostgreSQL, and if so, which version?",
       "Are the listed CVEs applicable to the specific PostgreSQL build in use?",
       "What is the current patch status of the other anomalous nodes lacking CVE data?"
+=======
+    "high_cves": [],
+    "node_cve_mapping": {},
+    "exploit_available": [],
+    "kev_listed": [],
+    "recommended_actions": []
+  },
+  "agent_response": {
+    "severity": "HIGH",
+    "confidence": 0.85,
+    "executive_summary": "The GNN has identified five isolated nodes with unusually high anomaly scores, indicating a likely compromise or misconfiguration. This poses an immediate risk of data exfiltration or service disruption, potentially costing the company significant financial and reputational damage.",
+    "cve_explanations": [],
+    "threat_analysis": {
+      "attack_stage": "Initial Access / Lateral Movement",
+      "topology_correlation": "The anomalous nodes have zero degree and zero clustering, meaning they are disconnected from the normal network flow yet exhibit high z-scores. This pattern is typical of compromised hosts that have been isolated by attackers to avoid detection while establishing footholds for lateral movement.",
+      "severity_rationale": "High severity is driven by the combination of high anomaly scores (z > 5), the nodes\u2019 isolation (no legitimate neighbors), and the potential for these nodes to serve as pivot points for further attacks.",
+      "attack_vector_assessment": "Attackers likely exploited a zero\u2011day or unpatched vulnerability in a service running on these hosts, or used credential theft to gain initial access and then isolated the nodes to evade monitoring.",
+      "predicted_next_steps": "If left unchecked, attackers will likely expand lateral movement to other critical systems, exfiltrate sensitive data, or deploy ransomware."
+    },
+    "root_cause": {
+      "primary_vulnerability": "Lack of network segmentation and outdated host configurations allowing isolated nodes to become attack surfaces.",
+      "contributing_factors": [
+        "Insufficient patch management for legacy devices",
+        "Weak or default credentials on critical services",
+        "Inadequate host\u2011based monitoring on isolated nodes"
+      ],
+      "why_detected_now": "The GNN model flagged sudden deviations in traffic patterns and node isolation metrics, which were previously within normal ranges.",
+      "systemic_vs_isolated": "The issue appears localized to the five nodes but indicates a systemic weakness in segmentation and monitoring that could affect other parts of the network."
+    },
+    "business_impact": {
+      "immediate_risks": [
+        "Potential data exfiltration of customer information",
+        "Service downtime for critical applications"
+      ],
+      "potential_losses": "Estimated $500,000 in direct costs, $1.2 million in reputational damage, and possible regulatory fines up to $2 million.",
+      "compliance_implications": "Non\u2011compliance with GDPR, PCI\u2011DSS, and HIPAA could trigger audits and penalties.",
+      "affected_operations": "Customer data handling, payment processing, and internal communications."
+    },
+    "recommended_actions": [
+      {
+        "priority": 1,
+        "urgency": "IMMEDIATE",
+        "action_name": "Isolate anomalous nodes",
+        "technical_steps": [
+          "Place nodes 14, 35, 41, 51, and 98 into a quarantine VLAN.",
+          "Block all inbound and outbound traffic except for essential management traffic.",
+          "Verify isolation using network ACLs and firewall rules."
+        ],
+        "business_friendly_explanation": "We will temporarily cut off these machines from the rest of the network to stop any potential spread of malicious activity.",
+        "estimated_time": "30 minutes",
+        "resources_needed": "Network engineer, 1 hour",
+        "cve_related": [],
+        "risk_if_delayed": "Attackers could move laterally to critical servers."
+      },
+      {
+        "priority": 2,
+        "urgency": "24hrs",
+        "action_name": "Conduct full vulnerability scan",
+        "technical_steps": [
+          "Run Nessus/Qualys against the quarantined nodes.",
+          "Identify missing patches and misconfigurations.",
+          "Document findings for remediation."
+        ],
+        "business_friendly_explanation": "We will check these machines for known weaknesses that attackers could exploit.",
+        "estimated_time": "2 hours",
+        "resources_needed": "Security analyst, scanning tools",
+        "cve_related": [],
+        "risk_if_delayed": "Unknown vulnerabilities may remain exploitable."
+      },
+      {
+        "priority": 3,
+        "urgency": "Week",
+        "action_name": "Apply patches and harden hosts",
+        "technical_steps": [
+          "Install all critical security updates.",
+          "Enforce strong password policies and MFA.",
+          "Disable unused services and ports."
+        ],
+        "business_friendly_explanation": "We will update the software and tighten security settings to prevent future attacks.",
+        "estimated_time": "4 hours",
+        "resources_needed": "System admins, patch management system",
+        "cve_related": [],
+        "risk_if_delayed": "Persistent vulnerabilities could be exploited again."
+      }
+    ],
+    "immediate_mitigations": [
+      "Right now: Block all traffic to/from nodes 14, 35, 41, 51, and 98 (takes 5 minutes).",
+      "Today: Run host\u2011based intrusion detection on the quarantined nodes (takes 1 hour).",
+      "This week: Re\u2011integrate cleaned nodes after patching and hardening (takes 1 day)."
+    ],
+    "long_term_recommendations": [
+      "Implement automated patch management to ensure timely updates.",
+      "Deploy network segmentation with strict ACLs to isolate critical assets.",
+      "Enhance monitoring with continuous GNN analysis and SIEM correlation."
+    ],
+    "detailed_reasoning": "The GNN model detected five nodes with zero degree and zero clustering yet with anomaly scores exceeding the detection threshold by more than 5 standard deviations. Such isolated high\u2011score nodes are a hallmark of compromised hosts that have been deliberately disconnected to avoid detection. The lack of legitimate neighbors suggests that these machines are not part of normal traffic flows, implying that attackers may have used them as pivot points for lateral movement or as staging areas for data exfiltration. The immediate business risk is significant: if attackers gain access to customer data or critical services, the company faces regulatory fines, loss of customer trust, and direct financial losses from downtime and remediation. The root cause analysis points to systemic gaps in network segmentation and patch management, which allowed these nodes to become vulnerable. The recommended actions prioritize isolation, vulnerability assessment, and patching, with clear time estimates and resource allocations. Long\u2011term measures focus on automation, segmentation, and continuous monitoring to prevent recurrence.",
+    "questions_for_team": [
+      "What is the current patch management cadence for legacy devices?",
+      "Do we have an incident response playbook that includes isolated node containment?"
+>>>>>>> Stashed changes
     ]
   },
   "actions_taken": [
     {
+<<<<<<< Updated upstream
       "action": "Patch PostgreSQL to the latest supported version",
       "status": "executed",
       "timestamp": "2025-11-04T15:21:50.659612",
@@ -1013,4 +1172,29 @@
     }
   ],
   "total_anomalies_cumulative": 16
+=======
+      "action": "Isolate anomalous nodes",
+      "action_type": "Isolate anomalous nodes",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:01.226997",
+      "priority": 1,
+      "urgency": "IMMEDIATE",
+      "details": "We will temporarily cut off these machines from the rest of the network to stop any potential spread of malicious activity.",
+      "estimated_time": "30 minutes",
+      "cve_related": []
+    },
+    {
+      "action": "Conduct full vulnerability scan",
+      "action_type": "Conduct full vulnerability scan",
+      "status": "executed",
+      "timestamp": "2025-11-04T10:48:01.226997",
+      "priority": 2,
+      "urgency": "24hrs",
+      "details": "We will check these machines for known weaknesses that attackers could exploit.",
+      "estimated_time": "2 hours",
+      "cve_related": []
+    }
+  ],
+  "total_anomalies_cumulative": 5
+>>>>>>> Stashed changes
 }

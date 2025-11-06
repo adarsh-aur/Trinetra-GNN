@@ -33,6 +33,27 @@ const userSchema = new mongoose.Schema({
     minlength: [6, 'Password must be at least 6 characters'],
     select: false
   },
+  // NEW PROFILE FIELDS
+  phone: {
+    type: String,
+    trim: true,
+    maxlength: [20, 'Phone number cannot exceed 20 characters']
+  },
+  location: {
+    type: String,
+    trim: true,
+    maxlength: [100, 'Location cannot exceed 100 characters']
+  },
+  bio: {
+    type: String,
+    trim: true,
+    maxlength: [500, 'Bio cannot exceed 500 characters']
+  },
+  avatar: {
+    type: String,
+    trim: true
+  },
+  // END NEW PROFILE FIELDS
   cloudProviders: [{
     provider: {
       type: String,
@@ -54,8 +75,8 @@ const userSchema = new mongoose.Schema({
   }],
   role: {
     type: String,
-    enum: ['user', 'admin'],
-    default: 'user'
+    enum: ['user', 'admin', 'Security Analyst', 'Senior Analyst', 'Manager', 'Administrator'],
+    default: 'Security Analyst'
   },
   isActive: {
     type: Boolean,
@@ -64,6 +85,8 @@ const userSchema = new mongoose.Schema({
   lastLogin: {
     type: Date
   },
+  resetPasswordToken: String,
+  resetPasswordExpire: Date,
   createdAt: {
     type: Date,
     default: Date.now
@@ -110,6 +133,8 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
 userSchema.methods.toJSON = function() {
   const user = this.toObject();
   delete user.password;
+  delete user.resetPasswordToken;
+  delete user.resetPasswordExpire;
   return user;
 };
 

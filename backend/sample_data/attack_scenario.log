@@ -1,18 +1,18 @@
-<86>Nov 01 18:08:07 aws-instance sshd[12345]: Failed password for invalid user admin from 198.51.100.23 port 52847 ssh2 cve=CVE-2023-48795 severity=HIGH
-<86>Nov 01 18:09:07 aws-instance sshd[12345]: Failed password for invalid user admin from 198.51.100.23 port 52847 ssh2 cve=CVE-2023-48795 severity=HIGH
-<86>Nov 01 18:10:07 aws-instance sshd[12345]: Failed password for invalid user admin from 198.51.100.23 port 52847 ssh2 cve=CVE-2023-48795 severity=HIGH
-<86>Nov 01 18:13:07 aws-instance sshd[12345]: Accepted password for root from 198.51.100.23 port 52847 ssh2 cve=CVE-2023-48795 technique=T1133 tactic=Initial_Access status=BREACH severity=CRITICAL
-<134>Nov 01 18:38:07 aws-web-server httpd[8080]: GET /api/exploit?cmd=whoami from 185.220.101.45 cve=CVE-2023-46604 technique=T1053.003 tactic=Execution status=EXPLOITED user=www-data target=10.0.2.50
-<134>Nov 01 18:40:07 aws-web-server httpd[8080]: POST /upload/shell.php from 185.220.101.45 cve=CVE-2023-46604 technique=T1059.004 tactic=Execution status=WEBSHELL_UPLOADED size=4096
-<131>Nov 01 19:08:07 aws-instance kernel: [exploit] Attempting privilege escalation cve=CVE-2024-1086 technique=T1068 tactic=Privilege_Escalation process=exploit user=www-data target_user=root
-<131>Nov 01 19:09:07 aws-instance kernel: [exploit] UID changed: www-data (33) -> root (0) cve=CVE-2024-1086 status=ROOT_OBTAINED severity=CRITICAL
-<133>Nov 01 19:23:07 aws-ecs-host dockerd[2341]: Container escape attempt detected cve=CVE-2023-5528 technique=T1611 tactic=Privilege_Escalation container_id=c8f3a9b2d1e4 instance=i-0abc123def456
-<133>Nov 01 19:25:07 aws-ecs-host dockerd[2341]: Host filesystem mounted in container cve=CVE-2023-5528 technique=T1611 status=ESCAPED path=/host severity=CRITICAL
-<134>Nov 01 19:38:07 aws-rds-mysql mysqld[5432]: Unauthorized SQL injection attempt from 192.0.2.100 cve=CVE-2024-21123 technique=T1555 query='UNION SELECT password FROM users' status=BLOCKED
-<134>Nov 01 19:43:07 aws-rds-mysql mysqld[5432]: Authentication bypass successful cve=CVE-2024-21123 technique=T1555 tactic=Credential_Access user=admin from=192.0.2.100 status=BREACH severity=HIGH
-<86>Nov 01 19:53:07 aws-instance sshd[9876]: Connection from 172.31.42.16 port 44123 technique=T1563 tactic=Lateral_Movement status=INTERNAL_MOVEMENT user=compromised_user
-<86>Nov 01 19:54:07 aws-instance-2 sshd[9877]: Accepted publickey for root from 172.31.42.16 port 44123 ssh2: RSA SHA256:suspicious_key technique=T1563 status=LATERAL_SUCCESS
-<131>Nov 01 20:06:07 aws-instance systemd[1]: CloudWatch agent stopped unexpectedly technique=T1562.001 tactic=Defense_Evasion status=MONITORING_DISABLED
-<131>Nov 01 20:07:07 aws-instance kernel: [audit] Log files deleted: /var/log/auth.log* technique=T1562.001 tactic=Defense_Evasion count=15 status=EVIDENCE_DESTROYED severity=HIGH
-<134>Nov 01 20:03:07 aws-instance s3-sync[4321]: Large data transfer detected technique=T1041 tactic=Exfiltration destination=s3://attacker-bucket size=15GB files=10532 status=EXFILTRATING
-<134>Nov 01 20:06:07 aws-instance s3-sync[4321]: Transfer complete to external bucket technique=T1041 tactic=Exfiltration destination=s3://attacker-bucket status=DATA_STOLEN severity=CRITICAL
+<86>Nov 05 20:17:36 aws-instance sshd[12345]: Failed password for invalid user admin from 192.0.2.100 port 52847 ssh2 cve=CVE-2023-51385 severity=HIGH
+<86>Nov 05 20:18:36 aws-instance sshd[12345]: Failed password for invalid user admin from 192.0.2.100 port 52847 ssh2 cve=CVE-2023-51385 severity=HIGH
+<86>Nov 05 20:19:36 aws-instance sshd[12345]: Failed password for invalid user admin from 192.0.2.100 port 52847 ssh2 cve=CVE-2023-51385 severity=HIGH
+<86>Nov 05 20:22:36 aws-instance sshd[12345]: Accepted password for root from 192.0.2.100 port 52847 ssh2 cve=CVE-2023-51385 technique=T1190 tactic=Initial_Access status=BREACH severity=CRITICAL
+<134>Nov 05 20:47:36 aws-web-server httpd[8080]: GET /api/exploit?cmd=whoami from 185.220.101.45 cve=CVE-2024-23897 technique=T1203 tactic=Execution status=EXPLOITED user=www-data target=10.0.1.100
+<134>Nov 05 20:49:36 aws-web-server httpd[8080]: POST /upload/shell.php from 185.220.101.45 cve=CVE-2024-23897 technique=T1059.004 tactic=Execution status=WEBSHELL_UPLOADED size=4096
+<131>Nov 05 21:17:36 aws-instance kernel: [exploit] Attempting privilege escalation cve=CVE-2024-0193 technique=T1068 tactic=Privilege_Escalation process=exploit user=www-data target_user=root
+<131>Nov 05 21:18:36 aws-instance kernel: [exploit] UID changed: www-data (33) -> root (0) cve=CVE-2024-0193 status=ROOT_OBTAINED severity=CRITICAL
+<133>Nov 05 21:32:36 aws-ecs-host dockerd[2341]: Container escape attempt detected cve=CVE-2024-3094 technique=T1611 tactic=Privilege_Escalation container_id=c8f3a9b2d1e4 instance=i-0xyz789ghi012
+<133>Nov 05 21:34:36 aws-ecs-host dockerd[2341]: Host filesystem mounted in container cve=CVE-2024-3094 technique=T1611 status=ESCAPED path=/host severity=CRITICAL
+<134>Nov 05 21:47:36 aws-rds-mysql mysqld[5432]: Unauthorized SQL injection attempt from 185.220.101.45 cve=CVE-2024-1086 technique=T1110.001 query='UNION SELECT password FROM users' status=BLOCKED
+<134>Nov 05 21:52:36 aws-rds-mysql mysqld[5432]: Authentication bypass successful cve=CVE-2024-1086 technique=T1110.001 tactic=Credential_Access user=admin from=185.220.101.45 status=BREACH severity=HIGH
+<86>Nov 05 22:02:36 aws-instance sshd[9876]: Connection from 172.31.42.16 port 44123 technique=T1563 tactic=Lateral_Movement status=INTERNAL_MOVEMENT user=compromised_user
+<86>Nov 05 22:03:36 aws-instance-2 sshd[9877]: Accepted publickey for root from 172.31.42.16 port 44123 ssh2: RSA SHA256:suspicious_key technique=T1563 status=LATERAL_SUCCESS
+<131>Nov 05 22:15:36 aws-instance systemd[1]: CloudWatch agent stopped unexpectedly technique=T1562.001 tactic=Defense_Evasion status=MONITORING_DISABLED
+<131>Nov 05 22:16:36 aws-instance kernel: [audit] Log files deleted: /var/log/auth.log* technique=T1562.001 tactic=Defense_Evasion count=15 status=EVIDENCE_DESTROYED severity=HIGH
+<134>Nov 05 22:12:36 aws-instance s3-sync[4321]: Large data transfer detected technique=T1041 tactic=Exfiltration destination=s3://attacker-bucket size=15GB files=10532 status=EXFILTRATING
+<134>Nov 05 22:15:36 aws-instance s3-sync[4321]: Transfer complete to external bucket technique=T1041 tactic=Exfiltration destination=s3://attacker-bucket status=DATA_STOLEN severity=CRITICAL

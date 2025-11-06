@@ -2,10 +2,15 @@
   "nodes": [
     {
       "id": 0,
+<<<<<<< Updated upstream
       "name": "110.111.159.210",
+=======
+      "name": "192.168.1.15",
+>>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
+<<<<<<< Updated upstream
       "categorization_reasoning": "External source IP interacting with GCP instance, flagged by firewall.",
       "risk_score": 0.0,
       "anomaly_probability": 0.31008780002593994,
@@ -13,16 +18,30 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-03 19:17:26 IST",
+=======
+      "categorization_reasoning": "Private IP in internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.3725845217704773,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+>>>>>>> Stashed changes
       "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
+      "size": 25.0,
+      "color": "#e74c3c"
     },
     {
       "id": 1,
+<<<<<<< Updated upstream
       "name": "172.26.237.203",
+=======
+      "name": "203.0.113.45",
+>>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
+<<<<<<< Updated upstream
       "categorization_reasoning": "Internal GCP network address, part of instance's subnet.",
       "risk_score": 0.0,
       "anomaly_probability": 0.25809693336486816,
@@ -30,12 +49,22 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-03 19:17:26 IST",
+=======
+      "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.34912335872650146,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+>>>>>>> Stashed changes
       "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
+      "size": 25.0,
+      "color": "#e74c3c"
     },
     {
       "id": 2,
+<<<<<<< Updated upstream
       "name": "169.254.169.254",
       "type": "ip",
       "cloud_platform": "gcp",
@@ -49,14 +78,34 @@
       "last_seen": "2025-11-03 19:17:26 IST",
       "group": 1,
       "size": 5,
+=======
+      "name": "10.0.0.5",
+      "type": "ip",
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Private IP, internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.3237788677215576,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 0,
+      "size": 25.0,
+>>>>>>> Stashed changes
       "color": "#e74c3c"
     },
     {
       "id": 3,
+<<<<<<< Updated upstream
       "name": "10.157.67.27",
+=======
+      "name": "192.168.1.10",
+>>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
+<<<<<<< Updated upstream
       "categorization_reasoning": "Private GCP instance IP, used for internal communication.",
       "risk_score": 0.0,
       "anomaly_probability": 0.2797577679157257,
@@ -64,16 +113,30 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-03 19:17:26 IST",
+=======
+      "categorization_reasoning": "Private IP, internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.3291052579879761,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+>>>>>>> Stashed changes
       "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
+      "size": 25.0,
+      "color": "#e74c3c"
     },
     {
       "id": 4,
+<<<<<<< Updated upstream
       "name": "192.168.240.65",
+=======
+      "name": "198.51.100.202",
+>>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
+<<<<<<< Updated upstream
       "categorization_reasoning": "Private GCP address within VPC, typical internal traffic.",
       "risk_score": 0.0,
       "anomaly_probability": 0.2797577679157257,
@@ -81,16 +144,30 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-03 19:17:26 IST",
+=======
+      "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.35058021545410156,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+>>>>>>> Stashed changes
       "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
+      "size": 25.0,
+      "color": "#e74c3c"
     },
     {
       "id": 5,
+<<<<<<< Updated upstream
       "name": "172.24.129.16",
+=======
+      "name": "198.51.100.23",
+>>>>>>> Stashed changes
       "type": "ip",
       "cloud_platform": "gcp",
       "category": "network",
+<<<<<<< Updated upstream
       "categorization_reasoning": "GCP internal address, part of VPC subnet.",
       "risk_score": 0.0,
       "anomaly_probability": 0.2797577679157257,
@@ -98,12 +175,22 @@
       "cve": [],
       "cve_count": 0,
       "last_seen": "2025-11-03 19:17:26 IST",
+=======
+      "categorization_reasoning": "Reserved test IP, internal network, no cloud indicator.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.41685813665390015,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+>>>>>>> Stashed changes
       "group": 0,
-      "size": 5,
-      "color": "#2ecc71"
+      "size": 25.0,
+      "color": "#e74c3c"
     },
     {
       "id": 6,
+<<<<<<< Updated upstream
       "name": "10.187.173.68",
       "type": "ip",
       "cloud_platform": "gcp",
@@ -339,6 +426,90 @@
       "group": 3,
       "size": 23.72,
       "color": "#e74c3c"
+=======
+      "name": "logging",
+      "type": "process",
+      "cloud_platform": "generic",
+      "category": "monitoring",
+      "categorization_reasoning": "Logging process, part of observability stack, no cloud-specific tags.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.41010236740112305,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 1,
+      "size": 25.0,
+      "color": "#e74c3c"
+    },
+    {
+      "id": 7,
+      "name": "web",
+      "type": "process",
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Web server process, typical compute instance, no cloud-specific tags.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.3230983316898346,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 2,
+      "size": 25.0,
+      "color": "#e74c3c"
+    },
+    {
+      "id": 8,
+      "name": "ssh",
+      "type": "process",
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "SSH daemon process, compute instance, no cloud-specific tags.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.29179468750953674,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 2,
+      "size": 25.0,
+      "color": "#e74c3c"
+    },
+    {
+      "id": 9,
+      "name": "s3",
+      "type": "process",
+      "cloud_platform": "aws",
+      "category": "storage",
+      "categorization_reasoning": "S3 service indicates AWS storage platform.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.2769050598144531,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 3,
+      "size": 25.0,
+      "color": "#e74c3c"
+    },
+    {
+      "id": 10,
+      "name": "db",
+      "type": "process",
+      "cloud_platform": "generic",
+      "category": "database",
+      "categorization_reasoning": "Database service, generic database, no cloud-specific tags.",
+      "risk_score": 10.0,
+      "anomaly_probability": 0.3121638596057892,
+      "is_anomaly": false,
+      "cve": [],
+      "cve_count": 0,
+      "last_seen": "2025-11-05 22:24:17 IST",
+      "group": 4,
+      "size": 25.0,
+      "color": "#e74c3c"
+>>>>>>> Stashed changes
     }
   ],
   "links": [
@@ -421,86 +592,18 @@
       "weight": 1.0,
       "count": 1,
       "value": 1.0
-    },
-    {
-      "source": 10,
-      "target": 11,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 11,
-      "target": 12,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 12,
-      "target": 13,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 13,
-      "target": 14,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 14,
-      "target": 15,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 15,
-      "target": 16,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 16,
-      "target": 17,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 17,
-      "target": 18,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
-    },
-    {
-      "source": 18,
-      "target": 19,
-      "type": "connection",
-      "weight": 1.0,
-      "count": 1,
-      "value": 1.0
     }
   ],
   "metadata": {
     "timestamp": null,
+<<<<<<< Updated upstream
     "generated_at": "2025-11-03 13:47:27 UTC",
+=======
+    "generated_at": "2025-11-05 16:54:17 UTC",
+>>>>>>> Stashed changes
     "analysis_summary": {
-      "total_nodes": 20,
-      "total_links": 19,
+      "total_nodes": 11,
+      "total_links": 10,
       "attack_type": "unknown",
       "confidence": 0.3,
       "anomalies_detected": 0,
@@ -511,6 +614,7 @@
       "gnn_f1_score": 0.0
     },
     "cloud_platforms": {
+<<<<<<< Updated upstream
       "gcp": 13,
       "generic": 7
     },
@@ -527,6 +631,24 @@
       "min_risk_score": 0.0,
       "avg_anomaly_probability": 0.28,
       "high_risk_nodes": 6,
+=======
+      "generic": 10,
+      "aws": 1
+    },
+    "category_distribution": {
+      "network": 6,
+      "monitoring": 1,
+      "compute": 2,
+      "storage": 1,
+      "database": 1
+    },
+    "risk_statistics": {
+      "avg_risk_score": 10.0,
+      "max_risk_score": 10.0,
+      "min_risk_score": 10.0,
+      "avg_anomaly_probability": 0.34,
+      "high_risk_nodes": 11,
+>>>>>>> Stashed changes
       "anomalous_nodes": 0,
       "total_cves": 0,
       "nodes_with_cves": 0

@@ -1,0 +1,832 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "zscore_threshold": 2.0,
+    "total_nodes": 10,
+    "total_edges": 9,
+    "anomalies_detected_count": 0,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 29,
+    "nodes_with_cves": 8,
+    "unique_cves": [
+      "CVE-2025-25297",
+      "CVE-2018-5435",
+      "CVE-1999-0407",
+      "CVE-2023-51385",
+      "CVE-2015-1335",
+      "CVE-1999-0244",
+      "CVE-1999-1152",
+      "CVE-2015-3629",
+      "CVE-1999-1073",
+      "CVE-2024-3094",
+      "CVE-1999-0071",
+      "CVE-1999-0440",
+      "CVE-2019-15310",
+      "CVE-1999-0236",
+      "CVE-2000-1236",
+      "CVE-2001-1283",
+      "CVE-2024-23897",
+      "CVE-2024-1086",
+      "CVE-2001-1224",
+      "CVE-2015-4554"
+    ],
+    "high_severity_cves": [
+      "CVE-2024-1086",
+      "CVE-2024-23897",
+      "CVE-2000-1236",
+      "CVE-2001-1224",
+      "CVE-1999-0244",
+      "CVE-1999-0440",
+      "CVE-2001-1283",
+      "CVE-2024-23897",
+      "CVE-1999-0236",
+      "CVE-1999-0071",
+      "CVE-2024-3094",
+      "CVE-2015-3629",
+      "CVE-2015-1335",
+      "CVE-2024-1086",
+      "CVE-1999-1152",
+      "CVE-1999-1073",
+      "CVE-1999-0407",
+      "CVE-2015-4554",
+      "CVE-2018-5435",
+      "CVE-2019-15310",
+      "CVE-2025-25297",
+      "CVE-2024-23897",
+      "CVE-2000-1236",
+      "CVE-2001-1224",
+      "CVE-1999-0244",
+      "CVE-1999-0440",
+      "CVE-2001-1283"
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "185.220.101.45",
+      "type": "ip",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-1086",
+        "CVE-2024-23897",
+        "CVE-2000-1236",
+        "CVE-2001-1224"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 7.8,
+        "CVE-2024-23897": 9.8,
+        "CVE-2000-1236": 7.5,
+        "CVE-2001-1224": 7.5
+      },
+      "last_seen": null
+    },
+    {
+      "id": "192.0.2.100",
+      "type": "ip",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2023-51385",
+        "CVE-1999-0244",
+        "CVE-1999-0440",
+        "CVE-2001-1283"
+      ],
+      "cve_scores": {
+        "CVE-2023-51385": 6.5,
+        "CVE-1999-0244": 7.5,
+        "CVE-1999-0440": 7.5,
+        "CVE-2001-1283": 7.5
+      },
+      "last_seen": null
+    },
+    {
+      "id": "172.31.42.16",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.0.1.100",
+      "type": "ip",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-23897",
+        "CVE-1999-0236",
+        "CVE-1999-0071"
+      ],
+      "cve_scores": {
+        "CVE-2024-23897": 9.8,
+        "CVE-1999-0236": 7.5,
+        "CVE-1999-0071": 7.5
+      },
+      "last_seen": null
+    },
+    {
+      "id": "systemd",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_scores": {},
+      "last_seen": null
+    },
+    {
+      "id": "dockerd",
+      "type": "process",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-3094",
+        "CVE-2015-3629",
+        "CVE-2015-1335"
+      ],
+      "cve_scores": {
+        "CVE-2024-3094": 10.0,
+        "CVE-2015-3629": 7.8,
+        "CVE-2015-1335": 7.2
+      },
+      "last_seen": null
+    },
+    {
+      "id": "mysqld",
+      "type": "process",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-1086",
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407"
+      ],
+      "cve_scores": {
+        "CVE-2024-1086": 7.8,
+        "CVE-1999-1152": 7.5,
+        "CVE-1999-1073": 7.2,
+        "CVE-1999-0407": 10.0
+      },
+      "last_seen": null
+    },
+    {
+      "id": "s3-sync",
+      "type": "process",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2015-4554",
+        "CVE-2018-5435",
+        "CVE-2019-15310",
+        "CVE-2025-25297"
+      ],
+      "cve_scores": {
+        "CVE-2015-4554": 7.5,
+        "CVE-2018-5435": 9.6,
+        "CVE-2019-15310": 9.8,
+        "CVE-2025-25297": 8.6
+      },
+      "last_seen": null
+    },
+    {
+      "id": "httpd",
+      "type": "process",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2024-23897",
+        "CVE-2000-1236",
+        "CVE-2001-1224"
+      ],
+      "cve_scores": {
+        "CVE-2024-23897": 9.8,
+        "CVE-2000-1236": 7.5,
+        "CVE-2001-1224": 7.5
+      },
+      "last_seen": null
+    },
+    {
+      "id": "sshd",
+      "type": "process",
+      "risk_score": 10.0,
+      "cve": [
+        "CVE-2023-51385",
+        "CVE-1999-0244",
+        "CVE-1999-0440",
+        "CVE-2001-1283"
+      ],
+      "cve_scores": {
+        "CVE-2023-51385": 6.5,
+        "CVE-1999-0244": 7.5,
+        "CVE-1999-0440": 7.5,
+        "CVE-2001-1283": 7.5
+      },
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "185.220.101.45",
+      "target": "192.0.2.100",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.100",
+      "target": "172.31.42.16",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "172.31.42.16",
+      "target": "10.0.1.100",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.1.100",
+      "target": "systemd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "systemd",
+      "target": "dockerd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "dockerd",
+      "target": "mysqld",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "mysqld",
+      "target": "s3-sync",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "s3-sync",
+      "target": "httpd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "httpd",
+      "target": "sshd",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "185.220.101.45": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP used for multiple attack attempts."
+    },
+    "192.0.2.100": {
+      "category": "network",
+      "cloud_platform": "generic",
+      "reasoning": "External IP used for SSH brute force and root login."
+    },
+    "172.31.42.16": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private AWS VPC IP address."
+    },
+    "10.0.1.100": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal AWS instance IP targeted by web exploits."
+    },
+    "systemd": {
+      "category": "compute",
+      "cloud_platform": "generic",
+      "reasoning": "System service running on Linux host."
+    },
+    "dockerd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Docker daemon on AWS ECS host."
+    },
+    "mysqld": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "MySQL database instance handling SQL injection."
+    },
+    "s3-sync": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Utility syncing data to AWS S3."
+    },
+    "httpd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Apache HTTP server handling web requests."
+    },
+    "sshd": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "SSH daemon providing remote access."
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip",
+      "type_process"
+    ],
+    "predictions": [
+      {
+        "node_id": "185.220.101.45",
+        "anomaly_probability": 0.2707670032978058,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.0.2.100",
+        "anomaly_probability": 0.29970186948776245,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.42.16",
+        "anomaly_probability": 0.2660294473171234,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.1.100",
+        "anomaly_probability": 0.2786586284637451,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "systemd",
+        "anomaly_probability": 0.30891963839530945,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "dockerd",
+        "anomaly_probability": 0.40474674105644226,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "mysqld",
+        "anomaly_probability": 0.31631720066070557,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3-sync",
+        "anomaly_probability": 0.22946234047412872,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "httpd",
+        "anomaly_probability": 0.2377871572971344,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd",
+        "anomaly_probability": 0.26272836327552795,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.27218398451805115
+  },
+  "embeddings_shape": [
+    10,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-2024-1086": {
+            "cve_id": "CVE-2024-1086",
+            "score": 7.8,
+            "severity": "HIGH",
+            "description": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation.\n\nThe nft_verdict_init() function allows positive values as d",
+            "published": "2024-01-31T13:15:10.827",
+            "last_modified": "2025-10-27T17:06:37.437"
+          },
+          "CVE-2024-23897": {
+            "cve_id": "CVE-2024-23897",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "Jenkins 2.441 and earlier, LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents, ",
+            "published": "2024-01-24T18:15:09.370",
+            "last_modified": "2025-10-24T14:49:09.100"
+          },
+          "CVE-2000-1236": {
+            "cve_id": "CVE-2000-1236",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "SQL injection vulnerability in mod_sql in Oracle Internet Application Server (IAS) 3.0.7 and earlier allows remote attackers to execute arbitrary SQL commands via the query string of the URL.",
+            "published": "2000-12-31T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2001-1224": {
+            "cve_id": "CVE-2001-1224",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "get_input in adrotate.pm for Les VanBrunt AdRotate Pro 2.0 allows remote attackers to modify the database and possibly execute arbitrary commands via a SQL code injection attack.",
+            "published": "2001-12-23T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "ip",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "185.220.101.45"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-2023-51385": {
+            "cve_id": "CVE-2023-51385",
+            "score": 6.5,
+            "severity": "MEDIUM",
+            "description": "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations. For exampl",
+            "published": "2023-12-18T19:15:08.773",
+            "last_modified": "2025-11-04T22:15:56.047"
+          },
+          "CVE-1999-0244": {
+            "cve_id": "CVE-1999-0244",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Livingston RADIUS code has a buffer overflow which can allow remote execution of commands as root.",
+            "published": "1997-12-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0440": {
+            "cve_id": "CVE-1999-0440",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The byte code verifier component of the Java Virtual Machine (JVM) allows remote execution through malicious web pages.",
+            "published": "1999-03-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2001-1283": {
+            "cve_id": "CVE-2001-1283",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The webmail interface for Ipswitch IMail 7.04 and earlier allows remote authenticated users to cause a denial of service (crash) via a mailbox name that contains a large number of . (dot) or other cha",
+            "published": "2001-10-12T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "ip",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "192.0.2.100"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "172.31.42.16"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-2024-23897": {
+            "cve_id": "CVE-2024-23897",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "Jenkins 2.441 and earlier, LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents, ",
+            "published": "2024-01-24T18:15:09.370",
+            "last_modified": "2025-10-24T14:49:09.100"
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "ip",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "10.0.1.100"
+      },
+      {
+        "cve": [],
+        "description": "Process systemd",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "systemd"
+      },
+      {
+        "cve": [],
+        "description": "Process dockerd",
+        "cve_details": {
+          "CVE-2024-3094": {
+            "cve_id": "CVE-2024-3094",
+            "score": 10.0,
+            "severity": "CRITICAL",
+            "description": "Malicious code was discovered in the upstream tarballs of xz, starting with version 5.6.0. \r\nThrough a series of complex obfuscations, the liblzma build process extracts a prebuilt object file from a ",
+            "published": "2024-03-29T17:15:21.150",
+            "last_modified": "2025-08-19T01:15:57.407"
+          },
+          "CVE-2015-3629": {
+            "cve_id": "CVE-2015-3629",
+            "score": 7.8,
+            "severity": "HIGH",
+            "description": "Libcontainer 1.6.0, as used in Docker Engine, allows local users to escape containerization (\"mount namespace breakout\") and write to arbitrary file on the host system via a symlink attack in an image",
+            "published": "2015-05-18T15:59:15.807",
+            "last_modified": "2025-04-12T10:46:40.837"
+          },
+          "CVE-2015-1335": {
+            "cve_id": "CVE-2015-1335",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "lxc-start in lxc before 1.0.8 and 1.1.x before 1.1.4 allows local container administrators to escape AppArmor confinement via a symlink attack on a (1) mount target or (2) bind mount source.",
+            "published": "2015-10-01T20:59:00.100",
+            "last_modified": "2025-04-12T10:46:40.837"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "dockerd"
+      },
+      {
+        "cve": [],
+        "description": "Process mysqld",
+        "cve_details": {
+          "CVE-2024-1086": {
+            "cve_id": "CVE-2024-1086",
+            "score": 7.8,
+            "severity": "HIGH",
+            "description": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation.\n\nThe nft_verdict_init() function allows positive values as d",
+            "published": "2024-01-31T13:15:10.827",
+            "last_modified": "2025-10-27T17:06:37.437"
+          },
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "Compaq/Microcom 6000 Access Integrator does not disconnect a client after a certain number of failed login attempts, which allows remote attackers to guess usernames or passwords via a brute force att",
+            "published": "1998-06-03T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "Excite for Web Servers (EWS) 1.1 records the first two characters of a plaintext password in the beginning of the encrypted password, which makes it easier for an attacker to guess passwords via a bru",
+            "published": "1998-11-30T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "By default, IIS 4.0 has a virtual directory /IISADMPWD which contains files that can be used as proxies for brute force password attacks, or to identify valid users on the system.",
+            "published": "1999-02-09T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "mysqld"
+      },
+      {
+        "cve": [],
+        "description": "Process s3-sync",
+        "cve_details": {
+          "CVE-2015-4554": {
+            "cve_id": "CVE-2015-4554",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Multiple unspecified vulnerabilities in TIBCO Spotfire Client and Spotfire Web Player Client in Spotfire Analyst before 5.5.2, 6.0.x before 6.0.3, 6.5.x before 6.5.3, and 7.0.x before 7.0.1; Spotfire ",
+            "published": "2015-07-21T19:59:03.037",
+            "last_modified": "2025-04-12T10:46:40.837"
+          },
+          "CVE-2018-5435": {
+            "cve_id": "CVE-2018-5435",
+            "score": 9.6,
+            "severity": "CRITICAL",
+            "description": "The TIBCO Spotfire Client and TIBCO Spotfire Web Player Client components of TIBCO Software Inc.'s TIBCO Spotfire Analyst, TIBCO Spotfire Analytics Platform for AWS Marketplace, TIBCO Spotfire Deploym",
+            "published": "2018-06-27T16:29:00.347",
+            "last_modified": "2024-11-21T04:08:47.810"
+          },
+          "CVE-2019-15310": {
+            "cve_id": "CVE-2019-15310",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "An issue was discovered on various devices via the Linkplay firmware. There is WAN remote code execution without user interaction. An attacker could retrieve the AWS key from the firmware and obtain f",
+            "published": "2020-07-01T20:15:10.767",
+            "last_modified": "2024-11-21T04:28:25.350"
+          },
+          "CVE-2025-25297": {
+            "cve_id": "CVE-2025-25297",
+            "score": 8.6,
+            "severity": "HIGH",
+            "description": "Label Studio is an open source data labeling tool. Prior to version 1.16.0, Label Studio's S3 storage integration feature contains a Server-Side Request Forgery (SSRF) vulnerability in its endpoint co",
+            "published": "2025-02-14T20:15:36.627",
+            "last_modified": "2025-08-25T01:17:33.247"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "s3-sync"
+      },
+      {
+        "cve": [],
+        "description": "Process httpd",
+        "cve_details": {
+          "CVE-2024-23897": {
+            "cve_id": "CVE-2024-23897",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "Jenkins 2.441 and earlier, LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents, ",
+            "published": "2024-01-24T18:15:09.370",
+            "last_modified": "2025-10-24T14:49:09.100"
+          },
+          "CVE-2000-1236": {
+            "cve_id": "CVE-2000-1236",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "SQL injection vulnerability in mod_sql in Oracle Internet Application Server (IAS) 3.0.7 and earlier allows remote attackers to execute arbitrary SQL commands via the query string of the URL.",
+            "published": "2000-12-31T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2001-1224": {
+            "cve_id": "CVE-2001-1224",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "get_input in adrotate.pm for Les VanBrunt AdRotate Pro 2.0 allows remote attackers to modify the database and possibly execute arbitrary commands via a SQL code injection attack.",
+            "published": "2001-12-23T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "httpd"
+      },
+      {
+        "cve": [],
+        "description": "Process sshd",
+        "cve_details": {
+          "CVE-2023-51385": {
+            "cve_id": "CVE-2023-51385",
+            "score": 6.5,
+            "severity": "MEDIUM",
+            "description": "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations. For exampl",
+            "published": "2023-12-18T19:15:08.773",
+            "last_modified": "2025-11-04T22:15:56.047"
+          },
+          "CVE-1999-0244": {
+            "cve_id": "CVE-1999-0244",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Livingston RADIUS code has a buffer overflow which can allow remote execution of commands as root.",
+            "published": "1997-12-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0440": {
+            "cve_id": "CVE-1999-0440",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The byte code verifier component of the Java Virtual Machine (JVM) allows remote execution through malicious web pages.",
+            "published": "1999-03-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2001-1283": {
+            "cve_id": "CVE-2001-1283",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The webmail interface for Ipswitch IMail 7.04 and earlier allows remote authenticated users to cause a denial of service (crash) via a mailbox name that contains a large number of . (dot) or other cha",
+            "published": "2001-10-12T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 10.0,
+        "type": "process",
+        "last_seen": "2025-11-05 22:19:04 IST",
+        "id": "sshd"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "185.220.101.45",
+        "target": "192.0.2.100"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.0.2.100",
+        "target": "172.31.42.16"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.42.16",
+        "target": "10.0.1.100"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.1.100",
+        "target": "systemd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "systemd",
+        "target": "dockerd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "dockerd",
+        "target": "mysqld"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "mysqld",
+        "target": "s3-sync"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "s3-sync",
+        "target": "httpd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "httpd",
+        "target": "sshd"
+      }
+    ]
+  }
+}

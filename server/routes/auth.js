@@ -4,6 +4,7 @@ import {
   login,
   getMe,
   updateCloudProvider,
+  updateProfile,      // ← Make sure this is imported
   logout,
   deleteAccount,
   forgotPassword,
@@ -26,6 +27,7 @@ router.post('/reset-password/:token', resetPassword);
 
 // Protected auth routes
 router.get('/me', protect, getMe);
+router.put('/profile', protect, updateProfile);  // ← This line
 router.put('/cloud-provider', protect, updateCloudProvider);
 router.post('/logout', protect, logout);
 router.delete('/account', protect, deleteAccount);

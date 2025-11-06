@@ -1,0 +1,50 @@
+[
+  {
+    "iteration": 1,
+    "timestamp": "2025-11-04T10:47:58.857678",
+    "anomalies": 5,
+    "anomaly_rate": 0.05,
+    "severity": "HIGH",
+    "file": "report_000001.json"
+  },
+  {
+    "iteration": 2,
+    "timestamp": "2025-11-04T10:48:05.350907",
+    "anomalies": 4,
+    "anomaly_rate": 0.04,
+    "severity": "UNKNOWN",
+    "file": "report_000002.json"
+  },
+  {
+    "iteration": 3,
+    "timestamp": "2025-11-04T10:48:07.540649",
+    "anomalies": 2,
+    "anomaly_rate": 0.02,
+    "severity": "HIGH",
+    "file": "report_000003.json"
+  },
+  {
+    "iteration": 4,
+    "timestamp": "2025-11-04T10:48:11.927648",
+    "anomalies": 5,
+    "anomaly_rate": 0.05,
+    "severity": "UNKNOWN",
+    "file": "report_000004.json"
+  },
+  {
+    "iteration": 5,
+    "timestamp": "2025-11-04T10:48:14.150731",
+    "anomalies": 5,
+    "anomaly_rate": 0.05,
+    "severity": "UNKNOWN",
+    "file": "report_000005.json"
+  },
+  {
+    "iteration": 6,
+    "timestamp": "2025-11-04T10:48:16.327298",
+    "anomalies": 3,
+    "anomaly_rate": 0.03,
+    "severity": "HIGH",
+    "file": "report_000006.json"
+  }
+]

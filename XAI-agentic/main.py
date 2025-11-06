@@ -49,7 +49,7 @@ async def main():
         config = Config()
         report_path = Path(config.REPORT_DIR)
         if report_path.exists() and config.SAVE_REPORTS:
-            print(f"⚠️ Clearing old reports in: {report_path.resolve()}")
+            print(f"Clearing old reports in: {report_path.resolve()}")
             shutil.rmtree(report_path)
 
         os.makedirs(report_path, exist_ok=True)
