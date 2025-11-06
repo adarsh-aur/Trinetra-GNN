@@ -2,39 +2,31 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
-import authRoutes from './routes/auth.js';
-// import graphRoutes from './routes/graphRoutes.js';
+import authRoutes from './routes/auth.js';  // ✅ Only one import
 import * as graphController from './controllers/graphController.js';
 
-// Load environment variables
 dotenv.config();
 
-// Initialize express app
 const app = express();
-
-// Connect to MongoDB
 connectDB();
 
-// Middleware
+// CORS
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5000'],
   credentials: true
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Request logging middleware
+// Request logging
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
   next();
 });
 
-// Routes
+// ✅ SINGLE ROUTE REGISTRATION - handles both /api/auth/* and /api/auth/graph/*
 app.use('/api/auth', authRoutes);
-app.use('/api/graph', authRoutes);
-
-// app.use('/api/graph', graphRoutes);
 
 // Root route
 app.get('/', (req, res) => {
@@ -47,19 +39,22 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       register: '/api/auth/register',
       login: '/api/auth/login',
-      me: '/api/auth/me (Protected)'
+      me: '/api/auth/me (Protected)',
+      graphTest: '/api/auth/graph/test',
+      graphData: '/api/auth/graph/data',
+      graphStats: '/api/auth/graph/stats'
     }
   });
 });
 
-// Health check route
+// Health check
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
     status: 'OK',
     message: 'Trinetra Security API is running',
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV,
+    environment: process.env.NODE_ENV || 'development',
     database: 'Connected'
   });
 });
@@ -75,7 +70,6 @@ app.use((req, res) => {
 // Global error handler
 app.use((err, req, res, next) => {
   console.error('Error:', err.stack);
-
   res.status(err.status || 500).json({
     success: false,
     message: err.message || 'Internal server error',
@@ -84,22 +78,20 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log('\n' + '='.repeat(50));
+const PORT = process.env.PORT || 5000;
+const server = app.listen(PORT, () => {
+  console.log('\n' + '='.repeat(60));
   console.log('🚀 Trinetra Security Server Started');
-  console.log('='.repeat(50));
-  console.log(`📡 Environment: ${process.env.NODE_ENV}`);
+  console.log('='.repeat(60));
+  console.log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🌐 Server URL: http://localhost:${PORT}`);
   console.log(`💚 Health Check: http://localhost:${PORT}/api/health`);
   console.log(`🔐 Auth Endpoint: http://localhost:${PORT}/api/auth`);
-  console.log(`📊 Graph API available at http://localhost:${PORT}/api/graph`);
-  console.log('='.repeat(50) + '\n');
+  console.log(`📊 Graph API: http://localhost:${PORT}/api/auth/graph`);
+  console.log('='.repeat(60) + '\n');
 });
 
-// Shutdown for Neo4j driver
-
+// Graceful shutdown
 process.on('SIGINT', async () => {
   console.log('\n🛑 Shutting down gracefully...');
   await graphController.closeDriver();

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Activity, TrendingUp, Users, Brain, ChevronRight, Sparkles, User } from 'lucide-react';
+import { Activity, TrendingUp, Users, Brain, ChevronRight, BarChart3, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 
@@ -144,7 +144,7 @@ export default function Dashboard() {
     navigate('/user-profile');
   };
 
-  const handleExploreClick = () => {
+  const handleGraphVisualizationClick = () => {
     navigate('/GraphDisplay');
   };
 
@@ -245,7 +245,7 @@ export default function Dashboard() {
             </div>
 
             {/* CTA Buttons */}
-            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button
                 onClick={handleGNNDemoClick}
                 style={{
@@ -309,7 +309,7 @@ export default function Dashboard() {
               </button>
 
               <button 
-                onClick={handleExploreClick}
+                onClick={handleGraphVisualizationClick}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -334,39 +334,9 @@ export default function Dashboard() {
                   e.target.style.boxShadow = 'none';
                 }}
               >
-                <Sparkles size={20} />
-                <span>Explore Features</span>
+                <BarChart3 size={20} />
+                <span>Graph Visualization</span>
               </button>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div 
-              onClick={handleExploreClick}
-              style={{
-                marginTop: '3rem',
-                cursor: 'pointer',
-                animation: 'bounce 2s ease-in-out infinite'
-              }}
-            >
-              <div style={{
-                width: '30px',
-                height: '50px',
-                border: `2px solid ${TEXT_CYPHER}`,
-                borderRadius: '25px',
-                display: 'flex',
-                justifyContent: 'center',
-                padding: '8px',
-                margin: '0 auto',
-                boxShadow: `0 0 20px ${TEXT_CYPHER}60`
-              }}>
-                <div style={{
-                  width: '6px',
-                  height: '10px',
-                  background: TEXT_CYPHER,
-                  borderRadius: '3px',
-                  animation: 'scroll 1.5s ease-in-out infinite'
-                }}></div>
-              </div>
             </div>
           </div>
         </div>
@@ -650,29 +620,6 @@ export default function Dashboard() {
           50% {
             opacity: 0.5;
             transform: scale(1.2);
-          }
-        }
-        
-        @keyframes bounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        
-        @keyframes scroll {
-          0% {
-            opacity: 0;
-            transform: translateY(0);
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(15px);
           }
         }
       `}</style>
