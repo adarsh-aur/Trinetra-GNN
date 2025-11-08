@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Activity, TrendingUp, Users, Brain, ChevronRight, BarChart3, User } from 'lucide-react';
+import { Activity, TrendingUp, Users, Brain, ChevronRight, BarChart3, User, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 
@@ -148,6 +148,15 @@ export default function Dashboard() {
     navigate('/GraphDisplay');
   };
 
+  const handleLogout = () => {
+    // Clear authentication data
+    sessionStorage.removeItem('token');
+    localStorage.removeItem('token');
+    
+    // Navigate to landing page
+    navigate('/');
+  };
+
   return (
     <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden', background: '#000000' }}>
       {/* Three.js Background */}
@@ -175,6 +184,44 @@ export default function Dashboard() {
         zIndex: 1,
         pointerEvents: 'none'
       }} />
+
+      {/* Logout Button - Fixed Position */}
+      <button
+        onClick={handleLogout}
+        style={{
+          position: 'fixed',
+          top: '2rem',
+          right: '2rem',
+          zIndex: 100,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          padding: '0.75rem 1.5rem',
+          background: BASE_BG_COLOR_HIGH_OPACITY,
+          border: `2px solid #FF0064`,
+          color: '#FF0064',
+          borderRadius: '12px',
+          fontWeight: '600',
+          cursor: 'pointer',
+          fontSize: '1rem',
+          backdropFilter: 'blur(10px)',
+          transition: 'all 0.3s ease',
+          boxShadow: '0 0 20px rgba(255, 0, 100, 0.3)'
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.background = 'rgba(255, 0, 100, 0.1)';
+          e.target.style.boxShadow = '0 0 40px rgba(255, 0, 100, 0.6)';
+          e.target.style.transform = 'translateY(-2px)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.background = BASE_BG_COLOR_HIGH_OPACITY;
+          e.target.style.boxShadow = '0 0 20px rgba(255, 0, 100, 0.3)';
+          e.target.style.transform = 'translateY(0)';
+        }}
+      >
+        <LogOut size={20} />
+        <span>Logout</span>
+      </button>
 
       {recentActivities.length === 0 ? (
         /* Hero Section - Empty State */

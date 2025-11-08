@@ -1,7 +1,7 @@
 import torch
 from torch_geometric.loader import DataLoader
-from simple_gnn_demo import SimpleCyberGNN
-from demo_data_generator import DemoDataGenerator
+from backend.demo_gnn.simple_gnn_demo import SimpleCyberGNN
+from backend.demo_gnn.demo_data_generator import DemoDataGenerator
 import os
 
 def train_demo_model():

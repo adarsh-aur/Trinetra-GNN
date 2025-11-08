@@ -20,6 +20,15 @@ import AuthContext from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+// Color Constants (matching Landing.jsx)
+const BASE_BG_COLOR = 'rgba(0, 0, 10, 0.98)';
+const BASE_BG_COLOR_HIGH_OPACITY = 'rgba(0, 0, 10, 0.95)';
+const ACCENT_VIOLET = '#8A2BE2';
+const TEXT_CYPHER = '#00FFFF';
+const SHADOW_CYAN = '0 0 50px rgba(0, 255, 255, 0.9)';
+const BORDER_CYPHER = '2px solid #00FFFF';
+const TEXT_WHITE = '#E2E8F0';
+
 const UserProfile = () => {
   const { user, loading: authLoading } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -44,7 +53,6 @@ const UserProfile = () => {
     avatar: null
   });
 
-  // tempData can hold avatarFile for upload and avatar (preview URL)
   const [tempData, setTempData] = useState(profileData);
 
   useEffect(() => {
@@ -61,9 +69,7 @@ const UserProfile = () => {
         location: user.location || null,
         joinDate: joinDate,
         role: user.role || null,
-        bio:
-          user.bio ||
-          `Working at ${user.company || 'your organization'}.`,
+        bio: user.bio || `Working at ${user.company || 'your organization'}.`,
         avatar: user.avatar || null
       };
 
@@ -106,7 +112,6 @@ const UserProfile = () => {
 
       // 2. If avatar file exists, upload it (separate endpoint)
       if (tempData.avatarFile) {
-        // adjust endpoint if backend expects different path
         const form = new FormData();
         form.append('avatar', tempData.avatarFile);
 
@@ -119,9 +124,7 @@ const UserProfile = () => {
       }
 
       if (response.data.success !== false) {
-        // merge profile update locally (avatar already previewed)
         const newProfile = { ...profileData, ...tempData };
-        // Remove avatarFile before saving to profileData
         delete newProfile.avatarFile;
         setProfileData(newProfile);
         setIsEditing(false);
@@ -156,7 +159,6 @@ const UserProfile = () => {
   const handleFileChange = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
-    // preview
     const previewUrl = URL.createObjectURL(file);
     setTempData(prev => ({ ...prev, avatar: previewUrl, avatarFile: file }));
   };
@@ -173,28 +175,32 @@ const UserProfile = () => {
 
   if (authLoading) {
     return (
-      <div
-        style={{
-          minHeight: '100vh',
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              width: '64px',
-              height: '64px',
-              border: '4px solid #a855f7',
-              borderTopColor: 'transparent',
-              borderRadius: '50%',
-              animation: 'spin 1s linear infinite',
-              margin: '0 auto 16px'
-            }}
-          ></div>
-          <div style={{ color: '#e9d5ff', fontSize: '20px', textShadow: '0 0 20px rgba(168, 85, 247, 0.5)' }}>
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #000005 0%, #150520 50%, #000005 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{ textAlign: 'center', position: 'relative', zIndex: 10 }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            border: `4px solid ${ACCENT_VIOLET}`,
+            borderTopColor: 'transparent',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            margin: '0 auto 16px',
+            boxShadow: `0 0 30px ${ACCENT_VIOLET}`
+          }}></div>
+          <div style={{ 
+            color: TEXT_CYPHER, 
+            fontSize: '20px', 
+            textShadow: SHADOW_CYAN,
+            fontWeight: '600'
+          }}>
             Loading profile...
           </div>
         </div>
@@ -204,45 +210,45 @@ const UserProfile = () => {
 
   if (!user) {
     return (
-      <div
-        style={{
-          minHeight: '100vh',
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              color: '#e9d5ff',
-              fontSize: '20px',
-              marginBottom: '16px',
-              textShadow: '0 0 20px rgba(168, 85, 247, 0.5)'
-            }}
-          >
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #000005 0%, #150520 50%, #000005 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{ textAlign: 'center', position: 'relative', zIndex: 10 }}>
+          <div style={{
+            color: TEXT_CYPHER,
+            fontSize: '20px',
+            marginBottom: '16px',
+            textShadow: SHADOW_CYAN,
+            fontWeight: '600'
+          }}>
             Please log in to view your profile
           </div>
           <button
             onClick={() => navigate('/login')}
             style={{
-              background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-              color: 'white',
+              background: ACCENT_VIOLET,
+              color: TEXT_WHITE,
               padding: '12px 24px',
               borderRadius: '8px',
-              border: '1px solid rgba(168, 85, 247, 0.5)',
+              border: `2px solid ${ACCENT_VIOLET}`,
               cursor: 'pointer',
               transition: 'all 0.3s',
-              boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)',
-              fontWeight: '500'
+              boxShadow: `0 0 20px ${ACCENT_VIOLET}`,
+              fontWeight: '600',
+              fontSize: '1rem'
             }}
             onMouseOver={(e) => {
-              e.target.style.boxShadow = '0 0 30px rgba(168, 85, 247, 0.6)';
+              e.target.style.boxShadow = `0 0 40px ${ACCENT_VIOLET}`;
               e.target.style.transform = 'translateY(-2px)';
             }}
             onMouseOut={(e) => {
-              e.target.style.boxShadow = '0 0 20px rgba(168, 85, 247, 0.4)';
+              e.target.style.boxShadow = `0 0 20px ${ACCENT_VIOLET}`;
               e.target.style.transform = 'translateY(0)';
             }}
           >
@@ -254,38 +260,34 @@ const UserProfile = () => {
   }
 
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%)',
-        padding: '32px 16px',
-        position: 'relative',
-        overflow: 'hidden'
-      }}
-    >
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #000005 0%, #150520 50%, #000005 100%)',
+      padding: '32px 16px',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
       {/* Animated background particles */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          overflow: 'hidden',
-          pointerEvents: 'none'
-        }}
-      >
-        {[...Array(30)].map((_, i) => (
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        overflow: 'hidden',
+        pointerEvents: 'none'
+      }}>
+        {[...Array(50)].map((_, i) => (
           <div
             key={i}
             style={{
               position: 'absolute',
-              width: `${Math.random() * 6 + 2}px`,
-              height: `${Math.random() * 6 + 2}px`,
-              background: i % 2 === 0 ? '#a855f7' : '#7c3aed',
+              width: `${Math.random() * 4 + 1}px`,
+              height: `${Math.random() * 4 + 1}px`,
+              background: i % 3 === 0 ? TEXT_CYPHER : ACCENT_VIOLET,
               borderRadius: '50%',
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 10 + 10}s linear infinite`,
-              opacity: Math.random() * 0.3 + 0.1,
-              boxShadow: `0 0 ${Math.random() * 10 + 5}px ${i % 2 === 0 ? '#a855f7' : '#7c3aed'}`
+              animation: `float ${Math.random() * 15 + 10}s linear infinite`,
+              opacity: Math.random() * 0.4 + 0.1,
+              boxShadow: `0 0 ${Math.random() * 15 + 5}px ${i % 3 === 0 ? TEXT_CYPHER : ACCENT_VIOLET}`
             }}
           />
         ))}
@@ -300,27 +302,27 @@ const UserProfile = () => {
           onClick={() => navigate('/dashboard')}
           style={{
             marginBottom: '24px',
-            background: 'rgba(15, 15, 15, 0.8)',
-            color: '#e9d5ff',
+            background: BASE_BG_COLOR_HIGH_OPACITY,
+            color: TEXT_CYPHER,
             padding: '12px 24px',
             borderRadius: '8px',
-            border: '1px solid rgba(168, 85, 247, 0.3)',
+            border: BORDER_CYPHER,
             cursor: 'pointer',
             transition: 'all 0.3s',
-            boxShadow: '0 0 15px rgba(168, 85, 247, 0.2)',
+            boxShadow: '0 0 15px rgba(0, 255, 255, 0.3)',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            fontWeight: '500',
+            fontWeight: '600',
             backdropFilter: 'blur(10px)'
           }}
           onMouseOver={(e) => {
-            e.target.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-            e.target.style.boxShadow = '0 0 25px rgba(168, 85, 247, 0.4)';
+            e.target.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.6)';
+            e.target.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.target.style.borderColor = 'rgba(168, 85, 247, 0.3)';
-            e.target.style.boxShadow = '0 0 15px rgba(168, 85, 247, 0.2)';
+            e.target.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.3)';
+            e.target.style.transform = 'translateY(0)';
           }}
         >
           <svg style={{ width: '20px', height: '20px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -331,100 +333,92 @@ const UserProfile = () => {
 
         {/* Success Message */}
         {success && (
-          <div
-            style={{
-              marginBottom: '24px',
-              background: 'rgba(34, 197, 94, 0.15)',
-              border: '1px solid rgba(74, 222, 128, 0.5)',
-              color: '#86efac',
-              padding: '16px 24px',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              backdropFilter: 'blur(10px)',
-              boxShadow: '0 0 20px rgba(74, 222, 128, 0.2)'
-            }}
-          >
+          <div style={{
+            marginBottom: '24px',
+            background: 'rgba(0, 255, 0, 0.1)',
+            border: '2px solid #00FF00',
+            color: '#00FF00',
+            padding: '16px 24px',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 0 20px rgba(0, 255, 0, 0.3)',
+            animation: 'pulse 2s ease-in-out infinite'
+          }}>
             <CheckCircle size={24} />
-            <span style={{ fontWeight: '500' }}>Profile updated successfully!</span>
+            <span style={{ fontWeight: '600' }}>Profile updated successfully!</span>
           </div>
         )}
 
         {/* Error Message */}
         {error && (
-          <div
-            style={{
-              marginBottom: '24px',
-              background: 'rgba(239, 68, 68, 0.15)',
-              border: '1px solid rgba(248, 113, 113, 0.5)',
-              color: '#fca5a5',
-              padding: '16px 24px',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              backdropFilter: 'blur(10px)',
-              boxShadow: '0 0 20px rgba(248, 113, 113, 0.2)'
-            }}
-          >
+          <div style={{
+            marginBottom: '24px',
+            background: 'rgba(255, 0, 100, 0.1)',
+            border: '2px solid #FF0064',
+            color: '#FF0064',
+            padding: '16px 24px',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 0 20px rgba(255, 0, 100, 0.3)'
+          }}>
             <X size={24} />
-            <span style={{ fontWeight: '500' }}>{error}</span>
+            <span style={{ fontWeight: '600' }}>{error}</span>
           </div>
         )}
 
         {/* Header Section */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '32px',
-            flexWrap: 'wrap',
-            gap: '16px'
-          }}
-        >
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '32px',
+          flexWrap: 'wrap',
+          gap: '16px'
+        }}>
           <div>
-            <h1
-              style={{
-                fontSize: '42px',
-                fontWeight: 'bold',
-                background: 'linear-gradient(135deg, #e9d5ff 0%, #a855f7 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                marginBottom: '8px',
-                textShadow: '0 0 40px rgba(168, 85, 247, 0.3)'
-              }}
-            >
+            <h1 style={{
+              fontSize: '42px',
+              fontWeight: 'bold',
+              color: ACCENT_VIOLET,
+              marginBottom: '8px',
+              textShadow: `0 0 40px ${ACCENT_VIOLET}`
+            }}>
               User Profile
             </h1>
-            <p style={{ color: '#c4b5fd' }}>Manage your personal information and account settings</p>
+            <p style={{ color: TEXT_CYPHER, textShadow: '0 0 10px rgba(0, 255, 255, 0.5)' }}>
+              Manage your personal information and account settings
+            </p>
           </div>
 
           {!isEditing ? (
             <button
               onClick={handleEdit}
               style={{
-                background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-                color: 'white',
+                background: ACCENT_VIOLET,
+                color: TEXT_WHITE,
                 padding: '12px 24px',
                 borderRadius: '8px',
-                border: '1px solid rgba(168, 85, 247, 0.5)',
+                border: `2px solid ${ACCENT_VIOLET}`,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 transition: 'all 0.3s',
-                boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)',
-                fontWeight: '500'
+                boxShadow: `0 0 20px ${ACCENT_VIOLET}`,
+                fontWeight: '600'
               }}
               onMouseOver={(e) => {
-                e.target.style.boxShadow = '0 0 30px rgba(168, 85, 247, 0.6)';
+                e.target.style.boxShadow = `0 0 40px ${ACCENT_VIOLET}`;
                 e.target.style.transform = 'translateY(-2px)';
               }}
               onMouseOut={(e) => {
-                e.target.style.boxShadow = '0 0 20px rgba(168, 85, 247, 0.4)';
+                e.target.style.boxShadow = `0 0 20px ${ACCENT_VIOLET}`;
                 e.target.style.transform = 'translateY(0)';
               }}
             >
@@ -437,35 +431,33 @@ const UserProfile = () => {
                 onClick={handleSave}
                 disabled={saving}
                 style={{
-                  background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-                  color: 'white',
+                  background: '#00FF00',
+                  color: '#000000',
                   padding: '12px 24px',
                   borderRadius: '8px',
-                  border: '1px solid rgba(16, 185, 129, 0.5)',
+                  border: '2px solid #00FF00',
                   cursor: saving ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
                   transition: 'all 0.3s',
-                  boxShadow: '0 0 20px rgba(16, 185, 129, 0.4)',
+                  boxShadow: '0 0 20px rgba(0, 255, 0, 0.5)',
                   opacity: saving ? 0.5 : 1,
-                  fontWeight: '500'
+                  fontWeight: '600'
                 }}
-                onMouseOver={(e) => !saving && (e.target.style.boxShadow = '0 0 30px rgba(16, 185, 129, 0.6)')}
-                onMouseOut={(e) => !saving && (e.target.style.boxShadow = '0 0 20px rgba(16, 185, 129, 0.4)')}
+                onMouseOver={(e) => !saving && (e.target.style.boxShadow = '0 0 40px rgba(0, 255, 0, 0.8)')}
+                onMouseOut={(e) => !saving && (e.target.style.boxShadow = '0 0 20px rgba(0, 255, 0, 0.5)')}
               >
                 {saving ? (
                   <>
-                    <div
-                      style={{
-                        width: '16px',
-                        height: '16px',
-                        border: '2px solid white',
-                        borderTopColor: 'transparent',
-                        borderRadius: '50%',
-                        animation: 'spin 1s linear infinite'
-                      }}
-                    ></div>
+                    <div style={{
+                      width: '16px',
+                      height: '16px',
+                      border: '2px solid #000000',
+                      borderTopColor: 'transparent',
+                      borderRadius: '50%',
+                      animation: 'spin 1s linear infinite'
+                    }}></div>
                     Saving...
                   </>
                 ) : (
@@ -479,23 +471,23 @@ const UserProfile = () => {
                 onClick={handleCancel}
                 disabled={saving}
                 style={{
-                  background: 'rgba(15, 15, 15, 0.8)',
-                  color: '#e9d5ff',
+                  background: BASE_BG_COLOR_HIGH_OPACITY,
+                  color: TEXT_CYPHER,
                   padding: '12px 24px',
                   borderRadius: '8px',
-                  border: '1px solid rgba(168, 85, 247, 0.3)',
+                  border: BORDER_CYPHER,
                   cursor: saving ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
                   transition: 'all 0.3s',
-                  boxShadow: '0 0 15px rgba(168, 85, 247, 0.2)',
+                  boxShadow: '0 0 15px rgba(0, 255, 255, 0.3)',
                   opacity: saving ? 0.5 : 1,
-                  fontWeight: '500',
+                  fontWeight: '600',
                   backdropFilter: 'blur(10px)'
                 }}
-                onMouseOver={(e) => !saving && (e.target.style.borderColor = 'rgba(168, 85, 247, 0.6)')}
-                onMouseOut={(e) => !saving && (e.target.style.borderColor = 'rgba(168, 85, 247, 0.3)')}
+                onMouseOver={(e) => !saving && (e.target.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.6)')}
+                onMouseOut={(e) => !saving && (e.target.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.3)')}
               >
                 <X size={18} />
                 Cancel
@@ -505,70 +497,59 @@ const UserProfile = () => {
         </div>
 
         {/* Main Profile Card */}
-        <div
-          style={{
-            background: 'rgba(15, 15, 15, 0.8)',
-            backdropFilter: 'blur(20px)',
-            borderRadius: '16px',
-            overflow: 'hidden',
-            boxShadow: '0 0 40px rgba(168, 85, 247, 0.2)',
-            border: '1px solid rgba(168, 85, 247, 0.3)',
-            marginBottom: '32px'
-          }}
-        >
+        <div style={{
+          background: BASE_BG_COLOR_HIGH_OPACITY,
+          backdropFilter: 'blur(20px)',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          boxShadow: `0 0 40px ${ACCENT_VIOLET}`,
+          border: `2px solid ${ACCENT_VIOLET}`,
+          marginBottom: '32px'
+        }}>
           {/* Cover Image */}
-          <div
-            style={{
-              height: '192px',
-              background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%)',
-              position: 'relative',
-              overflow: 'hidden'
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                opacity: 0.2,
-                backgroundImage:
-                  'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-                backgroundSize: '50px 50px'
-              }}
-            ></div>
+          <div style={{
+            height: '192px',
+            background: `linear-gradient(135deg, ${ACCENT_VIOLET} 0%, ${TEXT_CYPHER} 100%)`,
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              opacity: 0.2,
+              backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}></div>
           </div>
 
           {/* Profile Content */}
           <div style={{ padding: '0 32px 32px' }}>
             {/* Avatar Section */}
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-end',
-                marginTop: '-80px',
-                marginBottom: '24px',
-                flexWrap: 'wrap',
-                gap: '16px'
-              }}
-            >
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-end',
+              marginTop: '-80px',
+              marginBottom: '24px',
+              flexWrap: 'wrap',
+              gap: '16px'
+            }}>
               <div style={{ position: 'relative', marginBottom: '16px' }}>
-                <div
-                  style={{
-                    width: '160px',
-                    height: '160px',
-                    borderRadius: '16px',
-                    background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '48px',
-                    fontWeight: 'bold',
-                    border: '4px solid #0a0a0a',
-                    boxShadow: '0 0 40px rgba(168, 85, 247, 0.5)',
-                    overflow: 'hidden'
-                  }}
-                >
+                <div style={{
+                  width: '160px',
+                  height: '160px',
+                  borderRadius: '16px',
+                  background: `linear-gradient(135deg, ${ACCENT_VIOLET} 0%, ${TEXT_CYPHER} 100%)`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'white',
+                  fontSize: '48px',
+                  fontWeight: 'bold',
+                  border: '4px solid #000005',
+                  boxShadow: `0 0 40px ${ACCENT_VIOLET}`,
+                  overflow: 'hidden'
+                }}>
                   {isEditing ? (tempData.avatar ? (
                     <img
                       src={tempData.avatar}
@@ -594,16 +575,16 @@ const UserProfile = () => {
                       bottom: '8px',
                       right: '8px',
                       padding: '12px',
-                      background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+                      background: TEXT_CYPHER,
                       borderRadius: '50%',
-                      color: 'white',
-                      border: '2px solid #0a0a0a',
+                      color: '#000000',
+                      border: '2px solid #000005',
                       cursor: 'pointer',
                       transition: 'all 0.3s',
-                      boxShadow: '0 0 20px rgba(168, 85, 247, 0.5)'
+                      boxShadow: `0 0 20px ${TEXT_CYPHER}`
                     }}
-                    onMouseOver={(e) => (e.target.style.boxShadow = '0 0 30px rgba(168, 85, 247, 0.7)')}
-                    onMouseOut={(e) => (e.target.style.boxShadow = '0 0 20px rgba(168, 85, 247, 0.5)')}
+                    onMouseOver={(e) => (e.target.style.boxShadow = `0 0 40px ${TEXT_CYPHER}`)}
+                    onMouseOut={(e) => (e.target.style.boxShadow = `0 0 20px ${TEXT_CYPHER}`)}
                     onClick={onChooseAvatar}
                     title="Change avatar"
                   >
@@ -613,37 +594,35 @@ const UserProfile = () => {
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    color: '#c4b5fd',
-                    fontSize: '14px',
-                    background: 'rgba(168, 85, 247, 0.15)',
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    border: '1px solid rgba(168, 85, 247, 0.3)',
-                    backdropFilter: 'blur(10px)'
-                  }}
-                >
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: TEXT_CYPHER,
+                  fontSize: '14px',
+                  background: 'rgba(0, 255, 255, 0.1)',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: BORDER_CYPHER,
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 0 10px rgba(0, 255, 255, 0.3)'
+                }}>
                   <Calendar size={16} />
                   <span>Joined {profileData.joinDate}</span>
                 </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    color: '#86efac',
-                    fontSize: '14px',
-                    background: 'rgba(74, 222, 128, 0.15)',
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    border: '1px solid rgba(74, 222, 128, 0.3)',
-                    backdropFilter: 'blur(10px)'
-                  }}
-                >
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#00FF00',
+                  fontSize: '14px',
+                  background: 'rgba(0, 255, 0, 0.1)',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: '2px solid #00FF00',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 0 10px rgba(0, 255, 0, 0.3)'
+                }}>
                   <Shield size={16} />
                   <span>Verified Account</span>
                 </div>
@@ -662,23 +641,22 @@ const UserProfile = () => {
                     style={{
                       fontSize: '30px',
                       fontWeight: 'bold',
-                      color: '#e9d5ff',
-                      background: 'rgba(168, 85, 247, 0.1)',
-                      border: '1px solid rgba(168, 85, 247, 0.3)',
+                      color: TEXT_CYPHER,
+                      background: 'rgba(0, 255, 255, 0.1)',
+                      border: BORDER_CYPHER,
                       borderRadius: '8px',
                       padding: '12px 16px',
                       width: '100%',
                       marginBottom: '12px',
                       outline: 'none',
                       transition: 'all 0.3s',
-                      backdropFilter: 'blur(10px)'
+                      backdropFilter: 'blur(10px)',
+                      textShadow: '0 0 10px rgba(0, 255, 255, 0.5)'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-                      e.target.style.boxShadow = '0 0 15px rgba(168, 85, 247, 0.3)';
+                      e.target.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.5)';
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = 'rgba(168, 85, 247, 0.3)';
                       e.target.style.boxShadow = 'none';
                     }}
                   />
@@ -689,9 +667,9 @@ const UserProfile = () => {
                     placeholder="Your Role/Title"
                     style={{
                       fontSize: '20px',
-                      color: '#c4b5fd',
-                      background: 'rgba(168, 85, 247, 0.1)',
-                      border: '1px solid rgba(168, 85, 247, 0.3)',
+                      color: TEXT_WHITE,
+                      background: `rgba(138, 43, 226, 0.1)`,
+                      border: `2px solid ${ACCENT_VIOLET}`,
                       borderRadius: '8px',
                       padding: '8px 16px',
                       width: '100%',
@@ -701,21 +679,27 @@ const UserProfile = () => {
                       backdropFilter: 'blur(10px)'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-                      e.target.style.boxShadow = '0 0 15px rgba(168, 85, 247, 0.3)';
+                      e.target.style.boxShadow = `0 0 20px ${ACCENT_VIOLET}`;
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = 'rgba(168, 85, 247, 0.3)';
                       e.target.style.boxShadow = 'none';
                     }}
                   />
                 </>
               ) : (
                 <>
-                  <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: '#e9d5ff', marginBottom: '8px', textShadow: '0 0 20px rgba(168, 85, 247, 0.3)' }}>
+                  <h2 style={{ 
+                    fontSize: '36px', 
+                    fontWeight: 'bold', 
+                    color: TEXT_CYPHER, 
+                    marginBottom: '8px', 
+                    textShadow: SHADOW_CYAN 
+                  }}>
                     {profileData.name || 'User'}
                   </h2>
-                  <p style={{ fontSize: '20px', color: '#c4b5fd', marginBottom: '16px' }}>{profileData.role}</p>
+                  <p style={{ fontSize: '20px', color: ACCENT_VIOLET, marginBottom: '16px', textShadow: `0 0 10px ${ACCENT_VIOLET}` }}>
+                    {profileData.role}
+                  </p>
                 </>
               )}
 
@@ -725,9 +709,9 @@ const UserProfile = () => {
                   onChange={(e) => handleChange('bio', e.target.value)}
                   placeholder="Tell us about yourself..."
                   style={{
-                    color: '#c4b5fd',
-                    background: 'rgba(168, 85, 247, 0.1)',
-                    border: '1px solid rgba(168, 85, 247, 0.3)',
+                    color: TEXT_WHITE,
+                    background: BASE_BG_COLOR_HIGH_OPACITY,
+                    border: `2px solid ${ACCENT_VIOLET}`,
                     borderRadius: '8px',
                     padding: '12px 16px',
                     width: '100%',
@@ -740,113 +724,103 @@ const UserProfile = () => {
                     backdropFilter: 'blur(10px)'
                   }}
                   onFocus={(e) => {
-                    e.target.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-                    e.target.style.boxShadow = '0 0 15px rgba(168, 85, 247, 0.3)';
+                    e.target.style.boxShadow = `0 0 20px ${ACCENT_VIOLET}`;
                   }}
                   onBlur={(e) => {
-                    e.target.style.borderColor = 'rgba(168, 85, 247, 0.3)';
                     e.target.style.boxShadow = 'none';
                   }}
                 />
               ) : (
-                <p style={{ color: '#c4b5fd', lineHeight: '1.75', fontSize: '18px' }}>{profileData.bio}</p>
+                <p style={{ color: TEXT_WHITE, lineHeight: '1.75', fontSize: '18px' }}>{profileData.bio}</p>
               )}
             </div>
 
             {/* Contact Information Grid */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '24px'
-              }}
-            >
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '24px'
+            }}>
               {/* Email - Read Only */}
-              <div
-                style={{
-                  background: 'rgba(168, 85, 247, 0.1)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(168, 85, 247, 0.3)',
-                  transition: 'all 0.3s',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(168, 85, 247, 0.2)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.3)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
+              <div style={{
+                background: BASE_BG_COLOR_HIGH_OPACITY,
+                borderRadius: '12px',
+                padding: '20px',
+                border: BORDER_CYPHER,
+                transition: 'all 0.3s',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.4)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                  <div style={{ padding: '8px', background: 'rgba(168, 85, 247, 0.2)', borderRadius: '8px', transition: 'all 0.3s' }}>
-                    <Mail size={20} style={{ color: '#c4b5fd' }} />
+                  <div style={{ padding: '8px', background: 'rgba(0, 255, 255, 0.2)', borderRadius: '8px' }}>
+                    <Mail size={20} style={{ color: TEXT_CYPHER }} />
                   </div>
-                  <span style={{ color: '#a78bfa', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ color: TEXT_CYPHER, fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Email Address
                   </span>
                 </div>
-                <p style={{ color: '#e9d5ff', fontWeight: '500', fontSize: '18px' }}>{profileData.email || 'Not provided'}</p>
-                <p style={{ color: '#7c3aed', fontSize: '12px', marginTop: '4px' }}>Email cannot be changed</p>
+                <p style={{ color: TEXT_WHITE, fontWeight: '500', fontSize: '18px' }}>{profileData.email || 'Not provided'}</p>
+                <p style={{ color: ACCENT_VIOLET, fontSize: '12px', marginTop: '4px' }}>Email cannot be changed</p>
               </div>
 
               {/* Company - Read Only */}
-              <div
-                style={{
-                  background: 'rgba(168, 85, 247, 0.1)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(168, 85, 247, 0.3)',
-                  transition: 'all 0.3s',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(168, 85, 247, 0.2)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.3)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
+              <div style={{
+                background: BASE_BG_COLOR_HIGH_OPACITY,
+                borderRadius: '12px',
+                padding: '20px',
+                border: `2px solid ${ACCENT_VIOLET}`,
+                transition: 'all 0.3s',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.boxShadow = `0 0 30px ${ACCENT_VIOLET}`;
+                e.currentTarget.style.transform = 'translateY(-3px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                  <div style={{ padding: '8px', background: 'rgba(168, 85, 247, 0.2)', borderRadius: '8px', transition: 'all 0.3s' }}>
-                    <Building2 size={20} style={{ color: '#c084fc' }} />
+                  <div style={{ padding: '8px', background: `rgba(138, 43, 226, 0.2)`, borderRadius: '8px' }}>
+                    <Building2 size={20} style={{ color: ACCENT_VIOLET }} />
                   </div>
-                  <span style={{ color: '#a78bfa', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ color: TEXT_CYPHER, fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Company
                   </span>
                 </div>
-                <p style={{ color: '#e9d5ff', fontWeight: '500', fontSize: '18px' }}>{profileData.company || 'Not provided'}</p>
-                <p style={{ color: '#7c3aed', fontSize: '12px', marginTop: '4px' }}>Company cannot be changed</p>
+                <p style={{ color: TEXT_WHITE, fontWeight: '500', fontSize: '18px' }}>{profileData.company || 'Not provided'}</p>
+                <p style={{ color: ACCENT_VIOLET, fontSize: '12px', marginTop: '4px' }}>Company cannot be changed</p>
               </div>
 
               {/* Phone */}
-              <div
-                style={{
-                  background: 'rgba(168, 85, 247, 0.1)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(168, 85, 247, 0.3)',
-                  transition: 'all 0.3s',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(34, 197, 94, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.12)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.3)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
+              <div style={{
+                background: BASE_BG_COLOR_HIGH_OPACITY,
+                borderRadius: '12px',
+                padding: '20px',
+                border: '2px solid #00FF00',
+                transition: 'all 0.3s',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 255, 0, 0.4)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                  <div style={{ padding: '8px', background: 'rgba(34, 197, 94, 0.2)', borderRadius: '8px', transition: 'all 0.3s' }}>
-                    <Phone size={20} style={{ color: '#4ade80' }} />
+                  <div style={{ padding: '8px', background: 'rgba(0, 255, 0, 0.2)', borderRadius: '8px' }}>
+                    <Phone size={20} style={{ color: '#00FF00' }} />
                   </div>
-                  <span style={{ color: '#a78bfa', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ color: TEXT_CYPHER, fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Phone Number
                   </span>
                 </div>
@@ -857,48 +831,47 @@ const UserProfile = () => {
                     onChange={(e) => handleChange('phone', e.target.value)}
                     placeholder="+1 (555) 123-4567"
                     style={{
-                      color: 'white',
-                      background: 'rgba(31, 41, 55, 0.5)',
-                      border: '1px solid #4b5563',
+                      color: TEXT_WHITE,
+                      background: 'rgba(0, 255, 0, 0.1)',
+                      border: '2px solid #00FF00',
                       borderRadius: '8px',
                       padding: '8px 16px',
                       width: '100%',
                       outline: 'none',
-                      transition: 'border 0.3s',
-                      fontSize: '16px'
+                      transition: 'all 0.3s',
+                      fontSize: '16px',
+                      backdropFilter: 'blur(10px)'
                     }}
-                    onFocus={(e) => (e.target.style.borderColor = '#22c55e')}
-                    onBlur={(e) => (e.target.style.borderColor = '#4b5563')}
+                    onFocus={(e) => (e.target.style.boxShadow = '0 0 15px rgba(0, 255, 0, 0.5)')}
+                    onBlur={(e) => (e.target.style.boxShadow = 'none')}
                   />
                 ) : (
-                  <p style={{ color: 'white', fontWeight: '500', fontSize: '18px' }}>{profileData.phone || 'Not provided'}</p>
+                  <p style={{ color: TEXT_WHITE, fontWeight: '500', fontSize: '18px' }}>{profileData.phone || 'Not provided'}</p>
                 )}
               </div>
 
               {/* Location */}
-              <div
-                style={{
-                  background: 'rgba(168, 85, 247, 0.1)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(168, 85, 247, 0.3)',
-                  transition: 'all 0.3s',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(6, 182, 212, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.08)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.3)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
+              <div style={{
+                background: BASE_BG_COLOR_HIGH_OPACITY,
+                borderRadius: '12px',
+                padding: '20px',
+                border: BORDER_CYPHER,
+                transition: 'all 0.3s',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.4)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                  <div style={{ padding: '8px', background: 'rgba(6, 182, 212, 0.2)', borderRadius: '8px', transition: 'all 0.3s' }}>
-                    <MapPin size={20} style={{ color: '#22d3ee' }} />
+                  <div style={{ padding: '8px', background: 'rgba(0, 255, 255, 0.2)', borderRadius: '8px' }}>
+                    <MapPin size={20} style={{ color: TEXT_CYPHER }} />
                   </div>
-                  <span style={{ color: '#a78bfa', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ color: TEXT_CYPHER, fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Location
                   </span>
                 </div>
@@ -909,21 +882,22 @@ const UserProfile = () => {
                     onChange={(e) => handleChange('location', e.target.value)}
                     placeholder="City, State, Country"
                     style={{
-                      color: 'white',
-                      background: 'rgba(31, 41, 55, 0.5)',
-                      border: '1px solid #4b5563',
+                      color: TEXT_WHITE,
+                      background: 'rgba(0, 255, 255, 0.1)',
+                      border: BORDER_CYPHER,
                       borderRadius: '8px',
                       padding: '8px 16px',
                       width: '100%',
                       outline: 'none',
-                      transition: 'border 0.3s',
-                      fontSize: '16px'
+                      transition: 'all 0.3s',
+                      fontSize: '16px',
+                      backdropFilter: 'blur(10px)'
                     }}
-                    onFocus={(e) => (e.target.style.borderColor = '#06b6d4')}
-                    onBlur={(e) => (e.target.style.borderColor = '#4b5563')}
+                    onFocus={(e) => (e.target.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.5)')}
+                    onBlur={(e) => (e.target.style.boxShadow = 'none')}
                   />
                 ) : (
-                  <p style={{ color: 'white', fontWeight: '500', fontSize: '18px' }}>{profileData.location}</p>
+                  <p style={{ color: TEXT_WHITE, fontWeight: '500', fontSize: '18px' }}>{profileData.location}</p>
                 )}
               </div>
             </div>
@@ -937,8 +911,18 @@ const UserProfile = () => {
             to { transform: rotate(360deg); }
           }
           @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-40px); }
+            0%, 100% { 
+              transform: translateY(0) translateX(0);
+              opacity: 0.3;
+            }
+            50% { 
+              transform: translateY(-30px) translateX(10px);
+              opacity: 0.6;
+            }
+          }
+          @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
           }
         `}
       </style>
