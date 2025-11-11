@@ -41,7 +41,7 @@ import string
 # CONFIGURATION
 # ============================================================================
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "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")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "your_api_key_here")  # Replace with your Groq API key
 OUTPUT_FILE = "security_logs.log"
 GENERATION_INTERVAL = 5  # seconds between log generation
 LOGS_PER_BATCH = 3  # number of logs to generate per batch
