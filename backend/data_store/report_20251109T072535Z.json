@@ -1,0 +1,785 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "analysis_mode": "fully_adaptive_llm_driven",
+  "detected_cloud_platform": "aws",
+  "platform_detection": {
+    "platform": "aws",
+    "confidence": 95,
+    "indicators": [
+      "s3",
+      "cloud-init",
+      "ENA"
+    ],
+    "reasoning": "The logs reference an s3 service, which is specific to Amazon Web Services. Additionally, the presence of cloud-init and ENA (Elastic Network Adapter) indicators further corroborates an AWS environment."
+  },
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3
+  },
+  "statistical_analysis": {
+    "adaptive_threshold": {
+      "threshold": 2.0,
+      "sensitivity": "medium",
+      "expected_anomaly_rate": "5%",
+      "reasoning": "The mean is 4.55 and std dev 1.44. The lowest value (0) is 3.16 SD below the mean, exceeding a 2 SD threshold, while all other values lie within \u00b12 SD. A 2 SD threshold therefore flags the single low outlier, giving an anomaly rate of ~9% (\u22481/11). This balances detection of significant deviations with a low false\u2011positive rate, so a medium sensitivity setting is appropriate.",
+      "method": "llm_adaptive"
+    },
+    "total_nodes": 11,
+    "anomalies_detected_count": 1,
+    "anomalies_confirmed_count": 0
+  },
+  "cve_analysis": {
+    "total_cves_found": 12,
+    "unique_cves": [
+      "CVE-1999-1073",
+      "CVE-1999-0013",
+      "CVE-1999-0071",
+      "CVE-2009-2629",
+      "CVE-2019-1003062",
+      "CVE-1999-0661",
+      "CVE-2019-15310",
+      "CVE-1999-0168",
+      "CVE-1999-1152",
+      "CVE-2000-0525",
+      "CVE-1999-0236",
+      "CVE-1999-0407"
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "192.168.1.10",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ]
+    },
+    {
+      "id": "203.0.113.45",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407",
+        "CVE-1999-0168"
+      ]
+    },
+    {
+      "id": "198.51.100.202",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-2009-2629"
+      ]
+    },
+    {
+      "id": "198.51.100.23",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-1999-0236",
+        "CVE-1999-0071"
+      ]
+    },
+    {
+      "id": "192.168.1.15",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-2019-15310"
+      ]
+    },
+    {
+      "id": "10.0.0.5",
+      "type": "ip",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2019-15310",
+        "CVE-1999-0236",
+        "CVE-1999-0071"
+      ]
+    },
+    {
+      "id": "logging",
+      "type": "process",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-2019-1003062"
+      ]
+    },
+    {
+      "id": "web",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": []
+    },
+    {
+      "id": "db",
+      "type": "process",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407"
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "process",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407"
+      ]
+    },
+    {
+      "id": "ssh",
+      "type": "process",
+      "risk_score": 5.0,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-1999-0013"
+      ]
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "web",
+      "risk_score": 0.0
+    }
+  ],
+  "anomalies_confirmed": [],
+  "llm_categorization": {
+    "192.168.1.10": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP address within 192.168.0.0/16, typically used for internal networking."
+    },
+    "203.0.113.45": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Public IP address in the TEST-NET-3 range, used for external network communication."
+    },
+    "198.51.100.202": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Public IP address in the TEST-NET-2 range, used for external network communication."
+    },
+    "198.51.100.23": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Public IP address in the TEST-NET-2 range, used for external network communication."
+    },
+    "192.168.1.15": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP address within 192.168.0.0/16, used for internal networking."
+    },
+    "10.0.0.5": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Private IP address within 10.0.0.0/8, used for internal networking."
+    },
+    "logging": {
+      "category": "monitoring",
+      "cloud_platform": "aws",
+      "reasoning": "Process name suggests log collection or monitoring activity."
+    },
+    "web": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Process name indicates a web server or application, typically a compute resource."
+    },
+    "db": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "Process name indicates a database service."
+    },
+    "s3": {
+      "category": "storage",
+      "cloud_platform": "aws",
+      "reasoning": "Process name refers to Amazon S3, a storage service."
+    },
+    "ssh": {
+      "category": "security",
+      "cloud_platform": "aws",
+      "reasoning": "SSH is a secure shell protocol used for secure remote access."
+    }
+  },
+  "gnn_analysis": {
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "predictions": [
+      {
+        "node_id": "192.168.1.10",
+        "anomaly_probability": 0.22929628193378448,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "203.0.113.45",
+        "anomaly_probability": 0.2025700807571411,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "198.51.100.202",
+        "anomaly_probability": 0.2067309319972992,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "198.51.100.23",
+        "anomaly_probability": 0.2098660171031952,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.1.15",
+        "anomaly_probability": 0.24711933732032776,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.0.0.5",
+        "anomaly_probability": 0.36690855026245117,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "logging",
+        "anomaly_probability": 0.3053648769855499,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "web",
+        "anomaly_probability": 0.20343099534511566,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "db",
+        "anomaly_probability": 0.18017958104610443,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3",
+        "anomaly_probability": 0.21554827690124512,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh",
+        "anomaly_probability": 0.27386561036109924,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ]
+  },
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have tak",
+            "published": "1992-06-04T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "192.168.1.10"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "Compaq/Microcom 6000 Access Integrator does not disconnect a client after a certain number of failed login attempts, which allows remote attackers to guess usernames or passwords via a brute force att",
+            "published": "1998-06-03T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "Excite for Web Servers (EWS) 1.1 records the first two characters of a plaintext password in the beginning of the encrypted password, which makes it easier for an attacker to guess passwords via a bru",
+            "published": "1998-11-30T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "By default, IIS 4.0 has a virtual directory /IISADMPWD which contains files that can be used as proxies for brute force password attacks, or to identify valid users on the system.",
+            "published": "1999-02-09T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have tak",
+            "published": "1992-06-04T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "203.0.113.45"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2009-2629": {
+            "cve_id": "CVE-2009-2629",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Buffer underflow in src/http/ngx_http_parse.c in nginx 0.1.0 through 0.5.37, 0.6.x before 0.6.39, 0.7.x before 0.7.62, and 0.8.x before 0.8.15 allows remote attackers to execute arbitrary code via cra",
+            "published": "2009-09-15T22:30:00.233",
+            "last_modified": "2025-04-09T00:30:58.490"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "198.51.100.202"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have tak",
+            "published": "1992-06-04T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "198.51.100.23"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2019-15310": {
+            "cve_id": "CVE-2019-15310",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "An issue was discovered on various devices via the Linkplay firmware. There is WAN remote code execution without user interaction. An attacker could retrieve the AWS key from the firmware and obtain f",
+            "published": "2020-07-01T20:15:10.767",
+            "last_modified": "2024-11-21T04:28:25.350"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "192.168.1.15"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have tak",
+            "published": "1992-06-04T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2019-15310": {
+            "cve_id": "CVE-2019-15310",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "An issue was discovered on various devices via the Linkplay firmware. There is WAN remote code execution without user interaction. An attacker could retrieve the AWS key from the firmware and obtain f",
+            "published": "2020-07-01T20:15:10.767",
+            "last_modified": "2024-11-21T04:28:25.350"
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+            "published": "1997-01-01T05:00:00.000",
+            "last_modified": "2025-04-20T01:37:25.860"
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+            "published": "1997-09-01T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "ip",
+        "last_seen": 1762673126.7687795,
+        "id": "10.0.0.5"
+      },
+      {
+        "cve": [],
+        "description": "Process logging",
+        "cve_details": {
+          "CVE-2019-1003062": {
+            "cve_id": "CVE-2019-1003062",
+            "score": 8.8,
+            "severity": "HIGH",
+            "description": "Jenkins AWS CloudWatch Logs Publisher Plugin stores credentials unencrypted in its global configuration file on the Jenkins master where they can be viewed by users with access to the master file syst",
+            "published": "2019-04-04T16:29:00.867",
+            "last_modified": "2024-11-21T04:17:50.150"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "process",
+        "last_seen": 1762673126.7697947,
+        "id": "logging"
+      },
+      {
+        "cve": [],
+        "description": "Process web",
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": 1762673126.7697947,
+        "id": "web"
+      },
+      {
+        "cve": [],
+        "description": "Process db",
+        "cve_details": {
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "Compaq/Microcom 6000 Access Integrator does not disconnect a client after a certain number of failed login attempts, which allows remote attackers to guess usernames or passwords via a brute force att",
+            "published": "1998-06-03T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "Excite for Web Servers (EWS) 1.1 records the first two characters of a plaintext password in the beginning of the encrypted password, which makes it easier for an attacker to guess passwords via a bru",
+            "published": "1998-11-30T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "By default, IIS 4.0 has a virtual directory /IISADMPWD which contains files that can be used as proxies for brute force password attacks, or to identify valid users on the system.",
+            "published": "1999-02-09T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "process",
+        "last_seen": 1762673126.7697947,
+        "id": "db"
+      },
+      {
+        "cve": [],
+        "description": "Process s3",
+        "cve_details": {
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 7.5,
+            "severity": "HIGH",
+            "description": "Compaq/Microcom 6000 Access Integrator does not disconnect a client after a certain number of failed login attempts, which allows remote attackers to guess usernames or passwords via a brute force att",
+            "published": "1998-06-03T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "Excite for Web Servers (EWS) 1.1 records the first two characters of a plaintext password in the beginning of the encrypted password, which makes it easier for an attacker to guess passwords via a bru",
+            "published": "1998-11-30T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "By default, IIS 4.0 has a virtual directory /IISADMPWD which contains files that can be used as proxies for brute force password attacks, or to identify valid users on the system.",
+            "published": "1999-02-09T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "process",
+        "last_seen": 1762673126.7697947,
+        "id": "s3"
+      },
+      {
+        "cve": [],
+        "description": "Process ssh",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 7.5,
+            "severity": "MEDIUM",
+            "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have tak",
+            "published": "1992-06-04T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0013": {
+            "cve_id": "CVE-1999-0013",
+            "score": 8.4,
+            "severity": "HIGH",
+            "description": "Stolen credentials from SSH clients via ssh-agent program, allowing other local users to access remote accounts belonging to the ssh-agent user.",
+            "published": "1998-01-22T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 5.0,
+        "type": "process",
+        "last_seen": 1762673126.7697947,
+        "id": "ssh"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.10",
+        "target": "203.0.113.45"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "203.0.113.45",
+        "target": "198.51.100.202"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.202",
+        "target": "198.51.100.23"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.23",
+        "target": "192.168.1.15"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.15",
+        "target": "10.0.0.5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.5",
+        "target": "logging"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "logging",
+        "target": "web"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "web",
+        "target": "db"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "db",
+        "target": "s3"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "s3",
+        "target": "ssh"
+      }
+    ]
+  }
+}

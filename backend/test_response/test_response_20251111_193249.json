@@ -1,0 +1,983 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "detected_cloud_platform": "generic",
+  "platform_detection": {
+    "platform": "generic",
+    "confidence": 50,
+    "indicators": [],
+    "config": {
+      "regions": [
+        "on-premise"
+      ],
+      "network_interface": [
+        "eth0",
+        "ens3"
+      ],
+      "init_service": "systemd",
+      "adapter_full": "Generic Network Device",
+      "common_services": [
+        "systemd",
+        "sshd",
+        "NetworkManager"
+      ],
+      "common_cves": [
+        "CVE-2024-6387",
+        "CVE-2023-4911"
+      ]
+    }
+  },
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3,
+    "cluster_pattern": "No anomalies",
+    "cluster_description": "System normal"
+  },
+  "statistical_analysis": {
+    "total_nodes": 23,
+    "anomalies_detected_count": 3,
+    "anomalies_confirmed_count": 0,
+    "zscore_threshold": 1.8,
+    "adaptive_threshold": 1.8
+  },
+  "cve_analysis": {
+    "total_cves_found": 5,
+    "nodes_with_cves": 3,
+    "avg_cve_risk": 1.18,
+    "avg_behavioral_risk": 0.0,
+    "avg_combined_risk": 0.83,
+    "unique_cves": [
+      "CVE-2014-3499",
+      "CVE-2000-0525",
+      "CVE-1999-0661"
+    ],
+    "all_cve_details": [
+      {
+        "cve_id": "CVE-2000-0525",
+        "score": 10.0,
+        "severity": "MEDIUM",
+        "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+        "published": "2000-06-08T04:00:00.000",
+        "last_modified": "2025-04-03T01:03:51.193"
+      },
+      {
+        "cve_id": "CVE-1999-0661",
+        "score": 10.0,
+        "severity": "MEDIUM",
+        "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+        "published": "1999-01-01T05:00:00.000",
+        "last_modified": "2025-04-03T01:03:51.193"
+      },
+      {
+        "cve_id": "CVE-2014-3499",
+        "score": 7.2,
+        "severity": "MEDIUM",
+        "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.",
+        "published": "2014-07-11T14:55:04.010",
+        "last_modified": "2025-04-12T10:46:40.837"
+      }
+    ]
+  },
+  "nodes_information": [
+    {
+      "id": "179.65.6.246",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.76.226",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.23.15.247",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.48.20",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.81.53.166",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "7.81.134.18",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.24.222.79",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "32.42.1.217",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "41.37.9.221",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.16.40.125",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.27.82.49",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "192.168.196.80",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "196.248.150.50",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.31.221.246",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.20.11.2",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.154.162.212",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "48.194.184.59",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "10.40.183.249",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "56.181.190.24",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "172.17.105.215",
+      "type": "ip",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_count": 0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "ssh",
+      "type": "service",
+      "risk_score": 7.0,
+      "cve": [
+        "CVE-2000-0525",
+        "CVE-1999-0661"
+      ],
+      "cve_count": 2,
+      "cve_risk": 10.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+          "published": "2000-06-08T04:00:00.000",
+          "last_modified": "2025-04-03T01:03:51.193"
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+          "published": "1999-01-01T05:00:00.000",
+          "last_modified": "2025-04-03T01:03:51.193"
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "sshd",
+      "type": "service",
+      "risk_score": 7.0,
+      "cve": [
+        "CVE-2000-0525",
+        "CVE-1999-0661"
+      ],
+      "cve_count": 2,
+      "cve_risk": 10.0,
+      "behavioral_risk": 0.0,
+      "cve_details": {
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+          "published": "2000-06-08T04:00:00.000",
+          "last_modified": "2025-04-03T01:03:51.193"
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+          "published": "1999-01-01T05:00:00.000",
+          "last_modified": "2025-04-03T01:03:51.193"
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "docker",
+      "type": "service",
+      "risk_score": 5.04,
+      "cve": [
+        "CVE-2014-3499"
+      ],
+      "cve_count": 1,
+      "cve_risk": 7.2,
+      "behavioral_risk": 0.0,
+      "cve_details": {
+        "CVE-2014-3499": {
+          "cve_id": "CVE-2014-3499",
+          "score": 7.2,
+          "severity": "MEDIUM",
+          "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.",
+          "published": "2014-07-11T14:55:04.010",
+          "last_modified": "2025-04-12T10:46:40.837"
+        }
+      },
+      "last_seen": null
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "ssh",
+      "risk_score": 7.0,
+      "type": "service",
+      "z_score": 2.85,
+      "cve": [
+        "CVE-2000-0525",
+        "CVE-1999-0661"
+      ]
+    },
+    {
+      "id": "sshd",
+      "risk_score": 7.0,
+      "type": "service",
+      "z_score": 2.85,
+      "cve": [
+        "CVE-2000-0525",
+        "CVE-1999-0661"
+      ]
+    },
+    {
+      "id": "docker",
+      "risk_score": 5.04,
+      "type": "service",
+      "z_score": 1.95,
+      "cve": [
+        "CVE-2014-3499"
+      ]
+    }
+  ],
+  "anomalies_confirmed": [],
+  "llm_categorization": {},
+  "gnn_analysis": {
+    "accuracy": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "predictions": [
+      {
+        "node_id": "179.65.6.246",
+        "anomaly_probability": 0.37022531032562256,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.76.226",
+        "anomaly_probability": 0.3490999639034271,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.23.15.247",
+        "anomaly_probability": 0.36723795533180237,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.48.20",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.81.53.166",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "7.81.134.18",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.24.222.79",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "32.42.1.217",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "41.37.9.221",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.16.40.125",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.27.82.49",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.196.80",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "196.248.150.50",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.31.221.246",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.20.11.2",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.154.162.212",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "48.194.184.59",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "10.40.183.249",
+        "anomaly_probability": 0.36662012338638306,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "56.181.190.24",
+        "anomaly_probability": 0.46932005882263184,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "172.17.105.215",
+        "anomaly_probability": 0.4132937788963318,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh",
+        "anomaly_probability": 0.3352752923965454,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "sshd",
+        "anomaly_probability": 0.31148025393486023,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "docker",
+        "anomaly_probability": 0.32444801926612854,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "training_epochs": 50,
+    "learning_rate": 0.001
+  },
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address 179.65.6.246",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "179.65.6.246"
+      },
+      {
+        "cve": [],
+        "description": "IP address 192.168.76.226",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "192.168.76.226"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.23.15.247",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.23.15.247"
+      },
+      {
+        "cve": [],
+        "description": "IP address 192.168.48.20",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "192.168.48.20"
+      },
+      {
+        "cve": [],
+        "description": "IP address 10.81.53.166",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "10.81.53.166"
+      },
+      {
+        "cve": [],
+        "description": "IP address 7.81.134.18",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "7.81.134.18"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.24.222.79",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.24.222.79"
+      },
+      {
+        "cve": [],
+        "description": "IP address 32.42.1.217",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "32.42.1.217"
+      },
+      {
+        "cve": [],
+        "description": "IP address 41.37.9.221",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "41.37.9.221"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.16.40.125",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.16.40.125"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.27.82.49",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.27.82.49"
+      },
+      {
+        "cve": [],
+        "description": "IP address 192.168.196.80",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "192.168.196.80"
+      },
+      {
+        "cve": [],
+        "description": "IP address 196.248.150.50",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "196.248.150.50"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.31.221.246",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.31.221.246"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.20.11.2",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.20.11.2"
+      },
+      {
+        "cve": [],
+        "description": "IP address 10.154.162.212",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "10.154.162.212"
+      },
+      {
+        "cve": [],
+        "description": "IP address 48.194.184.59",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "48.194.184.59"
+      },
+      {
+        "cve": [],
+        "description": "IP address 10.40.183.249",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "10.40.183.249"
+      },
+      {
+        "cve": [],
+        "description": "IP address 56.181.190.24",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "56.181.190.24"
+      },
+      {
+        "cve": [],
+        "description": "IP address 172.17.105.215",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "ip",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "172.17.105.215"
+      },
+      {
+        "cve": [],
+        "description": "Service ssh",
+        "cve_details": {
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 7.0,
+        "type": "service",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "ssh"
+      },
+      {
+        "cve": [],
+        "description": "Service sshd",
+        "cve_details": {
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+            "published": "2000-06-08T04:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 10.0,
+            "severity": "MEDIUM",
+            "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+            "published": "1999-01-01T05:00:00.000",
+            "last_modified": "2025-04-03T01:03:51.193"
+          }
+        },
+        "risk_score": 7.0,
+        "type": "service",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "sshd"
+      },
+      {
+        "cve": [],
+        "description": "Service docker",
+        "cve_details": {
+          "CVE-2014-3499": {
+            "cve_id": "CVE-2014-3499",
+            "score": 7.2,
+            "severity": "MEDIUM",
+            "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.",
+            "published": "2014-07-11T14:55:04.010",
+            "last_modified": "2025-04-12T10:46:40.837"
+          }
+        },
+        "risk_score": 5.04,
+        "type": "service",
+        "last_seen": "2025-11-11 19:32:47 IST",
+        "id": "docker"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "179.65.6.246",
+        "target": "192.168.76.226"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.76.226",
+        "target": "172.23.15.247"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.23.15.247",
+        "target": "192.168.48.20"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.48.20",
+        "target": "10.81.53.166"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.81.53.166",
+        "target": "7.81.134.18"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "7.81.134.18",
+        "target": "172.24.222.79"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.24.222.79",
+        "target": "32.42.1.217"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "32.42.1.217",
+        "target": "41.37.9.221"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "41.37.9.221",
+        "target": "172.16.40.125"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.16.40.125",
+        "target": "172.27.82.49"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.27.82.49",
+        "target": "192.168.196.80"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.196.80",
+        "target": "196.248.150.50"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "196.248.150.50",
+        "target": "172.31.221.246"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.31.221.246",
+        "target": "172.20.11.2"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.20.11.2",
+        "target": "10.154.162.212"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.154.162.212",
+        "target": "48.194.184.59"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "48.194.184.59",
+        "target": "10.40.183.249"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.40.183.249",
+        "target": "56.181.190.24"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "56.181.190.24",
+        "target": "172.17.105.215"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "172.17.105.215",
+        "target": "ssh"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "ssh",
+        "target": "sshd"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "sshd",
+        "target": "docker"
+      }
+    ]
+  },
+  "report_path": "data_store\\report_20251111T140249Z.json",
+  "d3_results_path": "data_store\\results.json"
+}

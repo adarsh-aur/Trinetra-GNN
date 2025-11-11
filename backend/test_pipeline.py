@@ -26,7 +26,7 @@ load_dotenv()
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000").rstrip("/")
 LOG_FILE_PATH = os.getenv(
     "LOG_FILE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/synthetic_logs_with_attacks_mitre_v3.log"
+    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/security_logs.log"
 )
 DATA_STORE_PATH = os.getenv(
     "DATA_STORE_PATH",
@@ -106,7 +106,7 @@ def test_ingest_file():
 
     try:
         start_time = datetime.now()
-        r = requests.post(url, timeout=120)  # Increased timeout for LLM processing
+        r = requests.post(url, timeout=300)  # Increased timeout for LLM processing
         elapsed = (datetime.now() - start_time).total_seconds()
 
         print(f"✅ Request completed in {elapsed:.2f} seconds")

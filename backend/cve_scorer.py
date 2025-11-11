@@ -1,3 +1,4 @@
+#cve_scorer.py
 import re
 import requests
 import time
@@ -64,7 +65,7 @@ def get_cve_score_from_nvd(cve_id: str):
         rate_limit_check()
         
         headers = {}
-        if NVD_API_KEY and NVD_API_KEY != "YOUR_NVD_API_KEY_HERE":
+        if NVD_API_KEY and NVD_API_KEY != "b924563d-868f-4022-900e-deff8c57af60":
             headers["apiKey"] = NVD_API_KEY
         
         url = f"{NVD_API_BASE}?cveId={cve_id}"
@@ -155,7 +156,7 @@ def search_cves_by_keyword(keyword: str, max_results=5):
         rate_limit_check()
         
         headers = {}
-        if NVD_API_KEY and NVD_API_KEY != "YOUR_NVD_API_KEY_HERE":
+        if NVD_API_KEY and NVD_API_KEY != "b924563d-868f-4022-900e-deff8c57af60":
             headers["apiKey"] = NVD_API_KEY
         
         # Search for recent critical/high CVEs

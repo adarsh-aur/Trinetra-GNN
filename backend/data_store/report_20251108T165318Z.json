@@ -1,0 +1,1719 @@
+{
+  "status": "ok",
+  "timestamp": null,
+  "analysis_mode": "fully_adaptive_llm_driven",
+  "detected_cloud_platform": "aws",
+  "platform_detection": {
+    "platform": "aws",
+    "confidence": 90,
+    "indicators": [
+      "s3 service present",
+      "cloud login events",
+      "private IP 10.0.0.5 typical VPC"
+    ],
+    "reasoning": "The presence of an S3 service and typical AWS VPC IP ranges strongly indicate an AWS environment."
+  },
+  "cloud_configuration": {
+    "platform": "AWS",
+    "detection_confidence": 90,
+    "init_service": "cloud-init",
+    "network_interfaces": [
+      "ens5",
+      "eth0",
+      "ens3"
+    ],
+    "regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "ap-south-1",
+      "ap-southeast-1",
+      "ca-central-1"
+    ],
+    "adapter": "Elastic Network Adapter (ENA)",
+    "metadata_service": "169.254.169.254",
+    "common_services": [
+      "amazon-ssm-agent",
+      "cloud-init",
+      "awslogs",
+      "ec2-instance-connect"
+    ],
+    "platform_specific_cves": [
+      "CVE-2024-21626",
+      "CVE-2023-45142",
+      "CVE-2023-2975"
+    ]
+  },
+  "attack_analysis": {
+    "attack_type": "unknown",
+    "confidence": 0.3,
+    "description": "unknown attack detected with 0.3% confidence"
+  },
+  "statistical_analysis": {
+    "adaptive_threshold": {
+      "threshold": 2.0,
+      "sensitivity": "medium",
+      "expected_anomaly_rate": "5%",
+      "reasoning": "The risk score distribution has moderate variance (std\u22482.6) and only one extreme outlier above mean+2\u03c3, so a 2.0 Z\u2011score threshold balances false positives and captures the clear high\u2011risk node while keeping the anomaly rate near the expected 5%.",
+      "method": "llm_adaptive"
+    },
+    "zscore_threshold": 2.0,
+    "total_nodes": 11,
+    "total_edges": 10,
+    "anomalies_detected_count": 1,
+    "anomalies_confirmed_count": 1,
+    "anomaly_detection_rate": "9.1%"
+  },
+  "cve_analysis": {
+    "total_cves_found": 32,
+    "unique_cves": 15,
+    "nodes_with_cves": 9,
+    "unique_cve_list": [
+      "CVE-1999-0071",
+      "CVE-1999-0407",
+      "CVE-1999-0236",
+      "CVE-1999-0013",
+      "CVE-2016-1866",
+      "CVE-1999-1152",
+      "CVE-1999-0661",
+      "CVE-1999-1073",
+      "CVE-2000-0525",
+      "CVE-2018-16865",
+      "CVE-2009-2629",
+      "CVE-2008-5617",
+      "CVE-2002-1200",
+      "CVE-1999-0168",
+      "CVE-2005-3074"
+    ],
+    "high_severity_cves": [
+      "CVE-2016-1866"
+    ],
+    "high_severity_count": 1,
+    "critical_cves": [
+      "CVE-2016-1866"
+    ],
+    "critical_count": 1,
+    "active_exploits_detected": 1,
+    "platform_specific_cves": [
+      "CVE-2024-21626",
+      "CVE-2023-45142",
+      "CVE-2023-2975"
+    ],
+    "cve_details": [
+      {
+        "cve_id": "CVE-1999-0071",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-1999-0407",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "A flaw in the Windows 2000 TCP/IP stack allows remote attackers to execute arbitrary code via a specially crafted packet.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-1999-0236",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-1999-0013",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Buffer overflow in the Windows Shell allows remote attackers to execute arbitrary code via a crafted file.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-2016-1866",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "description": "Apache Struts 2.0.0 to 2.3.20.1 is vulnerable to remote code execution via OGNL injection in the struts2-velocity-plugin, allowing attackers to execute arbitrary code on the server.",
+        "confidence": "high",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "CRITICAL",
+          "adjusted_score": 9.8,
+          "exploitability": "high",
+          "active_exploitation": true
+        }
+      },
+      {
+        "cve_id": "CVE-1999-1152",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Microsoft Windows 2000 Remote Desktop Protocol (RDP) vulnerability that allows remote code execution via a specially crafted packet.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-1999-0661",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-1999-1073",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Remote code execution vulnerability in Microsoft Windows 95/98/NT due to improper handling of specially crafted files.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-2000-0525",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "LOW",
+          "adjusted_score": 2.0,
+          "exploitability": "low",
+          "active_exploitation": false
+        }
+      },
+      {
+        "cve_id": "CVE-2018-16865",
+        "score": 5.0,
+        "severity": "MEDIUM",
+        "description": "Apache Struts 2.3.x and 2.5.x remote code execution vulnerability via OGNL injection in the struts2-velocity-plugin.",
+        "confidence": "medium",
+        "source": "LLM_Assessment",
+        "llm_assessment": {
+          "adjusted_severity": "MEDIUM",
+          "adjusted_score": 5.0,
+          "exploitability": "medium",
+          "active_exploitation": false
+        }
+      }
+    ],
+    "llm_enhanced": true
+  },
+  "nodes_information": [
+    {
+      "id": "192.168.1.15",
+      "type": "ip",
+      "risk_score": 4.2,
+      "cve": [
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ],
+      "cve_details": {
+        "CVE-1999-0236": {
+          "cve_id": "CVE-1999-0236",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0071": {
+          "cve_id": "CVE-1999-0071",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "198.51.100.202",
+      "type": "ip",
+      "risk_score": 5.5,
+      "cve": [
+        "CVE-1999-0236",
+        "CVE-1999-0071",
+        "CVE-2009-2629"
+      ],
+      "cve_details": {
+        "CVE-1999-0236": {
+          "cve_id": "CVE-1999-0236",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0071": {
+          "cve_id": "CVE-1999-0071",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2009-2629": {
+          "cve_id": "CVE-2009-2629",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Apache Struts 2.0.0 is vulnerable to remote code execution via maliciously crafted request that exploits a flaw in the handling of OGNL expressions.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "MEDIUM",
+            "adjusted_score": 5.0,
+            "exploitability": "medium",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "198.51.100.23",
+      "type": "ip",
+      "risk_score": 4.2,
+      "cve": [
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-1999-0236",
+        "CVE-1999-0071"
+      ],
+      "cve_details": {
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0236": {
+          "cve_id": "CVE-1999-0236",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0071": {
+          "cve_id": "CVE-1999-0071",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "192.168.1.10",
+      "type": "ip",
+      "risk_score": 9.91,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2016-1866"
+      ],
+      "cve_details": {
+        "CVE-1999-0168": {
+          "cve_id": "CVE-1999-0168",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2016-1866": {
+          "cve_id": "CVE-2016-1866",
+          "score": 9.8,
+          "severity": "CRITICAL",
+          "description": "Apache Struts 2.0.0 to 2.3.20.1 is vulnerable to remote code execution via OGNL injection in the struts2-velocity-plugin, allowing attackers to execute arbitrary code on the server.",
+          "confidence": "high",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "CRITICAL",
+            "adjusted_score": 9.8,
+            "exploitability": "high",
+            "active_exploitation": true
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "10.0.0.5",
+      "type": "ip",
+      "risk_score": 4.2,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-1999-0013"
+      ],
+      "cve_details": {
+        "CVE-1999-0168": {
+          "cve_id": "CVE-1999-0168",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0013": {
+          "cve_id": "CVE-1999-0013",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell allows remote attackers to execute arbitrary code via a crafted file.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "203.0.113.45",
+      "type": "ip",
+      "risk_score": 4.0,
+      "cve": [
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407"
+      ],
+      "cve_details": {
+        "CVE-1999-1152": {
+          "cve_id": "CVE-1999-1152",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Microsoft Windows 2000 Remote Desktop Protocol (RDP) vulnerability that allows remote code execution via a specially crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-1073": {
+          "cve_id": "CVE-1999-1073",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 95/98/NT due to improper handling of specially crafted files.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0407": {
+          "cve_id": "CVE-1999-0407",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "A flaw in the Windows 2000 TCP/IP stack allows remote attackers to execute arbitrary code via a specially crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "db",
+      "type": "process",
+      "risk_score": 4.0,
+      "cve": [
+        "CVE-1999-1152",
+        "CVE-1999-1073",
+        "CVE-1999-0407"
+      ],
+      "cve_details": {
+        "CVE-1999-1152": {
+          "cve_id": "CVE-1999-1152",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Microsoft Windows 2000 Remote Desktop Protocol (RDP) vulnerability that allows remote code execution via a specially crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-1073": {
+          "cve_id": "CVE-1999-1073",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 95/98/NT due to improper handling of specially crafted files.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0407": {
+          "cve_id": "CVE-1999-0407",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "A flaw in the Windows 2000 TCP/IP stack allows remote attackers to execute arbitrary code via a specially crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "logging",
+      "type": "process",
+      "risk_score": 6.3,
+      "cve": [
+        "CVE-2005-3074",
+        "CVE-2008-5617",
+        "CVE-2002-1200",
+        "CVE-2018-16865"
+      ],
+      "cve_details": {
+        "CVE-2005-3074": {
+          "cve_id": "CVE-2005-3074",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "A buffer overflow in the Windows 2000/XP kernel allows remote attackers to execute arbitrary code via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "MEDIUM",
+            "adjusted_score": 5.0,
+            "exploitability": "medium",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2008-5617": {
+          "cve_id": "CVE-2008-5617",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Apache Struts 2.0.0 to 2.0.4 allows remote attackers to execute arbitrary code via a crafted request that exploits a vulnerability in the OGNL expression evaluation.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "MEDIUM",
+            "adjusted_score": 5.0,
+            "exploitability": "medium",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2002-1200": {
+          "cve_id": "CVE-2002-1200",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "A vulnerability in Microsoft Windows 2000 allows remote attackers to execute arbitrary code by creating a specially crafted file that exploits a flaw in the file system handling.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "MEDIUM",
+            "adjusted_score": 5.0,
+            "exploitability": "medium",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2018-16865": {
+          "cve_id": "CVE-2018-16865",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Apache Struts 2.3.x and 2.5.x remote code execution vulnerability via OGNL injection in the struts2-velocity-plugin.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "MEDIUM",
+            "adjusted_score": 5.0,
+            "exploitability": "medium",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    },
+    {
+      "id": "web",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "s3",
+      "type": "process",
+      "risk_score": 0.0,
+      "cve": [],
+      "cve_details": {},
+      "last_seen": null
+    },
+    {
+      "id": "ssh",
+      "type": "process",
+      "risk_score": 4.0,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ],
+      "cve_details": {
+        "CVE-1999-0168": {
+          "cve_id": "CVE-1999-0168",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-1999-0661": {
+          "cve_id": "CVE-1999-0661",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        },
+        "CVE-2000-0525": {
+          "cve_id": "CVE-2000-0525",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+          "confidence": "medium",
+          "source": "LLM_Assessment",
+          "llm_assessment": {
+            "adjusted_severity": "LOW",
+            "adjusted_score": 2.0,
+            "exploitability": "low",
+            "active_exploitation": false
+          }
+        }
+      },
+      "last_seen": null
+    }
+  ],
+  "edges_information": [
+    {
+      "source": "192.168.1.15",
+      "target": "198.51.100.202",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "198.51.100.202",
+      "target": "198.51.100.23",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "198.51.100.23",
+      "target": "192.168.1.10",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "192.168.1.10",
+      "target": "10.0.0.5",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "10.0.0.5",
+      "target": "203.0.113.45",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "203.0.113.45",
+      "target": "db",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "db",
+      "target": "logging",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "logging",
+      "target": "web",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "web",
+      "target": "s3",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    },
+    {
+      "source": "s3",
+      "target": "ssh",
+      "type": "connection",
+      "weight": 1.0,
+      "count": 1
+    }
+  ],
+  "anomalies_detected": [
+    {
+      "id": "192.168.1.10",
+      "risk_score": 9.91,
+      "type": "ip",
+      "z_score": 2.2,
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2016-1866"
+      ]
+    }
+  ],
+  "anomalies_confirmed": [
+    {
+      "id": "192.168.1.10",
+      "risk_score": 9.91,
+      "type": "ip",
+      "reason": "Detected root login from internal IP 192.168.1.10 with malicious persistence technique T1078.004, indicating unauthorized access and potential privilege escalation.",
+      "cve": [
+        "CVE-1999-0168",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2016-1866"
+      ]
+    }
+  ],
+  "llm_categorization": {
+    "192.168.1.15": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "IP address used for internal communication"
+    },
+    "198.51.100.202": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP address, part of network traffic"
+    },
+    "198.51.100.23": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP address, part of network traffic"
+    },
+    "192.168.1.10": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal IP address, part of network"
+    },
+    "10.0.0.5": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "Internal IP address, part of network"
+    },
+    "203.0.113.45": {
+      "category": "network",
+      "cloud_platform": "aws",
+      "reasoning": "External IP address, part of network"
+    },
+    "db": {
+      "category": "database",
+      "cloud_platform": "aws",
+      "reasoning": "Database service process"
+    },
+    "logging": {
+      "category": "monitoring",
+      "cloud_platform": "aws",
+      "reasoning": "Logging service process"
+    },
+    "web": {
+      "category": "compute",
+      "cloud_platform": "aws",
+      "reasoning": "Web application process"
+    },
+    "s3": {
+      "category": "storage",
+      "cloud_platform": "aws",
+      "reasoning": "S3 storage service process"
+    },
+    "ssh": {
+      "category": "identity",
+      "cloud_platform": "aws",
+      "reasoning": "SSH protocol used for authentication and identity management"
+    }
+  },
+  "gnn_analysis": {
+    "training_epochs": 50,
+    "learning_rate": 0.001,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "model_architecture": {
+      "type": "AdaptiveGCN",
+      "input_dim": 32,
+      "hidden_dim": 64,
+      "output_dim": 32
+    },
+    "feature_names": [
+      "risk_score",
+      "type_ip",
+      "type_process"
+    ],
+    "predictions": [
+      {
+        "node_id": "192.168.1.15",
+        "anomaly_probability": 0.19439437985420227,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "198.51.100.202",
+        "anomaly_probability": 0.29270321130752563,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "198.51.100.23",
+        "anomaly_probability": 0.48346248269081116,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "192.168.1.10",
+        "anomaly_probability": 0.6326674222946167,
+        "predicted_label": 1,
+        "actual_label": 1
+      },
+      {
+        "node_id": "10.0.0.5",
+        "anomaly_probability": 0.3719266653060913,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "203.0.113.45",
+        "anomaly_probability": 0.28104522824287415,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "db",
+        "anomaly_probability": 0.19230273365974426,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "logging",
+        "anomaly_probability": 0.26320919394493103,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "web",
+        "anomaly_probability": 0.21073706448078156,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "s3",
+        "anomaly_probability": 0.197565957903862,
+        "predicted_label": 0,
+        "actual_label": 0
+      },
+      {
+        "node_id": "ssh",
+        "anomaly_probability": 0.21350647509098053,
+        "predicted_label": 0,
+        "actual_label": 0
+      }
+    ],
+    "final_loss": 0.33074986934661865
+  },
+  "embeddings_shape": [
+    11,
+    32
+  ],
+  "device_used": "cpu",
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.199999999999999,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "192.168.1.15"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2009-2629": {
+            "cve_id": "CVE-2009-2629",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Apache Struts 2.0.0 is vulnerable to remote code execution via maliciously crafted request that exploits a flaw in the handling of OGNL expressions.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "MEDIUM",
+              "adjusted_score": 5.0,
+              "exploitability": "medium",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 5.5,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "198.51.100.202"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0236": {
+            "cve_id": "CVE-1999-0236",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell (Windows 95/98) that can be exploited by a malicious user to execute arbitrary code.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0071": {
+            "cve_id": "CVE-1999-0071",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell allows remote code execution via specially crafted file.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.199999999999999,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "198.51.100.23"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2016-1866": {
+            "cve_id": "CVE-2016-1866",
+            "score": 9.8,
+            "severity": "CRITICAL",
+            "description": "Apache Struts 2.0.0 to 2.3.20.1 is vulnerable to remote code execution via OGNL injection in the struts2-velocity-plugin, allowing attackers to execute arbitrary code on the server.",
+            "confidence": "high",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "CRITICAL",
+              "adjusted_score": 9.8,
+              "exploitability": "high",
+              "active_exploitation": true
+            }
+          }
+        },
+        "risk_score": 9.905000000000001,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "192.168.1.10"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0013": {
+            "cve_id": "CVE-1999-0013",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell allows remote attackers to execute arbitrary code via a crafted file.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.199999999999999,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "10.0.0.5"
+      },
+      {
+        "cve": [],
+        "description": "IP address",
+        "cve_details": {
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Microsoft Windows 2000 Remote Desktop Protocol (RDP) vulnerability that allows remote code execution via a specially crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 95/98/NT due to improper handling of specially crafted files.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "A flaw in the Windows 2000 TCP/IP stack allows remote attackers to execute arbitrary code via a specially crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.0,
+        "type": "ip",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "203.0.113.45"
+      },
+      {
+        "cve": [],
+        "description": "Process db",
+        "cve_details": {
+          "CVE-1999-1152": {
+            "cve_id": "CVE-1999-1152",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Microsoft Windows 2000 Remote Desktop Protocol (RDP) vulnerability that allows remote code execution via a specially crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-1073": {
+            "cve_id": "CVE-1999-1073",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 95/98/NT due to improper handling of specially crafted files.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0407": {
+            "cve_id": "CVE-1999-0407",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "A flaw in the Windows 2000 TCP/IP stack allows remote attackers to execute arbitrary code via a specially crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.0,
+        "type": "process",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "db"
+      },
+      {
+        "cve": [],
+        "description": "Process logging",
+        "cve_details": {
+          "CVE-2005-3074": {
+            "cve_id": "CVE-2005-3074",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "A buffer overflow in the Windows 2000/XP kernel allows remote attackers to execute arbitrary code via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "MEDIUM",
+              "adjusted_score": 5.0,
+              "exploitability": "medium",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2008-5617": {
+            "cve_id": "CVE-2008-5617",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Apache Struts 2.0.0 to 2.0.4 allows remote attackers to execute arbitrary code via a crafted request that exploits a vulnerability in the OGNL expression evaluation.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "MEDIUM",
+              "adjusted_score": 5.0,
+              "exploitability": "medium",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2002-1200": {
+            "cve_id": "CVE-2002-1200",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "A vulnerability in Microsoft Windows 2000 allows remote attackers to execute arbitrary code by creating a specially crafted file that exploits a flaw in the file system handling.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "MEDIUM",
+              "adjusted_score": 5.0,
+              "exploitability": "medium",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2018-16865": {
+            "cve_id": "CVE-2018-16865",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Apache Struts 2.3.x and 2.5.x remote code execution vulnerability via OGNL injection in the struts2-velocity-plugin.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "MEDIUM",
+              "adjusted_score": 5.0,
+              "exploitability": "medium",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 6.3,
+        "type": "process",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "logging"
+      },
+      {
+        "cve": [],
+        "description": "Process web",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "web"
+      },
+      {
+        "cve": [],
+        "description": "Process s3",
+        "cve_details": {},
+        "risk_score": 0.0,
+        "type": "process",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "s3"
+      },
+      {
+        "cve": [],
+        "description": "Process ssh",
+        "cve_details": {
+          "CVE-1999-0168": {
+            "cve_id": "CVE-1999-0168",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Microsoft Windows 2000: Remote code execution via SMB service due to malformed packet handling.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-1999-0661": {
+            "cve_id": "CVE-1999-0661",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Buffer overflow in the Windows Shell that can be exploited by local users to gain elevated privileges.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          },
+          "CVE-2000-0525": {
+            "cve_id": "CVE-2000-0525",
+            "score": 5.0,
+            "severity": "MEDIUM",
+            "description": "Remote code execution vulnerability in Microsoft Windows 2000's Win32k component via a crafted packet.",
+            "confidence": "medium",
+            "source": "LLM_Assessment",
+            "llm_assessment": {
+              "adjusted_severity": "LOW",
+              "adjusted_score": 2.0,
+              "exploitability": "low",
+              "active_exploitation": false
+            }
+          }
+        },
+        "risk_score": 4.0,
+        "type": "process",
+        "last_seen": "2025-11-08 22:23:16 IST",
+        "id": "ssh"
+      }
+    ],
+    "links": [
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.15",
+        "target": "198.51.100.202"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.202",
+        "target": "198.51.100.23"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "198.51.100.23",
+        "target": "192.168.1.10"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "192.168.1.10",
+        "target": "10.0.0.5"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "10.0.0.5",
+        "target": "203.0.113.45"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "203.0.113.45",
+        "target": "db"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "db",
+        "target": "logging"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "logging",
+        "target": "web"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "web",
+        "target": "s3"
+      },
+      {
+        "type": "connection",
+        "weight": 1.0,
+        "count": 1,
+        "source": "s3",
+        "target": "ssh"
+      }
+    ]
+  }
+}
