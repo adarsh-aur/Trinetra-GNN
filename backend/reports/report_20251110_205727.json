@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-11-10T20:57:27.591239",
+  "attack_type": "DDoS",
+  "threat_probability": 0.9999774694442749,
+  "anomalous_nodes": 29,
+  "anomaly_rate": 1.0,
+  "agent_response": {
+    "severity": "CRITICAL",
+    "confidence": 0.99,
+    "executive_summary": "A coordinated DDoS attack is overwhelming the network’s central node (192.168.1.100). Multiple attacker nodes are flooding the victim, causing service disruption across the entire 29‑node network.",
+    "detailed_report_simple": "The network’s main server (node 0) is receiving traffic from four distinct attacker nodes, each connected only to the victim. The attackers are sending high‑volume requests that saturate the victim’s bandwidth, leading to denial of service for all connected nodes. The attack paths show that the attackers are not directly communicating with each other; they are all targeting the same victim, which is typical of a distributed denial‑of‑service (DDoS) campaign. The attack was detected because all nodes exhibited anomalous traffic patterns and the victim’s centrality metrics spiked dramatically, indicating an overload.",
+    "root_cause": {
+      "what_went_wrong": "The network lacks proper traffic filtering and rate limiting, allowing malicious traffic from external IPs to reach the central server. No intrusion detection or anomaly thresholds were in place to flag the sudden surge of requests.",
+      "how_attackers_exploit": "Attackers send a flood of requests (TCP SYN, HTTP GET, or UDP packets) to the victim’s IP. Because the victim is the only node with many connections, the traffic overwhelms its processing capacity, causing legitimate traffic to be dropped or delayed.",
+      "why_detected_now": "The monitoring system flagged all nodes as anomalous after the traffic spike exceeded predefined thresholds. The high betweenness centrality of the victim and the sudden drop in clustering coefficient triggered the alert."
+    },
+    "cve_explanations": [],
+    "recommended_actions": [
+      {
+        "priority": "CRITICAL",
+        "action_name": "Block Attacker IPs",
+        "what_to_do": "Immediately add firewall rules to block the four attacker IP addresses (192.168.52.164, 192.168.126.180, 192.168.135.233, 192.168.105.245) from accessing the victim node.",
+        "why_do_this": "Stopping the source of the flood will restore normal traffic flow and prevent further service disruption.",
+        "timeline": "Immediate (within 15 minutes)",
+        "estimated_time": "15 minutes"
+      },
+      {
+        "priority": "CRITICAL",
+        "action_name": "Enable Rate Limiting on Victim",
+        "what_to_do": "Configure the victim’s network interface or application to limit the number of requests per second per IP and drop excess packets.",
+        "why_do_this": "Rate limiting protects the server from being overwhelmed by sudden traffic spikes.",
+        "timeline": "Within 1 hour",
+        "estimated_time": "30 minutes"
+      },
+      {
+        "priority": "HIGH",
+        "action_name": "Deploy Intrusion Detection System (IDS)",
+        "what_to_do": "Install an IDS (e.g., Snort, Suricata) on the victim and key routers to detect and alert on abnormal traffic patterns in real time.",
+        "why_do_this": "Early detection allows rapid response to future attacks and provides visibility into attack vectors.",
+        "timeline": "Within 24 hours",
+        "estimated_time": "4 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Patch Network Devices and Software",
+        "what_to_do": "Review firmware and software versions on all network devices; apply the latest security patches and updates.",
+        "why_do_this": "Outdated software can contain vulnerabilities that attackers exploit to launch or amplify DDoS attacks.",
+        "timeline": "Within 48 hours",
+        "estimated_time": "2 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Implement Traffic Monitoring and Alerting",
+        "what_to_do": "Set up continuous traffic monitoring dashboards and automated alerts for traffic volume, packet loss, and latency anomalies.",
+        "why_do_this": "Ongoing visibility helps detect future incidents early and assess the effectiveness of mitigation measures.",
+        "timeline": "Within 1 week",
+        "estimated_time": "3 hours"
+      }
+    ]
+  },
+  "graph_stats": {
+    "num_nodes": 29,
+    "num_edges": 28,
+    "vulnerable_paths": 5,
+    "cves_found": 0
+  },
+  "suspicious_nodes_detail": [
+    {
+      "node_id": 0,
+      "label": "192.168.1.100 [VICTIM]",
+      "metrics": {
+        "degree": 23,
+        "betweenness": 0.9841269841269841,
+        "clustering": 0.0,
+        "neighbors": [
+          

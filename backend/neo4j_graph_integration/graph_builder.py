@@ -56,6 +56,7 @@ class GraphBuilder:
             constraints = [
                 "CREATE CONSTRAINT ip_id_unique IF NOT EXISTS FOR (n:IP) REQUIRE n.id IS UNIQUE",
                 "CREATE CONSTRAINT process_id_unique IF NOT EXISTS FOR (n:PROCESS) REQUIRE n.id IS UNIQUE"
+                "CREATE CONSTRAINT service_id_unique IF NOT EXISTS FOR (n:SERVICE) REQUIRE n.id IS UNIQUE"
             ]
             
             for const_query in constraints:

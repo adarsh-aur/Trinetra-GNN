@@ -18,9 +18,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ============================================================
+  
 # 🔑 Initialize Groq client
-# ============================================================
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 if not GROQ_API_KEY:
     print("⚠️  WARNING: GROQ_API_KEY not set in environment variables")
@@ -28,9 +28,9 @@ if not GROQ_API_KEY:
 
 client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
-# ============================================================
+  
 # 🧮 Token utilities (simplified - no tiktoken needed)
-# ============================================================
+  
 def truncate_to_char_limit(text, max_chars=12000):
     """
     Truncate input text to character limit (faster than token counting)
@@ -41,19 +41,19 @@ def truncate_to_char_limit(text, max_chars=12000):
         return text[:max_chars]
     return text
 
-# ============================================================
+  
 # ⚙️ Groq LLM call helper - FIXED MODEL NAME
-# ============================================================
-def call_groq_llm(prompt, model="llama-3.1-70b-versatile", temperature=0.1, max_tokens=4000, retries=3, timeout=30):
+  
+def call_groq_llm(prompt, model="llama-3.3-70b-versatile", temperature=0.0, max_tokens=4000, retries=3, timeout=30):
     """
     Calls Groq LLM with retry logic and timeout.
     
     CRITICAL FIX: Using correct Groq model name
     - Was: "openai/gpt-oss-20b" (WRONG - not a Groq model)
-    - Now: "llama-3.1-70b-versatile" (CORRECT)
+    - Now: "llama-3.3-70b-versatile" (CORRECT)
     
     Available Groq models:
-    - llama-3.1-70b-versatile (recommended, fast, accurate)
+    - llama-3.3-70b-versatile (recommended, fast, accurate)
     - llama-3.1-8b-instant (fastest, less accurate)
     - mixtral-8x7b-32768 (good alternative)
     """
@@ -104,7 +104,7 @@ def call_groq_llm(prompt, model="llama-3.1-70b-versatile", temperature=0.1, max_
             elif "model" in error_msg or "invalid" in error_msg:
                 print(f"❌ Invalid model error: {e}")
                 print(f"   Attempted model: {model}")
-                print("   Available models: llama-3.1-70b-versatile, llama-3.1-8b-instant")
+                print("   Available models: llama-3.3-70b-versatile, llama-3.1-8b-instant")
                 raise
             
             elif "timeout" in error_msg:
@@ -124,9 +124,9 @@ def call_groq_llm(prompt, model="llama-3.1-70b-versatile", temperature=0.1, max_
                 else:
                     raise Exception(f"❌ All retry attempts failed: {e}")
 
-# ============================================================
+  
 # 🧰 JSON repair helper - IMPROVED
-# ============================================================
+  
 def safe_json_parse(response_text):
     """
     Tries to fix and parse malformed JSON from LLM responses.
@@ -196,10 +196,10 @@ def safe_json_parse(response_text):
     print(f"   Response preview: {cleaned[:200]}...")
     return None
 
-# ============================================================
+  
 # 🧠 Core function: process logs with LLM - OPTIMIZED
-# ============================================================
-def process_logs_with_llm(raw_logs, model="llama-3.1-70b-versatile"):
+  
+def process_logs_with_llm(raw_logs, model="llama-3.3-70b-versatile"):
     """
     Process raw system logs using Groq LLM to extract structured data.
     
@@ -326,9 +326,9 @@ Return ONLY valid JSON (no markdown):
         print("🔄 Falling back to rule-based parser...")
         return create_fallback_response(log_sample)
 
-# ============================================================
+  
 # 🛠️ Fallback parser (rule-based) - IMPROVED
-# ============================================================
+  
 def create_fallback_response(log_sample):
     """
     Fast rule-based parser for when LLM fails
@@ -417,9 +417,9 @@ def create_fallback_response(log_sample):
         "confidence": confidence
     }
 
-# ============================================================
+  
 # 🧪 Self-Test
-# ============================================================
+  
 if __name__ == "__main__":
     print("=" * 70)
     print("🧪 Testing LLM Processor Module")

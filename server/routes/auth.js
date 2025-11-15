@@ -15,9 +15,9 @@ import { testConnection, getGraphData, getGraphStats } from '../controllers/grap
 
 const router = express.Router();
 
-// ========================================
+
 // 🔐 AUTHENTICATION ROUTES
-// ========================================
+  
 
 // Public auth routes
 router.post('/register', register);
@@ -32,9 +32,9 @@ router.put('/cloud-provider', protect, updateCloudProvider);
 router.post('/logout', protect, logout);
 router.delete('/account', protect, deleteAccount);
 
-// ========================================
+  
 // 📊 GRAPH ROUTES (Neo4j)
-// ========================================
+  
 
 // Test Neo4j connection
 router.get('/graph/test', testConnection);

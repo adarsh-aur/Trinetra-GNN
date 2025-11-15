@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-11-10T20:57:42.478026",
+  "attack_type": "DDoS",
+  "threat_probability": 0.999977707862854,
+  "anomalous_nodes": 32,
+  "anomaly_rate": 1.0,
+  "agent_response": {
+    "severity": "MEDIUM",
+    "confidence": 0.7,
+    "reasoning": "Error: Event loop is closed",
+    "executive_summary": "Analysis completed but response format needs review",
+    "detailed_report_simple": "Error: Event loop is closed",
+    "recommended_actions": [
+      {
+        "priority": "HIGH",
+        "action_name": "Review security logs",
+        "what_to_do": "Investigate detected anomalies",
+        "why_do_this": "Anomalous behavior detected in network",
+        "timeline": "Within 1 hour",
+        "estimated_time": "30 minutes"
+      }
+    ]
+  },
+  "graph_stats": {
+    "num_nodes": 32,
+    "num_edges": 30,
+    "vulnerable_paths": 5,
+    "cves_found": 0
+  },
+  "suspicious_nodes_detail": [
+    {
+      "node_id": 0,
+      "label": "192.168.1.100 [VICTIM]",
+      "metrics": {
+        "degree": 26,
+        "betweenness": 0.9268817204301075,
+        "clustering": 0.0,
+        "neighbors": [
+          

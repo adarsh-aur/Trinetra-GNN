@@ -1,0 +1,3005 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "generated_at": "2025-11-14T06:54:54.579248+00:00",
+    "generated_at_ist": "2025-11-14 12:24:54 IST",
+    "compatible_with": [
+      "neo4j",
+      "gnn",
+      "d3js",
+      "cytoscape"
+    ],
+    "cloud_platform": {
+      "provider": "generic",
+      "confidence": 50,
+      "indicators": [],
+      "config": {
+        "regions": [
+          "on-premise"
+        ],
+        "network_interface": [
+          "eth0",
+          "ens3"
+        ],
+        "init_service": "systemd",
+        "adapter_full": "Generic Network Device",
+        "common_services": [
+          "systemd",
+          "sshd",
+          "NetworkManager"
+        ],
+        "common_cves": [
+          "CVE-2024-6387",
+          "CVE-2023-4911"
+        ]
+      }
+    },
+    "attack_summary": {
+      "type": "brute_force",
+      "confidence": 0.7,
+      "cluster_pattern": "No anomalies",
+      "cluster_description": "System normal"
+    },
+    "statistics": {
+      "total_nodes": 28,
+      "total_relationships": 27,
+      "anomalies_detected": 1,
+      "anomalies_confirmed": 0,
+      "zscore_threshold": 1.8,
+      "adaptive_threshold": 1.8
+    },
+    "cve_summary": {
+      "total_cves_found": 1,
+      "nodes_with_cves": 1,
+      "unique_cves": [
+        "CVE-2001-0201"
+      ],
+      "high_severity_count": 1,
+      "avg_cve_risk": 0.27,
+      "avg_behavioral_risk": 0.0,
+      "avg_combined_risk": 0.19
+    },
+    "gnn_performance": {
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "training_epochs": 50,
+      "learning_rate": 0.001
+    }
+  },
+  "nodes": [
+    {
+      "node_number": 1,
+      "id": "169.254.169.254",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 169.254.169.254",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.307,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 2,
+      "id": "110.111.159.210",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 110.111.159.210",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.271,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 3,
+      "id": "172.26.118.168",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.26.118.168",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.275,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 4,
+      "id": "56.13.147.103",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 56.13.147.103",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 5,
+      "id": "93.184.216.34",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 93.184.216.34",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 6,
+      "id": "71.165.20.222",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 71.165.20.222",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 7,
+      "id": "10.157.67.27",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 10.157.67.27",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 8,
+      "id": "172.21.79.146",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.21.79.146",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 9,
+      "id": "255.255.240.0",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 255.255.240.0",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 10,
+      "id": "172.26.237.203",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.26.237.203",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 11,
+      "id": "172.24.129.16",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.24.129.16",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 12,
+      "id": "192.168.240.65",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 192.168.240.65",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 13,
+      "id": "172.17.34.217",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.17.34.217",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 14,
+      "id": "10.80.29.114",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 10.80.29.114",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.279,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 15,
+      "id": "192.168.118.55",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 192.168.118.55",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.329,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 16,
+      "id": "172.23.76.227",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address 172.23.76.227",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.421,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 17,
+      "id": "google-startup-scripts",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process google-startup-scripts",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.347,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 18,
+      "id": "auditd",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process auditd",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.324,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 19,
+      "id": "nginx",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process nginx",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.313,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 20,
+      "id": "postgres",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process postgres",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 5.25,
+      "cve_risk": 7.5,
+      "behavioral_risk": 0.0,
+      "cve_ids": [
+        "CVE-2001-0201"
+      ],
+      "cve_count": 1,
+      "cve_details": [
+        {
+          "cve_id": "CVE-2001-0201",
+          "score": 7.5,
+          "severity": "MEDIUM",
+          "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program."
+        }
+      ],
+      "has_critical_cve": false,
+      "has_high_cve": true,
+      "is_anomaly": false,
+      "is_detected_anomaly": true,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.355,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#e67e22",
+      "size": 25.75,
+      "group": 0
+    },
+    {
+      "node_number": 21,
+      "id": "mysqld",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process mysqld",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.307,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 22,
+      "id": "kubelet",
+      "labels": [
+        "Process"
+      ],
+      "type": "process",
+      "description": "Process kubelet",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "compute",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.273,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 23,
+      "id": "ssh",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service ssh",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.3,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 24,
+      "id": "sshd",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service sshd",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.305,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 25,
+      "id": "systemd",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service systemd",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.301,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 26,
+      "id": "cloud-init",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service cloud-init",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.302,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 27,
+      "id": "kernel",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service kernel",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.29,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 28,
+      "id": "docker",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Service docker",
+      "last_seen": "2025-11-14 12:24:52 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "generic",
+      "category": "other",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.315,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel_0",
+      "type": "CONNECTION",
+      "source": "169.254.169.254",
+      "target": "110.111.159.210",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_1",
+      "type": "CONNECTION",
+      "source": "110.111.159.210",
+      "target": "172.26.118.168",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_2",
+      "type": "CONNECTION",
+      "source": "172.26.118.168",
+      "target": "56.13.147.103",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_3",
+      "type": "CONNECTION",
+      "source": "56.13.147.103",
+      "target": "93.184.216.34",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_4",
+      "type": "CONNECTION",
+      "source": "93.184.216.34",
+      "target": "71.165.20.222",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_5",
+      "type": "CONNECTION",
+      "source": "71.165.20.222",
+      "target": "10.157.67.27",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_6",
+      "type": "CONNECTION",
+      "source": "10.157.67.27",
+      "target": "172.21.79.146",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_7",
+      "type": "CONNECTION",
+      "source": "172.21.79.146",
+      "target": "255.255.240.0",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_8",
+      "type": "CONNECTION",
+      "source": "255.255.240.0",
+      "target": "172.26.237.203",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_9",
+      "type": "CONNECTION",
+      "source": "172.26.237.203",
+      "target": "172.24.129.16",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_10",
+      "type": "CONNECTION",
+      "source": "172.24.129.16",
+      "target": "192.168.240.65",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_11",
+      "type": "CONNECTION",
+      "source": "192.168.240.65",
+      "target": "172.17.34.217",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_12",
+      "type": "CONNECTION",
+      "source": "172.17.34.217",
+      "target": "10.80.29.114",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_13",
+      "type": "CONNECTION",
+      "source": "10.80.29.114",
+      "target": "192.168.118.55",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_14",
+      "type": "CONNECTION",
+      "source": "192.168.118.55",
+      "target": "172.23.76.227",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_15",
+      "type": "CONNECTION",
+      "source": "172.23.76.227",
+      "target": "google-startup-scripts",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_16",
+      "type": "CONNECTION",
+      "source": "google-startup-scripts",
+      "target": "auditd",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_17",
+      "type": "CONNECTION",
+      "source": "auditd",
+      "target": "nginx",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_18",
+      "type": "CONNECTION",
+      "source": "nginx",
+      "target": "postgres",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_19",
+      "type": "CONNECTION",
+      "source": "postgres",
+      "target": "mysqld",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_20",
+      "type": "CONNECTION",
+      "source": "mysqld",
+      "target": "kubelet",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_21",
+      "type": "CONNECTION",
+      "source": "kubelet",
+      "target": "ssh",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_22",
+      "type": "CONNECTION",
+      "source": "ssh",
+      "target": "sshd",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_23",
+      "type": "CONNECTION",
+      "source": "sshd",
+      "target": "systemd",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_24",
+      "type": "CONNECTION",
+      "source": "systemd",
+      "target": "cloud-init",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_25",
+      "type": "CONNECTION",
+      "source": "cloud-init",
+      "target": "kernel",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_26",
+      "type": "CONNECTION",
+      "source": "kernel",
+      "target": "docker",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    }
+  ],
+  "gnn_features": {
+    "node_features": [
+      {
+        "node_id": "169.254.169.254",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.307,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "110.111.159.210",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.271,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.26.118.168",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.275,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "56.13.147.103",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "93.184.216.34",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "71.165.20.222",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "10.157.67.27",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.21.79.146",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "255.255.240.0",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.26.237.203",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.24.129.16",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.240.65",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.17.34.217",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "10.80.29.114",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.279,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.118.55",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.329,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.23.76.227",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.421,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "google-startup-scripts",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.347,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "auditd",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.324,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "nginx",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.313,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "postgres",
+        "feature_vector": [
+          5.25,
+          7.5,
+          0.0,
+          1,
+          0.0,
+          1.0,
+          0.355,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "mysqld",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.307,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "kubelet",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.273,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "ssh",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.3,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "sshd",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.305,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "systemd",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.301,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "cloud-init",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.302,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "kernel",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.29,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "docker",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.315,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      }
+    ],
+    "edge_features": [
+      {
+        "edge_id": "rel_0",
+        "source": "169.254.169.254",
+        "target": "110.111.159.210",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_1",
+        "source": "110.111.159.210",
+        "target": "172.26.118.168",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_2",
+        "source": "172.26.118.168",
+        "target": "56.13.147.103",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_3",
+        "source": "56.13.147.103",
+        "target": "93.184.216.34",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_4",
+        "source": "93.184.216.34",
+        "target": "71.165.20.222",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_5",
+        "source": "71.165.20.222",
+        "target": "10.157.67.27",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_6",
+        "source": "10.157.67.27",
+        "target": "172.21.79.146",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_7",
+        "source": "172.21.79.146",
+        "target": "255.255.240.0",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_8",
+        "source": "255.255.240.0",
+        "target": "172.26.237.203",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_9",
+        "source": "172.26.237.203",
+        "target": "172.24.129.16",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_10",
+        "source": "172.24.129.16",
+        "target": "192.168.240.65",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_11",
+        "source": "192.168.240.65",
+        "target": "172.17.34.217",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_12",
+        "source": "172.17.34.217",
+        "target": "10.80.29.114",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_13",
+        "source": "10.80.29.114",
+        "target": "192.168.118.55",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_14",
+        "source": "192.168.118.55",
+        "target": "172.23.76.227",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_15",
+        "source": "172.23.76.227",
+        "target": "google-startup-scripts",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_16",
+        "source": "google-startup-scripts",
+        "target": "auditd",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_17",
+        "source": "auditd",
+        "target": "nginx",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_18",
+        "source": "nginx",
+        "target": "postgres",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_19",
+        "source": "postgres",
+        "target": "mysqld",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_20",
+        "source": "mysqld",
+        "target": "kubelet",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_21",
+        "source": "kubelet",
+        "target": "ssh",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_22",
+        "source": "ssh",
+        "target": "sshd",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_23",
+        "source": "sshd",
+        "target": "systemd",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_24",
+        "source": "systemd",
+        "target": "cloud-init",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_25",
+        "source": "cloud-init",
+        "target": "kernel",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_26",
+        "source": "kernel",
+        "target": "docker",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      }
+    ],
+    "labels": {
+      "169.254.169.254": 0,
+      "110.111.159.210": 0,
+      "172.26.118.168": 0,
+      "56.13.147.103": 0,
+      "93.184.216.34": 0,
+      "71.165.20.222": 0,
+      "10.157.67.27": 0,
+      "172.21.79.146": 0,
+      "255.255.240.0": 0,
+      "172.26.237.203": 0,
+      "172.24.129.16": 0,
+      "192.168.240.65": 0,
+      "172.17.34.217": 0,
+      "10.80.29.114": 0,
+      "192.168.118.55": 0,
+      "172.23.76.227": 0,
+      "google-startup-scripts": 0,
+      "auditd": 0,
+      "nginx": 0,
+      "postgres": 0,
+      "mysqld": 0,
+      "kubelet": 0,
+      "ssh": 0,
+      "sshd": 0,
+      "systemd": 0,
+      "cloud-init": 0,
+      "kernel": 0,
+      "docker": 0
+    }
+  },
+  "visualization": {
+    "d3_nodes": [
+      {
+        "id": 0,
+        "node_number": 1,
+        "original_id": "169.254.169.254",
+        "label": "169.254.169.254",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 1,
+        "node_number": 2,
+        "original_id": "110.111.159.210",
+        "label": "110.111.159.210",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 2,
+        "node_number": 3,
+        "original_id": "172.26.118.168",
+        "label": "172.26.118.168",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 3,
+        "node_number": 4,
+        "original_id": "56.13.147.103",
+        "label": "56.13.147.103",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 4,
+        "node_number": 5,
+        "original_id": "93.184.216.34",
+        "label": "93.184.216.34",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 5,
+        "node_number": 6,
+        "original_id": "71.165.20.222",
+        "label": "71.165.20.222",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 6,
+        "node_number": 7,
+        "original_id": "10.157.67.27",
+        "label": "10.157.67.27",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 7,
+        "node_number": 8,
+        "original_id": "172.21.79.146",
+        "label": "172.21.79.146",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 8,
+        "node_number": 9,
+        "original_id": "255.255.240.0",
+        "label": "255.255.240.0",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 9,
+        "node_number": 10,
+        "original_id": "172.26.237.203",
+        "label": "172.26.237.203",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 10,
+        "node_number": 11,
+        "original_id": "172.24.129.16",
+        "label": "172.24.129.16",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 11,
+        "node_number": 12,
+        "original_id": "192.168.240.65",
+        "label": "192.168.240.65",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 12,
+        "node_number": 13,
+        "original_id": "172.17.34.217",
+        "label": "172.17.34.217",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 13,
+        "node_number": 14,
+        "original_id": "10.80.29.114",
+        "label": "10.80.29.114",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 14,
+        "node_number": 15,
+        "original_id": "192.168.118.55",
+        "label": "192.168.118.55",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 15,
+        "node_number": 16,
+        "original_id": "172.23.76.227",
+        "label": "172.23.76.227",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 16,
+        "node_number": 17,
+        "original_id": "google-startup-scripts",
+        "label": "google-startup-scripts",
+        "type": "process",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 17,
+        "node_number": 18,
+        "original_id": "auditd",
+        "label": "auditd",
+        "type": "process",
+        "category": "compute",
+        "color": "#3498db",
+        "size": 10,
+        "group": 0,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 18,
+        "node_number": 19,
+        "original_id": "nginx",
+        "label": "nginx",
+        "type": "process",
+        "category": "compute",
+        "color": "#3498db",
+        "size": 10,
+        "group": 0,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 19,
+        "node_number": 20,
+        "original_id": "postgres",
+        "label": "postgres",
+        "type": "process",
+        "category": "compute",
+        "color": "#e67e22",
+        "size": 25.75,
+        "group": 0,
+        "risk_score": 5.25,
+        "is_anomaly": false,
+        "cve_count": 1
+      },
+      {
+        "id": 20,
+        "node_number": 21,
+        "original_id": "mysqld",
+        "label": "mysqld",
+        "type": "process",
+        "category": "compute",
+        "color": "#3498db",
+        "size": 10,
+        "group": 0,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 21,
+        "node_number": 22,
+        "original_id": "kubelet",
+        "label": "kubelet",
+        "type": "process",
+        "category": "compute",
+        "color": "#3498db",
+        "size": 10,
+        "group": 0,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 22,
+        "node_number": 23,
+        "original_id": "ssh",
+        "label": "ssh",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 23,
+        "node_number": 24,
+        "original_id": "sshd",
+        "label": "sshd",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 24,
+        "node_number": 25,
+        "original_id": "systemd",
+        "label": "systemd",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 25,
+        "node_number": 26,
+        "original_id": "cloud-init",
+        "label": "cloud-init",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 26,
+        "node_number": 27,
+        "original_id": "kernel",
+        "label": "kernel",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 27,
+        "node_number": 28,
+        "original_id": "docker",
+        "label": "docker",
+        "type": "service",
+        "category": "other",
+        "color": "#95a5a6",
+        "size": 10,
+        "group": 8,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      }
+    ],
+    "d3_links": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "CONNECTION",
+        "weight": 1.0,
+        "value": 1.0
+      }
+    ]
+  },
+  "cve_database": [
+    {
+      "cve_id": "CVE-2001-0201",
+      "score": 7.5,
+      "severity": "MEDIUM",
+      "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+      "published": "2001-03-26T05:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    }
+  ],
+  "anomalies": {
+    "detected": [
+      {
+        "id": "postgres",
+        "risk_score": 5.25,
+        "type": "process",
+        "z_score": 5.2,
+        "cve": [
+          "CVE-2001-0201"
+        ]
+      }
+    ],
+    "confirmed": []
+  }
+}

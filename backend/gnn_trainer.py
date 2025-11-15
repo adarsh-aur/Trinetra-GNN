@@ -18,9 +18,9 @@ from typing import Dict, Tuple, Optional
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# =====================================================================
+  
 # 1️⃣ ADAPTIVE GRAPH CONVOLUTION NETWORK
-# =====================================================================
+  
 class AdaptiveGCN(nn.Module):
     """
     Adaptive GCN that automatically adjusts to input dimensions
@@ -78,9 +78,9 @@ class AdaptiveGCN(nn.Module):
         return logits, embeddings
 
 
-# =====================================================================
+  
 # 2️⃣ DYNAMIC GRAPH TO TENSOR CONVERTER
-# =====================================================================
+  
 def graph_to_tensors(G: nx.Graph, verbose: bool = True) -> Tuple:
     """
     Universal converter: NetworkX Graph → PyTorch Tensors
@@ -188,9 +188,9 @@ def graph_to_tensors(G: nx.Graph, verbose: bool = True) -> Tuple:
     )
 
 
-# =====================================================================
+  
 # 3️⃣ UNIVERSAL TRAINING FUNCTION
-# =====================================================================
+  
 def train_on_examples(
     G: nx.Graph,
     labels_dict: Dict[str, int],
@@ -364,9 +364,9 @@ def train_on_examples(
     }
 
 
-# =====================================================================
+  
 # 4️⃣ TESTING WITH REAL SYSLOG DATA
-# =====================================================================
+  
 if __name__ == "__main__":
     print("="*70)
     print("🔍 Testing Universal GNN Trainer")

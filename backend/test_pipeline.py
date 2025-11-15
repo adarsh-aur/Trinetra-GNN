@@ -23,10 +23,10 @@ from pathlib import Path
 load_dotenv()
 
 # Configuration
-BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000").rstrip("/")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5003").rstrip("/")
 LOG_FILE_PATH = os.getenv(
     "LOG_FILE_PATH",
-    "D:/Final Year Project/LLM_Final_Year/LLM_final_year/multi-cloud-gnn/backend/sample_data/security_logs.log"
+    "D:/College/Final Year Project/Trinetra-GNN/backend/sample_data/syslogs2.log"
 )
 DATA_STORE_PATH = os.getenv(
     "DATA_STORE_PATH",
@@ -68,7 +68,7 @@ def check_backend_alive():
         print(f"❌ Cannot connect to {BACKEND_URL}")
         print("\n💡 Troubleshooting:")
         print("   1. Ensure Flask backend is running: python app.py")
-        print("   2. Check if port 5000 is available")
+        print("   2. Check if port 5003 is available")
         print("   3. Verify BACKEND_URL in .env file")
         return False
     except Exception as e:

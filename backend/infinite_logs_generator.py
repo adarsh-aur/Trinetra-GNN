@@ -12,9 +12,9 @@ from groq import Groq
 import os
 import string
 
-# ============================================================================
+  
 # INSTALLATION INSTRUCTIONS
-# ============================================================================
+  
 # Run this command to install required packages:
 # pip install groq
 
@@ -29,26 +29,26 @@ import string
 # export GROQ_API_KEY='your_api_key_here'
 # or set it directly in the code below
 
-# ============================================================================
+  
 # QUICK START
-# ============================================================================
+  
 # 1. Install: pip install groq
 # 2. Get API key from: https://console.groq.com
 # 3. Set API key: export GROQ_API_KEY='your_key_here'
 # 4. Run: python log_generator.py
 
-# ============================================================================
+  
 # CONFIGURATION
-# ============================================================================
+  
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "your_api_key_here")  # Replace with your Groq API key
 OUTPUT_FILE = "security_logs.log"
 GENERATION_INTERVAL = 5  # seconds between log generation
 LOGS_PER_BATCH = 3  # number of logs to generate per batch
 
-# ============================================================================
+  
 # RANDOM DATA GENERATORS
-# ============================================================================
+  
 
 def random_ip(ip_type="any"):
     """Generate random IP address"""
@@ -176,9 +176,9 @@ def random_user_agent():
     ]
     return random.choice(agents)
 
-# ============================================================================
+  
 # GROQ CLIENT INITIALIZATION
-# ============================================================================
+  
 
 try:
     client = Groq(api_key=GROQ_API_KEY)
@@ -187,9 +187,9 @@ except Exception as e:
     print("Please set GROQ_API_KEY environment variable or update the code")
     exit(1)
 
-# ============================================================================
+  
 # ATTACK SCENARIO GENERATION WITH GROQ
-# ============================================================================
+  
 
 def clean_text(text):
     """Remove problematic Unicode characters"""
@@ -279,9 +279,9 @@ Make it completely random and unique each time. Don't use common attack names. U
             "anomaly_score": round(random.uniform(0.6, 0.99), 2)
         }
 
-# ============================================================================
+  
 # LOG GENERATION
-# ============================================================================
+  
 
 def generate_benign_log(timestamp):
     """Generate a benign/normal log entry"""
@@ -386,9 +386,9 @@ def generate_malicious_log(timestamp):
 
     return log_entry
 
-# ============================================================================
+  
 # LOG FORMATTING (UDM-like format)
-# ============================================================================
+  
 
 def format_log_line(log_entry):
     """Format log entry in UDM-compatible format"""
@@ -470,9 +470,9 @@ def format_log_line(log_entry):
 
     return " ".join(log_parts)
 
-# ============================================================================
+  
 # MAIN GENERATOR
-# ============================================================================
+  
 
 def generate_and_write_logs(malicious_ratio=0.4):
     """Generate logs continuously and write to file"""
@@ -538,9 +538,9 @@ def generate_and_write_logs(malicious_ratio=0.4):
         print(f"⏱️  Runtime: {datetime.now() - start_time}")
         print(f"📁 Logs saved to: {OUTPUT_FILE}")
 
-# ============================================================================
+  
 # ENTRY POINT
-# ============================================================================
+  
 
 if __name__ == "__main__":
     print("=" * 70)

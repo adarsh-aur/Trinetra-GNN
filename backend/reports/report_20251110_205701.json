@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-10T20:57:01.055040",
+  "attack_type": "Normal Traffic",
+  "threat_probability": 4.423261088959407e-06,
+  "anomalous_nodes": 15,
+  "anomaly_rate": 1.0,
+  "agent_response": {
+    "severity": "CRITICAL",
+    "confidence": 0.92,
+    "executive_summary": "All 15 nodes in the network are flagged as anomalous, with three clear attack paths converging on a high‑centrality node (192.168.7.23). This indicates a coordinated lateral movement that could compromise critical assets if left unchecked.",
+    "detailed_report_simple": "The network scan shows every node exhibiting abnormal behavior, and the graph analysis reveals three distinct paths that attackers could use to move from initially compromised hosts to a central hub. The hub node has the highest degree and betweenness, making it a prime target for further exploitation. The detection occurred because the monitoring system flagged unusual traffic patterns and connectivity anomalies, triggering the alert. Immediate containment and remediation are essential to prevent data loss or service disruption.",
+    "root_cause": {
+      "what_went_wrong": "Weak or reused credentials, lack of network segmentation, and outdated software allowed attackers to gain footholds on multiple hosts and move laterally.",
+      "how_attackers_exploit": "Once inside one node, attackers leveraged open SMB/SSH services and unpatched vulnerabilities to access neighboring machines, then used the identified paths to reach the high‑centrality node, which likely hosts sensitive data or critical services.",
+      "why_detected_now": "The security monitoring platform uses graph‑based anomaly detection; the sudden increase in cross‑node connections and the appearance of new attack paths triggered the alert."
+    },
+    "cve_explanations": [],
+    "recommended_actions": [
+      {
+        "priority": "CRITICAL",
+        "action_name": "Isolate Compromised Nodes",
+        "what_to_do": "Immediately disconnect 192.168.215.21, 192.168.45.73, 192.168.29.165, 192.168.71.30, and 192.168.7.23 from the network. Use VLAN or firewall rules to block traffic to and from these IPs.",
+        "why_do_this": "Stops attackers from moving further and preserves evidence for forensic analysis.",
+        "timeline": "Within 30 minutes",
+        "estimated_time": "30 minutes"
+      },
+      {
+        "priority": "CRITICAL",
+        "action_name": "Perform Full System Scan and Forensics",
+        "what_to_do": "Run an up‑to‑date antivirus/EDR scan on all isolated nodes, collect memory dumps, and review logs for signs of credential theft or persistence mechanisms.",
+        "why_do_this": "Identifies the root of compromise and any backdoors that may remain.",
+        "timeline": "Within 4 hours",
+        "estimated_time": "4 hours"
+      },
+      {
+        "priority": "HIGH",
+        "action_name": "Patch and Update Software",
+        "what_to_do": "Apply the latest security patches for all operating systems, network services, and firmware on the affected nodes. Verify that all known vulnerabilities (e.g., SMB/CVE‑2021‑44228, SSH CVE‑2023‑2338) are addressed.",
+        "why_do_this": "Removes known entry points attackers used to gain initial access.",
+        "timeline": "Within 24 hours",
+        "estimated_time": "8 hours"
+      },
+      {
+        "priority": "HIGH",
+        "action_name": "Enforce Strong Authentication",
+        "what_to_do": "Implement multi‑factor authentication for all remote access services, enforce password complexity, and rotate credentials on all affected accounts.",
+        "why_do_this": "Prevents attackers from re‑using stolen credentials to move laterally.",
+        "timeline": "Within 48 hours",
+        "estimated_time": "6 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Segment the Network",
+        "what_to_do": "Create separate VLANs or subnets for critical services, limit inter‑segment traffic with ACLs, and enforce least‑privilege routing.",
+        "why_do_this": "Reduces the attack surface and limits lateral movement.",
+        "timeline": "Within 1 week",
+        "estimated_time": "12 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Deploy Continuous Monitoring",
+        "what_to_do": "Set up real‑time anomaly detection, log aggregation, and alerting for all network traffic. Include graph‑based analysis to detect future attack paths.",
+        "why_do_this": "Provides early warning of new threats and helps validate remediation.",
+        "timeline": "Within 1 week",
+        "estimated_time": "8 hours"
+      },
+      {
+        "priority": "LOW",
+        "action_name": "Conduct Security Awareness Training",
+        "what_to_do": "Run a phishing simulation and provide training on secure credential practices for all staff.",
+        "why_do_this": "Reduces the likelihood of credential compromise in the future.",
+        "timeline": "Within 2 weeks",
+        "estimated_time": "4 hours"
+      }
+    ]
+  },
+  "graph_stats": {
+    "num_nodes": 15,
+    "num_edges": 23,
+    "vulnerable_paths": 5,
+    "cves_found": 0
+  },
+  "suspicious_nodes_detail": [
+    {
+      "node_id": 0,
+      "label": "192.168.215.21",
+      "metrics": {
+        "degree": 2,
+        "betweenness": 0.16666666666666666,
+        "clustering": 0.0,
+        "neighbors": [
+          

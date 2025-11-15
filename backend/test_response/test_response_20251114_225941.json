@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schema_version": "2.0.0",
-    "generated_at": "2025-11-14T17:41:01.499386+00:00",
-    "generated_at_ist": "2025-11-14 23:11:01 IST",
+    "generated_at": "2025-11-14T17:29:41.392809+00:00",
+    "generated_at_ist": "2025-11-14 22:59:41 IST",
     "compatible_with": [
       "neo4j",
       "gnn",
@@ -18,8 +18,7 @@
         "instance-7672257.us-east1.c.project-499132.internal",
         "instance-3309038.us-east1.c.project-895329.internal",
         "169.254.169.254",
-        "ens4",
-        "google-osconfig-agent"
+        "Network interface ens4 initialized on GCP"
       ],
       "config": {
         "regions": [
@@ -44,42 +43,44 @@
       }
     },
     "attack_summary": {
-      "type": "malicious",
+      "type": "malicious_activity",
       "confidence": 0.9,
-      "cluster_pattern": "Privilege Escalation and Lateral Movement",
-      "cluster_description": "The attack pattern indicates a sophisticated threat actor attempting to escalate privileges and move laterally within the network, exploiting vulnerabilities in PostgreSQL, MySQL, and Docker. The threat actor is using suspicious processes and network activity to achieve their goals. The presence of a malicious kernel module and unauthorized access attempts suggests a high level of sophistication."
+      "cluster_pattern": "Privilege Escalation/Unauthorized Access",
+      "cluster_description": "The attack pattern indicates a privilege escalation and unauthorized access attempt, with multiple services and IP addresses involved, suggesting a potential multi-stage attack. The threat actors may be exploiting vulnerabilities in services like postgres and mysqld to gain elevated privileges. The presence of suspicious kernel module loading and unusual systemd behavior further supports this assessment."
     },
     "statistics": {
-      "total_nodes": 37,
-      "total_relationships": 29,
-      "anomalies_detected": 6,
-      "anomalies_confirmed": 4,
+      "total_nodes": 33,
+      "total_relationships": 22,
+      "anomalies_detected": 5,
+      "anomalies_confirmed": 5,
       "zscore_threshold": 1.8,
       "adaptive_threshold": 1.8
     },
     "cve_summary": {
-      "total_cves_found": 21,
+      "total_cves_found": 22,
       "nodes_with_cves": 7,
       "unique_cves": [
-        "CVE-2009-2629",
-        "CVE-1999-0661",
         "CVE-2014-3499",
-        "CVE-2000-0525",
-        "CVE-2001-0201",
+        "CVE-1999-1253",
         "CVE-1999-0297",
+        "CVE-2001-0201",
+        "CVE-2000-0707",
+        "CVE-2000-0525",
+        "CVE-2002-1358",
         "CVE-1999-0340",
-        "CVE-2000-0707"
+        "CVE-2002-1357",
+        "CVE-1999-0661"
       ],
-      "high_severity_count": 0,
-      "avg_cve_risk": 1.62,
+      "high_severity_count": 8,
+      "avg_cve_risk": 1.89,
       "avg_behavioral_risk": 0.0,
-      "avg_combined_risk": 1.13
+      "avg_combined_risk": 1.32
     },
     "gnn_performance": {
-      "accuracy": 0.9459459459459459,
-      "precision": 0.6666666666666666,
+      "accuracy": 0.9375,
+      "precision": 0.7142857142857143,
       "recall": 1.0,
-      "f1_score": 0.8,
+      "f1_score": 0.8333333333333334,
       "training_epochs": 50,
       "learning_rate": 0.001
     }
@@ -93,7 +94,7 @@
       ],
       "type": "ip",
       "description": "Source IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "network",
@@ -110,7 +111,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.196,
+      "anomaly_probability": 0.23,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -130,7 +131,7 @@
       ],
       "type": "ip",
       "description": "Destination IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "network",
@@ -147,7 +148,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.196,
+      "anomaly_probability": 0.23,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -163,15 +164,15 @@
       "node_number": 3,
       "id": "iptables",
       "labels": [
-        "Process"
+        "Service"
       ],
-      "type": "process",
-      "description": "Firewall process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "service",
+      "description": "Firewall service",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "security",
-      "categorization_reasoning": "firewall process",
+      "categorization_reasoning": "firewall service",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -184,7 +185,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.174,
+      "anomaly_probability": 0.198,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -204,7 +205,7 @@
       ],
       "type": "process",
       "description": "Google startup scripts process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "compute",
@@ -221,7 +222,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.321,
+      "anomaly_probability": 0.249,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -237,15 +238,15 @@
       "node_number": 5,
       "id": "nginx",
       "labels": [
-        "Process"
+        "Service"
       ],
-      "type": "process",
-      "description": "Nginx web server process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "service",
+      "description": "Web server service",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "compute",
-      "categorization_reasoning": "web server process",
+      "categorization_reasoning": "web server service",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -258,7 +259,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
+      "anomaly_probability": 0.383,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -272,117 +273,13 @@
     },
     {
       "node_number": 6,
-      "id": "mysqld",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "MySQL database process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "database",
-      "categorization_reasoning": "database process",
-      "categorization_method": "llm",
-      "risk_score": 6.26,
-      "cve_risk": 8.94,
-      "behavioral_risk": 0.0,
-      "cve_ids": [
-        "CVE-1999-0661",
-        "CVE-2000-0707",
-        "CVE-2014-3499",
-        "CVE-2000-0525"
-      ],
-      "cve_count": 4,
-      "cve_details": [
-        {
-          "cve_id": "CVE-1999-0661",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
-        },
-        {
-          "cve_id": "CVE-2000-0707",
-          "score": 7.5,
-          "severity": "MEDIUM",
-          "description": "PCCS MySQLDatabase Admin Tool Manager 1.2.4 and earlier installs the file dbconnect.inc within the web root, which allows remote attackers to obtain sensitive information such as the administrative pa"
-        },
-        {
-          "cve_id": "CVE-2014-3499",
-          "score": 7.2,
-          "severity": "MEDIUM",
-          "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors."
-        },
-        {
-          "cve_id": "CVE-2000-0525",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
-        }
-      ],
-      "has_critical_cve": true,
-      "has_high_cve": true,
-      "is_anomaly": true,
-      "is_detected_anomaly": true,
-      "is_confirmed_anomaly": true,
-      "anomaly_probability": 0.606,
-      "anomaly_confidence": "low",
-      "anomaly_threat_type": "unauthorized_access",
-      "anomaly_reason": "Unauthorized access attempt from unknown IP detected",
-      "anomaly_severity": "low",
-      "enhanced_anomaly_score": 5.34,
-      "gnn_predicted_label": 1,
-      "gnn_actual_label": 1,
-      "color": "#c0392b",
-      "size": 48.78,
-      "group": 3
-    },
-    {
-      "node_number": 7,
-      "id": "kubelet",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "Kubernetes process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "container orchestration process",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.234,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#3498db",
-      "size": 10,
-      "group": 0
-    },
-    {
-      "node_number": 8,
       "id": "ec2-user",
       "labels": [
         "User"
       ],
       "type": "user",
       "description": "EC2 user",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "identity",
@@ -399,7 +296,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.243,
+      "anomaly_probability": 0.419,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -412,14 +309,14 @@
       "group": 5
     },
     {
-      "node_number": 9,
+      "node_number": 7,
       "id": "169.254.169.254",
       "labels": [
         "Ip"
       ],
       "type": "ip",
       "description": "Metadata service IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "network",
@@ -436,7 +333,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.243,
+      "anomaly_probability": 0.249,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -449,388 +346,293 @@
       "group": 1
     },
     {
-      "node_number": 10,
-      "id": "93.184.216.34",
+      "node_number": 8,
+      "id": "kubelet",
       "labels": [
-        "Ip"
+        "Service"
       ],
-      "type": "ip",
-      "description": "Suspicious IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.234,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 11,
-      "id": "56.13.147.103",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Unauthorized access attempt IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.382,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 12,
-      "id": "71.165.20.222",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Blocked connection attempt IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.382,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 13,
-      "id": "172.26.237.203",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Public key connection IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.261,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 14,
-      "id": "192.168.4.242",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Public key connection IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.382,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 15,
-      "id": "172.18.197.40",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Public key connection IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.261,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 16,
-      "id": "172.29.40.223",
-      "labels": [
-        "Ip"
-      ],
-      "type": "ip",
-      "description": "Public key connection IP address",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "network",
-      "categorization_reasoning": "ip address",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.261,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#2ecc71",
-      "size": 10,
-      "group": 1
-    },
-    {
-      "node_number": 17,
-      "id": "eth0",
-      "labels": [
-        "Hardware"
-      ],
-      "type": "hardware",
-      "description": "Network interface",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "hardware",
-      "categorization_reasoning": "network interface",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.329,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#34495e",
-      "size": 10,
-      "group": 6
-    },
-    {
-      "node_number": 18,
-      "id": "ens4",
-      "labels": [
-        "Hardware"
-      ],
-      "type": "hardware",
-      "description": "Network interface",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "hardware",
-      "categorization_reasoning": "network interface",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.329,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#34495e",
-      "size": 10,
-      "group": 6
-    },
-    {
-      "node_number": 19,
-      "id": "evil_mod",
-      "labels": [
-        "Module"
-      ],
-      "type": "module",
-      "description": "Suspicious kernel module",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "other",
-      "categorization_reasoning": "unknown module",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.253,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#95a5a6",
-      "size": 10,
-      "group": 8
-    },
-    {
-      "node_number": 20,
-      "id": "containerd",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "Container runtime process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "service",
+      "description": "Kubernetes service",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "compute",
-      "categorization_reasoning": "container runtime process",
+      "categorization_reasoning": "container orchestration service",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.233,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 9,
+      "id": "apache2",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Web server service",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "compute",
+      "categorization_reasoning": "web server service",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.256,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#3498db",
+      "size": 10,
+      "group": 0
+    },
+    {
+      "node_number": 10,
+      "id": "mysqld",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Database service",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "database",
+      "categorization_reasoning": "database service",
+      "categorization_method": "llm",
+      "risk_score": 6.26,
+      "cve_risk": 8.94,
+      "behavioral_risk": 0.0,
+      "cve_ids": [
+        "CVE-2014-3499",
+        "CVE-2000-0707",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ],
+      "cve_count": 4,
+      "cve_details": [
+        {
+          "cve_id": "CVE-2014-3499",
+          "score": 7.2,
+          "severity": "MEDIUM",
+          "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors."
+        },
+        {
+          "cve_id": "CVE-2000-0707",
+          "score": 7.5,
+          "severity": "MEDIUM",
+          "description": "PCCS MySQLDatabase Admin Tool Manager 1.2.4 and earlier installs the file dbconnect.inc within the web root, which allows remote attackers to obtain sensitive information such as the administrative pa"
+        },
+        {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
+        },
+        {
+          "cve_id": "CVE-2000-0525",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
+        }
+      ],
+      "has_critical_cve": true,
+      "has_high_cve": true,
+      "is_anomaly": true,
+      "is_detected_anomaly": true,
+      "is_confirmed_anomaly": true,
+      "anomaly_probability": 0.623,
+      "anomaly_confidence": "medium",
+      "anomaly_threat_type": "unauthorized_access",
+      "anomaly_reason": "Detected unauthorized access attempt",
+      "anomaly_severity": "medium",
+      "enhanced_anomaly_score": 5.61,
+      "gnn_predicted_label": 1,
+      "gnn_actual_label": 1,
+      "color": "#c0392b",
+      "size": 48.78,
+      "group": 3
+    },
+    {
+      "node_number": 11,
+      "id": "postgres",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Database service",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "database",
+      "categorization_reasoning": "database service",
+      "categorization_method": "llm",
+      "risk_score": 6.26,
+      "cve_risk": 8.94,
+      "behavioral_risk": 0.0,
+      "cve_ids": [
+        "CVE-1999-1253",
+        "CVE-2001-0201",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ],
+      "cve_count": 4,
+      "cve_details": [
+        {
+          "cve_id": "CVE-1999-1253",
+          "score": 7.2,
+          "severity": "MEDIUM",
+          "description": "Vulnerability in a kernel error handling routine in SCO OpenServer 5.0.2 and earlier, and SCO Internet FastStart 1.0, allows local users to gain root privileges."
+        },
+        {
+          "cve_id": "CVE-2001-0201",
+          "score": 7.5,
+          "severity": "MEDIUM",
+          "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program."
+        },
+        {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
+        },
+        {
+          "cve_id": "CVE-2000-0525",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
+        }
+      ],
+      "has_critical_cve": true,
+      "has_high_cve": true,
+      "is_anomaly": true,
+      "is_detected_anomaly": true,
+      "is_confirmed_anomaly": true,
+      "anomaly_probability": 0.643,
+      "anomaly_confidence": "high",
+      "anomaly_threat_type": "privilege_escalation",
+      "anomaly_reason": "Detected loading of malicious kernel module via root exploit and dropping of backdoor process",
+      "anomaly_severity": "high",
+      "enhanced_anomaly_score": 6.61,
+      "gnn_predicted_label": 1,
+      "gnn_actual_label": 1,
+      "color": "#c0392b",
+      "size": 48.78,
+      "group": 3
+    },
+    {
+      "node_number": 12,
+      "id": "cron",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Scheduling service",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "compute",
+      "categorization_reasoning": "job scheduling service",
+      "categorization_method": "llm",
+      "risk_score": 5.91,
+      "cve_risk": 8.44,
+      "behavioral_risk": 0.0,
+      "cve_ids": [
+        "CVE-1999-0297",
+        "CVE-1999-0340",
+        "CVE-1999-0661",
+        "CVE-2000-0525"
+      ],
+      "cve_count": 4,
+      "cve_details": [
+        {
+          "cve_id": "CVE-1999-0297",
+          "score": 7.2,
+          "severity": "MEDIUM",
+          "description": "Buffer overflow in Vixie Cron library up to version 3.0 allows local users to obtain root access via a long environmental variable."
+        },
+        {
+          "cve_id": "CVE-1999-0340",
+          "score": 5.0,
+          "severity": "MEDIUM",
+          "description": "Score unavailable from NVD"
+        },
+        {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
+        },
+        {
+          "cve_id": "CVE-2000-0525",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
+        }
+      ],
+      "has_critical_cve": true,
+      "has_high_cve": true,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.793,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 1,
+      "gnn_actual_label": 0,
+      "color": "#e67e22",
+      "size": 27.73,
+      "group": 0
+    },
+    {
+      "node_number": 13,
+      "id": "containerd",
+      "labels": [
+        "Service"
+      ],
+      "type": "service",
+      "description": "Container runtime service",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "compute",
+      "categorization_reasoning": "container runtime service",
       "categorization_method": "llm",
       "risk_score": 7.0,
       "cve_risk": 10.0,
@@ -859,12 +661,12 @@
       "is_anomaly": true,
       "is_detected_anomaly": true,
       "is_confirmed_anomaly": true,
-      "anomaly_probability": 0.916,
-      "anomaly_confidence": "medium",
-      "anomaly_threat_type": "suspicious_process_execution",
-      "anomaly_reason": "Unauthorized containerd execution detected",
-      "anomaly_severity": "medium",
-      "enhanced_anomaly_score": 5.98,
+      "anomaly_probability": 0.885,
+      "anomaly_confidence": "high",
+      "anomaly_threat_type": "unauthorized_execution",
+      "anomaly_reason": "Detected unauthorized containerd execution",
+      "anomaly_severity": "high",
+      "enhanced_anomaly_score": 6.72,
       "gnn_predicted_label": 1,
       "gnn_actual_label": 1,
       "color": "#c0392b",
@@ -872,236 +674,29 @@
       "group": 0
     },
     {
-      "node_number": 21,
-      "id": "apache2",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "Apache web server process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "web server process",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.261,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#3498db",
-      "size": 10,
-      "group": 0
-    },
-    {
-      "node_number": 22,
-      "id": "postgres",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "PostgreSQL database process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "database",
-      "categorization_reasoning": "database process",
-      "categorization_method": "llm",
-      "risk_score": 6.12,
-      "cve_risk": 8.75,
-      "behavioral_risk": 0.0,
-      "cve_ids": [
-        "CVE-1999-0661",
-        "CVE-2000-0525",
-        "CVE-2001-0201"
-      ],
-      "cve_count": 3,
-      "cve_details": [
-        {
-          "cve_id": "CVE-1999-0661",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
-        },
-        {
-          "cve_id": "CVE-2000-0525",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
-        },
-        {
-          "cve_id": "CVE-2001-0201",
-          "score": 5.0,
-          "severity": "MEDIUM",
-          "description": "Score unavailable from NVD"
-        }
-      ],
-      "has_critical_cve": true,
-      "has_high_cve": true,
-      "is_anomaly": true,
-      "is_detected_anomaly": true,
-      "is_confirmed_anomaly": true,
-      "anomaly_probability": 0.566,
-      "anomaly_confidence": "high",
-      "anomaly_threat_type": "privilege_escalation",
-      "anomaly_reason": "Detected privilege escalation through loading a malicious kernel module via a root exploit and then dropping a backdoor process",
-      "anomaly_severity": "high",
-      "enhanced_anomaly_score": 6.54,
-      "gnn_predicted_label": 1,
-      "gnn_actual_label": 1,
-      "color": "#c0392b",
-      "size": 48.36,
-      "group": 3
-    },
-    {
-      "node_number": 23,
-      "id": "systemd",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "Systemd process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "system init process",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#3498db",
-      "size": 10,
-      "group": 0
-    },
-    {
-      "node_number": 24,
-      "id": "cron",
-      "labels": [
-        "Process"
-      ],
-      "type": "process",
-      "description": "Cron process",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "monitoring",
-      "categorization_reasoning": "job scheduling process",
-      "categorization_method": "llm",
-      "risk_score": 5.6,
-      "cve_risk": 8.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [
-        "CVE-1999-0297",
-        "CVE-1999-0340",
-        "CVE-1999-0661",
-        "CVE-2000-0525"
-      ],
-      "cve_count": 4,
-      "cve_details": [
-        {
-          "cve_id": "CVE-1999-0297",
-          "score": 5.0,
-          "severity": "MEDIUM",
-          "description": "Score unavailable from NVD"
-        },
-        {
-          "cve_id": "CVE-1999-0340",
-          "score": 5.0,
-          "severity": "MEDIUM",
-          "description": "Score unavailable from NVD"
-        },
-        {
-          "cve_id": "CVE-1999-0661",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
-        },
-        {
-          "cve_id": "CVE-2000-0525",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
-        }
-      ],
-      "has_critical_cve": true,
-      "has_high_cve": true,
-      "is_anomaly": false,
-      "is_detected_anomaly": true,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.534,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 1,
-      "gnn_actual_label": 0,
-      "color": "#e67e22",
-      "size": 26.799999999999997,
-      "group": 7
-    },
-    {
-      "node_number": 25,
+      "node_number": 14,
       "id": "docker",
       "labels": [
-        "Process"
+        "Service"
       ],
-      "type": "process",
-      "description": "Docker process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "service",
+      "description": "Containerization service",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "compute",
-      "categorization_reasoning": "container runtime process",
+      "categorization_reasoning": "container runtime service",
       "categorization_method": "llm",
       "risk_score": 6.51,
       "cve_risk": 9.3,
       "behavioral_risk": 0.0,
       "cve_ids": [
-        "CVE-1999-0661",
         "CVE-2014-3499",
+        "CVE-1999-0661",
         "CVE-2000-0525"
       ],
       "cve_count": 3,
       "cve_details": [
-        {
-          "cve_id": "CVE-1999-0661",
-          "score": 10.0,
-          "severity": "MEDIUM",
-          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
-        },
         {
           "cve_id": "CVE-2014-3499",
           "score": 7.2,
@@ -1109,6 +704,12 @@
           "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors."
         },
         {
+          "cve_id": "CVE-1999-0661",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an"
+        },
+        {
           "cve_id": "CVE-2000-0525",
           "score": 10.0,
           "severity": "MEDIUM",
@@ -1120,12 +721,12 @@
       "is_anomaly": true,
       "is_detected_anomaly": true,
       "is_confirmed_anomaly": true,
-      "anomaly_probability": 0.894,
-      "anomaly_confidence": "medium",
-      "anomaly_threat_type": "suspicious_network_activity",
-      "anomaly_reason": "Multiple connections to unusual ports detected",
-      "anomaly_severity": "medium",
-      "enhanced_anomaly_score": 5.82,
+      "anomaly_probability": 0.868,
+      "anomaly_confidence": "low",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "No clear indication of malicious activity",
+      "anomaly_severity": "low",
+      "enhanced_anomaly_score": 5.09,
       "gnn_predicted_label": 1,
       "gnn_actual_label": 1,
       "color": "#c0392b",
@@ -1133,31 +734,300 @@
       "group": 0
     },
     {
-      "node_number": 26,
-      "id": "firewalld",
+      "node_number": 15,
+      "id": "sshd",
       "labels": [
-        "Process"
+        "Service"
       ],
-      "type": "process",
-      "description": "Firewalld process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "service",
+      "description": "SSH service",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
       "category": "security",
-      "categorization_reasoning": "firewall process",
+      "categorization_reasoning": "secure shell service",
       "categorization_method": "llm",
-      "risk_score": 6.12,
-      "cve_risk": 8.75,
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.383,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#e74c3c",
+      "size": 10,
+      "group": 4
+    },
+    {
+      "node_number": 16,
+      "id": "evil_mod",
+      "labels": [
+        "Module"
+      ],
+      "type": "module",
+      "description": "Suspicious kernel module",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "other",
+      "categorization_reasoning": "unknown module",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.281,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#95a5a6",
+      "size": 10,
+      "group": 8
+    },
+    {
+      "node_number": 17,
+      "id": "ens4",
+      "labels": [
+        "Hardware"
+      ],
+      "type": "hardware",
+      "description": "Network interface",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "hardware",
+      "categorization_reasoning": "network interface",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.219,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#34495e",
+      "size": 10,
+      "group": 6
+    },
+    {
+      "node_number": 18,
+      "id": "eth0",
+      "labels": [
+        "Hardware"
+      ],
+      "type": "hardware",
+      "description": "Network interface",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "hardware",
+      "categorization_reasoning": "network interface",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.219,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#34495e",
+      "size": 10,
+      "group": 6
+    },
+    {
+      "node_number": 19,
+      "id": "93.184.216.34",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "Malicious IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.281,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 20,
+      "id": "71.165.20.222",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "Malicious IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.449,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 21,
+      "id": "56.13.147.103",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "Malicious IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 5.25,
+      "cve_risk": 7.5,
       "behavioral_risk": 0.0,
       "cve_ids": [
-        "CVE-2009-2629",
-        "CVE-1999-0661",
-        "CVE-2000-0525"
+        "CVE-2000-0707"
       ],
-      "cve_count": 3,
+      "cve_count": 1,
       "cve_details": [
         {
-          "cve_id": "CVE-2009-2629",
+          "cve_id": "CVE-2000-0707",
+          "score": 7.5,
+          "severity": "MEDIUM",
+          "description": "PCCS MySQLDatabase Admin Tool Manager 1.2.4 and earlier installs the file dbconnect.inc within the web root, which allows remote attackers to obtain sensitive information such as the administrative pa"
+        }
+      ],
+      "has_critical_cve": false,
+      "has_high_cve": true,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.599,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 1,
+      "gnn_actual_label": 0,
+      "color": "#e67e22",
+      "size": 25.75,
+      "group": 1
+    },
+    {
+      "node_number": 22,
+      "id": "211.55.190.32",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "Malicious IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 6.36,
+      "cve_risk": 9.09,
+      "behavioral_risk": 0.0,
+      "cve_ids": [
+        "CVE-2002-1357",
+        "CVE-1999-0661",
+        "CVE-2000-0525",
+        "CVE-2002-1358"
+      ],
+      "cve_count": 4,
+      "cve_details": [
+        {
+          "cve_id": "CVE-2002-1357",
           "score": 5.0,
           "severity": "MEDIUM",
           "description": "Score unavailable from NVD"
@@ -1173,39 +1043,193 @@
           "score": 10.0,
           "severity": "MEDIUM",
           "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon."
+        },
+        {
+          "cve_id": "CVE-2002-1358",
+          "score": 10.0,
+          "severity": "MEDIUM",
+          "description": "Multiple SSH2 servers and clients do not properly handle lists with empty elements or strings, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code, as demo"
         }
       ],
       "has_critical_cve": true,
       "has_high_cve": true,
-      "is_anomaly": false,
+      "is_anomaly": true,
       "is_detected_anomaly": true,
+      "is_confirmed_anomaly": true,
+      "anomaly_probability": 0.793,
+      "anomaly_confidence": "low",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "No clear indication of malicious activity from this IP",
+      "anomaly_severity": "low",
+      "enhanced_anomaly_score": 5.18,
+      "gnn_predicted_label": 1,
+      "gnn_actual_label": 1,
+      "color": "#c0392b",
+      "size": 49.08,
+      "group": 1
+    },
+    {
+      "node_number": 23,
+      "id": "172.26.237.203",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.566,
+      "anomaly_probability": 0.248,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
       "anomaly_severity": "none",
       "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 1,
+      "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#e67e22",
-      "size": 28.36,
-      "group": 4
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 24,
+      "id": "192.168.4.242",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.449,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 25,
+      "id": "172.18.197.40",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.248,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
+    },
+    {
+      "node_number": 26,
+      "id": "172.29.40.223",
+      "labels": [
+        "Ip"
+      ],
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
+      "last_seen_ist": null,
+      "cloud_platform": "gcp",
+      "category": "network",
+      "categorization_reasoning": "ip address",
+      "categorization_method": "llm",
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
+      "has_critical_cve": false,
+      "has_high_cve": false,
+      "is_anomaly": false,
+      "is_detected_anomaly": false,
+      "is_confirmed_anomaly": false,
+      "anomaly_probability": 0.248,
+      "anomaly_confidence": "none",
+      "anomaly_threat_type": "none",
+      "anomaly_reason": "N/A",
+      "anomaly_severity": "none",
+      "enhanced_anomaly_score": 0.0,
+      "gnn_predicted_label": 0,
+      "gnn_actual_label": 0,
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
     },
     {
       "node_number": 27,
-      "id": "rsyslog",
+      "id": "192.168.125.27",
       "labels": [
-        "Process"
+        "Ip"
       ],
-      "type": "process",
-      "description": "Rsyslog process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "monitoring",
-      "categorization_reasoning": "system logging process",
-      "categorization_method": "llm",
+      "category": "network",
+      "categorization_reasoning": "Fallback rule-based",
+      "categorization_method": "fallback",
       "risk_score": 0.0,
       "cve_risk": 0.0,
       "behavioral_risk": 0.0,
@@ -1217,7 +1241,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1225,23 +1249,23 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#1abc9c",
+      "color": "#2ecc71",
       "size": 10,
-      "group": 7
+      "group": 1
     },
     {
       "node_number": 28,
-      "id": "google-osconfig-agent",
+      "id": "172.22.37.249",
       "labels": [
-        "Process"
+        "Ip"
       ],
-      "type": "process",
-      "description": "Google OS Config Agent process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "compute",
-      "categorization_reasoning": "os configuration agent process",
+      "category": "network",
+      "categorization_reasoning": "ip address",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -1254,7 +1278,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1262,52 +1286,36 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#3498db",
+      "color": "#2ecc71",
       "size": 10,
-      "group": 0
+      "group": 1
     },
     {
       "node_number": 29,
-      "id": "chronyd",
+      "id": "10.80.77.121",
       "labels": [
-        "Process"
+        "Ip"
       ],
-      "type": "process",
-      "description": "Chronyd process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "monitoring",
-      "categorization_reasoning": "time synchronization process",
+      "category": "network",
+      "categorization_reasoning": "ip address",
       "categorization_method": "llm",
-      "risk_score": 4.27,
-      "cve_risk": 6.1,
+      "risk_score": 0.0,
+      "cve_risk": 0.0,
       "behavioral_risk": 0.0,
-      "cve_ids": [
-        "CVE-2009-2629",
-        "CVE-2014-3499"
-      ],
-      "cve_count": 2,
-      "cve_details": [
-        {
-          "cve_id": "CVE-2009-2629",
-          "score": 5.0,
-          "severity": "MEDIUM",
-          "description": "Score unavailable from NVD"
-        },
-        {
-          "cve_id": "CVE-2014-3499",
-          "score": 7.2,
-          "severity": "MEDIUM",
-          "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors."
-        }
-      ],
+      "cve_ids": [],
+      "cve_count": 0,
+      "cve_details": [],
       "has_critical_cve": false,
-      "has_high_cve": true,
+      "has_high_cve": false,
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.45,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1315,23 +1323,23 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#e67e22",
-      "size": 22.81,
-      "group": 7
+      "color": "#2ecc71",
+      "size": 10,
+      "group": 1
     },
     {
       "node_number": 30,
-      "id": "sshd",
+      "id": "172.27.54.7",
       "labels": [
-        "Process"
+        "Ip"
       ],
-      "type": "process",
-      "description": "SSH daemon process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "security",
-      "categorization_reasoning": "secure shell process",
+      "category": "network",
+      "categorization_reasoning": "ip address",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -1344,7 +1352,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1352,23 +1360,23 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#e74c3c",
+      "color": "#2ecc71",
       "size": 10,
-      "group": 4
+      "group": 1
     },
     {
       "node_number": 31,
-      "id": "crond",
+      "id": "192.168.144.103",
       "labels": [
-        "Process"
+        "Ip"
       ],
-      "type": "process",
-      "description": "Cron daemon process",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "monitoring",
-      "categorization_reasoning": "job scheduling process",
+      "category": "network",
+      "categorization_reasoning": "ip address",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -1381,7 +1389,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.318,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1389,23 +1397,23 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#1abc9c",
+      "color": "#2ecc71",
       "size": 10,
-      "group": 7
+      "group": 1
     },
     {
       "node_number": 32,
-      "id": "overlay",
+      "id": "192.168.51.201",
       "labels": [
-        "Module"
+        "Ip"
       ],
-      "type": "module",
-      "description": "Overlay filesystem module",
-      "last_seen": "2025-11-14 23:11:01 IST",
+      "type": "ip",
+      "description": "IP address",
+      "last_seen": "2025-11-14 22:59:38 IST",
       "last_seen_ist": null,
       "cloud_platform": "gcp",
-      "category": "other",
-      "categorization_reasoning": "unknown module",
+      "category": "network",
+      "categorization_reasoning": "ip address",
       "categorization_method": "llm",
       "risk_score": 0.0,
       "cve_risk": 0.0,
@@ -1418,7 +1426,7 @@
       "is_anomaly": false,
       "is_detected_anomaly": false,
       "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.253,
+      "anomaly_probability": 0.265,
       "anomaly_confidence": "none",
       "anomaly_threat_type": "none",
       "anomaly_reason": "N/A",
@@ -1426,194 +1434,9 @@
       "enhanced_anomaly_score": 0.0,
       "gnn_predicted_label": 0,
       "gnn_actual_label": 0,
-      "color": "#95a5a6",
+      "color": "#2ecc71",
       "size": 10,
-      "group": 8
-    },
-    {
-      "node_number": 33,
-      "id": "loop",
-      "labels": [
-        "Module"
-      ],
-      "type": "module",
-      "description": "Loop device module",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "other",
-      "categorization_reasoning": "unknown module",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.253,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#95a5a6",
-      "size": 10,
-      "group": 8
-    },
-    {
-      "node_number": 34,
-      "id": "nvme0n1",
-      "labels": [
-        "Hardware"
-      ],
-      "type": "hardware",
-      "description": "NVMe device",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "hardware",
-      "categorization_reasoning": "storage device",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.329,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#34495e",
-      "size": 10,
-      "group": 6
-    },
-    {
-      "node_number": 35,
-      "id": "sda1",
-      "labels": [
-        "Hardware"
-      ],
-      "type": "hardware",
-      "description": "Block device",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "hardware",
-      "categorization_reasoning": "storage device",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.329,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#34495e",
-      "size": 10,
-      "group": 6
-    },
-    {
-      "node_number": 36,
-      "id": "ed25519",
-      "labels": [
-        "Key"
-      ],
-      "type": "key",
-      "description": "Ed25519 key",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "security",
-      "categorization_reasoning": "encryption key",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.253,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#e74c3c",
-      "size": 10,
-      "group": 4
-    },
-    {
-      "node_number": 37,
-      "id": "ssh_host_ed25519_key",
-      "labels": [
-        "Key"
-      ],
-      "type": "key",
-      "description": "SSH host Ed25519 key",
-      "last_seen": "2025-11-14 23:11:01 IST",
-      "last_seen_ist": null,
-      "cloud_platform": "gcp",
-      "category": "security",
-      "categorization_reasoning": "ssh host key",
-      "categorization_method": "llm",
-      "risk_score": 0.0,
-      "cve_risk": 0.0,
-      "behavioral_risk": 0.0,
-      "cve_ids": [],
-      "cve_count": 0,
-      "cve_details": [],
-      "has_critical_cve": false,
-      "has_high_cve": false,
-      "is_anomaly": false,
-      "is_detected_anomaly": false,
-      "is_confirmed_anomaly": false,
-      "anomaly_probability": 0.351,
-      "anomaly_confidence": "none",
-      "anomaly_threat_type": "none",
-      "anomaly_reason": "N/A",
-      "anomaly_severity": "none",
-      "enhanced_anomaly_score": 0.0,
-      "gnn_predicted_label": 0,
-      "gnn_actual_label": 0,
-      "color": "#e74c3c",
-      "size": 10,
-      "group": 4
+      "group": 1
     }
   ],
   "relationships": [
@@ -1628,51 +1451,78 @@
     },
     {
       "id": "rel_1",
-      "type": "CONNECTION",
-      "source": "google-startup-scripts",
+      "type": "AUTHENTICATION",
+      "source": "ec2-user",
       "target": "nginx",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "authentication"
     },
     {
       "id": "rel_2",
-      "type": "CONNECTION",
-      "source": "google-startup-scripts",
-      "target": "mysqld",
+      "type": "AUTHENTICATION",
+      "source": "ec2-user",
+      "target": "apache2",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "authentication"
     },
     {
       "id": "rel_3",
-      "type": "CONNECTION",
-      "source": "kubelet",
-      "target": "93.184.216.34",
+      "type": "AUTHENTICATION",
+      "source": "ec2-user",
+      "target": "mysqld",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "authentication"
     },
     {
       "id": "rel_4",
-      "type": "CONNECTION",
+      "type": "AUTHENTICATION",
       "source": "ec2-user",
-      "target": "169.254.169.254",
+      "target": "postgres",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "authentication"
     },
     {
       "id": "rel_5",
       "type": "CONNECTION",
-      "source": "56.13.147.103",
-      "target": "mysqld",
+      "source": "169.254.169.254",
+      "target": "google-startup-scripts",
       "weight": 1.0,
       "count": 1,
       "connection_type": "connection"
     },
     {
       "id": "rel_6",
+      "type": "LOADING",
+      "source": "kubelet",
+      "target": "evil_mod",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "loading"
+    },
+    {
+      "id": "rel_7",
+      "type": "AUTHENTICATION",
+      "source": "sshd",
+      "target": "ec2-user",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "authentication"
+    },
+    {
+      "id": "rel_8",
+      "type": "CONNECTION",
+      "source": "93.184.216.34",
+      "target": "kubelet",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_9",
       "type": "CONNECTION",
       "source": "71.165.20.222",
       "target": "mysqld",
@@ -1681,7 +1531,25 @@
       "connection_type": "connection"
     },
     {
-      "id": "rel_7",
+      "id": "rel_10",
+      "type": "CONNECTION",
+      "source": "56.13.147.103",
+      "target": "mysqld",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_11",
+      "type": "CONNECTION",
+      "source": "211.55.190.32",
+      "target": "cron",
+      "weight": 1.0,
+      "count": 1,
+      "connection_type": "connection"
+    },
+    {
+      "id": "rel_12",
       "type": "CONNECTION",
       "source": "172.26.237.203",
       "target": "apache2",
@@ -1690,7 +1558,7 @@
       "connection_type": "connection"
     },
     {
-      "id": "rel_8",
+      "id": "rel_13",
       "type": "CONNECTION",
       "source": "192.168.4.242",
       "target": "mysqld",
@@ -1699,7 +1567,7 @@
       "connection_type": "connection"
     },
     {
-      "id": "rel_9",
+      "id": "rel_14",
       "type": "CONNECTION",
       "source": "172.18.197.40",
       "target": "apache2",
@@ -1708,7 +1576,7 @@
       "connection_type": "connection"
     },
     {
-      "id": "rel_10",
+      "id": "rel_15",
       "type": "CONNECTION",
       "source": "172.29.40.223",
       "target": "apache2",
@@ -1717,166 +1585,58 @@
       "connection_type": "connection"
     },
     {
-      "id": "rel_11",
-      "type": "CONNECTION",
-      "source": "eth0",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_12",
-      "type": "CONNECTION",
-      "source": "ens4",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_13",
-      "type": "CONNECTION",
-      "source": "containerd",
-      "target": "docker",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_14",
-      "type": "CONNECTION",
-      "source": "apache2",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_15",
-      "type": "CONNECTION",
-      "source": "postgres",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
       "id": "rel_16",
-      "type": "CONNECTION",
-      "source": "systemd",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "192.168.125.27",
+      "target": "ens4",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     },
     {
       "id": "rel_17",
-      "type": "CONNECTION",
-      "source": "cron",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "172.22.37.249",
+      "target": "ens4",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     },
     {
       "id": "rel_18",
-      "type": "CONNECTION",
-      "source": "docker",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "10.80.77.121",
+      "target": "eth0",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     },
     {
       "id": "rel_19",
-      "type": "CONNECTION",
-      "source": "firewalld",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "172.27.54.7",
+      "target": "eth0",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     },
     {
       "id": "rel_20",
-      "type": "CONNECTION",
-      "source": "rsyslog",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "192.168.144.103",
+      "target": "eth0",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     },
     {
       "id": "rel_21",
-      "type": "CONNECTION",
-      "source": "google-osconfig-agent",
-      "target": "google-startup-scripts",
+      "type": "ASSOCIATION",
+      "source": "192.168.51.201",
+      "target": "ens4",
       "weight": 1.0,
       "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_22",
-      "type": "CONNECTION",
-      "source": "chronyd",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_23",
-      "type": "CONNECTION",
-      "source": "sshd",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_24",
-      "type": "CONNECTION",
-      "source": "crond",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_25",
-      "type": "CONNECTION",
-      "source": "nvme0n1",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_26",
-      "type": "CONNECTION",
-      "source": "sda1",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_27",
-      "type": "CONNECTION",
-      "source": "ed25519",
-      "target": "ssh_host_ed25519_key",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
-    },
-    {
-      "id": "rel_28",
-      "type": "CONNECTION",
-      "source": "ssh_host_ed25519_key",
-      "target": "google-startup-scripts",
-      "weight": 1.0,
-      "count": 1,
-      "connection_type": "connection"
+      "connection_type": "association"
     }
   ],
   "gnn_features": {
@@ -1890,7 +1650,7 @@
           0,
           0.0,
           0.0,
-          0.196,
+          0.23,
           0.0
         ],
         "feature_names": [
@@ -1913,7 +1673,7 @@
           0,
           0.0,
           0.0,
-          0.196,
+          0.23,
           0.0
         ],
         "feature_names": [
@@ -1936,7 +1696,7 @@
           0,
           0.0,
           0.0,
-          0.174,
+          0.198,
           0.0
         ],
         "feature_names": [
@@ -1959,7 +1719,7 @@
           0,
           0.0,
           0.0,
-          0.321,
+          0.249,
           0.0
         ],
         "feature_names": [
@@ -1982,53 +1742,7 @@
           0,
           0.0,
           0.0,
-          0.318,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "mysqld",
-        "feature_vector": [
-          6.26,
-          8.94,
-          0.0,
-          4,
-          1.0,
-          1.0,
-          0.606,
-          1.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "kubelet",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.234,
+          0.383,
           0.0
         ],
         "feature_names": [
@@ -2051,7 +1765,7 @@
           0,
           0.0,
           0.0,
-          0.243,
+          0.419,
           0.0
         ],
         "feature_names": [
@@ -2074,7 +1788,7 @@
           0,
           0.0,
           0.0,
-          0.243,
+          0.249,
           0.0
         ],
         "feature_names": [
@@ -2089,7 +1803,7 @@
         ]
       },
       {
-        "node_id": "93.184.216.34",
+        "node_id": "kubelet",
         "feature_vector": [
           0.0,
           0.0,
@@ -2097,7 +1811,7 @@
           0,
           0.0,
           0.0,
-          0.234,
+          0.233,
           0.0
         ],
         "feature_names": [
@@ -2112,7 +1826,7 @@
         ]
       },
       {
-        "node_id": "56.13.147.103",
+        "node_id": "apache2",
         "feature_vector": [
           0.0,
           0.0,
@@ -2120,7 +1834,7 @@
           0,
           0.0,
           0.0,
-          0.382,
+          0.256,
           0.0
         ],
         "feature_names": [
@@ -2135,16 +1849,16 @@
         ]
       },
       {
-        "node_id": "71.165.20.222",
+        "node_id": "mysqld",
         "feature_vector": [
+          6.26,
+          8.94,
           0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.382,
-          0.0
+          4,
+          1.0,
+          1.0,
+          0.623,
+          1.0
         ],
         "feature_names": [
           "risk_score",
@@ -2158,16 +1872,16 @@
         ]
       },
       {
-        "node_id": "172.26.237.203",
+        "node_id": "postgres",
         "feature_vector": [
+          6.26,
+          8.94,
           0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.261,
-          0.0
+          4,
+          1.0,
+          1.0,
+          0.643,
+          1.0
         ],
         "feature_names": [
           "risk_score",
@@ -2181,130 +1895,15 @@
         ]
       },
       {
-        "node_id": "192.168.4.242",
+        "node_id": "cron",
         "feature_vector": [
+          5.91,
+          8.44,
           0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.382,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "172.18.197.40",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.261,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "172.29.40.223",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.261,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "eth0",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.329,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "ens4",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.329,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "evil_mod",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.253,
+          4,
+          1.0,
+          1.0,
+          0.793,
           0.0
         ],
         "feature_names": [
@@ -2327,100 +1926,8 @@
           2,
           1.0,
           1.0,
-          0.916,
+          0.885,
           1.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "apache2",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.261,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "postgres",
-        "feature_vector": [
-          6.12,
-          8.75,
-          0.0,
-          3,
-          1.0,
-          1.0,
-          0.566,
-          1.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "systemd",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.318,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "cron",
-        "feature_vector": [
-          5.6,
-          8.0,
-          0.0,
-          4,
-          1.0,
-          1.0,
-          0.534,
-          0.0
         ],
         "feature_names": [
           "risk_score",
@@ -2442,100 +1949,8 @@
           3,
           1.0,
           1.0,
-          0.894,
+          0.868,
           1.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "firewalld",
-        "feature_vector": [
-          6.12,
-          8.75,
-          0.0,
-          3,
-          1.0,
-          1.0,
-          0.566,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "rsyslog",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.318,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "google-osconfig-agent",
-        "feature_vector": [
-          0.0,
-          0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.318,
-          0.0
-        ],
-        "feature_names": [
-          "risk_score",
-          "cve_risk",
-          "behavioral_risk",
-          "cve_count",
-          "has_critical_cve",
-          "has_high_cve",
-          "anomaly_probability",
-          "is_anomaly"
-        ]
-      },
-      {
-        "node_id": "chronyd",
-        "feature_vector": [
-          4.27,
-          6.1,
-          0.0,
-          2,
-          0.0,
-          1.0,
-          0.45,
-          0.0
         ],
         "feature_names": [
           "risk_score",
@@ -2557,7 +1972,7 @@
           0,
           0.0,
           0.0,
-          0.318,
+          0.383,
           0.0
         ],
         "feature_names": [
@@ -2572,7 +1987,7 @@
         ]
       },
       {
-        "node_id": "crond",
+        "node_id": "evil_mod",
         "feature_vector": [
           0.0,
           0.0,
@@ -2580,7 +1995,7 @@
           0,
           0.0,
           0.0,
-          0.318,
+          0.281,
           0.0
         ],
         "feature_names": [
@@ -2595,7 +2010,7 @@
         ]
       },
       {
-        "node_id": "overlay",
+        "node_id": "ens4",
         "feature_vector": [
           0.0,
           0.0,
@@ -2603,7 +2018,7 @@
           0,
           0.0,
           0.0,
-          0.253,
+          0.219,
           0.0
         ],
         "feature_names": [
@@ -2618,7 +2033,7 @@
         ]
       },
       {
-        "node_id": "loop",
+        "node_id": "eth0",
         "feature_vector": [
           0.0,
           0.0,
@@ -2626,7 +2041,7 @@
           0,
           0.0,
           0.0,
-          0.253,
+          0.219,
           0.0
         ],
         "feature_names": [
@@ -2641,7 +2056,7 @@
         ]
       },
       {
-        "node_id": "nvme0n1",
+        "node_id": "93.184.216.34",
         "feature_vector": [
           0.0,
           0.0,
@@ -2649,7 +2064,7 @@
           0,
           0.0,
           0.0,
-          0.329,
+          0.281,
           0.0
         ],
         "feature_names": [
@@ -2664,7 +2079,7 @@
         ]
       },
       {
-        "node_id": "sda1",
+        "node_id": "71.165.20.222",
         "feature_vector": [
           0.0,
           0.0,
@@ -2672,7 +2087,7 @@
           0,
           0.0,
           0.0,
-          0.329,
+          0.449,
           0.0
         ],
         "feature_names": [
@@ -2687,15 +2102,15 @@
         ]
       },
       {
-        "node_id": "ed25519",
+        "node_id": "56.13.147.103",
         "feature_vector": [
+          5.25,
+          7.5,
           0.0,
+          1,
           0.0,
-          0.0,
-          0,
-          0.0,
-          0.0,
-          0.253,
+          1.0,
+          0.599,
           0.0
         ],
         "feature_names": [
@@ -2710,7 +2125,30 @@
         ]
       },
       {
-        "node_id": "ssh_host_ed25519_key",
+        "node_id": "211.55.190.32",
+        "feature_vector": [
+          6.36,
+          9.09,
+          0.0,
+          4,
+          1.0,
+          1.0,
+          0.793,
+          1.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.26.237.203",
         "feature_vector": [
           0.0,
           0.0,
@@ -2718,7 +2156,214 @@
           0,
           0.0,
           0.0,
-          0.351,
+          0.248,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.4.242",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.449,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.18.197.40",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.248,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.29.40.223",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.248,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.125.27",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.22.37.249",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "10.80.77.121",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "172.27.54.7",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.144.103",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
+          0.0
+        ],
+        "feature_names": [
+          "risk_score",
+          "cve_risk",
+          "behavioral_risk",
+          "cve_count",
+          "has_critical_cve",
+          "has_high_cve",
+          "anomaly_probability",
+          "is_anomaly"
+        ]
+      },
+      {
+        "node_id": "192.168.51.201",
+        "feature_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0,
+          0.0,
+          0.0,
+          0.265,
           0.0
         ],
         "feature_names": [
@@ -2749,7 +2394,7 @@
       },
       {
         "edge_id": "rel_1",
-        "source": "google-startup-scripts",
+        "source": "ec2-user",
         "target": "nginx",
         "feature_vector": [
           1.0,
@@ -2762,8 +2407,8 @@
       },
       {
         "edge_id": "rel_2",
-        "source": "google-startup-scripts",
-        "target": "mysqld",
+        "source": "ec2-user",
+        "target": "apache2",
         "feature_vector": [
           1.0,
           1
@@ -2775,8 +2420,8 @@
       },
       {
         "edge_id": "rel_3",
-        "source": "kubelet",
-        "target": "93.184.216.34",
+        "source": "ec2-user",
+        "target": "mysqld",
         "feature_vector": [
           1.0,
           1
@@ -2789,7 +2434,7 @@
       {
         "edge_id": "rel_4",
         "source": "ec2-user",
-        "target": "169.254.169.254",
+        "target": "postgres",
         "feature_vector": [
           1.0,
           1
@@ -2801,8 +2446,8 @@
       },
       {
         "edge_id": "rel_5",
-        "source": "56.13.147.103",
-        "target": "mysqld",
+        "source": "169.254.169.254",
+        "target": "google-startup-scripts",
         "feature_vector": [
           1.0,
           1
@@ -2814,6 +2459,45 @@
       },
       {
         "edge_id": "rel_6",
+        "source": "kubelet",
+        "target": "evil_mod",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_7",
+        "source": "sshd",
+        "target": "ec2-user",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_8",
+        "source": "93.184.216.34",
+        "target": "kubelet",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_9",
         "source": "71.165.20.222",
         "target": "mysqld",
         "feature_vector": [
@@ -2826,7 +2510,33 @@
         ]
       },
       {
-        "edge_id": "rel_7",
+        "edge_id": "rel_10",
+        "source": "56.13.147.103",
+        "target": "mysqld",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_11",
+        "source": "211.55.190.32",
+        "target": "cron",
+        "feature_vector": [
+          1.0,
+          1
+        ],
+        "feature_names": [
+          "weight",
+          "count"
+        ]
+      },
+      {
+        "edge_id": "rel_12",
         "source": "172.26.237.203",
         "target": "apache2",
         "feature_vector": [
@@ -2839,7 +2549,7 @@
         ]
       },
       {
-        "edge_id": "rel_8",
+        "edge_id": "rel_13",
         "source": "192.168.4.242",
         "target": "mysqld",
         "feature_vector": [
@@ -2852,7 +2562,7 @@
         ]
       },
       {
-        "edge_id": "rel_9",
+        "edge_id": "rel_14",
         "source": "172.18.197.40",
         "target": "apache2",
         "feature_vector": [
@@ -2865,7 +2575,7 @@
         ]
       },
       {
-        "edge_id": "rel_10",
+        "edge_id": "rel_15",
         "source": "172.29.40.223",
         "target": "apache2",
         "feature_vector": [
@@ -2878,74 +2588,9 @@
         ]
       },
       {
-        "edge_id": "rel_11",
-        "source": "eth0",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_12",
-        "source": "ens4",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_13",
-        "source": "containerd",
-        "target": "docker",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_14",
-        "source": "apache2",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_15",
-        "source": "postgres",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
         "edge_id": "rel_16",
-        "source": "systemd",
-        "target": "google-startup-scripts",
+        "source": "192.168.125.27",
+        "target": "ens4",
         "feature_vector": [
           1.0,
           1
@@ -2957,8 +2602,8 @@
       },
       {
         "edge_id": "rel_17",
-        "source": "cron",
-        "target": "google-startup-scripts",
+        "source": "172.22.37.249",
+        "target": "ens4",
         "feature_vector": [
           1.0,
           1
@@ -2970,8 +2615,8 @@
       },
       {
         "edge_id": "rel_18",
-        "source": "docker",
-        "target": "google-startup-scripts",
+        "source": "10.80.77.121",
+        "target": "eth0",
         "feature_vector": [
           1.0,
           1
@@ -2983,8 +2628,8 @@
       },
       {
         "edge_id": "rel_19",
-        "source": "firewalld",
-        "target": "google-startup-scripts",
+        "source": "172.27.54.7",
+        "target": "eth0",
         "feature_vector": [
           1.0,
           1
@@ -2996,8 +2641,8 @@
       },
       {
         "edge_id": "rel_20",
-        "source": "rsyslog",
-        "target": "google-startup-scripts",
+        "source": "192.168.144.103",
+        "target": "eth0",
         "feature_vector": [
           1.0,
           1
@@ -3009,99 +2654,8 @@
       },
       {
         "edge_id": "rel_21",
-        "source": "google-osconfig-agent",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_22",
-        "source": "chronyd",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_23",
-        "source": "sshd",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_24",
-        "source": "crond",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_25",
-        "source": "nvme0n1",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_26",
-        "source": "sda1",
-        "target": "google-startup-scripts",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_27",
-        "source": "ed25519",
-        "target": "ssh_host_ed25519_key",
-        "feature_vector": [
-          1.0,
-          1
-        ],
-        "feature_names": [
-          "weight",
-          "count"
-        ]
-      },
-      {
-        "edge_id": "rel_28",
-        "source": "ssh_host_ed25519_key",
-        "target": "google-startup-scripts",
+        "source": "192.168.51.201",
+        "target": "ens4",
         "feature_vector": [
           1.0,
           1
@@ -3118,38 +2672,33 @@
       "iptables": 0,
       "google-startup-scripts": 0,
       "nginx": 0,
-      "mysqld": 1,
-      "kubelet": 0,
       "ec2-user": 0,
       "169.254.169.254": 0,
+      "kubelet": 0,
+      "apache2": 0,
+      "mysqld": 1,
+      "postgres": 1,
+      "cron": 0,
+      "containerd": 1,
+      "docker": 1,
+      "sshd": 0,
+      "evil_mod": 0,
+      "ens4": 0,
+      "eth0": 0,
       "93.184.216.34": 0,
-      "56.13.147.103": 0,
       "71.165.20.222": 0,
+      "56.13.147.103": 0,
+      "211.55.190.32": 1,
       "172.26.237.203": 0,
       "192.168.4.242": 0,
       "172.18.197.40": 0,
       "172.29.40.223": 0,
-      "eth0": 0,
-      "ens4": 0,
-      "evil_mod": 0,
-      "containerd": 1,
-      "apache2": 0,
-      "postgres": 1,
-      "systemd": 0,
-      "cron": 0,
-      "docker": 1,
-      "firewalld": 0,
-      "rsyslog": 0,
-      "google-osconfig-agent": 0,
-      "chronyd": 0,
-      "sshd": 0,
-      "crond": 0,
-      "overlay": 0,
-      "loop": 0,
-      "nvme0n1": 0,
-      "sda1": 0,
-      "ed25519": 0,
-      "ssh_host_ed25519_key": 0
+      "192.168.125.27": 0,
+      "172.22.37.249": 0,
+      "10.80.77.121": 0,
+      "172.27.54.7": 0,
+      "192.168.144.103": 0,
+      "192.168.51.201": 0
     }
   },
   "visualization": {
@@ -3187,7 +2736,7 @@
         "node_number": 3,
         "original_id": "iptables",
         "label": "iptables",
-        "type": "process",
+        "type": "service",
         "category": "security",
         "color": "#e74c3c",
         "size": 10,
@@ -3215,7 +2764,7 @@
         "node_number": 5,
         "original_id": "nginx",
         "label": "nginx",
-        "type": "process",
+        "type": "service",
         "category": "compute",
         "color": "#3498db",
         "size": 10,
@@ -3227,34 +2776,6 @@
       {
         "id": 5,
         "node_number": 6,
-        "original_id": "mysqld",
-        "label": "mysqld",
-        "type": "process",
-        "category": "database",
-        "color": "#c0392b",
-        "size": 48.78,
-        "group": 3,
-        "risk_score": 6.26,
-        "is_anomaly": true,
-        "cve_count": 4
-      },
-      {
-        "id": 6,
-        "node_number": 7,
-        "original_id": "kubelet",
-        "label": "kubelet",
-        "type": "process",
-        "category": "compute",
-        "color": "#3498db",
-        "size": 10,
-        "group": 0,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 7,
-        "node_number": 8,
         "original_id": "ec2-user",
         "label": "ec2-user",
         "type": "user",
@@ -3267,8 +2788,8 @@
         "cve_count": 0
       },
       {
-        "id": 8,
-        "node_number": 9,
+        "id": 6,
+        "node_number": 7,
         "original_id": "169.254.169.254",
         "label": "169.254.169.254",
         "type": "ip",
@@ -3281,85 +2802,113 @@
         "cve_count": 0
       },
       {
-        "id": 9,
-        "node_number": 10,
-        "original_id": "93.184.216.34",
-        "label": "93.184.216.34",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
+        "id": 7,
+        "node_number": 8,
+        "original_id": "kubelet",
+        "label": "kubelet",
+        "type": "service",
+        "category": "compute",
+        "color": "#3498db",
         "size": 10,
-        "group": 1,
+        "group": 0,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
+      },
+      {
+        "id": 8,
+        "node_number": 9,
+        "original_id": "apache2",
+        "label": "apache2",
+        "type": "service",
+        "category": "compute",
+        "color": "#3498db",
+        "size": 10,
+        "group": 0,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 9,
+        "node_number": 10,
+        "original_id": "mysqld",
+        "label": "mysqld",
+        "type": "service",
+        "category": "database",
+        "color": "#c0392b",
+        "size": 48.78,
+        "group": 3,
+        "risk_score": 6.26,
+        "is_anomaly": true,
+        "cve_count": 4
       },
       {
         "id": 10,
         "node_number": 11,
-        "original_id": "56.13.147.103",
-        "label": "56.13.147.103",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
-        "size": 10,
-        "group": 1,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
+        "original_id": "postgres",
+        "label": "postgres",
+        "type": "service",
+        "category": "database",
+        "color": "#c0392b",
+        "size": 48.78,
+        "group": 3,
+        "risk_score": 6.26,
+        "is_anomaly": true,
+        "cve_count": 4
       },
       {
         "id": 11,
         "node_number": 12,
-        "original_id": "71.165.20.222",
-        "label": "71.165.20.222",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
-        "size": 10,
-        "group": 1,
-        "risk_score": 0.0,
+        "original_id": "cron",
+        "label": "cron",
+        "type": "service",
+        "category": "compute",
+        "color": "#e67e22",
+        "size": 27.73,
+        "group": 0,
+        "risk_score": 5.91,
         "is_anomaly": false,
-        "cve_count": 0
+        "cve_count": 4
       },
       {
         "id": 12,
         "node_number": 13,
-        "original_id": "172.26.237.203",
-        "label": "172.26.237.203",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
-        "size": 10,
-        "group": 1,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
+        "original_id": "containerd",
+        "label": "containerd",
+        "type": "service",
+        "category": "compute",
+        "color": "#c0392b",
+        "size": 51.0,
+        "group": 0,
+        "risk_score": 7.0,
+        "is_anomaly": true,
+        "cve_count": 2
       },
       {
         "id": 13,
         "node_number": 14,
-        "original_id": "192.168.4.242",
-        "label": "192.168.4.242",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
-        "size": 10,
-        "group": 1,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
+        "original_id": "docker",
+        "label": "docker",
+        "type": "service",
+        "category": "compute",
+        "color": "#c0392b",
+        "size": 49.53,
+        "group": 0,
+        "risk_score": 6.51,
+        "is_anomaly": true,
+        "cve_count": 3
       },
       {
         "id": 14,
         "node_number": 15,
-        "original_id": "172.18.197.40",
-        "label": "172.18.197.40",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
+        "original_id": "sshd",
+        "label": "sshd",
+        "type": "service",
+        "category": "security",
+        "color": "#e74c3c",
         "size": 10,
-        "group": 1,
+        "group": 4,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3367,48 +2916,6 @@
       {
         "id": 15,
         "node_number": 16,
-        "original_id": "172.29.40.223",
-        "label": "172.29.40.223",
-        "type": "ip",
-        "category": "network",
-        "color": "#2ecc71",
-        "size": 10,
-        "group": 1,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 16,
-        "node_number": 17,
-        "original_id": "eth0",
-        "label": "eth0",
-        "type": "hardware",
-        "category": "hardware",
-        "color": "#34495e",
-        "size": 10,
-        "group": 6,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 17,
-        "node_number": 18,
-        "original_id": "ens4",
-        "label": "ens4",
-        "type": "hardware",
-        "category": "hardware",
-        "color": "#34495e",
-        "size": 10,
-        "group": 6,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 18,
-        "node_number": 19,
         "original_id": "evil_mod",
         "label": "evil_mod",
         "type": "module",
@@ -3421,57 +2928,99 @@
         "cve_count": 0
       },
       {
-        "id": 19,
-        "node_number": 20,
-        "original_id": "containerd",
-        "label": "containerd",
-        "type": "process",
-        "category": "compute",
-        "color": "#c0392b",
-        "size": 51.0,
-        "group": 0,
-        "risk_score": 7.0,
-        "is_anomaly": true,
-        "cve_count": 2
-      },
-      {
-        "id": 20,
-        "node_number": 21,
-        "original_id": "apache2",
-        "label": "apache2",
-        "type": "process",
-        "category": "compute",
-        "color": "#3498db",
+        "id": 16,
+        "node_number": 17,
+        "original_id": "ens4",
+        "label": "ens4",
+        "type": "hardware",
+        "category": "hardware",
+        "color": "#34495e",
         "size": 10,
-        "group": 0,
+        "group": 6,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
       },
       {
+        "id": 17,
+        "node_number": 18,
+        "original_id": "eth0",
+        "label": "eth0",
+        "type": "hardware",
+        "category": "hardware",
+        "color": "#34495e",
+        "size": 10,
+        "group": 6,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 18,
+        "node_number": 19,
+        "original_id": "93.184.216.34",
+        "label": "93.184.216.34",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 19,
+        "node_number": 20,
+        "original_id": "71.165.20.222",
+        "label": "71.165.20.222",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
+      },
+      {
+        "id": 20,
+        "node_number": 21,
+        "original_id": "56.13.147.103",
+        "label": "56.13.147.103",
+        "type": "ip",
+        "category": "network",
+        "color": "#e67e22",
+        "size": 25.75,
+        "group": 1,
+        "risk_score": 5.25,
+        "is_anomaly": false,
+        "cve_count": 1
+      },
+      {
         "id": 21,
         "node_number": 22,
-        "original_id": "postgres",
-        "label": "postgres",
-        "type": "process",
-        "category": "database",
+        "original_id": "211.55.190.32",
+        "label": "211.55.190.32",
+        "type": "ip",
+        "category": "network",
         "color": "#c0392b",
-        "size": 48.36,
-        "group": 3,
-        "risk_score": 6.12,
+        "size": 49.08,
+        "group": 1,
+        "risk_score": 6.36,
         "is_anomaly": true,
-        "cve_count": 3
+        "cve_count": 4
       },
       {
         "id": 22,
         "node_number": 23,
-        "original_id": "systemd",
-        "label": "systemd",
-        "type": "process",
-        "category": "compute",
-        "color": "#3498db",
+        "original_id": "172.26.237.203",
+        "label": "172.26.237.203",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 0,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3479,55 +3028,55 @@
       {
         "id": 23,
         "node_number": 24,
-        "original_id": "cron",
-        "label": "cron",
-        "type": "process",
-        "category": "monitoring",
-        "color": "#e67e22",
-        "size": 26.799999999999997,
-        "group": 7,
-        "risk_score": 5.6,
+        "original_id": "192.168.4.242",
+        "label": "192.168.4.242",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
         "is_anomaly": false,
-        "cve_count": 4
+        "cve_count": 0
       },
       {
         "id": 24,
         "node_number": 25,
-        "original_id": "docker",
-        "label": "docker",
-        "type": "process",
-        "category": "compute",
-        "color": "#c0392b",
-        "size": 49.53,
-        "group": 0,
-        "risk_score": 6.51,
-        "is_anomaly": true,
-        "cve_count": 3
+        "original_id": "172.18.197.40",
+        "label": "172.18.197.40",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
+        "is_anomaly": false,
+        "cve_count": 0
       },
       {
         "id": 25,
         "node_number": 26,
-        "original_id": "firewalld",
-        "label": "firewalld",
-        "type": "process",
-        "category": "security",
-        "color": "#e67e22",
-        "size": 28.36,
-        "group": 4,
-        "risk_score": 6.12,
+        "original_id": "172.29.40.223",
+        "label": "172.29.40.223",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
         "is_anomaly": false,
-        "cve_count": 3
+        "cve_count": 0
       },
       {
         "id": 26,
         "node_number": 27,
-        "original_id": "rsyslog",
-        "label": "rsyslog",
-        "type": "process",
-        "category": "monitoring",
-        "color": "#1abc9c",
+        "original_id": "192.168.125.27",
+        "label": "192.168.125.27",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 7,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3535,13 +3084,13 @@
       {
         "id": 27,
         "node_number": 28,
-        "original_id": "google-osconfig-agent",
-        "label": "google-osconfig-agent",
-        "type": "process",
-        "category": "compute",
-        "color": "#3498db",
+        "original_id": "172.22.37.249",
+        "label": "172.22.37.249",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 0,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3549,27 +3098,27 @@
       {
         "id": 28,
         "node_number": 29,
-        "original_id": "chronyd",
-        "label": "chronyd",
-        "type": "process",
-        "category": "monitoring",
-        "color": "#e67e22",
-        "size": 22.81,
-        "group": 7,
-        "risk_score": 4.27,
+        "original_id": "10.80.77.121",
+        "label": "10.80.77.121",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
+        "size": 10,
+        "group": 1,
+        "risk_score": 0.0,
         "is_anomaly": false,
-        "cve_count": 2
+        "cve_count": 0
       },
       {
         "id": 29,
         "node_number": 30,
-        "original_id": "sshd",
-        "label": "sshd",
-        "type": "process",
-        "category": "security",
-        "color": "#e74c3c",
+        "original_id": "172.27.54.7",
+        "label": "172.27.54.7",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 4,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3577,13 +3126,13 @@
       {
         "id": 30,
         "node_number": 31,
-        "original_id": "crond",
-        "label": "crond",
-        "type": "process",
-        "category": "monitoring",
-        "color": "#1abc9c",
+        "original_id": "192.168.144.103",
+        "label": "192.168.144.103",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 7,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3591,83 +3140,13 @@
       {
         "id": 31,
         "node_number": 32,
-        "original_id": "overlay",
-        "label": "overlay",
-        "type": "module",
-        "category": "other",
-        "color": "#95a5a6",
+        "original_id": "192.168.51.201",
+        "label": "192.168.51.201",
+        "type": "ip",
+        "category": "network",
+        "color": "#2ecc71",
         "size": 10,
-        "group": 8,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 32,
-        "node_number": 33,
-        "original_id": "loop",
-        "label": "loop",
-        "type": "module",
-        "category": "other",
-        "color": "#95a5a6",
-        "size": 10,
-        "group": 8,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 33,
-        "node_number": 34,
-        "original_id": "nvme0n1",
-        "label": "nvme0n1",
-        "type": "hardware",
-        "category": "hardware",
-        "color": "#34495e",
-        "size": 10,
-        "group": 6,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 34,
-        "node_number": 35,
-        "original_id": "sda1",
-        "label": "sda1",
-        "type": "hardware",
-        "category": "hardware",
-        "color": "#34495e",
-        "size": 10,
-        "group": 6,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 35,
-        "node_number": 36,
-        "original_id": "ed25519",
-        "label": "ed25519",
-        "type": "key",
-        "category": "security",
-        "color": "#e74c3c",
-        "size": 10,
-        "group": 4,
-        "risk_score": 0.0,
-        "is_anomaly": false,
-        "cve_count": 0
-      },
-      {
-        "id": 36,
-        "node_number": 37,
-        "original_id": "ssh_host_ed25519_key",
-        "label": "ssh_host_ed25519_key",
-        "type": "key",
-        "category": "security",
-        "color": "#e74c3c",
-        "size": 10,
-        "group": 4,
+        "group": 1,
         "risk_score": 0.0,
         "is_anomaly": false,
         "cve_count": 0
@@ -3682,247 +3161,268 @@
         "value": 1.0
       },
       {
-        "source": 3,
+        "source": 5,
         "target": 4,
-        "type": "CONNECTION",
+        "type": "AUTHENTICATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
-        "source": 3,
-        "target": 5,
-        "type": "CONNECTION",
+        "source": 5,
+        "target": 8,
+        "type": "AUTHENTICATION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "AUTHENTICATION",
+        "weight": 1.0,
+        "value": 1.0
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "AUTHENTICATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 6,
-        "target": 9,
+        "target": 3,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 7,
-        "target": 8,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 10,
-        "target": 5,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 11,
-        "target": 5,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 12,
-        "target": 20,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 13,
-        "target": 5,
-        "type": "CONNECTION",
+        "target": 15,
+        "type": "LOADING",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 14,
-        "target": 20,
-        "type": "CONNECTION",
+        "target": 5,
+        "type": "AUTHENTICATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
-        "source": 15,
-        "target": 20,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 16,
-        "target": 3,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 17,
-        "target": 3,
+        "source": 18,
+        "target": 7,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 19,
-        "target": 24,
+        "target": 9,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 20,
-        "target": 3,
+        "target": 9,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 21,
-        "target": 3,
+        "target": 11,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 22,
-        "target": 3,
+        "target": 8,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 23,
-        "target": 3,
+        "target": 9,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 24,
-        "target": 3,
+        "target": 8,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 25,
-        "target": 3,
+        "target": 8,
         "type": "CONNECTION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 26,
-        "target": 3,
-        "type": "CONNECTION",
+        "target": 16,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 27,
-        "target": 3,
-        "type": "CONNECTION",
+        "target": 16,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 28,
-        "target": 3,
-        "type": "CONNECTION",
+        "target": 17,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 29,
-        "target": 3,
-        "type": "CONNECTION",
+        "target": 17,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
         "source": 30,
-        "target": 3,
-        "type": "CONNECTION",
+        "target": 17,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       },
       {
-        "source": 33,
-        "target": 3,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 34,
-        "target": 3,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 35,
-        "target": 36,
-        "type": "CONNECTION",
-        "weight": 1.0,
-        "value": 1.0
-      },
-      {
-        "source": 36,
-        "target": 3,
-        "type": "CONNECTION",
+        "source": 31,
+        "target": 16,
+        "type": "ASSOCIATION",
         "weight": 1.0,
         "value": 1.0
       }
     ]
   },
-  "cve_database": [],
+  "cve_database": [
+    {
+      "cve_id": "CVE-2014-3499",
+      "score": 7.2,
+      "severity": "MEDIUM",
+      "description": "Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.",
+      "published": "2014-07-11T14:55:04.010",
+      "last_modified": "2025-04-12T10:46:40.837"
+    },
+    {
+      "cve_id": "CVE-2000-0707",
+      "score": 7.5,
+      "severity": "MEDIUM",
+      "description": "PCCS MySQLDatabase Admin Tool Manager 1.2.4 and earlier installs the file dbconnect.inc within the web root, which allows remote attackers to obtain sensitive information such as the administrative pa",
+      "published": "2000-10-20T04:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-1999-0661",
+      "score": 10.0,
+      "severity": "MEDIUM",
+      "description": "A system is running a version of software that was replaced with a Trojan Horse at one of its distribution points, such as (1) TCP Wrappers 7.6, (2) util-linux 2.9g, (3) wuarchive ftpd (wuftpd) 2.2 an",
+      "published": "1999-01-01T05:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-2000-0525",
+      "score": 10.0,
+      "severity": "MEDIUM",
+      "description": "OpenSSH does not properly drop privileges when the UseLogin option is enabled, which allows local users to execute arbitrary commands by providing the command to the ssh daemon.",
+      "published": "2000-06-08T04:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-1999-1253",
+      "score": 7.2,
+      "severity": "MEDIUM",
+      "description": "Vulnerability in a kernel error handling routine in SCO OpenServer 5.0.2 and earlier, and SCO Internet FastStart 1.0, allows local users to gain root privileges.",
+      "published": "1996-06-07T04:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-2001-0201",
+      "score": 7.5,
+      "severity": "MEDIUM",
+      "description": "The Postaci frontend for PostgreSQL does not properly filter characters such as semicolons, which could allow remote attackers to execute arbitrary SQL queries via the deletecontact.php program.",
+      "published": "2001-03-26T05:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-1999-0297",
+      "score": 7.2,
+      "severity": "MEDIUM",
+      "description": "Buffer overflow in Vixie Cron library up to version 3.0 allows local users to obtain root access via a long environmental variable.",
+      "published": "1996-12-12T05:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    },
+    {
+      "cve_id": "CVE-1999-0340",
+      "score": 5.0,
+      "severity": "MEDIUM",
+      "description": "Score unavailable from NVD",
+      "published": "",
+      "last_modified": ""
+    },
+    {
+      "cve_id": "CVE-2002-1357",
+      "score": 5.0,
+      "severity": "MEDIUM",
+      "description": "Score unavailable from NVD",
+      "published": "",
+      "last_modified": ""
+    },
+    {
+      "cve_id": "CVE-2002-1358",
+      "score": 10.0,
+      "severity": "MEDIUM",
+      "description": "Multiple SSH2 servers and clients do not properly handle lists with empty elements or strings, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code, as demo",
+      "published": "2002-12-23T05:00:00.000",
+      "last_modified": "2025-04-03T01:03:51.193"
+    }
+  ],
   "anomalies": {
     "detected": [
       {
         "id": "mysqld",
         "risk_score": 6.26,
-        "type": "process",
-        "z_score": 2.16,
+        "type": "service",
+        "z_score": 1.93,
         "cve": [
-          "CVE-1999-0661",
-          "CVE-2000-0707",
           "CVE-2014-3499",
-          "CVE-2000-0525"
-        ]
-      },
-      {
-        "id": "containerd",
-        "risk_score": 7.0,
-        "type": "process",
-        "z_score": 2.48,
-        "cve": [
+          "CVE-2000-0707",
           "CVE-1999-0661",
           "CVE-2000-0525"
         ]
       },
       {
         "id": "postgres",
-        "risk_score": 6.12,
-        "type": "process",
-        "z_score": 2.11,
+        "risk_score": 6.26,
+        "type": "service",
+        "z_score": 1.93,
         "cve": [
+          "CVE-1999-1253",
+          "CVE-2001-0201",
           "CVE-1999-0661",
-          "CVE-2000-0525",
-          "CVE-2001-0201"
+          "CVE-2000-0525"
         ]
       },
       {
-        "id": "cron",
-        "risk_score": 5.6,
-        "type": "process",
-        "z_score": 1.89,
+        "id": "containerd",
+        "risk_score": 7.0,
+        "type": "service",
+        "z_score": 2.22,
         "cve": [
-          "CVE-1999-0297",
-          "CVE-1999-0340",
           "CVE-1999-0661",
           "CVE-2000-0525"
         ]
@@ -3930,51 +3430,53 @@
       {
         "id": "docker",
         "risk_score": 6.51,
-        "type": "process",
-        "z_score": 2.27,
+        "type": "service",
+        "z_score": 2.03,
         "cve": [
-          "CVE-1999-0661",
           "CVE-2014-3499",
+          "CVE-1999-0661",
           "CVE-2000-0525"
         ]
       },
       {
-        "id": "firewalld",
-        "risk_score": 6.12,
-        "type": "process",
-        "z_score": 2.11,
+        "id": "211.55.190.32",
+        "risk_score": 6.36,
+        "type": "ip",
+        "z_score": 1.98,
         "cve": [
-          "CVE-2009-2629",
+          "CVE-2002-1357",
           "CVE-1999-0661",
-          "CVE-2000-0525"
+          "CVE-2000-0525",
+          "CVE-2002-1358"
         ]
       }
     ],
     "confirmed": [
       {
         "id": "postgres",
-        "risk_score": 6.12,
-        "type": "process",
-        "reason": "Detected privilege escalation through loading a malicious kernel module via a root exploit and then dropping a backdoor process",
+        "risk_score": 6.26,
+        "type": "service",
+        "reason": "Detected loading of malicious kernel module via root exploit and dropping of backdoor process",
         "confidence": "high",
-        "enhanced_anomaly_score": 6.54,
+        "enhanced_anomaly_score": 6.61,
         "threat_type": "privilege_escalation",
         "severity": "high",
         "cve": [
+          "CVE-1999-1253",
+          "CVE-2001-0201",
           "CVE-1999-0661",
-          "CVE-2000-0525",
-          "CVE-2001-0201"
+          "CVE-2000-0525"
         ]
       },
       {
         "id": "containerd",
         "risk_score": 7.0,
-        "type": "process",
-        "reason": "Unauthorized containerd execution detected",
-        "confidence": "medium",
-        "enhanced_anomaly_score": 5.98,
-        "threat_type": "suspicious_process_execution",
-        "severity": "medium",
+        "type": "service",
+        "reason": "Detected unauthorized containerd execution",
+        "confidence": "high",
+        "enhanced_anomaly_score": 6.72,
+        "threat_type": "unauthorized_execution",
+        "severity": "high",
         "cve": [
           "CVE-1999-0661",
           "CVE-2000-0525"
@@ -3983,31 +3485,47 @@
       {
         "id": "docker",
         "risk_score": 6.51,
-        "type": "process",
-        "reason": "Multiple connections to unusual ports detected",
-        "confidence": "medium",
-        "enhanced_anomaly_score": 5.82,
-        "threat_type": "suspicious_network_activity",
-        "severity": "medium",
+        "type": "service",
+        "reason": "No clear indication of malicious activity",
+        "confidence": "low",
+        "enhanced_anomaly_score": 5.09,
+        "threat_type": "none",
+        "severity": "low",
         "cve": [
-          "CVE-1999-0661",
           "CVE-2014-3499",
+          "CVE-1999-0661",
           "CVE-2000-0525"
+        ]
+      },
+      {
+        "id": "211.55.190.32",
+        "risk_score": 6.36,
+        "type": "ip",
+        "reason": "No clear indication of malicious activity from this IP",
+        "confidence": "low",
+        "enhanced_anomaly_score": 5.18,
+        "threat_type": "none",
+        "severity": "low",
+        "cve": [
+          "CVE-2002-1357",
+          "CVE-1999-0661",
+          "CVE-2000-0525",
+          "CVE-2002-1358"
         ]
       },
       {
         "id": "mysqld",
         "risk_score": 6.26,
-        "type": "process",
-        "reason": "Unauthorized access attempt from unknown IP detected",
-        "confidence": "low",
-        "enhanced_anomaly_score": 5.34,
+        "type": "service",
+        "reason": "Detected unauthorized access attempt",
+        "confidence": "medium",
+        "enhanced_anomaly_score": 5.61,
         "threat_type": "unauthorized_access",
-        "severity": "low",
+        "severity": "medium",
         "cve": [
-          "CVE-1999-0661",
-          "CVE-2000-0707",
           "CVE-2014-3499",
+          "CVE-2000-0707",
+          "CVE-1999-0661",
           "CVE-2000-0525"
         ]
       }

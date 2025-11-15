@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-11-10T18:25:55.227130",
+  "attack_type": "DDoS Attack",
+  "threat_probability": 0.87,
+  "anomalous_nodes": 4,
+  "anomaly_rate": 0.2,
+  "agent_response": {
+    "severity": "CRITICAL",
+    "confidence": 0.87,
+    "executive_summary": "A distributed denial‑of‑service attack is overwhelming the network, with 20% of nodes showing abnormal traffic patterns. The attack is already impacting service availability and could grow if not stopped immediately.",
+    "detailed_report_simple": "The network has 20 devices but only 4 connections, meaning traffic is highly concentrated. Four servers (IDs 1, 5, 9, 12) are behaving oddly: Server‑1 is connected to two nodes but has very low centrality, while Servers‑5, 9, and 12 have no connections at all, indicating they may be compromised or misconfigured. This pattern is typical of a botnet sending flood traffic to a few targets, causing a denial‑of‑service. The attack was detected because the anomaly detection engine flagged the sudden drop in connectivity and the high probability score (87%).",
+    "root_cause": {
+      "what_went_wrong": "The network was flooded with traffic from compromised devices, causing legitimate connections to be dropped or ignored. The lack of connections on several servers suggests they were either taken offline by the attacker or misconfigured to accept no traffic.",
+      "how_attackers_exploit": "Attackers use botnets to send massive amounts of requests to a target, exhausting bandwidth and processing resources. By isolating a few nodes, they can make the rest of the network appear disconnected, which is what we see with the zero‑degree servers.",
+      "why_detected_now": "The anomaly detection system monitors node degree and betweenness; the sudden appearance of zero‑degree nodes and the drop in clustering coefficient triggered an alert. The high probability score indicates the system has learned this pattern is likely malicious."
+    },
+    "cve_explanations": [],
+    "recommended_actions": [
+      {
+        "priority": "CRITICAL",
+        "action_name": "Immediate Traffic Blocking",
+        "what_to_do": "Deploy firewall rules to block inbound traffic from known malicious IP ranges and drop packets that exceed normal rate limits on all nodes.",
+        "why_do_this": "Stops the flood before it can consume bandwidth and CPU resources.",
+        "timeline": "Within 30 minutes",
+        "estimated_time": "30 minutes"
+      },
+      {
+        "priority": "CRITICAL",
+        "action_name": "Isolate Compromised Nodes",
+        "what_to_do": "Move Servers‑5, 9, and 12 to a quarantine network segment, disable all services, and run a full malware scan.",
+        "why_do_this": "These nodes may be part of the botnet; isolating them prevents further spread and allows investigation.",
+        "timeline": "Within 1 hour",
+        "estimated_time": "1 hour"
+      },
+      {
+        "priority": "HIGH",
+        "action_name": "Apply Rate Limiting and QoS",
+        "what_to_do": "Configure rate limits on all routers and switches to cap traffic per source IP to a safe threshold (e.g., 100 requests/second).",
+        "why_do_this": "Reduces the impact of any remaining malicious traffic while keeping legitimate users online.",
+        "timeline": "Within 2 hours",
+        "estimated_time": "2 hours"
+      },
+      {
+        "priority": "HIGH",
+        "action_name": "Patch and Update Network Devices",
+        "what_to_do": "Ensure all firmware and software on routers, switches, and servers are up to date with the latest security patches.",
+        "why_do_this": "Prevents exploitation of known vulnerabilities that could be used to launch or amplify DDoS attacks.",
+        "timeline": "Within 24 hours",
+        "estimated_time": "4 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Conduct Forensic Analysis",
+        "what_to_do": "Collect logs from all affected nodes, analyze traffic patterns, and identify the source IPs of the attack.",
+        "why_do_this": "Provides evidence for incident response and helps refine future detection rules.",
+        "timeline": "Within 48 hours",
+        "estimated_time": "8 hours"
+      },
+      {
+        "priority": "MEDIUM",
+        "action_name": "Update Detection Rules",
+        "what_to_do": "Adjust anomaly detection thresholds and add new signatures for zero‑degree nodes and sudden connectivity drops.",
+        "why_do_this": "Improves early warning for similar attacks in the future.",
+        "timeline": "Within 72 hours",
+        "estimated_time": "2 hours"
+      }
+    ]
+  },
+  "graph_stats": {
+    "num_nodes": 20,
+    "num_edges": 4,
+    "vulnerable_paths": 0,
+    "cves_found": 0
+  },
+  "suspicious_nodes_detail": [
+    {
+      "node_id": 1,
+      "label": "Server-1",
+      "metrics": {
+        "degree": 2,
+        "betweenness": 0.017543859649122806,
+        "clustering": 0.0,
+        "neighbors": [
+          
