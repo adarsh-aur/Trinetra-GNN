@@ -44,7 +44,7 @@ def truncate_to_char_limit(text, max_chars=12000):
   
 # ⚙️ Groq LLM call helper - FIXED MODEL NAME
   
-def call_groq_llm(prompt, model="llama-3.3-70b-versatile", temperature=0.0, max_tokens=4000, retries=3, timeout=30):
+def call_groq_llm(prompt, model="openai/gpt-oss-120b", temperature=0.0, max_tokens=4000, retries=3, timeout=30):
     """
     Calls Groq LLM with retry logic and timeout.
     
@@ -199,7 +199,7 @@ def safe_json_parse(response_text):
   
 # 🧠 Core function: process logs with LLM - OPTIMIZED
   
-def process_logs_with_llm(raw_logs, model="llama-3.3-70b-versatile"):
+def process_logs_with_llm(raw_logs, model="openai/gpt-oss-120b"):
     """
     Process raw system logs using Groq LLM to extract structured data.
     
